@@ -1,6 +1,10 @@
+//
+//  AppTheme.swift
+//  裁缝助手 —— 全局主题（PRD 样式约束：浅色，米白 #F7F3EC + 焦糖 #B98A5A，正文 ≥15pt）
+//
+
 import SwiftUI
 
-// MARK: - 主题色（浅色主题，禁用深色模式适配）
 extension Color {
     /// 主色：米白 #F7F3EC（背景）
     static let appBackground = Color(red: 0xF7 / 255, green: 0xF3 / 255, blue: 0xEC / 255)
@@ -16,7 +20,6 @@ extension Color {
     static let appDivider = Color(red: 0xE5 / 255, green: 0xE0 / 255, blue: 0xD6 / 255)
 }
 
-// MARK: - 字体
 extension Font {
     static let appTitle = Font.system(size: 22, weight: .semibold)
     static let appHeadline = Font.system(size: 17, weight: .semibold)
@@ -24,7 +27,6 @@ extension Font {
     static let appCaption = Font.system(size: 13)
 }
 
-// MARK: - 圆角/阴影
 enum AppStyle {
     static let cornerRadius: CGFloat = 12
     static let cardShadowRadius: CGFloat = 4

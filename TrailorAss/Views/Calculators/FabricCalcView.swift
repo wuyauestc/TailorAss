@@ -1,6 +1,10 @@
+//
+//  FabricCalcView.swift
+//  裁缝助手 —— 5.1 布料用量计算器
+//
+
 import SwiftUI
 
-// MARK: - 5.1 布料用量计算器
 struct FabricCalcView: View {
     @StateObject private var vm = FabricCalcViewModel()
 
@@ -14,61 +18,43 @@ struct FabricCalcView: View {
                 LabeledField(title: "缩水率 r", text: $vm.shrinkage, unit: "%")
             }
 
-            Button("计算") {
-                vm.calculate()
+            Section {
+                Button {
+                    vm.calculate()
+                } label: {
+                    Text("计算")
+                        .font(.appHeadline)
+                        .frame(maxWidth: .infinity)
+                }
+                .listRowBackground(Color.appAccent)
+                .foregroundColor(.white)
             }
-            .frame(maxWidth: .infinity)
-            .foregroundColor(.white)
-            .listRowBackground(Color.appAccent)
 
             if let result = vm.result {
                 Section("计算结果") {
-                    HStack {
-                        Text("建议购布")
-                        Spacer()
-                        Text(String(format: "%.1f 米", result.meters))
-                            .foregroundColor(.appAccent)
-                            .font(.appHeadline)
-                    }
-                    HStack {
-                        Text("每行可排片数")
-                        Spacer()
-                        Text("\(result.piecesPerRow) 片")
-                    }
-                    HStack {
-                        Text("所需行数")
-                        Spacer()
-                        Text("\(result.rows) 行")
-                    }
+                    ResultRow(title: "建议购布",
+                              value: String(format: "%.1f 米", result.meters),
+                              highlight: true)
+                    ResultRow(title: "每行可排片数", value: "\(result.piecesPerRow) 片")
+                    ResultRow(title: "所需行数", value: "\(result.rows) 行")
                     if result.needSplice {
-                        Text("⚠️ 衣片宽度超过幅宽，需拼接")
+                        Label("衣片宽度超过幅宽，需拼接", systemImage: "exclamationmark.triangle.fill")
+                            .font(.appBody)
                             .foregroundColor(.orange)
                     }
                 }
             }
 
-            if let err = vm.errorMessage {
-                Text(err).foregroundColor(.red)
+            if let error = vm.errorMessage {
+                Section {
+                    Label(error, systemImage: "xmark.circle.fill")
+                        .font(.appBody)
+                        .foregroundColor(.red)
+                }
             }
         }
+        .appBackground()
         .navigationTitle("布料用量计算器")
         .navigationBarTitleDisplayMode(.inline)
-        .scrollContentBackground(.hidden)
-        .background(Color.appBackground)
-    }
-}
-
-struct LabeledField: View {
-    let title: String
-    @Binding var text: String
-    let unit: String
-    var body: some View {
-        HStack {
-            Text(title)
-            TextField("0", text: $text)
-                .keyboardType(.decimalPad)
-                .multilineTextAlignment(.trailing)
-            Text(unit).foregroundColor(.appSubText)
-        }
     }
 }

@@ -1,73 +1,61 @@
+//
+//  UnitConvertView.swift
+//  裁缝助手 —— 5.2 单位换算（码↔米、英尺↔米、英寸↔厘米，即时出结果）
+//
+
 import SwiftUI
 
-// MARK: - 5.2 单位换算
 struct UnitConvertView: View {
     @StateObject private var vm = UnitConvertViewModel()
 
     var body: some View {
         Form {
-            Section("输入数值") {
-                HStack {
-                    TextField("输入数值", text: $vm.inputValue)
-                        .keyboardType(.decimalPad)
-                    Picker("从", selection: $vm.fromUnit) {
-                        ForEach(CalculationUtils.LengthUnit.allCases, id: \.self) { unit in
-                            Text(unit.rawValue).tag(unit)
-                        }
+            Section("从单位 → 到单位") {
+                Picker("从", selection: $vm.fromUnit) {
+                    ForEach(CalculationUtils.LengthUnit.allCases) { unit in
+                        Text(unit.rawValue).tag(unit)
                     }
-                    .pickerStyle(.menu)
                 }
+                HStack {
+                    Spacer()
+                    Button {
+                        vm.swap()
+                    } label: {
+                        Label("交换", systemImage: "arrow.up.arrow.down")
+                            .font(.appCaption)
+                    }
+                    .buttonStyle(.borderless)
+                }
+                Picker("到", selection: $vm.toUnit) {
+                    ForEach(CalculationUtils.LengthUnit.allCases) { unit in
+                        Text(unit.rawValue).tag(unit)
+                    }
+                }
+            }
+
+            Section("输入数值") {
+                LabeledField(title: vm.fromUnit.rawValue, text: $vm.input, unit: vm.fromUnit.rawValue)
             }
 
             Section("换算结果") {
                 HStack {
-                    Text(String(format: "%.2f", vm.convertedValue))
-                        .foregroundColor(.appAccent)
-                        .font(.appHeadline)
+                    Text("结果")
+                        .font(.appBody)
                     Spacer()
-                    Picker("到", selection: $vm.toUnit) {
-                        ForEach(CalculationUtils.LengthUnit.allCases, id: \.self) { unit in
-                            Text(unit.rawValue).tag(unit)
-                        }
+                    if let output = vm.output {
+                        Text(String(format: "%.2f %@", output, vm.toUnit.rawValue))
+                            .font(.appHeadline)
+                            .foregroundColor(.appAccent)
+                    } else {
+                        Text("请输入数值")
+                            .font(.appBody)
+                            .foregroundColor(.appSubText)
                     }
-                    .pickerStyle(.menu)
                 }
             }
         }
+        .appBackground()
         .navigationTitle("单位换算")
         .navigationBarTitleDisplayMode(.inline)
-        .scrollContentBackground(.hidden)
-        .background(Color.appBackground)
-    }
-}
-
-// MARK: - 5.3 缩水率计算
-struct ShrinkageView: View {
-    @StateObject private var vm = ShrinkageViewModel()
-
-    var body: some View {
-        Form {
-            Section("输入") {
-                LabeledField(title: "成品尺寸 L", text: $vm.finishedLength, unit: "cm")
-                LabeledField(title: "缩水率 r", text: $vm.shrinkage, unit: "%")
-            }
-            Section("裁剪尺寸") {
-                HStack {
-                    Text(String(format: "%.1f cm", vm.cutLength))
-                        .foregroundColor(.appAccent)
-                        .font(.appHeadline)
-                    Spacer()
-                }
-            }
-            Section {
-                Text(vm.hintText)
-                    .font(.appCaption)
-                    .foregroundColor(.appSubText)
-            }
-        }
-        .navigationTitle("缩水率计算")
-        .navigationBarTitleDisplayMode(.inline)
-        .scrollContentBackground(.hidden)
-        .background(Color.appBackground)
     }
 }

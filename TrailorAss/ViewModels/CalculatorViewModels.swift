@@ -1,94 +1,134 @@
+//
+//  CalculatorViewModels.swift
+//  裁缝助手 —— M1 计算器视图模型（MVVM 轻量分层）
+//
+
 import Foundation
+import Combine
+
+/// 字符串数字解析（容忍空格与中文逗号）
+enum NumberParser {
+    static func double(_ text: String) -> Double? {
+        let trimmed = text.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: "，", with: ".")
+        return Double(trimmed)
+    }
+
+    static func int(_ text: String) -> Int? {
+        guard let d = double(text) else { return nil }
+        return Int(d.rounded())
+    }
+}
 
 // MARK: - 5.1 布料用量计算器
 final class FabricCalcViewModel: ObservableObject {
-    @Published var pieceCount: String = "2"
-    @Published var length: String = "60"       // cm
-    @Published var width: String = "50"        // cm
-    @Published var fabricWidth: String = "150" // cm
-    @Published var shrinkage: String = "0"     // %
-
-    @Published private(set) var result: CalculationUtils.FabricResult?
+    @Published var pieceCount = ""
+    @Published var length = ""
+    @Published var width = ""
+    @Published var fabricWidth = ""
+    @Published var shrinkage = ""
+    @Published var result: CalculationUtils.FabricResult?
     @Published var errorMessage: String?
 
     func calculate() {
-        errorMessage = nil
-        guard let N = Int(pieceCount), N > 0,
-              let L = Double(length), L > 0,
-              let W = Double(width), W > 0,
-              let F = Double(fabricWidth), F > 0,
-              let r = Double(shrinkage), r >= 0 else {
-            errorMessage = "请输入有效的数值"
-            result = nil
-            return
+        guard let n = NumberParser.int(pieceCount), n >= 1 else {
+            fail("请输入有效的衣片数（≥1 的整数）"); return
         }
-        result = CalculationUtils.calculateFabric(pieceCount: N, length: L, width: W, fabricWidth: F, shrinkage: r)
+        guard let l = NumberParser.double(length), l > 0 else {
+            fail("请输入有效的每片长 L（cm）"); return
+        }
+        guard let w = NumberParser.double(width), w > 0 else {
+            fail("请输入有效的每片宽 W（cm）"); return
+        }
+        guard let f = NumberParser.double(fabricWidth), f > 0 else {
+            fail("请输入有效的布料幅宽 F（cm）"); return
+        }
+        guard let r = NumberParser.double(shrinkage), r >= 0 else {
+            fail("请输入有效的缩水率 r（%）"); return
+        }
+        errorMessage = nil
+        result = CalculationUtils.calculateFabric(
+            pieceCount: n, length: l, width: w, fabricWidth: f, shrinkage: r
+        )
     }
 
-    /// 工具联动：把计算结果转为材料条目（名称"布料"、数量=结果、单位"米"）
-    func asMaterialItem() -> MaterialItem? {
-        guard let r = result else { return nil }
-        return MaterialItem(name: "布料", qty: r.meters, unit: "米")
+    private func fail(_ message: String) {
+        errorMessage = message
+        result = nil
     }
 }
 
 // MARK: - 5.2 单位换算
 final class UnitConvertViewModel: ObservableObject {
-    @Published var inputValue: String = "1"
-    @Published var fromUnit: CalculationUtils.LengthUnit = .yard
-    @Published var toUnit: CalculationUtils.LengthUnit = .meter
+    @Published var input = ""
+    @Published var fromUnit: CalculationUtils.LengthUnit = .yard {
+        didSet { if fromUnit == toUnit { toUnit = oldValue } }
+    }
+    @Published var toUnit: CalculationUtils.LengthUnit = .meter {
+        didSet { if toUnit == fromUnit { fromUnit = oldValue } }
+    }
 
-    var convertedValue: Double {
-        guard let v = Double(inputValue) else { return 0 }
-        return CalculationUtils.convertLength(value: v, from: fromUnit, to: toUnit)
+    /// 即时换算结果（保留 2 位小数）；输入无效时为 nil
+    var output: Double? {
+        guard let value = NumberParser.double(input) else { return nil }
+        return CalculationUtils.convertLength(value: value, from: fromUnit, to: toUnit)
+    }
+
+    func swap() {
+        let f = fromUnit
+        fromUnit = toUnit
+        toUnit = f
     }
 }
 
 // MARK: - 5.3 缩水率计算
 final class ShrinkageViewModel: ObservableObject {
-    @Published var finishedLength: String = "100" // cm
-    @Published var shrinkage: String = "5"        // %
+    @Published var finishedLength = ""
+    @Published var shrinkage = ""
 
-    var cutLength: Double {
-        guard let L = Double(finishedLength), let r = Double(shrinkage) else { return 0 }
-        return CalculationUtils.calculateShrinkage(finishedLength: L, shrinkage: r)
-    }
-
-    var hintText: String {
-        "布料下水后缩水 \(shrinkage)%，裁剪需预留；建议先预缩再裁剪"
+    /// 裁剪尺寸（保留 1 位小数）
+    var cutLength: Double? {
+        guard let l = NumberParser.double(finishedLength), l > 0,
+              let r = NumberParser.double(shrinkage), r >= 0 else { return nil }
+        return CalculationUtils.calculateShrinkage(finishedLength: l, shrinkage: r)
     }
 }
 
 // MARK: - 5.4 缝份换算
 final class SeamAllowanceViewModel: ObservableObject {
-    @Published var inchInput: String = ""
-    @Published var cmInput: String = ""
-
-    /// 英制→公制
-    var cmFromInch: Double? {
-        guard let v = Double(inchInput), !inchInput.isEmpty else { return nil }
-        return CalculationUtils.inchToCm(v)
+    enum Direction: String, CaseIterable, Identifiable {
+        case inchToCm = "英制 → 公制"
+        case cmToInch = "公制 → 英制"
+        var id: String { rawValue }
     }
 
-    /// 公制→英制
-    var inchFromCm: Double? {
-        guard let v = Double(cmInput), !cmInput.isEmpty else { return nil }
-        return CalculationUtils.cmToInch(v)
+    @Published var direction: Direction = .inchToCm
+    @Published var input = ""
+
+    var output: Double? {
+        guard let value = NumberParser.double(input) else { return nil }
+        switch direction {
+        case .inchToCm: return CalculationUtils.inchToCm(value)
+        case .cmToInch: return CalculationUtils.cmToInch(value)
+        }
     }
 }
 
 // MARK: - 5.5 针距换算
 final class StitchDensityViewModel: ObservableObject {
-    @Published var spiInput: String = ""    // 针/英寸
-    @Published var spcmInput: String = ""   // 针/厘米
-
-    var spcmFromSpi: Double? {
-        guard let v = Double(spiInput), !spiInput.isEmpty else { return nil }
-        return CalculationUtils.stitchesPerInchToCm(v)
+    enum Direction: String, CaseIterable, Identifiable {
+        case inchToCm = "针/英寸 → 针/厘米"
+        case cmToInch = "针/厘米 → 针/英寸"
+        var id: String { rawValue }
     }
 
-    var spiFromSpcm: Double? {
-        guard let v = Double(spcmInput), !spcmInput.isEmpty else { return nil }
-        return CalculationUtils.stitchesPerCmToInch(v)
+    @Published var direction: Direction = .inchToCm
+    @Published var input = ""
+
+    var output: Double? {
+        guard let value = NumberParser.double(input) else { return nil }
+        switch direction {
+        case .inchToCm: return CalculationUtils.stitchesPerInchToCm(value)
+        case .cmToInch: return CalculationUtils.stitchesPerCmToInch(value)
+        }
     }
 }

@@ -1,16 +1,20 @@
+//
+//  MainTabView.swift
+//  裁缝助手 —— 主导航（PRD：TabView 4 个 Tab）
+//
+
 import SwiftUI
 
-// MARK: - 主导航 TabView（4 个 Tab）
 struct MainTabView: View {
-    @State private var selection: Tab = .home
-
     enum Tab: Hashable {
         case home, patterns, projects, mine
     }
 
+    @State private var selectedTab: Tab = .home
+
     var body: some View {
-        TabView(selection: $selection) {
-            HomeTabView(switchTab: { tab in selection = tab })
+        TabView(selection: $selectedTab) {
+            HomeTabView(switchTab: { selectedTab = $0 })
                 .tabItem { Label("首页", systemImage: "house.fill") }
                 .tag(Tab.home)
 
@@ -27,6 +31,5 @@ struct MainTabView: View {
                 .tag(Tab.mine)
         }
         .tint(.appAccent)
-        .background(Color.appBackground.ignoresSafeArea())
     }
 }

@@ -1,20 +1,36 @@
+//
+//  HomeTabView.swift
+//  裁缝助手 —— 首页：9 个工具入口网格 + 最近项目摘要 + 图纸库入口
+//
+
 import SwiftUI
 
-// MARK: - 首页：9 个工具入口网格 + 最近项目摘要 + 图纸库入口
+/// 首页工具点击去向：push 二级页 或 切换 Tab
+enum ToolDestination: Hashable {
+    case route(HomeRoute)
+    case tab(MainTabView.Tab)
+}
+
+/// 首页二级页路由
+enum HomeRoute: Hashable {
+    case fabricCalc, unitConvert, shrinkage
+    case seamAllowance, stitchDensity
+    case needleThread, ironingTemp
+}
+
 struct HomeTabView: View {
-    @StateObject private var projectsVM = ProjectsViewModel()
     let switchTab: (MainTabView.Tab) -> Void
 
     private let tools: [ToolEntry] = [
-        ToolEntry(name: "布料用量", icon: "scissors", color: .appAccent, destination: .fabricCalc),
-        ToolEntry(name: "单位换算", icon: "arrow.left.arrow.right", color: .appAccent, destination: .unitConvert),
-        ToolEntry(name: "缩水率", icon: "drop", color: .appAccent, destination: .shrinkage),
-        ToolEntry(name: "缝份换算", icon: "ruler", color: .appAccent, destination: .seamAllowance),
-        ToolEntry(name: "针距换算", icon: "circle.grid.cross", color: .appAccent, destination: .stitchDensity),
-        ToolEntry(name: "针线搭配", icon: "tray.full", color: .appAccent, destination: .needleThread),
-        ToolEntry(name: "熨烫温度", icon: "flame", color: .appAccent, destination: .ironingTemp),
-        ToolEntry(name: "版型图纸", icon: "square.grid.2x2.fill", color: .appAccent, destination: .switchTab(.patterns)),
-        ToolEntry(name: "我的项目", icon: "folder.fill", color: .appAccent, destination: .switchTab(.projects))
+        .init(name: "布料用量", icon: "scissors", destination: .route(.fabricCalc)),
+        .init(name: "单位换算", icon: "arrow.left.arrow.right", destination: .route(.unitConvert)),
+        .init(name: "缩水率", icon: "drop", destination: .route(.shrinkage)),
+        .init(name: "缝份换算", icon: "ruler", destination: .route(.seamAllowance)),
+        .init(name: "针距换算", icon: "circle.grid.cross", destination: .route(.stitchDensity)),
+        .init(name: "针线搭配", icon: "tray.full", destination: .route(.needleThread)),
+        .init(name: "熨烫温度", icon: "flame", destination: .route(.ironingTemp)),
+        .init(name: "版型图纸", icon: "square.grid.2x2.fill", destination: .tab(.patterns)),
+        .init(name: "我的项目", icon: "folder.fill", destination: .tab(.projects))
     ]
 
     private let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
@@ -27,82 +43,62 @@ struct HomeTabView: View {
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(tools) { tool in
                             switch tool.destination {
-                            case .switchTab(let tab):
+                            case .tab(let tab):
                                 Button { switchTab(tab) } label: { ToolCell(tool: tool) }
                                     .buttonStyle(.plain)
-                            default:
-                                NavigationLink(value: tool.destination) {
-                                    ToolCell(tool: tool)
-                                }
-                                .buttonStyle(.plain)
+                            case .route(let route):
+                                NavigationLink(value: route) { ToolCell(tool: tool) }
+                                    .buttonStyle(.plain)
                             }
                         }
                     }
                     .padding(.horizontal)
 
-                    // 最近项目摘要
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("最近项目")
-                            .font(.appHeadline)
-                            .foregroundColor(.appText)
-                        if projectsVM.projects.isEmpty {
-                            Text("暂无项目，去创建第一个吧～")
+                    // 最近项目摘要（M3 接入私有库数据；M1 展示空状态）
+                    CardContainer {
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("最近项目")
+                                .font(.appHeadline)
+                                .foregroundColor(.appText)
+                            Text("暂无项目，去「项目」Tab 创建第一个吧～")
                                 .font(.appBody)
                                 .foregroundColor(.appSubText)
-                        } else {
-                            ForEach(projectsVM.projects.prefix(3)) { project in
-                                NavigationLink(value: NavigationDestination.projectDetail(project)) {
-                                    RecentProjectRow(project: project)
-                                }
-                                .buttonStyle(.plain)
-                            }
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .padding()
-                    .background(Color.appCard)
-                    .cornerRadius(AppStyle.cornerRadius)
-                    .shadow(color: .black.opacity(0.05), radius: AppStyle.cardShadowRadius, x: 0, y: AppStyle.cardShadowY)
                     .padding(.horizontal)
                 }
                 .padding(.vertical)
             }
+            .background(Color.appBackground)
             .navigationTitle(AppConstants.appName)
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color.appBackground)
-            .navigationDestination(for: NavigationDestination.self) { dest in
-                destinationView(for: dest)
+            .navigationDestination(for: HomeRoute.self) { route in
+                switch route {
+                case .fabricCalc:    FabricCalcView()
+                case .unitConvert:   UnitConvertView()
+                case .shrinkage:     ShrinkageView()
+                case .seamAllowance: SeamAllowanceView()
+                case .stitchDensity: StitchDensityView()
+                case .needleThread:  NeedleThreadView()
+                case .ironingTemp:   IroningTempView()
+                }
             }
-            .task { await projectsVM.load() }
-        }
-    }
-
-    @ViewBuilder
-    private func destinationView(for dest: NavigationDestination) -> some View {
-        switch dest {
-        case .fabricCalc: FabricCalcView()
-        case .unitConvert: UnitConvertView()
-        case .shrinkage: ShrinkageView()
-        case .seamAllowance: SeamAllowanceView()
-        case .stitchDensity: StitchDensityView()
-        case .needleThread: NeedleThreadView()
-        case .ironingTemp: IroningTempView()
-        case .projectDetail(let p): ProjectDetailView(project: p)
-        case .switchTab: EmptyView() // 由 switchTab 闭包处理
         }
     }
 }
 
-// MARK: - 工具入口模型
-struct ToolEntry: Identifiable, Hashable {
+// MARK: - 工具入口模型与单元格
+struct ToolEntry: Identifiable {
     let id = UUID()
     let name: String
     let icon: String
-    let color: Color
-    let destination: NavigationDestination
+    let destination: ToolDestination
 }
 
 struct ToolCell: View {
     let tool: ToolEntry
+
     var body: some View {
         VStack(spacing: 8) {
             Image(systemName: tool.icon)
@@ -117,38 +113,7 @@ struct ToolCell: View {
         .padding(.vertical, 16)
         .background(Color.appCard)
         .cornerRadius(AppStyle.cornerRadius)
-        .shadow(color: .black.opacity(0.05), radius: AppStyle.cardShadowRadius, x: 0, y: AppStyle.cardShadowY)
+        .shadow(color: .black.opacity(0.05), radius: AppStyle.cardShadowRadius,
+                x: 0, y: AppStyle.cardShadowY)
     }
-}
-
-struct RecentProjectRow: View {
-    let project: SewingProject
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(project.title)
-                    .font(.appBody)
-                    .foregroundColor(.appText)
-                Text(project.status.displayName)
-                    .font(.appCaption)
-                    .foregroundColor(.appSubText)
-            }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(.appSubText)
-        }
-    }
-}
-
-// MARK: - 导航路由
-enum NavigationDestination: Hashable {
-    case fabricCalc
-    case unitConvert
-    case shrinkage
-    case seamAllowance
-    case stitchDensity
-    case needleThread
-    case ironingTemp
-    case switchTab(MainTabView.Tab)
-    case projectDetail(SewingProject)
 }

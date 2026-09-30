@@ -1,23 +1,9 @@
 //
 //  PlaceholderTabViews.swift
-//  裁缝助手 —— 图纸/项目/我的 Tab（M2/M3 里程碑实现，M1 仅骨架）
+//  裁缝助手 —— 项目 Tab（M3 实现）/ 我的 Tab（收藏入口 M2 已接通）
 //
 
 import SwiftUI
-
-// MARK: - Tab 2 图纸（M2）
-struct PatternsTabView: View {
-    var body: some View {
-        NavigationStack {
-            ComingSoonView(
-                title: "版型图纸",
-                message: "图纸浏览、分类筛选、收藏与上传将在 M2 里程碑上线（需要 iCloud / CloudKit）。"
-            )
-            .navigationTitle("图纸")
-            .navigationBarTitleDisplayMode(.inline)
-        }
-    }
-}
 
 // MARK: - Tab 3 项目（M3）
 struct ProjectsTabView: View {
@@ -39,15 +25,19 @@ struct MineTabView: View {
         NavigationStack {
             List {
                 Section("我的内容") {
-                    Label("我的收藏", systemImage: "heart.fill")
-                        .foregroundColor(.appSubText)
+                    NavigationLink {
+                        MyFavoritesView()
+                    } label: {
+                        Label("我的收藏", systemImage: "heart.fill")
+                            .foregroundColor(.appText)
+                    }
                 }
                 Section("iCloud") {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("iCloud 状态")
                             .font(.appBody)
                             .foregroundColor(.appText)
-                        Text("图纸收藏、上传与项目同步需登录 iCloud 并开启 CloudKit（M2/M3）。")
+                        Text("图纸收藏、上传与项目同步需登录 iCloud 并开启 CloudKit。M2 开发期间使用本地模拟数据，无需登录也可体验。")
                             .font(.appCaption)
                             .foregroundColor(.appSubText)
                     }

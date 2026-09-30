@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 /// 标题 + 数字输入框 + 单位 的表单行
 struct LabeledField: View {
@@ -70,5 +71,77 @@ struct ResultRow: View {
                 .font(highlight ? .appHeadline : .appBody)
                 .foregroundColor(highlight ? .appAccent : .appText)
         }
+    }
+}
+
+/// 本地文件 URL 图片（CKAsset 解出的临时文件同样适用）；后台加载避免卡主线程
+struct LocalFileImage: View {
+    let url: URL?
+    var contentMode: ContentMode = .fill
+
+    @State private var image: UIImage?
+
+    var body: some View {
+        Group {
+            if let image {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: contentMode)
+            } else {
+                ZStack {
+                    Color.appDivider
+                    Image(systemName: "photo")
+                        .font(.system(size: 28))
+                        .foregroundColor(.appSubText)
+                }
+            }
+        }
+        .task(id: url) {
+            image = nil
+            guard let url else { return }
+            let loaded = await Task.detached(priority: .userInitiated) {
+                UIImage(contentsOfFile: url.path)
+            }.value
+            image = loaded
+        }
+    }
+}
+
+/// 心形收藏按钮（列表卡片使用）
+struct FavoriteHeartButton: View {
+    let isFavorited: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: isFavorited ? "heart.fill" : "heart")
+                .font(.system(size: 16))
+                .foregroundColor(isFavorited ? .appAccent : .appSubText)
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+/// "请登录 iCloud" 引导弹窗（复用）
+struct ICloudGuideAlertModifier: ViewModifier {
+    @Binding var isPresented: Bool
+
+    func body(content: Content) -> some View {
+        content.alert("需要登录 iCloud", isPresented: $isPresented) {
+            Button("去设置") {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            Button("取消", role: .cancel) {}
+        } message: {
+            Text("浏览图纸无需登录；收藏与上传需要在系统「设置」中登录 iCloud。")
+        }
+    }
+}
+
+extension View {
+    func iCloudGuideAlert(isPresented: Binding<Bool>) -> some View {
+        modifier(ICloudGuideAlertModifier(isPresented: isPresented))
     }
 }

@@ -43,6 +43,12 @@ enum MediaUtils {
         return size <= AppConstants.pdfMaxSizeMB * 1024 * 1024
     }
 
+    /// 项目照片：压缩到指定宽度上限并写入临时文件（PRD：单张 ≤5MB JPEG）
+    static func saveJPEGToTemp(data: Data, maxWidth: CGFloat = 1024) -> URL? {
+        guard let (_, jpeg) = compressCover(data: data, maxWidth: maxWidth) else { return nil }
+        return try? writeToTempFile(data: jpeg, ext: "jpg")
+    }
+
     /// 人类可读文件大小
     static func fileSizeText(_ url: URL) -> String? {
         guard let size = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize else { return nil }

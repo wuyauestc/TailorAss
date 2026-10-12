@@ -16,13 +16,18 @@ enum HomeRoute: Hashable {
     case fabricCalc, unitConvert, shrinkage
     case seamAllowance, stitchDensity
     case needleThread, ironingTemp
+    case layoutBoard
 }
 
 struct HomeTabView: View {
     let switchTab: (MainTabView.Tab) -> Void
 
+    @State private var recentProjects: [ProjectItem] = []
+    @State private var projectsLoaded = false
+
     private let tools: [ToolEntry] = [
         .init(name: "布料用量", icon: "scissors", destination: .route(.fabricCalc)),
+        .init(name: "布料排料", icon: "square.split.2x1.fill", destination: .route(.layoutBoard)),
         .init(name: "单位换算", icon: "arrow.left.arrow.right", destination: .route(.unitConvert)),
         .init(name: "缩水率", icon: "drop", destination: .route(.shrinkage)),
         .init(name: "缝份换算", icon: "ruler", destination: .route(.seamAllowance)),
@@ -54,15 +59,44 @@ struct HomeTabView: View {
                     }
                     .padding(.horizontal)
 
-                    // 最近项目摘要（M3 接入私有库数据；M1 展示空状态）
+                    // 最近项目摘要（M3 接入私有库数据）
                     CardContainer {
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("最近项目")
-                                .font(.appHeadline)
-                                .foregroundColor(.appText)
-                            Text("暂无项目，去「项目」Tab 创建第一个吧～")
-                                .font(.appBody)
-                                .foregroundColor(.appSubText)
+                            HStack {
+                                Text("最近项目")
+                                    .font(.appHeadline)
+                                    .foregroundColor(.appText)
+                                Spacer()
+                                Button("查看全部") { switchTab(.projects) }
+                                    .font(.appCaption)
+                                    .foregroundColor(.appAccent)
+                            }
+                            if recentProjects.isEmpty {
+                                Button { switchTab(.projects) } label: {
+                                    Text("暂无项目，去创建第一个吧～")
+                                        .font(.appBody)
+                                        .foregroundColor(.appSubText)
+                                }
+                                .buttonStyle(.plain)
+                            } else {
+                                ForEach(recentProjects.prefix(3)) { p in
+                                    Button { switchTab(.projects) } label: {
+                                        HStack {
+                                            Image(systemName: p.status.iconName)
+                                                .foregroundColor(.appAccent)
+                                                .font(.caption)
+                                            Text(p.title)
+                                                .font(.appBody)
+                                                .foregroundColor(.appText)
+                                            Spacer()
+                                            Text(p.status.rawValue)
+                                                .font(.appCaption)
+                                                .foregroundColor(.appSubText)
+                                        }
+                                    }
+                                    .buttonStyle(.plain)
+                                }
+                            }
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -82,6 +116,17 @@ struct HomeTabView: View {
                 case .stitchDensity: StitchDensityView()
                 case .needleThread:  NeedleThreadView()
                 case .ironingTemp:   IroningTempView()
+                case .layoutBoard:   LayoutBoardView()
+                }
+            }
+            .task {
+                guard !projectsLoaded else { return }
+                projectsLoaded = true
+                do {
+                    recentProjects = try await ProjectStoreFactory.projectStore.fetchProjects()
+                } catch {
+                    // 首页静默失败，不弹错误
+                    recentProjects = []
                 }
             }
         }

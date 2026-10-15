@@ -116,7 +116,7 @@ struct HomeTabView: View {
                 case .stitchDensity: StitchDensityView()
                 case .needleThread:  NeedleThreadView()
                 case .ironingTemp:   IroningTempView()
-                case .layoutBoard:   LayoutBoardView()
+                case .layoutBoard:   LayoutListView(navTitle: "排料方案")
                 }
             }
             .task {

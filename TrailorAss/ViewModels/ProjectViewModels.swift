@@ -54,8 +54,12 @@ final class ProjectDetailViewModel: ObservableObject {
     @Published var isUpdating = false
     @Published var errorMessage: String?
     @Published var showFabricCalc = false
+    // M5b 关联排料方案
+    @Published var layouts: [LayoutItem] = []
+    @Published var layoutsLoaded = false
 
     private let store = ProjectStoreFactory.projectStore
+    private let layoutStore = LayoutStoreFactory.layoutStore
     /// 保存串行队列：所有修改按顺序逐个保存，避免 CloudKit 并发冲突
     private var saveChain: Task<Void, Never>?
     /// 备注防抖任务
@@ -123,6 +127,17 @@ final class ProjectDetailViewModel: ObservableObject {
                                 unit: "米")
         project.materials.append(item)
         save()
+    }
+
+    // MARK: M5b 关联排料方案
+    func loadLayouts() async {
+        do {
+            layouts = try await layoutStore.fetchLayouts(forProject: project.recordName)
+            layoutsLoaded = true
+        } catch {
+            layouts = []
+            layoutsLoaded = true
+        }
     }
 
     /// 上传照片

@@ -49,6 +49,23 @@ enum MediaUtils {
         return try? writeToTempFile(data: jpeg, ext: "jpg")
     }
 
+    /// UIImage → 缩到最大宽度 → JPEG 临时文件（M5b 排料方案缩略图：画板渲染的 UIImage 直存）
+    static func saveUIImageToTemp(_ image: UIImage,
+                                   maxWidth: CGFloat = AppConstants.coverMaxWidth,
+                                   quality: CGFloat = 0.82) -> URL? {
+        let scaled: UIImage
+        if image.size.width > maxWidth {
+            let scale = maxWidth / image.size.width
+            let newSize = CGSize(width: maxWidth, height: image.size.height * scale)
+            let renderer = UIGraphicsImageRenderer(size: newSize)
+            scaled = renderer.image { _ in image.draw(in: CGRect(origin: .zero, size: newSize)) }
+        } else {
+            scaled = image
+        }
+        guard let jpeg = scaled.jpegData(compressionQuality: quality) else { return nil }
+        return try? writeToTempFile(data: jpeg, ext: "jpg")
+    }
+
     /// 人类可读文件大小
     static func fileSizeText(_ url: URL) -> String? {
         guard let size = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize else { return nil }

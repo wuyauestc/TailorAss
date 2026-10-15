@@ -146,6 +146,51 @@ struct ProjectDetailView: View {
                 }
             }
 
+            // MARK: 排料方案（M5b）
+            Section("排料方案") {
+                if vm.layouts.isEmpty {
+                    NavigationLink {
+                        LayoutBoardView(editingLayout: nil,
+                                        projectRecordName: vm.project.recordName) {
+                            Task { await vm.loadLayouts() }
+                        }
+                    } label: {
+                        Label("新建排料方案", systemImage: "plus.circle.fill")
+                            .foregroundColor(.appAccent)
+                    }
+                } else {
+                    ForEach(vm.layouts) { layout in
+                        NavigationLink {
+                            LayoutBoardView(editingLayout: layout,
+                                            projectRecordName: nil) {
+                                Task { await vm.loadLayouts() }
+                            }
+                        } label: {
+                            LayoutRow(layout: layout)
+                        }
+                    }
+                    .onDelete { idx in
+                        Task {
+                            for index in idx {
+                                let layout = vm.layouts[index]
+                                try? await LayoutStoreFactory.layoutStore
+                                    .deleteLayout(recordName: layout.recordName)
+                            }
+                            await vm.loadLayouts()
+                        }
+                    }
+                    NavigationLink {
+                        LayoutBoardView(editingLayout: nil,
+                                        projectRecordName: vm.project.recordName) {
+                            Task { await vm.loadLayouts() }
+                        }
+                    } label: {
+                        Label("新建排料方案", systemImage: "plus.circle.fill")
+                            .foregroundColor(.appAccent)
+                    }
+                }
+            }
+
             // MARK: 删除
             Section {
                 Button(role: .destructive) {
@@ -175,6 +220,10 @@ struct ProjectDetailView: View {
         .onChange(of: vm.project) { _, newProject in
             onUpdated(newProject)
         }
+        // M5b 进入详情页时拉取关联的排料方案
+        .task { await vm.loadLayouts() }
+        // 从画板返回时刷新方案列表
+        .onAppear { Task { await vm.loadLayouts() } }
     }
 }
 

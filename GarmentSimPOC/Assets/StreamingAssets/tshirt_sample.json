@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "mannequin": {
+    "size": "M",
+    "heightCm": 165,
+    "bustCm": 88,
+    "waistCm": 68,
+    "hipCm": 92
+  },
+  "pieces": [
+    {
+      "id": "tshirt-front",
+      "name": "前片",
+      "type": "front",
+      "vertices": [
+        {"id": "f0", "x": -22, "y": 0},
+        {"id": "f1", "x": 22, "y": 0},
+        {"id": "f2", "x": 22, "y": 38},
+        {"id": "f3", "x": 14, "y": 54},
+        {"id": "f4", "x": 6, "y": 56},
+        {"id": "f5", "x": 0, "y": 50},
+        {"id": "f6", "x": -6, "y": 56},
+        {"id": "f7", "x": -14, "y": 54},
+        {"id": "f8", "x": -22, "y": 38}
+      ],
+      "edges": [
+        {"id": "fe0", "fromVertex": "f0", "toVertex": "f1", "role": "hem"},
+        {"id": "fe1", "fromVertex": "f1", "toVertex": "f2", "role": "side"},
+        {"id": "fe2", "fromVertex": "f2", "toVertex": "f3", "role": "sleeveCap"},
+        {"id": "fe3", "fromVertex": "f3", "toVertex": "f4", "role": "shoulder"},
+        {"id": "fe4", "fromVertex": "f4", "toVertex": "f5", "role": "neckline"},
+        {"id": "fe5", "fromVertex": "f5", "toVertex": "f6", "role": "neckline"},
+        {"id": "fe6", "fromVertex": "f6", "toVertex": "f7", "role": "shoulder"},
+        {"id": "fe7", "fromVertex": "f7", "toVertex": "f8", "role": "sleeveCap"},
+        {"id": "fe8", "fromVertex": "f8", "toVertex": "f0", "role": "side"}
+      ],
+      "material": {"thickness": 0.02, "stiffness": 0.5, "color": "#2E86AB"}
+    },
+    {
+      "id": "tshirt-back",
+      "name": "后片",
+      "type": "back",
+      "vertices": [
+        {"id": "b0", "x": -22, "y": 0},
+        {"id": "b1", "x": 22, "y": 0},
+        {"id": "b2", "x": 22, "y": 38},
+        {"id": "b3", "x": 14, "y": 54},
+        {"id": "b4", "x": 6, "y": 56},
+        {"id": "b5", "x": 0, "y": 54},
+        {"id": "b6", "x": -6, "y": 56},
+        {"id": "b7", "x": -14, "y": 54},
+        {"id": "b8", "x": -22, "y": 38}
+      ],
+      "edges": [
+        {"id": "be0", "fromVertex": "b0", "toVertex": "b1", "role": "hem"},
+        {"id": "be1", "fromVertex": "b1", "toVertex": "b2", "role": "side"},
+        {"id": "be2", "fromVertex": "b2", "toVertex": "b3", "role": "sleeveCap"},
+        {"id": "be3", "fromVertex": "b3", "toVertex": "b4", "role": "shoulder"},
+        {"id": "be4", "fromVertex": "b4", "toVertex": "b5", "role": "neckline"},
+        {"id": "be5", "fromVertex": "b5", "toVertex": "b6", "role": "neckline"},
+        {"id": "be6", "fromVertex": "b6", "toVertex": "b7", "role": "shoulder"},
+        {"id": "be7", "fromVertex": "b7", "toVertex": "b8", "role": "sleeveCap"},
+        {"id": "be8", "fromVertex": "b8", "toVertex": "b0", "role": "side"}
+      ],
+      "material": {"thickness": 0.02, "stiffness": 0.5, "color": "#2E86AB"}
+    },
+    {
+      "id": "tshirt-sleeve-left",
+      "name": "左袖",
+      "type": "sleeveLeft",
+      "vertices": [
+        {"id": "ls0", "x": -15, "y": 0},
+        {"id": "ls1", "x": 15, "y": 0},
+        {"id": "ls2", "x": 14, "y": 13},
+        {"id": "ls3", "x": 0, "y": 24},
+        {"id": "ls4", "x": -14, "y": 13}
+      ],
+      "edges": [
+        {"id": "lse0", "fromVertex": "ls0", "toVertex": "ls1", "role": "sleeveCuff"},
+        {"id": "lse1", "fromVertex": "ls1", "toVertex": "ls2", "role": "side"},
+        {"id": "lse2", "fromVertex": "ls2", "toVertex": "ls3", "role": "sleeveCap"},
+        {"id": "lse3", "fromVertex": "ls3", "toVertex": "ls4", "role": "sleeveCap"},
+        {"id": "lse4", "fromVertex": "ls4", "toVertex": "ls0", "role": "side"}
+      ],
+      "material": {"thickness": 0.02, "stiffness": 0.5, "color": "#2E86AB"}
+    },
+    {
+      "id": "tshirt-sleeve-right",
+      "name": "右袖",
+      "type": "sleeveRight",
+      "vertices": [
+        {"id": "rs0", "x": -15, "y": 0},
+        {"id": "rs1", "x": 15, "y": 0},
+        {"id": "rs2", "x": 14, "y": 13},
+        {"id": "rs3", "x": 0, "y": 24},
+        {"id": "rs4", "x": -14, "y": 13}
+      ],
+      "edges": [
+        {"id": "rse0", "fromVertex": "rs0", "toVertex": "rs1", "role": "sleeveCuff"},
+        {"id": "rse1", "fromVertex": "rs1", "toVertex": "rs2", "role": "side"},
+        {"id": "rse2", "fromVertex": "rs2", "toVertex": "rs3", "role": "sleeveCap"},
+        {"id": "rse3", "fromVertex": "rs3", "toVertex": "rs4", "role": "sleeveCap"},
+        {"id": "rse4", "fromVertex": "rs4", "toVertex": "rs0", "role": "side"}
+      ],
+      "material": {"thickness": 0.02, "stiffness": 0.5, "color": "#2E86AB"}
+    }
+  ],
+  "seams": [
+    {"pieceA": "tshirt-front", "edgeA": "fe1", "pieceB": "tshirt-back", "edgeB": "be8", "type": "full", "samplingDensity": 20},
+    {"pieceA": "tshirt-front", "edgeA": "fe8", "pieceB": "tshirt-back", "edgeB": "be1", "type": "full", "samplingDensity": 20},
+    {"pieceA": "tshirt-front", "edgeA": "fe3", "pieceB": "tshirt-back", "edgeB": "be6", "type": "full", "samplingDensity": 15},
+    {"pieceA": "tshirt-front", "edgeA": "fe6", "pieceB": "tshirt-back", "edgeB": "be3", "type": "full", "samplingDensity": 15},
+    {"pieceA": "tshirt-front", "edgeA": "fe2", "pieceB": "tshirt-sleeve-left", "edgeB": "lse2", "type": "full", "samplingDensity": 25},
+    {"pieceA": "tshirt-back", "edgeA": "be2", "pieceB": "tshirt-sleeve-right", "edgeB": "rse3", "type": "full", "samplingDensity": 25},
+    {"pieceA": "tshirt-front", "edgeA": "fe7", "pieceB": "tshirt-sleeve-right", "edgeB": "rse2", "type": "full", "samplingDensity": 25},
+    {"pieceA": "tshirt-back", "edgeA": "be7", "pieceB": "tshirt-sleeve-left", "edgeB": "lse3", "type": "full", "samplingDensity": 25},
+    {"pieceA": "tshirt-sleeve-right", "edgeA": "rse1", "pieceB": "tshirt-sleeve-right", "edgeB": "rse4", "type": "full", "samplingDensity": 15},
+    {"pieceA": "tshirt-sleeve-left", "edgeA": "lse1", "pieceB": "tshirt-sleeve-left", "edgeB": "lse4", "type": "full", "samplingDensity": 15}
+  ]
+}

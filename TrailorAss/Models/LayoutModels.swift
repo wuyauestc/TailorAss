@@ -84,9 +84,41 @@ struct PlacedPiece: Identifiable, Hashable, Codable {
     var effectiveShape: PieceShape { shape.rotated(by: rotation) }
 }
 
-/// 排料文档：布料尺寸 + 已排裁片（M5b 存 CloudKit，M5a 本地会话）
+/// 排料文档：布料尺寸 + 已排裁片（M5b 存 CloudKit Layout.document 字段，JSON 字符串）
 struct LayoutDocument: Codable {
     var fabricWidth: Double    // 幅宽 cm
     var fabricLength: Double   // 长度 cm
     var pieces: [PlacedPiece]
+}
+
+/// 排料方案（M5b，对应 CloudKit 私有库 Record Type: Layout）
+/// 字段：title/projectRecordName(可空，禁用 CKReference，字符串)/document(JSON)/cover(Asset 缩略图)/updatedAt
+/// 索引：recordName(Queryable) + updatedAt(Sortable)
+struct LayoutItem: Identifiable, Hashable {
+    let recordName: String
+    var title: String
+    /// 关联项目记录名（可空，跨记录用字符串非 CKReference，同 M3/M2 约定）
+    var projectRecordName: String?
+    /// LayoutDocument 序列化后的 JSON 字符串（CloudKit 存 String）
+    var documentJSON: String
+    /// 缩略图本地临时 URL（CloudKit 下为 CKAsset 解出的临时文件 URL；nil 表示无缩略图）
+    var coverURL: URL?
+    var updatedAt: Date
+
+    var id: String { recordName }
+
+    /// 从 documentJSON 反序列化出排料文档；解析失败返回空文档
+    var document: LayoutDocument {
+        guard let data = documentJSON.data(using: .utf8),
+              let doc = try? JSONDecoder().decode(LayoutDocument.self, from: data) else {
+            return LayoutDocument(fabricWidth: 150, fabricLength: 200, pieces: [])
+        }
+        return doc
+    }
+
+    /// 缩略图标题预览（无 cover 时用裁片数）
+    var previewText: String {
+        let doc = document
+        return "\(Int(doc.fabricWidth))×\(Int(doc.fabricLength))cm · \(doc.pieces.count)片"
+    }
 }

@@ -11,6 +11,30 @@ struct LayoutBoardView: View {
     @State private var showFabricSizeSheet = false
     @State private var showPieceInputSheet = false
     @State private var exportImage: UIImage?
+    // M5b 保存与重排
+    @State private var showSaveSheet = false
+    @State private var titleText = ""
+    @State private var isSaving = false
+    @State private var saveError: String?
+    @State private var arrangeFailedCount: Int?
+    @State private var didLoadInitial = false
+
+    /// nil = 新建方案；非空 = 编辑现有方案
+    private var editingLayout: LayoutItem?
+    /// 关联项目记录名（新建时使用；编辑时从 editingLayout.projectRecordName 取）
+    private let projectRecordName: String?
+    let onSaved: () -> Void
+
+    init(editingLayout: LayoutItem?,
+         projectRecordName: String?,
+         onSaved: @escaping () -> Void) {
+        self.editingLayout = editingLayout
+        // 编辑模式下关联项目以 editingLayout 为准；新建模式下用传入的 projectRecordName
+        self.projectRecordName = editingLayout?.projectRecordName ?? projectRecordName
+        self.onSaved = onSaved
+        // 标题初值：编辑模式下取现有标题，新建模式下默认"新排料方案"
+        // 注意：这里通过 _titleText 设置初始值，但 onAppear 时会再同步一次确保 editingLayout 已载入
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -20,14 +44,33 @@ struct LayoutBoardView: View {
             toolbar
         }
         .appBackground()
-        .navigationTitle("布料排料")
+        .navigationTitle(editingLayout?.title ?? "布料排料")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    let failed = vm.autoArrangeAll()
+                    if failed > 0 {
+                        arrangeFailedCount = failed
+                    }
+                } label: {
+                    Label("一键重排", systemImage: "wand.and.stars")
+                        .foregroundColor(.appAccent)
+                }
+                .disabled(vm.placedPieces.isEmpty)
+            }
+            ToolbarItemGroup(placement: .topBarTrailing) {
                 Button {
                     showFabricSizeSheet = true
                 } label: {
                     Label("布料尺寸", systemImage: "ruler")
+                        .foregroundColor(.appAccent)
+                }
+                Button {
+                    titleText = editingLayout?.title ?? "新排料方案"
+                    showSaveSheet = true
+                } label: {
+                    Label("保存", systemImage: "tray.and.arrow.down")
                         .foregroundColor(.appAccent)
                 }
             }
@@ -42,11 +85,80 @@ struct LayoutBoardView: View {
             }
             .presentationDetents([.large])
         }
+        .sheet(isPresented: $showSaveSheet) {
+            LayoutSaveSheet(title: $titleText,
+                            isUpdating: editingLayout != nil,
+                            isSaving: $isSaving) {
+                Task { await saveLayout() }
+            }
+            .presentationDetents([.medium])
+        }
         .alert("导出成功", isPresented: .constant(exportImage != nil)) {
             Button("好") { exportImage = nil }
         } message: {
             Text("排料图已保存到相册")
         }
+        .alert("出错了", isPresented: .constant(saveError != nil)) {
+            Button("好") { saveError = nil }
+        } message: {
+            Text(saveError ?? "")
+        }
+        .alert("一键重排", isPresented: .constant(arrangeFailedCount != nil)) {
+            Button("好") { arrangeFailedCount = nil }
+        } message: {
+            Text(arrangeFailedCount.map { "\($0) 片放不下，请缩小布料或调整裁片" } ?? "")
+        }
+        .task {
+            guard !didLoadInitial else { return }
+            didLoadInitial = true
+            if let editingLayout {
+                vm.loadDocument(editingLayout.document)
+                titleText = editingLayout.title
+            } else {
+                titleText = "新排料方案"
+            }
+        }
+    }
+
+    // MARK: 保存到 CloudKit
+    @MainActor
+    private func saveLayout() async {
+        let store = LayoutStoreFactory.layoutStore
+        let document = vm.toDocument()
+        let coverImage = renderCover()
+
+        do {
+            if let editingLayout {
+                // 更新：document + cover 都更新；title 用输入框
+                var updated = editingLayout
+                updated.title = titleText
+                _ = try await store.updateLayout(updated,
+                                                document: document,
+                                                coverImage: coverImage)
+            } else {
+                // 新建
+                _ = try await store.createLayout(title: titleText,
+                                                projectRecordName: projectRecordName,
+                                                document: document,
+                                                coverImage: coverImage)
+            }
+            showSaveSheet = false
+            onSaved()
+        } catch is CancellationError {
+        } catch {
+            saveError = "保存失败：\(error.localizedDescription)"
+        }
+    }
+
+    /// 渲染缩略图（复用 FabricExportView 逻辑，缩到 750px 宽）
+    private func renderCover() -> UIImage? {
+        let scale: CGFloat = 4 // 4 px/cm
+        let width = vm.fabricWidth * scale
+        let height = vm.fabricLength * scale
+        let renderer = ImageRenderer(content: FabricExportView(vm: vm))
+        renderer.scale = 1
+        renderer.proposedSize = ProposedViewSize(width: width, height: height)
+        return renderer.uiImage
     }
 
     // MARK: 画布
@@ -569,5 +681,44 @@ struct FabricExportView: View {
             }
         }
         .aspectRatio(CGFloat(vm.fabricWidth / vm.fabricLength), contentMode: .fit)
+    }
+}
+
+// MARK: - 保存方案 Sheet（M5b）
+struct LayoutSaveSheet: View {
+    @Binding var title: String
+    let isUpdating: Bool       // true = 更新现有方案，false = 新建
+    @Binding var isSaving: Bool
+    let onSubmit: () -> Void
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("方案标题") {
+                    TextField("请输入方案标题", text: $title)
+                        .autocorrectionDisabled()
+                }
+                Section {
+                    Button {
+                        onSubmit()
+                    } label: {
+                        HStack {
+                            if isSaving { ProgressView() }
+                            Text(isUpdating ? "更新方案" : "保存方案")
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                    .disabled(title.trimmingCharacters(in: .whitespaces).isEmpty || isSaving)
+                }
+            }
+            .navigationTitle(isUpdating ? "更新方案" : "保存方案")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("取消") { dismiss() }
+                }
+            }
+        }
     }
 }

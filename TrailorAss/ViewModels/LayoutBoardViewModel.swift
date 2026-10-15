@@ -99,6 +99,74 @@ final class LayoutBoardViewModel: ObservableObject {
         return false // 布料放不下
     }
 
+    /// 一键重排：清空 → 按面积降序 → 每片 0/15/30/.../165 共 12 角度全板扫描选最靠左上合法落点放下
+    /// - Returns: 放不下的裁片数量
+    @discardableResult
+    func autoArrangeAll() -> Int {
+        // 收集当前所有裁片实例的 shape（保留每个独立实例）
+        let shapes = placedPieces.map(\.shape)
+        // 清空整板
+        placedPieces.removeAll()
+        rebuildBoard()
+        // 按面积降序（大面积先放）
+        let sorted = shapes.sorted { $0.area > $1.area }
+        let angles: [Double] = (0..<12).map { Double($0) * 15 }  // 0,15,...,165
+
+        var failed = 0
+        for shape in sorted {
+            if !autoArrangePlace(shape: shape, angles: angles) {
+                failed += 1
+            }
+        }
+        selectedPieceID = nil
+        return failed
+    }
+
+    /// 给 autoArrangeAll 用的放置：按角度顺序尝试，每个角度全板扫描最靠左上合法落点
+    private func autoArrangePlace(shape: PieceShape, angles: [Double]) -> Bool {
+        for rotation in angles {
+            let st = stamp(for: shape, rotation: rotation)
+            for r in 0..<board.rows {
+                for c in 0..<board.cols {
+                    if st.fits(atCol: c, atRow: r, board: board) {
+                        let piece = PlacedPiece(shape: shape, rotation: rotation,
+                                                anchor: CGPoint(x: CGFloat(c) * cellSize,
+                                                                y: CGFloat(r) * cellSize))
+                        placedPieces.append(piece)
+                        st.stamp(atCol: c, atRow: r, board: &board,
+                                 value: UInt8(min(placedPieces.count, 255)))
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+
+    // MARK: - M5b 存档载入/导出
+    /// 从排料文档载入（打开已存方案时调用）
+    func loadDocument(_ document: LayoutDocument) {
+        fabricWidth = document.fabricWidth
+        fabricLength = document.fabricLength
+        placedPieces = document.pieces
+        rebuildBoard()
+        selectedPieceID = nil
+    }
+
+    /// 导出当前画板为排料文档（保存到 CloudKit 时用）
+    func toDocument() -> LayoutDocument {
+        LayoutDocument(fabricWidth: fabricWidth,
+                       fabricLength: fabricLength,
+                       pieces: placedPieces)
+    }
+
+    /// 清空所有裁片
+    func clearAll() {
+        placedPieces.removeAll()
+        rebuildBoard()
+        selectedPieceID = nil
+    }
+
     /// 拖动预览：返回该位置是否合法（不落章）
     func isValidMove(pieceID: UUID, to newAnchor: CGPoint) -> Bool {
         guard let idx = placedPieces.firstIndex(where: { $0.id == pieceID }) else { return false }

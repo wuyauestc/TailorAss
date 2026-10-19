@@ -1,4 +1,7 @@
+using System;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 using UnityEngine;
 using GarmentSimPOC.Core;
 using GarmentSimPOC.Data;
@@ -17,11 +20,31 @@ namespace GarmentSimPOC.POC
         string status = "按 [1] 运行路线 A";
         bool autoRotate;
         Material clothMat, mannequinMat;
+        [SerializeField] Shader litShader;
+        bool cancelled;
+        bool ready;
+        string deferredPatternJson;
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [DllImport("__Internal")] static extern void TailorAssUnityDidComplete(string resultJson);
+        [DllImport("__Internal")] static extern void TailorAssUnityDidRequestClose();
+#endif
 
         void Start()
         {
             SetupScene();
             BuildMannequin();
+            ready = true;
+            if (!string.IsNullOrEmpty(deferredPatternJson))
+            {
+                var json = deferredPatternJson;
+                deferredPatternJson = null;
+                GenerateFromJson(json);
+            }
+            // 独立 Player 仍可直接查看；嵌入 App 时 Swift 会随后传入 JSON。
+#if !UNITY_IOS || UNITY_EDITOR
+            RunRouteA();
+#endif
         }
 
         void SetupScene()
@@ -50,12 +73,22 @@ namespace GarmentSimPOC.POC
             }
 
             // 材质（URP Lit，双面）
-            clothMat = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            var shader = litShader != null
+                ? litShader
+                : Shader.Find("Universal Render Pipeline/Lit");
+            if (shader == null)
+                throw new InvalidOperationException("URP Lit Shader 未包含在 Player 构建中");
+            clothMat = new Material(shader);
             clothMat.SetFloat("_Cull", (float)UnityEngine.Rendering.CullMode.Off);
             clothMat.SetFloat("_Smoothness", 0.25f);
-            mannequinMat = new Material(Shader.Find("Universal Render Pipeline/Lit"));
+            mannequinMat = new Material(shader);
             mannequinMat.color = new Color(0.82f, 0.80f, 0.78f);
             mannequinMat.SetFloat("_Smoothness", 0.35f);
+        }
+
+        public void SetLitShader(Shader shader)
+        {
+            litShader = shader;
         }
 
         void BuildMannequin()
@@ -76,6 +109,87 @@ namespace GarmentSimPOC.POC
             UnityEngine.Debug.Log(status);
         }
 
+        /// <summary>Swift 通过 UnitySendMessage 调用。参数必须是完整 GarmentPattern JSON。</summary>
+        public void LoadPatternJson(string json)
+        {
+            if (!ready)
+            {
+                deferredPatternJson = json;
+                status = "场景初始化中…";
+                return;
+            }
+            GenerateFromJson(json);
+        }
+
+        void GenerateFromJson(string json)
+        {
+            cancelled = false;
+            var watch = Stopwatch.StartNew();
+            try
+            {
+                if (string.IsNullOrWhiteSpace(json))
+                    throw new ArgumentException("纸样数据为空");
+                var pattern = JsonUtility.FromJson<GarmentPatternData>(json);
+                if (pattern == null) throw new ArgumentException("纸样 JSON 无法解析");
+
+                if (garment != null) Destroy(garment);
+                var res = GeometricGarmentAssembler.Assemble(pattern, clothMat);
+                if (cancelled) return;
+                if (res.root == null) throw new InvalidOperationException(res.report);
+                garment = res.root;
+                status = res.report;
+                watch.Stop();
+                SendResult(true, null, watch.ElapsedMilliseconds);
+            }
+            catch (Exception ex)
+            {
+                watch.Stop();
+                status = "生成失败：" + ex.Message;
+                UnityEngine.Debug.LogError(status);
+                SendResult(false, ex.Message, watch.ElapsedMilliseconds);
+            }
+        }
+
+        /// <summary>Swift 关闭全屏页时调用；几何路线同步执行，标志用于阻止结果回调。</summary>
+        public void CancelGeneration(string unused = "")
+        {
+            cancelled = true;
+            status = "已取消";
+        }
+
+        public void RequestClose()
+        {
+#if UNITY_IOS && !UNITY_EDITOR
+            TailorAssUnityDidRequestClose();
+#endif
+        }
+
+        void SendResult(bool success, string error, long elapsedMs)
+        {
+            var payload = new BridgeResult
+            {
+                success = success,
+                error = error ?? "",
+                elapsedMs = elapsedMs,
+                algorithmVersion = "routeA-1"
+            };
+            string resultJson = JsonUtility.ToJson(payload);
+#if UNITY_IOS && !UNITY_EDITOR
+            TailorAssUnityDidComplete(resultJson);
+#else
+            UnityEngine.Debug.Log("[BridgeResult] " + resultJson);
+#endif
+        }
+
+        [Serializable]
+        class BridgeResult
+        {
+            public bool success;
+            public string error;
+            public long elapsedMs;
+            public string algorithmVersion;
+        }
+
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1)) RunRouteA();
@@ -91,6 +205,7 @@ namespace GarmentSimPOC.POC
             GUILayout.Label("<b>GarmentSimPOC — 路线 A（几何变形）</b>");
             GUILayout.Label("[1] 运行  [2] 人台显隐  [R] 自动旋转  鼠标拖拽环绕/滚轮缩放");
             if (GUILayout.Button("运行路线 A")) RunRouteA();
+            if (GUILayout.Button("关闭预览")) RequestClose();
             GUILayout.Label(status);
             GUILayout.EndArea();
         }

@@ -48,7 +48,10 @@ protocol PatternStore {
 
 /// 数据层切换入口
 enum StoreFactory {
-    /// M2 已接入 CloudKit（Development 环境）。
-    /// 若需回到本地假数据调试 UI，改为 MockPatternStore() 即可
+    /// Simulator 使用本地数据，真机使用 CloudKit（Development 环境）。
+#if targetEnvironment(simulator)
+    static let patternStore: any PatternStore = MockPatternStore()
+#else
     static let patternStore: any PatternStore = CloudKitPatternStore()
+#endif
 }

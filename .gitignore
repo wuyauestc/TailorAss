@@ -40,3 +40,10 @@ Icon?
 
 # Trae
 .trae/
+
+# Unity generated output (source and POCOutput remain versioned)
+GarmentSimPOC/Builds/
+GarmentSimPOC/Library/
+GarmentSimPOC/Logs/
+GarmentSimPOC/Temp/
+GarmentSimPOC/UserSettings/

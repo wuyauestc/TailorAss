@@ -14,7 +14,8 @@ iOS 裁缝工具 App，SwiftUI + CloudKit。需求与验收标准见 [裁缝助�
 | M5b | 排料增强：一键全角度自动排列、排料存入项目（CloudKit） | ✅ 已完成 | 2026-10-13 |
 | M6-阶段0 | 3D 成衣 PO C 规格 + GarmentPattern 数据模型 + T 恤样例 | ✅ 已完成 | 2026-10-14 |
 | M6-阶段1 | 算法 POC（Unity 独立工程，路线 A 几何变形实现 + 对照实验） | ✅ 已完成 | 2026-10-15 |
-| M6-阶段2 | 端到端集成 POC（Unity iOS 全屏页 + Swift ↔ Unity + iPhone 12 实测） | ⏳ 计划中 | — |
+| M6-阶段2 | 端到端集成 POC（Unity iOS 全屏页 + Swift ↔ Unity + iPhone 12 实测） | 🚧 开发中（桥接代码完成，待 iOS 模块与真机） | — |
+| M7 | GarmentCode 风格的参数输入 → 2D 纸样生成 → 原生纸样数据导出 | 🔄 首版闭环已接通；版型与接缝仍需验证完善 | 2026-10-19 |
 
 ## M1（2026-09-25）
 
@@ -246,6 +247,18 @@ iOS 裁缝工具 App，SwiftUI + CloudKit。需求与验收标准见 [裁缝助�
 - iPhone 12 端到端耗时 ≤ 2s（如果实际远超，需要回头优化三角化质量或裁剪网格密度）
 - 失败率 0（如果 >0，需要回头排查 GarmentPattern JSON → Unity 解析是否稳定）
 
+### M6 阶段 2 当前进展（2026-10-15）
+
+- ✅ 排料画板新增「生成成衣」全屏入口，未接入 UnityFramework 时显示可操作的依赖提示，不影响主 App 编译
+- ✅ Swift → Unity：固定四片 T 恤 `GarmentPattern` JSON 通过 `UnitySendMessage` 发送
+- ✅ Unity → Swift：原生 iOS 插件以通知回传成功/失败、生成耗时与算法版本，并支持 Unity 主动关闭
+- ✅ Unity 运行时场景由构建脚本确定性生成；Metal、iPhone-only、iOS 17、竖屏参数固化
+- ✅ iPhone 交互补齐：单指旋转、双指缩放；Swift 关闭入口会发送取消并暂停 Unity
+- ✅ Unity 6000.6.5f1 iOS Build Support 已安装；Player 导出成功（UnityFramework + GameAssembly）
+- ✅ 主 Xcode 工程已接入 Unity 子工程、target dependency、Link Binary 与 Embed Frameworks
+- ✅ 完整无签名设备构建通过：`TrailorAss → UnityFramework → GameAssembly`
+- ⏳ 当前没有连接 iPhone；仍需按 [M6_阶段2_集成说明.md](M6_阶段2_集成说明.md) 在 iPhone 12 记录耗时/峰值内存/失败率/发热
+
 ### 阶段 1 遗留项（正式开发再做）
 
 - 三角化器内部格点 + Delaunay 重写（提升网格质量 p50 至 ~0.5）
@@ -263,8 +276,112 @@ iOS 裁缝工具 App，SwiftUI + CloudKit。需求与验收标准见 [裁缝助�
 
 见 [3D成衣仿真_落地方案.md](./3D成衣仿真_落地方案.md)
 
+### M6 阶段 4 · 服务器端 Warp 布料仿真（2026-10-19 技术方案）
+
+**背景**：GarmentCode 论文的 3D 悬垂效果由 NVIDIA Warp 物理仿真器实现，GarmentCode 本身只做 2D 纸样生成 + 6D placement。
+
+**技术路线**：
+- **服务器**：Windows + RTX 3070Ti + NVIDIA Warp（GarmentCode fork）
+- **通信**：局域网 HTTP（FastAPI）
+- **iOS**：上传设计参数 → 轮询获取结果 → Unity 加载 glTF
+
+**关键发现**：
+- GarmentCode 已从 ARCSim 切换到 NVIDIA Warp（GitHub 最新版）
+- GarmentCode 提供了完整的 Warp 仿真代码：[NvidiaWarp-GarmentCode](https://github.com/maria-korosteleva/NvidiaWarp-GarmentCode)
+- 包含自碰撞检测、缝合约束、身体碰撞约束等关键功能
+- 许可证风险：GarmentCode fork 基于 Warp v1.0.0-beta.6（非商业用途），需确认最新版许可证
+
+**详细方案**：见 [M6_阶段4_Warp仿真技术方案.md](./M6_阶段4_Warp仿真技术方案.md)
+
+**当前状态**：技术方案已完成，待本地 POC 验证（Windows + RTX 3070Ti）。
+
 ### 开发环境
 
 - Xcode 27 / iOS 17.0+ / 仅 iPhone 竖屏 / Bundle ID：`com.trailorass.app`
 - 模拟器运行 CloudKit 功能需先在模拟器"设置"中登录 iCloud
 - M6 POC 起需 Unity 6（免费 Personal 版）；Obi Cloth **暂缓购买**，POC 后再定
+
+## M7 · 参数化纸样设计（功能设计，2026-10-19）
+
+> 用户确认的新产品方向：对齐 GarmentCode 的用户流程与款式功能，不要求复刻其 Python 内核；使用适合 iOS 的 Swift 实现。先组合选择上衣、腰带/腰头、裙装/裤装等款式组件，再按选择显示参数，生成 2D 纸样并导出；不局限于 T-shirt。产品/实现路线见 [M7_参数化纸样设计.md](./M7_参数化纸样设计.md)。
+
+### 与现有 App 的关系
+
+- 首页新增独立的「纸样设计」入口，与「布料排料」并列；不把制版参数塞进现有排料画板。
+- 当前唯一目标：参考 GarmentCode 的款式流程与参数分类，原生生成 2D 纸样并导出带版本号的 TailorAss JSON。官方 JSON 导入/原样导出是独立互通能力；M6 Unity/3D、排料导入、PDF 打印均不属于本阶段。
+- 覆盖范围目标为官网/仓库已经提供的全部款式程序及可组合组件；这不是承诺支持无限任意服装设计。
+- 生成纸样与 `LayoutDocument` 分离：前者描述裁片、裁片语义和缝合；后者仍只描述裁片在布料上的摆放。进入排料时才由纸样裁片创建 `PieceShape`。
+
+### 计划实施顺序
+
+1. 锁定官方 GarmentCode/PyGarment 版本，清点官网所有款式和仓库所有 garment programs、design params、body params。
+2. 在不启用 3D 仿真的前提下验证官方 2D 生成入口、输出文件及必要依赖，建立黄金输入/输出。
+3. 参考官方款式/参数分类构建 iOS 组件式表单；Swift 原生实现并逐款验证几何，不要求复刻 Python 内核。
+4. 实现裁片轮廓、尺寸/裁剪信息及已验证接缝关系的 2D 查看器；复杂曲线和裁片属性分阶段补齐。
+5. 导出带版本号的 TailorAss 原生 JSON；各款式通过边界尺寸、几何和导出往返测试。
+
+### 当前进展（2026-10-19）
+
+- ✅ 首页新增独立「纸样设计」入口，与「布料排料」分开。
+- ✅ 新增基础短袖上衣参数表单（身高、胸围、腰围、臀围、肩宽、松量、衣长、袖长、袖口围）和基础范围校验。
+- ✅ 已移除旧的单一 T 恤临时生成器，纸样设计主流程现在直接进入多款式参数化流程。
+- ✅ 官方静态审计确认了 `test_garmentcode.py` 的纯纸样序列化入口：`assembly()` 后使用 `serialize(with_3d=False, with_printable=True)`；Warp 是仿真安装项，但纯 2D 路径的运行依赖仍须实测。
+- ✅ 已核实上游 PyGarment 2.0.2、MIT 许可、默认设计 YAML 的款式/参数分组，以及 `Panel`/`Interface`/`StitchingRule` 的曲线与缝合语义要求；完整记录见 [M7_参数化纸样设计.md](./M7_参数化纸样设计.md)。
+- ✅ 已固定官方 GarmentCode commit `d449629`，在隔离 Python 3.9 环境成功运行官方 T-shirt `MetaGarment → assembly → JSON/SVG` 路径，未安装或调用 Warp；因本机缺 Cairo 原生库，测试时只绕过 CairoSVG 的 PNG/PDF 转换，因此 PNG/PDF 尚未验证。
+- ✅ 生成并纳入内置官方 T-shirt specification fixture：8 panels、16 stitch pairs，含 line/circle/cubic Bezier 边；Swift 解码器已直接读取成功。
+- ✅ 新增官方 PyGarment JSON 导入/只读预览链路：读取 `pattern.panels`、`edges.curvature`、`stitches`，支持直线、圆弧、二/三次 Bezier 的 2D 绘制，并允许原样分享/导出源 JSON；纸样页可打开内置 T-shirt 基准样例。
+- ✅ 纸样设计页已按款式组合显示参数，并接入原生 Swift 2D 生成器：上衣、腰头、圆裙/不对称圆裙、喇叭裙、裤子、两片/多片裙、铅笔裙、层叠裙均可生成裁片并导出原生 JSON；Device Hub 已实测"合体上衣 + 喇叭裙"的参数、结果页与文件保存面板。
+- ✅ 原生生成结果有独立格式标识 `tailorass.native-pattern/1`，明确注明非 GarmentCode 官方结果及打版核验限制；官方 JSON 导入/预览/原样导出仍作为独立互通功能。
+- ⚠️ 当前几何仍是简化的直线轮廓，不等同 GarmentCode 输出，也未达到生产打版标准；裤装、喇叭插片、裙层的拼接接口，以及曲线、省道、缝份与实物试样仍待完善。
+- ✅ arm64 iOS Simulator 构建通过，Device Hub 已验证生成页与 JSON 文件导出面板；尚未逐款检查所有形状与参数边界。
+
+### M7 P0 · 曲线边局部坐标系（2026-10-19 完成）
+
+**目标**：按 GarmentCode 论文 §3.2.3 实现曲线边的局部坐标系表示，使曲线在平移/旋转/缩放时自动跟随，无需重算控制点。
+
+**核心改动**：
+
+- ✅ `PatternEdge` 新增可选 `curve: EdgeCurvature?` 字段，支持 quadratic/cubic/arc 三种曲线类型
+- ✅ 控制点存局部坐标（边长为单位，x 沿边方向、y 左法线），渲染/校验时才换算绝对坐标
+- ✅ 新增 `EdgeGeometry` 工具枚举：局部↔绝对坐标换算、曲线采样、弧长计算
+- ✅ 新增 `EdgeSpec` 枚举（.straight/.bulge/.quadratic/.cubic/.arc）+ `polygonCurved()` 构建器
+- ✅ 重写 `pieceUpperCurved`：7 锚点 + 7 条 curve 规格，领口/袖窿内凹、侧缝收腰
+- ✅ 重写 `pieceSleeveCurved`：5 锚点，袖山两段外凸、袖口微弧
+- ✅ 重写 `sector()`：圆裙外弧/内弧拆成 ≤90° arc 边（sagitta 数值法求符号）
+- ✅ 裤裆 `.bulge(back ? 3.2 : 2.2)`、铅笔裙臀部 `.bulge(-1.2)`
+- ✅ `PatternPieceCanvas` 改为遍历 edges + `EdgeGeometry.sample` 采样渲染（跳过每边起点避免重复）
+- ✅ 修复合身款侧缝方向反了的旧 bug（新约定：正 offset = 左法线方向 = CCW 轮廓内侧）
+- ✅ 接缝长度校验改用曲线弧长（`EdgeGeometry.length`）
+
+**效果**：身片从 ~50 个离散顶点降到 7 个锚点 + 曲线参数，平移/旋转/缩放时曲线自动跟随，无需重算控制点。
+
+### M7 参数补齐 + 帮助文本（2026-10-19 完成）
+
+**目标**：对齐 GarmentCode 官网的设计参数体系，补全所有核心参数。
+
+**新增 38 个参数**：
+
+- **身体参数（12 个）**：颈围、腕围、臂长、背长、前长、裆深、大腿围、膝围、小腿围、踝围、上臂围、肘围
+- **上衣参数（8 个）**：领宽、领长、门襟宽、下摆弧度、侧开衩、省位、省宽、省长
+- **袖片参数（9 个）**：袖山高度、袖山宽度、袖肥松量、袖山 pitch、克夫宽、克夫长、袖衩长、袖衩宽
+- **下装参数（9 个）**：臀深、开衩长/宽、拉链长、裆深、膝围、脚口、门襟长、完整度比例、口袋深/宽
+
+**生成器已接入新参数**：
+
+- 身片：领宽影响领口深度、下摆弧度影响下摆曲线
+- 袖片：袖山高度影响凸出程度、克夫宽度影响袖口弧度、上臂围+袖肥计算袖山宽
+- 裤子：裆深控制裤裆、膝围控制膝部、脚口控制脚口
+- 铅笔裙：臀深控制臀部位置、省宽影响臀部曲线
+- 圆裙：完整度比例控制展开角度
+
+**UI 帮助文本**：所有 38 个参数都有物理意义说明（如"袖山高度：袖山最高点到底线的距离，影响袖山凸出程度"）。
+
+**Random + Default 按钮**：新增随机参数生成和默认参数重置功能，修复 default 全 nil 导致校验失败的问题。
+
+**Device Hub 已实测**：随机/默认 → 生成 2D 纸样，曲线渲染正常，参数影响可见。
+
+### 当前未决/明确不做
+
+- 生成器目前直接运行在 iOS 设备端；后续若考虑服务端，需重新评估离线能力、隐私、延迟与部署成本并取得用户确认。
+- 目标覆盖官方实现已有的款式程序与可组合组件，不承诺超出官方程序定义的任意自定义服装；不直接把 M5 的自由手绘轮廓当作有语义、可自动缝合的参数化纸样。
+- 第一版不新增 CloudKit 纸样记录类型；先验证生成、查看和 JSON 导出，再确定草稿持久化与跨设备同步方案。

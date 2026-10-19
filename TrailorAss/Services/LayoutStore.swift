@@ -43,6 +43,10 @@ protocol LayoutStore {
 
 /// 数据层切换入口（沿用 ProjectStore 的 Factory 模式）
 enum LayoutStoreFactory {
-    /// M5b 接入 CloudKit 私有库
+    /// Simulator 使用本地数据，真机使用 CloudKit 私有库。
+#if targetEnvironment(simulator)
+    static let layoutStore: any LayoutStore = MockLayoutStore()
+#else
     static let layoutStore: any LayoutStore = CloudKitLayoutStore()
+#endif
 }

@@ -1,6 +1,6 @@
 //
 //  HomeTabView.swift
-//  裁缝助手 —— 首页：9 个工具入口网格 + 最近项目摘要 + 图纸库入口
+//  裁缝助手 —— 首页：工具入口网格 + 最近项目摘要 + 图纸库入口
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ enum HomeRoute: Hashable {
     case fabricCalc, unitConvert, shrinkage
     case seamAllowance, stitchDensity
     case needleThread, ironingTemp
-    case layoutBoard
+    case layoutBoard, patternDesign
 }
 
 struct HomeTabView: View {
@@ -27,6 +27,7 @@ struct HomeTabView: View {
 
     private let tools: [ToolEntry] = [
         .init(name: "布料用量", icon: "scissors", destination: .route(.fabricCalc)),
+        .init(name: "纸样设计", icon: "tshirt", destination: .route(.patternDesign)),
         .init(name: "布料排料", icon: "square.split.2x1.fill", destination: .route(.layoutBoard)),
         .init(name: "单位换算", icon: "arrow.left.arrow.right", destination: .route(.unitConvert)),
         .init(name: "缩水率", icon: "drop", destination: .route(.shrinkage)),
@@ -44,7 +45,7 @@ struct HomeTabView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    // 9 宫格工具入口
+                    // 工具入口网格
                     LazyVGrid(columns: columns, spacing: 16) {
                         ForEach(tools) { tool in
                             switch tool.destination {
@@ -117,6 +118,7 @@ struct HomeTabView: View {
                 case .needleThread:  NeedleThreadView()
                 case .ironingTemp:   IroningTempView()
                 case .layoutBoard:   LayoutListView(navTitle: "排料方案")
+                case .patternDesign: PatternDesignView()
                 }
             }
             .task {

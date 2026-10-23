@@ -1,0 +1,47 @@
+{
+  "case": "FittedShirt asymmetric left-sleeve",
+  "units": "cm",
+  "panels": [
+    {
+      "panel": "left_btorso",
+      "sampled_shape_distance_cm": 1.767949875386421e-07,
+      "same_parameter_distance_cm": 1.7679499819678313e-07
+    },
+    {
+      "panel": "left_ftorso",
+      "sampled_shape_distance_cm": 2.6712053726398143e-07,
+      "same_parameter_distance_cm": 2.678675161362413e-07
+    },
+    {
+      "panel": "left_sleeve_b",
+      "sampled_shape_distance_cm": 0.11761877947973096,
+      "same_parameter_distance_cm": 0.1342006233756971
+    },
+    {
+      "panel": "left_sleeve_f",
+      "sampled_shape_distance_cm": 0.27551760584575846,
+      "same_parameter_distance_cm": 0.778398102308219
+    },
+    {
+      "panel": "right_btorso",
+      "sampled_shape_distance_cm": 1.767949875386421e-07,
+      "same_parameter_distance_cm": 1.7679499109135577e-07
+    },
+    {
+      "panel": "right_ftorso",
+      "sampled_shape_distance_cm": 2.6712053726398143e-07,
+      "same_parameter_distance_cm": 2.678675173578869e-07
+    },
+    {
+      "panel": "sl_left_cuff_b",
+      "sampled_shape_distance_cm": 0.04360256136457252,
+      "same_parameter_distance_cm": 0.04360256136457252
+    },
+    {
+      "panel": "sl_left_cuff_f",
+      "sampled_shape_distance_cm": 0.04360256136457252,
+      "same_parameter_distance_cm": 0.04360256136457252
+    }
+  ],
+  "diagnostic_only": true
+}

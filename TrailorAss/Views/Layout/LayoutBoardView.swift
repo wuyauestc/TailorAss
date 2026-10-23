@@ -18,7 +18,6 @@ struct LayoutBoardView: View {
     @State private var saveError: String?
     @State private var arrangeFailedCount: Int?
     @State private var didLoadInitial = false
-    @State private var showGarmentPreview = false
 
     /// nil = 新建方案；非空 = 编辑现有方案
     private var editingLayout: LayoutItem?
@@ -93,9 +92,6 @@ struct LayoutBoardView: View {
                 Task { await saveLayout() }
             }
             .presentationDetents([.medium])
-        }
-        .fullScreenCover(isPresented: $showGarmentPreview) {
-            GarmentPreviewLauncherView()
         }
         .alert("导出成功", isPresented: .constant(exportImage != nil)) {
             Button("好") { exportImage = nil }
@@ -261,14 +257,6 @@ struct LayoutBoardView: View {
             }
 
             Spacer()
-
-            Button {
-                showGarmentPreview = true
-            } label: {
-                Label("生成成衣", systemImage: "tshirt.fill")
-                    .font(.appBody)
-                    .foregroundColor(.appAccent)
-            }
 
             Button {
                 exportToPhotos()

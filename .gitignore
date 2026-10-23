@@ -41,6 +41,9 @@ Icon?
 # Trae
 .trae/
 
+# Generated PDF QA samples
+/output/
+
 # Unity generated output (source and POCOutput remain versioned)
 GarmentSimPOC/Builds/
 GarmentSimPOC/Library/

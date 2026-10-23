@@ -6,42 +6,7 @@
 	objectVersion = 110;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A60000000000000000000001 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A60000000000000000000005 /* UnityFramework.framework */; };
-		A60000000000000000000002 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A60000000000000000000005 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A60000000000000000000003 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A60000000000000000000004 /* Unity-iPhone.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9D25AB9D213FB47800354C27;
-			remoteInfo = UnityFramework;
-		};
-		A60000000000000000000006 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A60000000000000000000004 /* Unity-iPhone.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9D25AB9C213FB47800354C27;
-			remoteInfo = UnityFramework;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A60000000000000000000007 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			dstPath = "";
-			dstSubfolder = Frameworks;
-			files = (
-				A60000000000000000000002 /* UnityFramework.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		A60000000000000000000004 /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "GarmentSimPOC/Builds/iOSSimulator/Unity-iPhone.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		F4ADBE713065841500CA1A56 /* TrailorAss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailorAss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -57,25 +22,15 @@
 		F4ADBE6E3065841500CA1A56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				A60000000000000000000001 /* UnityFramework.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A60000000000000000000008 /* Unity Products */ = {
-			isa = PBXGroup;
-			children = (
-				A60000000000000000000005 /* UnityFramework.framework */,
-			);
-			name = "Unity Products";
-			sourceTree = "<group>";
-		};
 		F4ADBE683065841500CA1A56 = {
 			isa = PBXGroup;
 			children = (
 				F4ADBE733065841500CA1A56 /* TrailorAss */,
-				A60000000000000000000004 /* Unity-iPhone.xcodeproj */,
 				F4ADBE723065841500CA1A56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,12 +53,8 @@
 				F4ADBE6D3065841500CA1A56 /* Sources */,
 				F4ADBE6E3065841500CA1A56 /* Frameworks */,
 				F4ADBE6F3065841500CA1A56 /* Resources */,
-				A60000000000000000000007 /* Embed Frameworks */,
 			);
 			buildRules = (
-			);
-			dependencies = (
-				A60000000000000000000009 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F4ADBE733065841500CA1A56 /* TrailorAss */,
@@ -140,28 +91,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4ADBE723065841500CA1A56 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A60000000000000000000008 /* Unity Products */;
-					ProjectRef = A60000000000000000000004 /* Unity-iPhone.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F4ADBE703065841500CA1A56 /* TrailorAss */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A60000000000000000000005 /* UnityFramework.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = UnityFramework.framework;
-			remoteRef = A60000000000000000000003 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F4ADBE6F3065841500CA1A56 /* Resources */ = {
@@ -178,14 +113,6 @@
 			);
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A60000000000000000000009 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = UnityFramework;
-			targetProxy = A60000000000000000000006 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F4ADBE7A3065841600CA1A56 /* Debug configuration for PBXProject "TrailorAss" */ = {

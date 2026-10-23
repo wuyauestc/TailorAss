@@ -30,7 +30,7 @@ protocol ProjectStore {
 
 /// 数据层切换入口
 enum ProjectStoreFactory {
-    /// Simulator 构建不具备真机签名后的 CloudKit entitlement，使用本地实现便于 UI / Unity 联调。
+    /// Simulator 构建不具备真机签名后的 CloudKit entitlement，使用本地实现便于 UI 联调。
     /// 真机继续使用 CloudKit 私有库。
 #if targetEnvironment(simulator)
     static let projectStore: any ProjectStore = MockProjectStore()

@@ -32,6 +32,10 @@ enum GarmentCodeNativeGenerator {
                 return withProvenance(upperPattern, body: body, design: design)
             }
             var lowerDesign = design
+            if upper == "FittedShirt",
+               ["SkirtCircle", "AsymmSkirtCircle", "SkirtManyPanels"].contains(bottom) {
+                _ = lowerDesign.setValue(.number(1), at: ["flare-skirt", "rise"])
+            }
             let lowerPattern: GarmentCodePatternFile
             switch bottom {
             case "SkirtCircle":
@@ -138,6 +142,8 @@ enum GarmentCodeNativeGenerator {
             risePath = ["pencil-skirt", "rise"]
         case "SkirtLevels":
             risePath = ["levels-skirt", "rise"]
+        case "Pants":
+            risePath = ["pants", "rise"]
         case "GodetSkirt":
             risePath = design.value(at: ["godet-skirt", "base"]) == .string("PencilSkirt")
                 ? ["pencil-skirt", "rise"] : ["skirt", "rise"]

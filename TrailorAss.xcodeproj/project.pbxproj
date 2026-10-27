@@ -6,6 +6,10 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C10C00010000000000000001 /* NativeClothCollision in Frameworks */ = {isa = PBXBuildFile; productRef = C10C00010000000000000003 /* NativeClothCollision */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F4ADBE713065841500CA1A56 /* TrailorAss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailorAss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -13,6 +17,9 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F4ADBE733065841500CA1A56 /* TrailorAss */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFolders = (
+				Resources/GarmentCodeStandardBodyRig,
+			);
 			path = TrailorAss;
 			sourceTree = "<group>";
 		};
@@ -22,6 +29,7 @@
 		F4ADBE6E3065841500CA1A56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				C10C00010000000000000001 /* NativeClothCollision in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -60,6 +68,9 @@
 				F4ADBE733065841500CA1A56 /* TrailorAss */,
 			);
 			name = TrailorAss;
+			packageProductDependencies = (
+				C10C00010000000000000003 /* NativeClothCollision */,
+			);
 			productName = TrailorAss;
 			productReference = F4ADBE713065841500CA1A56 /* TrailorAss.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +99,9 @@
 			);
 			mainGroup = F4ADBE683065841500CA1A56;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C10C00010000000000000002 /* XCLocalSwiftPackageReference "NativeClothCollision" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F4ADBE723065841500CA1A56 /* Products */;
 			projectDirPath = "";
@@ -320,6 +334,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C10C00010000000000000002 /* XCLocalSwiftPackageReference "NativeClothCollision" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = NativeClothCollision;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C10C00010000000000000003 /* NativeClothCollision */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C10C00010000000000000002 /* XCLocalSwiftPackageReference "NativeClothCollision" */;
+			productName = NativeClothCollision;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4ADBE693065841500CA1A56 /* Project object */;
 	validationLevel = 1;

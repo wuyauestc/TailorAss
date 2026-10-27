@@ -1954,7 +1954,7 @@ enum GarmentCodePrograms {
                 while endAngle - startAngle < -2 * .pi { endAngle += 2 * .pi }
             }
             var delta = endAngle - startAngle
-            if (abs(delta) > .pi) != largeArc { delta += right ? -2 * .pi : 2 * .pi }
+            if abs(delta) != .pi && (abs(delta) > .pi) != largeArc { delta += right ? -2 * .pi : 2 * .pi }
             return (0..<count).map { index in
                 let t = offset + Double(index) / Double(rays)
                 let angle = startAngle + delta * t
@@ -2241,6 +2241,10 @@ enum GarmentCodePrograms {
         var stitchRecords = try stitchEdgeRecords(base, in: panels)
         var previousFront = "skirt_front"
         var previousBack = "skirt_back"
+        guard var previousFrontHem = lowestEdge(in: panels[previousFront]),
+              var previousBackHem = lowestEdge(in: panels[previousBack]) else {
+            throw GarmentCodeGeometryError.invalidPanel(previousFront)
+        }
         var levelDesign = design
         guard levelDesign.setValue(.string(levelStyle), at: ["meta", "bottom"]) else {
             throw GarmentCodeProgramError.missingDesignParameter("levels-skirt.level")
@@ -2253,10 +2257,7 @@ enum GarmentCodePrograms {
         var levelBody = body
 
         for levelIndex in 0..<count {
-            guard let frontHem = lowestEdge(in: panels[previousFront]),
-                  let backHem = lowestEdge(in: panels[previousBack]) else {
-                throw GarmentCodeGeometryError.invalidPanel(previousFront)
-            }
+            let frontHem = previousFrontHem, backHem = previousBackHem
             levelBody.set(ruffle * (frontHem.length() + backHem.length()), for: "waist")
             levelBody.set(ruffle * backHem.length(), for: "waist_back_width")
 
@@ -2280,7 +2281,9 @@ enum GarmentCodePrograms {
             stitchRecords += try stitchEdgeRecords(tier, in: tierPanels)
             let tierFront = "skirt_front\(tag)", tierBack = "skirt_back\(tag)"
             guard let frontTop = tierPanels[tierFront]?.edges.first(where: { $0.label == "lower_interface" }),
-                  let backTop = tierPanels[tierBack]?.edges.first(where: { $0.label == "lower_interface" }) else {
+                  let backTop = tierPanels[tierBack]?.edges.first(where: { $0.label == "lower_interface" }),
+                  let tierFrontHem = lowestEdge(in: tierPanels[tierFront]),
+                  let tierBackHem = lowestEdge(in: tierPanels[tierBack]) else {
                 throw GarmentCodeGeometryError.invalidPanel(tierFront)
             }
             stitchRecords.append([(previousFront, frontHem.id), (tierFront, frontTop.id)])
@@ -2295,6 +2298,12 @@ enum GarmentCodePrograms {
             panels.merge(tierPanels) { _, new in new }
             previousFront = tierFront
             previousBack = tierBack
+            // Preserve the component's actual bottom interface before its
+            // internal top label is removed. Asymmetric circle panels have
+            // collinear endpoints, so rediscovering a hem after stripping the
+            // label can incorrectly select the rear waist arc on the next tier.
+            previousFrontHem = tierFrontHem
+            previousBackHem = tierBackHem
         }
 
         let stitches = try resolveStitchEdgeRecords(stitchRecords, in: panels)
@@ -2320,6 +2329,13 @@ enum GarmentCodePrograms {
         }
         if baseStyle == "Skirt2" {
             _ = baseDesign.setValue(.number(0), at: ["skirt", "bottom_cut"])
+        } else {
+            // GodetSkirt constructs its base with slit=False upstream. Keep
+            // the caller's original design for provenance, while the copied
+            // base design suppresses all four slit branches for this component.
+            for slit in ["front_slit", "back_slit", "left_slit", "right_slit"] {
+                _ = baseDesign.setValue(.number(0), at: ["pencil-skirt", slit])
+            }
         }
         let base = baseStyle == "PencilSkirt"
             ? try pencilSkirt(body: body, design: baseDesign)

@@ -200,7 +200,7 @@ enum GarmentCodeQuadrature {
 /// Pattern-only geometry primitives translated from GarmentCode/PyGarment.
 /// Coordinates are centimetres in panel-local 2D space. These types deliberately
 /// exclude 3D placement, draping and simulator dependencies.
-struct GarmentCodePoint: Codable, Hashable {
+nonisolated struct GarmentCodePoint: Codable, Hashable, Sendable {
     var x: Double
     var y: Double
 
@@ -373,16 +373,16 @@ private enum GarmentCodeWolfe1 {
 /// A PyGarment Edge/CurveEdge/CircleEdge-compatible edge. Bezier control
 /// points use GarmentCode's edge-local coordinates: x along the chord, y along
 /// its left normal. Circle parameters match the official serialized tuple.
-struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable {
+struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable, Sendable {
     var id: String
     var start: GarmentCodePoint
     var end: GarmentCodePoint
     var curvature: GarmentCodeCurvature?
     var label: String?
 
-    var chordLength: Double { start.distance(to: end) }
+    nonisolated var chordLength: Double { start.distance(to: end) }
 
-    func point(at t: Double) -> GarmentCodePoint {
+    nonisolated func point(at t: Double) -> GarmentCodePoint {
         let t = min(1, max(0, t))
         guard let curvature else { return start + (end - start) * t }
         switch curvature.type {
@@ -403,7 +403,7 @@ struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable {
         }
     }
 
-    func length(tolerance: Double = 1e-8) -> Double {
+    nonisolated func length(tolerance: Double = 1e-8) -> Double {
         guard let curvature else { return chordLength }
         if curvature.type == "circle", let circle = curvature.circle,
            let arc = Self.circleArc(start: start, end: end, radius: circle.radius,
@@ -976,13 +976,13 @@ struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable {
                      curvature: .init(type: "quadratic", params: [relative(control, from: start, to: end)]))
     }
 
-    private static func absolute(_ point: [Double], from start: GarmentCodePoint, to end: GarmentCodePoint) -> GarmentCodePoint {
+    nonisolated private static func absolute(_ point: [Double], from start: GarmentCodePoint, to end: GarmentCodePoint) -> GarmentCodePoint {
         guard point.count == 2 else { return start }
         let chord = end - start
         return start + chord * point[0] + chord.leftNormal * point[1]
     }
 
-    private static func circleArc(start: GarmentCodePoint, end: GarmentCodePoint, radius: Double,
+    nonisolated private static func circleArc(start: GarmentCodePoint, end: GarmentCodePoint, radius: Double,
                                   largeArc: Bool, right: Bool) -> (center: GarmentCodePoint, delta: Double, radius: Double)? {
         let chord = end - start
         let d = chord.length
@@ -1007,13 +1007,15 @@ struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable {
             while delta > 0 { delta -= 2 * .pi }
             while delta <= -2 * .pi { delta += 2 * .pi }
         }
-        if (abs(delta) > .pi) != largeArc {
+        // At a diameter both SVG arc sizes describe the same semicircle.
+        // Applying the large-arc correction at exactly pi reverses its sweep.
+        if abs(delta) != .pi && (abs(delta) > .pi) != largeArc {
             delta += sweepPositive ? -2 * .pi : 2 * .pi
         }
         return (center, delta, correctedRadius)
     }
 
-    private static func circlePoint(start: GarmentCodePoint, end: GarmentCodePoint,
+    nonisolated private static func circlePoint(start: GarmentCodePoint, end: GarmentCodePoint,
                                     curvature: GarmentCodeCurvature, t: Double) -> GarmentCodePoint {
         guard let circle = curvature.circle,
               let arc = circleArc(start: start, end: end, radius: circle.radius,
@@ -1026,7 +1028,7 @@ struct GarmentCodeGeometryEdge: Codable, Hashable, Identifiable {
 }
 
 /// A mutable panel edge loop corresponding to PyGarment EdgeSequence.
-struct GarmentCodePanelGeometry: Codable, Hashable, Identifiable {
+struct GarmentCodePanelGeometry: Codable, Hashable, Identifiable, Sendable {
     var id: String
     var label: String?
     var edges: [GarmentCodeGeometryEdge]
@@ -1555,11 +1557,13 @@ enum GarmentCodeSleeveGeometry {
         let slope = reflectedBack[reflectedBack.count - 1].end - frontResult[0].start
         guard slope.length > 1e-9 else { throw GarmentCodeGeometryError.zeroLengthInterface }
         let lastFront = frontResult[frontResult.count - 1]
-        let splitParameter = try intersectionParameter(of: lastFront,
-                                                       linePoint: (reflectedBack.last!.end + frontResult[0].start) * 0.5,
-                                                       lineDirection: slope.leftNormal)
         let tolerance = min(0.5, 0.2 / max(front.reduce(0) { $0 + $1.length() }, 1e-9))
-        if splitParameter > tolerance && splitParameter < 1 - tolerance {
+        // Upstream leaves both curves intact when the bisector misses the
+        // front opening, then still aligns the combined slope below.
+        if let splitParameter = intersectionParameter(of: lastFront,
+                linePoint: (reflectedBack.last!.end + frontResult[0].start) * 0.5,
+                lineDirection: slope.leftNormal),
+           splitParameter > tolerance && splitParameter < 1 - tolerance {
             let (frontPart, transferredPart) = lastFront.split(at: splitParameter,
                                                               idPrefix: "\(lastFront.id)-even")
             frontResult[frontResult.count - 1] = frontPart
@@ -1589,11 +1593,11 @@ enum GarmentCodeSleeveGeometry {
     }
 
     /// Find the intersection with an infinite line by sampling then bisecting
-    /// the signed cross-product. Armhole opening intersections are expected to
-    /// be unique by the upstream construction.
+    /// the signed cross-product. Like upstream's empty intersection list, a
+    /// missing intersection means no redistribution rather than invalid paper.
     private static func intersectionParameter(of edge: GarmentCodeGeometryEdge,
                                               linePoint: GarmentCodePoint,
-                                              lineDirection: GarmentCodePoint) throws -> Double {
+                                              lineDirection: GarmentCodePoint) -> Double? {
         func side(_ t: Double) -> Double {
             let point = edge.point(at: t) - linePoint
             return point.x * lineDirection.y - point.y * lineDirection.x
@@ -1611,7 +1615,7 @@ enum GarmentCodeSleeveGeometry {
             previousT = t
             previous = value
         }
-        guard !brackets.isEmpty else { throw GarmentCodeGeometryError.invalidPanel(edge.id) }
+        guard !brackets.isEmpty else { return nil }
         let bracket = brackets.min { abs(($0.0 + $0.1) / 2 - 0.5) < abs(($1.0 + $1.1) / 2 - 0.5) }!
         var low = bracket.0, high = bracket.1
         var lowValue = side(low)

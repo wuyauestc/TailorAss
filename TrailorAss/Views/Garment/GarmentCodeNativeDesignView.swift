@@ -12,38 +12,50 @@ private struct GarmentCodePreviewPresentation: Identifiable {
     let document: GarmentCodePatternFile
     let rawJSON: String
     let exportURL: URL
+    let contourIssues: [String]
 }
 
 /// GarmentCode-style parameter-first workflow. Controls are sourced from the
 /// pinned parameter catalog; no local prototype dimensions are used here.
 struct GarmentCodeNativeDesignView: View {
+    private enum EditingMode: String, CaseIterable, Identifiable {
+        case basic = "基础", advanced = "高级"
+        var id: String { rawValue }
+    }
+    private enum InputFocus: Hashable {
+        case length(GarmentCodeBasicDesign.Field), body(String)
+    }
     @State private var catalog: GarmentCodeParameterCatalog?
     @State private var design: GarmentCodeDesignParameters?
     @State private var bodyValues: [String: Double] = [:]
     @State private var validation: [String] = []
     @State private var previewPresentation: GarmentCodePreviewPresentation?
     @State private var importingPattern = false
+    @State private var mode: EditingMode = .basic
+    @State private var editingBody = false
+    @State private var basicLengthDrafts: [GarmentCodeBasicDesign.Field: String] = [:]
+    @State private var basicInputIssues: [String] = []
+    @State private var showingValidation = false
+    @FocusState private var inputFocus: InputFocus?
 
     var body: some View {
         Group {
             if let catalog, design != nil {
                 Form {
-                    Section {
-                        Text("选择服装款式，填写人体尺寸与设计参数，生成二维裁片。")
-                            .font(.appBody).foregroundStyle(Color.appSubText)
-                    }
+                    modeIntroduction
+                    if mode == .basic { basicBodySection }
                     Section("款式组件") {
                         parameterGroup("meta", title: "款式选择")
                     }
-                    ForEach(activeGroups(catalog: catalog)) { item in
-                        Section(item.title) { parameterGroup(item.group, title: item.title) }
-                    }
-                    Section("人体尺寸") {
-                        ForEach(bodyKeys, id: \.self) { key in
-                            bodyField(key)
+                    if mode == .basic {
+                        basicLengthsSection
+                        basicUpperOptions
+                        advancedCustomizationSection(catalog)
+                    } else {
+                        ForEach(activeGroups(catalog: catalog)) { item in
+                            Section(item.title) { parameterGroup(item.group, title: item.title) }
                         }
-                        Text("腿长、腰线离地高度等派生尺寸，会根据上面的测量值自动计算。")
-                            .font(.appCaption).foregroundStyle(Color.appSubText)
+                        Section("人体尺寸") { bodyMeasurementFields }
                     }
                     Section {
                         Button("导入纸样 JSON 文件") { importingPattern = true }
@@ -57,6 +69,19 @@ struct GarmentCodeNativeDesignView: View {
                             }
                         }
                     }
+                    if mode == .basic, !basicInputIssues.isEmpty {
+                        Section("长度输入需修正") {
+                            ForEach(basicInputIssues, id: \.self) { issue in
+                                Label(issue, systemImage: "exclamationmark.triangle").foregroundStyle(.red)
+                            }
+                            Button("放弃长度输入，恢复当前参数显示") {
+                                inputFocus = nil
+                                basicLengthDrafts = [:]
+                                basicInputIssues = []
+                                validation = []
+                            }
+                        }
+                    }
                     Section {
                         Button(action: generate) {
                             Label("生成 2D 纸样", systemImage: "square.grid.2x2")
@@ -67,9 +92,38 @@ struct GarmentCodeNativeDesignView: View {
                     }
                 }
                 .scrollContentBackground(.hidden)
+                .scrollDismissesKeyboard(.interactively)
                 .background(Color.appBackground)
                 .navigationTitle("纸样设计")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Link(destination: GarmentCodeHelp.url(for: .home)) {
+                            Label("帮助", systemImage: "questionmark.circle")
+                        }
+                        .accessibilityLabel("纸样设计图文帮助，打开网站")
+                        .accessibilityHint("当前为私有预览，需要网站所有者账号登录")
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Menu {
+                            Picker("编辑模式", selection: Binding(get: { mode }, set: { changeMode($0) })) {
+                                ForEach(EditingMode.allCases) { item in
+                                    Text("\(item.rawValue)模式").tag(item)
+                                }
+                            }
+                        } label: {
+                            HStack(spacing: 4) {
+                                Text(mode.rawValue)
+                                Image(systemName: "chevron.down").font(.caption)
+                            }
+                        }
+                        .accessibilityLabel("切换纸样设计模式，当前\(mode.rawValue)模式")
+                    }
+                    ToolbarItemGroup(placement: .keyboard) {
+                        Spacer()
+                        Button("收起键盘") { inputFocus = nil }
+                    }
+                }
             } else if !validation.isEmpty {
                 ContentUnavailableView {
                     Label("参数目录无法加载", systemImage: "exclamationmark.triangle")
@@ -90,7 +144,17 @@ struct GarmentCodeNativeDesignView: View {
         .sheet(item: $previewPresentation) { presentation in
             GarmentCodePatternPreviewView(document: presentation.document,
                                           rawJSON: presentation.rawJSON,
-                                          exportURL: presentation.exportURL)
+                                          exportURL: presentation.exportURL,
+                                          contourIssues: presentation.contourIssues)
+        }
+        .sheet(isPresented: $editingBody) { bodyEditor }
+        .alert("请检查输入", isPresented: $showingValidation) {
+            Button("返回修改", role: .cancel) { }
+        } message: {
+            Text(validation.joined(separator: "\n"))
+        }
+        .onChange(of: validation) { _, issues in
+            if !issues.isEmpty, catalog != nil { showingValidation = true }
         }
         .task { if catalog == nil { loadCatalog() } }
         .fileImporter(isPresented: $importingPattern, allowedContentTypes: [.json]) { result in
@@ -107,6 +171,272 @@ struct GarmentCodeNativeDesignView: View {
                 validation = ["导入失败：\(error.localizedDescription)"]
             }
         }
+    }
+
+    private var modeIntroduction: some View {
+        Section {
+            Text(mode == .basic
+                 ? "选择款式，核对人体尺寸，再用厘米调整长度。未展开的设计沿用当前参数，可在右上角切换高级模式。"
+                 : "完整 GarmentCode 参数。基础与高级共用同一份款式及人体数据，切换不会恢复默认。")
+                .font(.appBody).foregroundStyle(Color.appSubText)
+            Link(destination: GarmentCodeHelp.url(for: mode == .basic ? .basic : .parameters)) {
+                Label(mode == .basic ? "基础模式图文帮助" : "查看版型与参数说明", systemImage: "book.closed")
+            }
+            Text("帮助网站目前仅供你私有预览，打开后需使用拥有访问权限的账号登录。不会上传当前量体或设计数据。")
+                .font(.appCaption).foregroundStyle(Color.appSubText)
+        }
+    }
+
+    private var basicBodySection: some View {
+        Section("人体尺寸") {
+            HStack {
+                ForEach(["bust", "waist", "hips"], id: \.self) { key in
+                    VStack(spacing: 4) {
+                        Text(GarmentCodeChinese.body[key]?.title ?? key).font(.appCaption)
+                        Text("\((bodyValues[key] ?? 0).formatted(.number.precision(.fractionLength(0...1)))) cm")
+                            .font(.appBody)
+                    }
+                    .frame(maxWidth: .infinity)
+                }
+            }
+            Button("编辑全部人体尺寸（\(bodyKeys.count) 项）", systemImage: "person.crop.rectangle") {
+                inputFocus = nil
+                editingBody = true
+            }
+            let different = bodyKeys.filter { bodyValues[$0] != catalog?.body[$0] }.count
+            Label(different == 0
+                  ? "当前为示例人体尺寸，仅供测试。正式制版前请逐项量体并核对。"
+                  : "已有 \(different) 项与示例不同；其余数值仍与示例一致，请逐项核对，不会按身高自动估算。",
+                  systemImage: "exclamationmark.circle")
+                .font(.appCaption).foregroundStyle(Color.appSubText)
+        }
+    }
+
+    private var bodyMeasurementFields: some View {
+        Group {
+            ForEach(bodyKeys, id: \.self) { key in bodyField(key) }
+            Text("腿长、腰线离地高度等派生尺寸，会根据上面的测量值自动计算。两种模式共用全部量体数据。")
+                .font(.appCaption).foregroundStyle(Color.appSubText)
+        }
+    }
+
+    private var bodyEditor: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Text("请按每项说明量体。未修改的示例数值不代表你的个人尺寸；程序不会根据身高猜测其余围度。修改会同步到基础和高级模式。")
+                        .font(.appCaption).foregroundStyle(Color.appSubText)
+                }
+                Section("完整量体数据") { bodyMeasurementFields }
+            }
+            .scrollContentBackground(.hidden)
+            .scrollDismissesKeyboard(.interactively)
+            .background(Color.appBackground)
+            .navigationTitle("人体尺寸")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("完成") { inputFocus = nil; editingBody = false }
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("收起键盘") { inputFocus = nil }
+                }
+            }
+        }
+    }
+
+    private var basicOverviewResult: Result<GarmentCodeBasicDesign.Overview, Error> {
+        Result {
+            guard let design else { throw basicError("参数尚未加载。") }
+            return try GarmentCodeBasicDesign.overview(body: .init(values: bodyValues), design: design)
+        }
+    }
+
+    private var basicLengthsSection: some View {
+        Section("厘米尺寸") {
+            switch basicOverviewResult {
+            case let .success(overview):
+                ForEach(overview.controls) { control in basicLengthField(control) }
+                ForEach(overview.notices, id: \.self) { notice in
+                    Text(notice).font(.appCaption).foregroundStyle(Color.appSubText)
+                }
+                if overview.controls.isEmpty {
+                    if overview.notices.isEmpty {
+                        Text("请先选择上衣、下装或腰头。")
+                            .font(.appCaption).foregroundStyle(Color.appSubText)
+                    } else {
+                        Button("前往高级参数") { changeMode(.advanced) }
+                    }
+                }
+            case let .failure(error):
+                Label(error.localizedDescription, systemImage: "exclamationmark.triangle")
+                    .font(.appCaption).foregroundStyle(.red)
+            }
+            Text("长度按各字段标注的起止位置量取，不含缝份和下摆折边余量；不同款式的量法不能混用。")
+                .font(.appCaption).foregroundStyle(Color.appSubText)
+        }
+    }
+
+    private func basicLengthField(_ control: GarmentCodeBasicDesign.Control) -> some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text(control.title)
+                Spacer()
+                TextField(control.title, text: Binding(get: {
+                    basicLengthDrafts[control.field] ?? lengthText(control.valueCM)
+                }, set: { text in
+                    basicLengthDrafts[control.field] = text
+                    refreshBasicDrafts()
+                }))
+                .keyboardType(.decimalPad)
+                .multilineTextAlignment(.trailing)
+                .frame(width: 95)
+                .focused($inputFocus, equals: .length(control.field))
+                Text("cm").font(.appCaption).foregroundStyle(Color.appSubText)
+            }
+            Text(control.detail).font(.appCaption).foregroundStyle(Color.appSubText)
+            Text("范围：\(lengthText(ceil(control.rangeCM.lowerBound * 1_000) / 1_000))～\(lengthText(floor(control.rangeCM.upperBound * 1_000) / 1_000)) cm")
+                .font(.appCaption).foregroundStyle(Color.appSubText)
+        }
+    }
+
+    @ViewBuilder
+    private var basicUpperOptions: some View {
+        if let design, selected(design, ["meta", "upper"]) == "Shirt" {
+            Section("上衣基础选项") {
+                Picker("宽松程度", selection: Binding(get: {
+                    regularEaseValue(design.value(at: ["shirt", "width"])?.numberValue) ?? -1
+                }, set: { value in
+                    if value > 0 { setDesignValue(.number(value), at: ["shirt", "width"]) }
+                })) {
+                    ForEach([1.05, 1.15, 1.25], id: \.self) { ratio in
+                        let title = ratio == 1.05 ? "常规" : ratio == 1.15 ? "宽松" : "更宽松"
+                        Text("\(title)（胸围加 \(lengthText((bodyValues["bust"] ?? 0) * (ratio - 1))) cm）").tag(ratio)
+                    }
+                    if regularEaseValue(design.value(at: ["shirt", "width"])?.numberValue) == nil {
+                        Text("高级自定义（保留）").tag(-1.0)
+                    }
+                }
+                Toggle("添加袖子", isOn: Binding(get: {
+                    design.value(at: ["sleeve", "sleeveless"]) == .bool(false)
+                }, set: { enabled in
+                    setDesignValue(.bool(!enabled), at: ["sleeve", "sleeveless"])
+                }))
+                .tint(Color.appAccent)
+                Text("仅在选取选项时修改该参数，不重设领口、袖口或其他高级设计。有袖时保留当前袖长，精调请切换高级。宽松选项不代表已验证个人合体。")
+                    .font(.appCaption).foregroundStyle(Color.appSubText)
+            }
+        }
+    }
+
+    private func advancedCustomizationSection(_ catalog: GarmentCodeParameterCatalog) -> some View {
+        let paths = design.map { design in
+            GarmentCodeBasicDesign.customParameterPaths(design: design, catalog: catalog,
+                                                       body: .init(values: bodyValues)).filter {
+                !($0 == ["shirt", "width"] && selected(design, ["meta", "upper"]) == "Shirt" &&
+                  regularEaseValue(design.value(at: $0)?.numberValue) != nil)
+            }
+        } ?? []
+        return Section("设计参数保留") {
+            if paths.isEmpty {
+                Text("其他款式参数沿用默认或基础选项；需要调整领口、袖型、腰位、裙摆等细节时，可切换高级。")
+                    .font(.appCaption).foregroundStyle(Color.appSubText)
+            } else {
+                Label("已使用高级自定义（\(paths.count) 项）", systemImage: "slider.horizontal.3")
+                Text("这些设置会继续用于生成，切换模式不会覆盖。")
+                    .font(.appCaption).foregroundStyle(Color.appSubText)
+                DisclosureGroup("查看保留的参数") {
+                    ForEach(paths, id: \.self) { path in
+                        Text(GarmentCodeChinese.parameter(path)?.title ?? "自定义设计参数")
+                            .font(.appCaption)
+                    }
+                }
+            }
+            Button("查看高级参数") { changeMode(.advanced) }
+        }
+    }
+
+    private func regularEaseValue(_ value: Double?) -> Double? {
+        guard let value else { return nil }
+        return [1.05, 1.15, 1.25].first { abs($0 - value) < 1e-9 }
+    }
+
+    private func lengthText(_ value: Double) -> String {
+        value.formatted(.number.locale(Locale(identifier: "en_US_POSIX")).precision(.fractionLength(0...3)).grouping(.never))
+    }
+
+    private func basicError(_ message: String) -> NSError {
+        NSError(domain: "GarmentCodeBasicInput", code: 1, userInfo: [NSLocalizedDescriptionKey: message])
+    }
+
+    private func projectedBasicDesign() throws -> GarmentCodeDesignParameters {
+        guard var updated = design else { throw basicError("参数尚未加载。") }
+        let body = GarmentCodeBodyParameters(values: bodyValues)
+        let overview = try GarmentCodeBasicDesign.overview(body: body, design: updated)
+        let available = Set(overview.controls.map(\.field))
+        guard Set(basicLengthDrafts.keys).isSubset(of: available) else {
+            throw basicError("人体或组件变化后，已填写的长度暂时无法可靠换算。请修正人体数据，或明确放弃长度输入后再使用高级参数；不会忽略该长度直接生成。")
+        }
+        for control in overview.controls {
+            guard let draft = basicLengthDrafts[control.field] else { continue }
+            let normalized = draft.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: "，", with: ".")
+            guard let value = Double(normalized), value.isFinite else {
+                throw basicError("“\(control.title)”必须是有效的厘米数。")
+            }
+            try GarmentCodeBasicDesign.setLength(cm: value, for: control.field, body: body, design: &updated)
+        }
+        return updated
+    }
+
+    private func refreshBasicDrafts() {
+        validation = []
+        do {
+            design = try projectedBasicDesign()
+            basicInputIssues = []
+        } catch {
+            basicInputIssues = [error.localizedDescription]
+        }
+    }
+
+    private func changeMode(_ newMode: EditingMode) {
+        guard newMode != mode else { return }
+        if mode == .basic, !basicLengthDrafts.isEmpty {
+            refreshBasicDrafts()
+            if !basicInputIssues.isEmpty {
+                validation = basicInputIssues + ["请先修正当前长度，再切换模式；其他设计参数未被重置。"]
+                return
+            }
+        }
+        inputFocus = nil
+        basicInputIssues = []
+        validation = []
+        mode = newMode
+    }
+
+    private func setDesignValue(_ value: JSONValue, at path: [String]) {
+        if mode == .basic, !basicInputIssues.isEmpty {
+            validation = basicInputIssues + ["请先修正长度，再修改款式选项。"]
+            return
+        }
+        _ = design?.setValue(value, at: path)
+        if mode == .advanced {
+            // Explicit professional edits become authoritative. A pure mode
+            // switch, however, retains centimetre targets for later body edits.
+            basicLengthDrafts = [:]
+            basicInputIssues = []
+        } else if path.first == "meta" {
+            // Adding a waistband must not lose an independently entered skirt
+            // length. Only a replacement of that component drops its target.
+            switch path.last {
+            case "upper": basicLengthDrafts.removeValue(forKey: .upperLength)
+            case "bottom": basicLengthDrafts.removeValue(forKey: .lowerLength)
+            case "wb": basicLengthDrafts.removeValue(forKey: .waistbandHeight)
+            default: break
+            }
+        }
+        validation = []
+        if mode == .basic { refreshBasicDrafts() }
     }
 
     private var bodyKeys: [String] {
@@ -133,8 +463,11 @@ struct GarmentCodeNativeDesignView: View {
     }
 
     private func resetParameters(_ catalog: GarmentCodeParameterCatalog) {
+        inputFocus = nil
         design = GarmentCodeDesignParameters(catalog: catalog)
         bodyValues = catalog.body
+        basicLengthDrafts = [:]
+        basicInputIssues = []
         validation = []
         previewPresentation = nil
     }
@@ -202,8 +535,7 @@ struct GarmentCodeNativeDesignView: View {
             OfficialGarmentCodeParameterField(
                 path: path, node: node,
                 value: Binding(get: { design.value(at: path) ?? .null }, set: { value in
-                    _ = self.design?.setValue(value, at: path)
-                    validation = []
+                    setDesignValue(value, at: path)
                 })
             )
         } else if !node.children.isEmpty {
@@ -220,8 +552,7 @@ struct GarmentCodeNativeDesignView: View {
             return AnyView(OfficialGarmentCodeParameterField(
                 path: path, node: node,
                 value: Binding(get: { design.value(at: path) ?? .null }, set: { value in
-                    _ = self.design?.setValue(value, at: path)
-                    validation = []
+                    setDesignValue(value, at: path)
                 })
             ))
         }
@@ -237,6 +568,12 @@ struct GarmentCodeNativeDesignView: View {
         let binding = Binding<Double>(get: { bodyValues[key] ?? 0 }, set: { newValue in
             bodyValues[key] = newValue
             validation = []
+            if mode == .basic, !basicLengthDrafts.isEmpty {
+                refreshBasicDrafts()
+            } else if mode == .advanced {
+                basicLengthDrafts = [:]
+                basicInputIssues = []
+            }
         })
         return VStack(alignment: .leading, spacing: 4) {
             HStack {
@@ -244,6 +581,7 @@ struct GarmentCodeNativeDesignView: View {
                 Spacer()
                 TextField(field.title, value: binding, format: .number.precision(.fractionLength(0...3)))
                     .keyboardType(.numbersAndPunctuation).multilineTextAlignment(.trailing).frame(maxWidth: 130)
+                    .focused($inputFocus, equals: .body(key))
                 Text(field.unit).font(.appCaption).foregroundStyle(Color.appSubText)
             }
             Text(field.detail).font(.appCaption).foregroundStyle(Color.appSubText)
@@ -251,6 +589,11 @@ struct GarmentCodeNativeDesignView: View {
     }
 
     private func generate() {
+        inputFocus = nil
+        if mode == .basic {
+            refreshBasicDrafts()
+            if !basicInputIssues.isEmpty { validation = basicInputIssues; return }
+        }
         guard let design else { return }
         let body = GarmentCodeBodyParameters(values: bodyValues)
         var issues = design.validationMessages { GarmentCodeChinese.parameter($0)?.title ?? "设计参数" }
@@ -262,6 +605,9 @@ struct GarmentCodeNativeDesignView: View {
         guard issues.isEmpty else { validation = issues; return }
         do {
             let document = try GarmentCodeNativeGenerator.generate(body: body, design: design)
+            let contourReport = try GarmentCodeContourDiagnostics.inspect(document)
+            let contourIssues = GarmentCodeContourDiagnostics.messages(contourReport, document: document)
+            guard contourIssues.isEmpty else { validation = contourIssues; return }
             let data = try JSONEncoder.garmentCodeEncoder.encode(document)
             try present(document, data: data)
         } catch let error as GarmentCodeProgramError {
@@ -287,20 +633,28 @@ struct GarmentCodeNativeDesignView: View {
 
     /// Keep imported bytes intact, including upstream fields this viewer does not interpret.
     private func present(_ document: GarmentCodePatternFile, data: Data) throws {
+        let contourReport = try GarmentCodeContourDiagnostics.inspect(document)
+        let contourIssues = GarmentCodeContourDiagnostics.messages(contourReport, document: document)
         let exportURL = FileManager.default.temporaryDirectory
             .appendingPathComponent("GarmentCode-pattern-\(UUID().uuidString).json")
         try data.write(to: exportURL, options: .atomic)
         validation = []
         previewPresentation = GarmentCodePreviewPresentation(
-            document: document, rawJSON: String(decoding: data, as: UTF8.self), exportURL: exportURL)
+            document: document, rawJSON: String(decoding: data, as: UTF8.self), exportURL: exportURL,
+            contourIssues: contourIssues)
     }
 
 }
 
 private struct GarmentCodePatternPreviewView: View {
+    private enum DrapeDestination: String, Identifiable {
+        case wholeGarment, legacyPreview
+        var id: String { rawValue }
+    }
     let document: GarmentCodePatternFile
     let rawJSON: String
     let exportURL: URL
+    let contourIssues: [String]
     @Environment(\.dismiss) private var dismiss
     @State private var selectedName: String?
     @State private var showSeams = true
@@ -308,6 +662,7 @@ private struct GarmentCodePatternPreviewView: View {
     @State private var seamsExpanded = true
     @State private var exportingPDF = false
     @State private var editingDrafting = false
+    @State private var drapeDestination: DrapeDestination?
     @State private var drafting = GarmentCodeDraftingSettings()
     @State private var zoom: CGFloat = 1
     @State private var pan: CGSize = .zero
@@ -381,101 +736,118 @@ private struct GarmentCodePatternPreviewView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 10) {
-                HStack {
-                    Text("\(pieces.count) 片 · cm").font(.appCaption)
-                    Spacer()
-                    Button { zoom = max(0.5, zoom / 1.5) } label: {
-                        Image(systemName: "minus.magnifyingglass")
-                    }.accessibilityLabel("缩小纸样")
-                    Button { zoom = min(12, zoom * 1.5) } label: {
-                        Image(systemName: "plus.magnifyingglass")
-                    }.accessibilityLabel("放大纸样")
-                    Button("适配全图") { zoom = 1; pan = .zero }
-                }
-                .padding(.horizontal)
-                HStack {
-                    Toggle("显示接缝", isOn: $showSeams)
-                        .fixedSize().disabled(seamGuide.groups.isEmpty)
-                        .tint(Color.appAccent)
-                        .accessibilityHint("同一接缝的两条边显示相同颜色和编号")
-                    Spacer()
-                    Button("缝份与标记", systemImage: "scissors") { editingDrafting = true }
-                }
-                .font(.caption)
-                .padding(.horizontal)
-                .onChange(of: showSeams) { _, visible in
-                    if !visible { selectedSeamID = nil }
-                }
-                GeometryReader { proxy in
-                    Canvas { context, size in drawPieces(in: &context, size: size) }
-                        .background(Color.white)
-                        .contentShape(Rectangle())
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                        .gesture(SpatialTapGesture().onEnded { value in
-                            select(at: value.location, size: proxy.size)
-                        })
-                        .simultaneousGesture(DragGesture(minimumDistance: 4)
-                            .updating($livePan) { value, state, _ in state = value.translation }
-                            .onEnded { value in
-                                pan.width += value.translation.width
-                                pan.height += value.translation.height
-                            })
-                        .simultaneousGesture(MagnificationGesture()
-                            .updating($liveZoom) { value, state, _ in state = value }
-                            .onEnded { zoom = min(12, max(0.5, zoom * $0)) })
-                }
-                .frame(minHeight: 220)
-                .padding(.horizontal)
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(pieces) { piece in
-                            Button(GarmentCodeChinese.panel(piece.name)) {
-                                selectedName = piece.name
-                                selectedSeamID = nil
+            GeometryReader { viewport in
+                ScrollView {
+                    VStack(spacing: 10) {
+                        if !contourIssues.isEmpty {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Label("裁片轮廓需要修改", systemImage: "exclamationmark.triangle")
+                                    .font(.headline)
+                                Text(contourIssues.joined(separator: "\n"))
+                                Text("可查看并保存原始 JSON；修正后再打印或生成 3D。")
                             }
-                                .font(.caption)
-                                .buttonStyle(.bordered)
-                                .tint(selectedName == piece.name ? Color.appAccent : .secondary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.caption).foregroundStyle(.red)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.horizontal)
                         }
-                    }
-                }
-                .padding(.horizontal)
-                Group {
-                    if let piece = selectedPiece {
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(GarmentCodeChinese.panel(piece.name)).font(.headline)
-                            Text("宽 \(piece.width, specifier: "%.2f") cm × 高 \(piece.height, specifier: "%.2f") cm · 1 片")
-                            Text("近似面积 \(piece.area, specifier: "%.1f") cm²")
+                        HStack {
+                            Text("\(pieces.count) 片 · cm").font(.appCaption)
+                            Spacer()
+                            Button { zoom = max(0.5, zoom / 1.5) } label: {
+                                Image(systemName: "minus.magnifyingglass")
+                            }.accessibilityLabel("缩小纸样")
+                            Button { zoom = min(12, zoom * 1.5) } label: {
+                                Image(systemName: "plus.magnifyingglass")
+                            }.accessibilityLabel("放大纸样")
+                            Button("适配全图") { zoom = 1; pan = .zero }
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    } else {
-                        Text(showSeams ? "点选彩色边或接缝列表，高亮对应的两条边" : "双指缩放、拖动平移，点选裁片查看尺寸")
-                            .foregroundStyle(.secondary)
+                        .padding(.horizontal)
+                        HStack {
+                            Toggle("显示接缝", isOn: $showSeams)
+                                .fixedSize().disabled(seamGuide.groups.isEmpty)
+                                .tint(Color.appAccent)
+                                .accessibilityHint("同一接缝的两条边显示相同颜色和编号")
+                            Spacer()
+                            Button("缝份与标记", systemImage: "scissors") { editingDrafting = true }
+                                .disabled(!contourIssues.isEmpty)
+                        }
+                        .font(.caption)
+                        .padding(.horizontal)
+                        .onChange(of: showSeams) { _, visible in
+                            if !visible { selectedSeamID = nil }
+                        }
+                        GeometryReader { proxy in
+                            Canvas { context, size in drawPieces(in: &context, size: size) }
+                                .background(Color.white)
+                                .contentShape(Rectangle())
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .gesture(SpatialTapGesture().onEnded { value in
+                                    select(at: value.location, size: proxy.size)
+                                })
+                                .simultaneousGesture(DragGesture(minimumDistance: 4)
+                                    .updating($livePan) { value, state, _ in state = value.translation }
+                                    .onEnded { value in
+                                        pan.width += value.translation.width
+                                        pan.height += value.translation.height
+                                    })
+                                .simultaneousGesture(MagnificationGesture()
+                                    .updating($liveZoom) { value, state, _ in state = value }
+                                    .onEnded { zoom = min(12, max(0.5, zoom * $0)) })
+                        }
+                        .frame(height: max(220, min(420, viewport.size.height * 0.45)))
+                        .padding(.horizontal)
+                        ScrollView(.horizontal) {
+                            HStack {
+                                ForEach(pieces) { piece in
+                                    Button(GarmentCodeChinese.panel(piece.name)) {
+                                        selectedName = piece.name
+                                        selectedSeamID = nil
+                                    }
+                                        .font(.caption)
+                                        .buttonStyle(.bordered)
+                                        .tint(selectedName == piece.name ? Color.appAccent : .secondary)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                        Group {
+                            if let piece = selectedPiece {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(GarmentCodeChinese.panel(piece.name)).font(.headline)
+                                    Text("宽 \(piece.width, specifier: "%.2f") cm × 高 \(piece.height, specifier: "%.2f") cm · 1 片")
+                                    Text("近似面积 \(piece.area, specifier: "%.1f") cm²")
+                                }
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            } else {
+                                Text(showSeams ? "点选彩色边或接缝列表，高亮对应的两条边" : "双指缩放、拖动平移，点选裁片查看尺寸")
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .font(.caption)
+                        .frame(height: 64)
+                        .padding(.horizontal)
+                        if showSeams && !seamGuide.groups.isEmpty {
+                            seamList
+                        }
+                        DisclosureGroup("查看 JSON 数据") {
+                            ScrollView {
+                                Text(rawJSON).font(.system(size: 11, design: .monospaced))
+                                    .textSelection(.enabled).frame(maxWidth: .infinity, alignment: .leading)
+                            }.frame(maxHeight: 150)
+                        }.padding(.horizontal)
+                        Menu {
+                            exportActions
+                        } label: {
+                            Label("导出纸样", systemImage: "square.and.arrow.up")
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .padding(.horizontal)
                     }
+                    .padding(.vertical)
                 }
-                .font(.caption)
-                .frame(height: 64)
-                .padding(.horizontal)
-                if showSeams && !seamGuide.groups.isEmpty {
-                    seamList
-                }
-                DisclosureGroup("查看 JSON 数据") {
-                    ScrollView {
-                        Text(rawJSON).font(.system(size: 11, design: .monospaced))
-                            .textSelection(.enabled).frame(maxWidth: .infinity, alignment: .leading)
-                    }.frame(maxHeight: 150)
-                }.padding(.horizontal)
-                Menu {
-                    exportActions
-                } label: {
-                    Label("导出纸样", systemImage: "square.and.arrow.up")
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.borderedProminent)
-                .padding(.horizontal)
             }
-            .padding(.vertical)
             .navigationTitle("2D 纸样预览")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -483,10 +855,23 @@ private struct GarmentCodePatternPreviewView: View {
                     Button("参数") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Menu {
-                        exportActions
-                    } label: {
-                        Label("导出", systemImage: "square.and.arrow.up")
+                    HStack(spacing: 14) {
+                        Menu {
+                            Button("整衣 3D（实验）", systemImage: "tshirt") {
+                                drapeDestination = .wholeGarment
+                            }
+                            Button("裙装与腰头预览", systemImage: "cube") {
+                                drapeDestination = .legacyPreview
+                            }
+                        } label: {
+                            Label("3D", systemImage: "cube")
+                        }.disabled(!contourIssues.isEmpty)
+                        .accessibilityLabel("打开 3D 预览菜单")
+                        Menu {
+                            exportActions
+                        } label: {
+                            Label("导出", systemImage: "square.and.arrow.up")
+                        }
                     }
                 }
             }
@@ -497,12 +882,22 @@ private struct GarmentCodePatternPreviewView: View {
         .sheet(isPresented: $editingDrafting) {
             GarmentCodeDraftingEditorView(document: document, settings: $drafting, selectedPanel: selectedName)
         }
+        .sheet(item: $drapeDestination) { destination in
+            switch destination {
+            case .wholeGarment:
+                GarmentCodeJointDrapeView(document: document)
+            case .legacyPreview:
+                GarmentCodeDrapeView(document: document)
+            }
+        }
     }
 
     @ViewBuilder
     private var exportActions: some View {
         Button("缝份与制版标记", systemImage: "scissors") { editingDrafting = true }
+            .disabled(!contourIssues.isEmpty)
         Button("导出纸样 PDF", systemImage: "doc.richtext") { exportingPDF = true }
+            .disabled(!contourIssues.isEmpty)
         ShareLink(item: exportURL, preview: SharePreview("GarmentCode 纸样 JSON")) {
             Label("导出纸样 JSON", systemImage: "curlybraces")
         }

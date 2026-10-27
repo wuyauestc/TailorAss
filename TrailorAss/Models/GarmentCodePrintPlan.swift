@@ -303,7 +303,7 @@ struct GarmentCodePrintPlan {
                 while delta > 0 { delta -= 2 * .pi }
                 while delta <= -2 * .pi { delta += 2 * .pi }
             }
-            if (abs(delta) > .pi) != circle.largeArc {
+            if abs(delta) != .pi && (abs(delta) > .pi) != circle.largeArc {
                 delta += circle.right ? -2 * .pi : 2 * .pi
             }
             path.addArc(center: try cgPoint(center), radius: radius,

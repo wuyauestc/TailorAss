@@ -43,7 +43,7 @@ enum GarmentCodeChinese {
         "arm_length": .init("臂长", "肩端至腕部的测量长度，作为袖长的计算基准。", "cm"),
         "armscye_depth": .init("袖窿深", "肩部基准至腋下水平线的垂直深度；制版时自动加入袖窿余量。", "cm"),
         "wrist": .init("腕围", "手腕处围量一周，用于约束最小袖口宽度。", "cm"),
-        "arm_pose_angle": .init("手臂外展角", "人体参考姿态中的手臂外展角；当前二维流程不显示三维姿态。", "°")
+        "arm_pose_angle": .init("手臂参考姿态角", "参考姿态中，上臂在正面投影内相对水平线向下的角度，用于确定袖片的三维参考摆放方向。", "°")
     ]
 
     private static let fields: [String: Field] = [
@@ -119,11 +119,11 @@ enum GarmentCodeChinese {
         "levels-skirt.level": .init("接层裙型", "选择接在基裙下方的裙层款式。"),
         "levels-skirt.num_levels": .init("追加裙层数", "接在基裙下方的层数，不包含基裙本身。", "层"),
         "levels-skirt.level_ruffle": .init("层间抽褶倍率", "新裙层上口相对于上一层下摆的长度倍率。", "倍"),
-        "levels-skirt.length": .init("总裙长比例", "以腿长为基准设置基裙与接层的总长度。"),
+        "levels-skirt.length": .init("层裙腿长段比例", "将派生腿长的一定比例分配给基裙与接层；基裙另加当前腰位对应的腰臀高度，不是整裙最终总长。"),
         "levels-skirt.rise": .init("裙腰位置比例", "1 为自然腰线；数值减小，腰口向臀线下移。"),
         "levels-skirt.base_length_frac": .init("基裙长度占比", "基裙占可分配裙长的比例，其余长度由追加裙层均分。"),
         "pants.length": .init("裤长比例", "以人体派生腿长为基准；添加裤口组件时会扣除相应长度。"),
-        "pants.width": .init("裤身宽松倍率", "以人体围度为基准增加裤身宽度。", "倍"),
+        "pants.width": .init("裤装总裆伸倍率", "缩放总裆部延伸量，前裆伸按前臀宽计算，剩余量分配到后裆伸；不是腰臀裤脚统一放大的宽松倍率。", "倍"),
         "pants.flare": .init("裤脚扩缩系数", "1 为基准裤脚宽度，小于 1 收窄，大于 1 外扩。"),
         "pants.rise": .init("裤腰位置比例", "1 为自然腰线；数值减小，裤腰向臀线下移。")
     ]

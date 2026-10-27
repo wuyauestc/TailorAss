@@ -231,7 +231,7 @@ struct GarmentCodeEdge: Codable, Hashable {
     let curvature: GarmentCodeCurvature?
 }
 
-struct GarmentCodeCurvature: Codable, Hashable {
+nonisolated struct GarmentCodeCurvature: Codable, Hashable, Sendable {
     let type: String
     let params: [[Double]]?
 

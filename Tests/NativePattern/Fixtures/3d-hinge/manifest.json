@@ -1,0 +1,21 @@
+{
+  "scope": "Exact canonical native source and same-global-ID mesh/plan membership for derivative tests only; no dynamics or accepted garment",
+  "canonicalSourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "originalCapturedInputSHA256": "4e3cebec242b4e01d2b0efb3537b3e622def0fff7afdf85b7e0286fd552b1050",
+  "originalCapturedPlanSHA256": "5616e42273ff9ee28f19793f28f2a23b2efa95be46f8d417e1e9203fe7227e05",
+  "topologyProof": {
+    "vertices": 2000,
+    "triangles": 3472,
+    "internalHinges": 4948,
+    "boundaryEdges": 520,
+    "actualSewingConstraints": 69,
+    "maximumExactSourceBoundaryPointErrorMeters": 4.163336342344337e-16,
+    "groupDerivation": "Fixture-only unchanged global reference triangle components uniquely seeded by complete actual plan boundaries, every boundary sample checked against canonical analytic source curves; production consumes explicit groups and never guesses ownership."
+  },
+  "generatorSHA256": "df08a61c55629585beb8aebfb63c18ef42b16e73a88bab05370688e345a441ac",
+  "files": {
+    "complete-source.json": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+    "native-source-topology.json": "7871d9e36a6d29dcd1b2653c8f280e28c09437ed26ccfd66473ca41e52b3f95e",
+    "native-full-plan.json": "5616e42273ff9ee28f19793f28f2a23b2efa95be46f8d417e1e9203fe7227e05"
+  }
+}

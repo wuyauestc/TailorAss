@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-10-25T13:39:20+08:00",
+  "cases": {
+    "0.5": {
+      "file": "circle-0.5-mesh.json",
+      "sha256": "d488d61d97a7807b088d9df4de322dc3f5533c29d7e9de5765f7e13cd5ab391a",
+      "label": "半圆裙 · suns 0.5 · 中等（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "中等（实验预设）",
+      "surfaceIntersectionCount": 0
+    },
+    "0.75": {
+      "file": "circle-0.75-mesh.json",
+      "sha256": "a9ce920cc164f6447fe10bddbdc57bd02691728da4a9478eaa8e12109cc5ded0",
+      "label": "四分之三圆裙 · suns 0.75 · 中等（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "中等（实验预设）",
+      "surfaceIntersectionCount": 0
+    },
+    "1.0": {
+      "file": "circle-1.0-mesh.json",
+      "sha256": "8f65dd101674d505ab0c1a2d0e67e467c5fb9c85d7f1517c032995840b447f85",
+      "label": "整圆裙 · suns 1.0 · 中等（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "中等（实验预设）",
+      "surfaceIntersectionCount": 0
+    },
+    "0.75-length-0.35": {
+      "file": "circle-0.75-length-0.35-mesh.json",
+      "sha256": "be3dab5e03898e85ebca4e042b747b0a4271413f8b9c7bf4391d457065708086",
+      "label": "加长四分之三圆裙 · 中等（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "中等（实验预设）",
+      "surfaceIntersectionCount": 0
+    },
+    "0.75-material-soft": {
+      "file": "circle-0.75-material-soft-mesh.json",
+      "sha256": "7306adeeffc032d5bf632c0889b94c29daf72c2f3ba38009cecdf0cd9c670ff5",
+      "label": "四分之三圆裙 · 柔软（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "柔软（实验预设）",
+      "surfaceIntersectionCount": 0
+    },
+    "0.75-material-firm": {
+      "file": "circle-0.75-material-firm-mesh.json",
+      "sha256": "f7925e602df96239cd1a47a453f393fdace6d536b02ff4aac75912790e81b183",
+      "label": "四分之三圆裙 · 挺括（实验预设）",
+      "converged": true,
+      "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+      "materialName": "挺括（实验预设）",
+      "surfaceIntersectionCount": 0
+    }
+  }
+}

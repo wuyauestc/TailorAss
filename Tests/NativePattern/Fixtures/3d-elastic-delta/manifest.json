@@ -1,0 +1,19 @@
+{
+  "scope": "Frozen actual rounded 25 captured Newton line candidates + 4 all-source active barrier/hinge probes; no accepted simulation",
+  "canonicalSourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "generatorSHA256": "918c00ea1a6f370f9971ff885d0a89752cfebbd5048b96ced1ede765c3f99cac",
+  "uncompressedSHA256": "6e29a53d82020287d5a9cafecf406ba7de924d12c9dbb528f13d80200e14d5b2",
+  "files": {
+    "controls.json.gz": "d94f59d5365ed3f6efe7e5cb0c5abaf866d4e12f0c5acb33ba533cd9dd9297c4"
+  },
+  "oraclePrecisions": [
+    80,
+    100
+  ],
+  "referenceIsPosthocNotAnOnlineErrorCertificate": true,
+  "numpyLongDoubleMantissaBits": 53,
+  "nativeReferenceTriangles": 3472,
+  "nativeHinges": 4948,
+  "newtonCases": 25,
+  "activeCases": 4
+}

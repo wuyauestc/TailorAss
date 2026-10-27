@@ -1,0 +1,15 @@
+{
+  "scope": "Actual fixed mathematical states only; r237 is NOT physical acceptance; no new physics or changed source/material",
+  "canonicalFullPaperSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "sourceTopologyFixtureSHA256": "7871d9e36a6d29dcd1b2653c8f280e28c09437ed26ccfd66473ca41e52b3f95e",
+  "generatorSHA256": "e8d216b2bee25ef49a4e3e9c5f6db68c8d037c5c4fd94aa76c1b826b374af427",
+  "files": {
+    "actual-r236.json": "0981f1ef29d489e83224cbdd7d77a8f0c184c28b6c0c6d0550457cbef51db46d",
+    "mathematical-r237.json": "2deee444e5a1279167cd4277c4e72229797d68986a067290ba7f04a77cb9ef43"
+  },
+  "vertices": 2000,
+  "triangles": 3472,
+  "hinges": 4948,
+  "experimentalNonzeroBendingUsedOnlyForDerivativeControls": 0.0002,
+  "actualR237NewtonBending": 0
+}

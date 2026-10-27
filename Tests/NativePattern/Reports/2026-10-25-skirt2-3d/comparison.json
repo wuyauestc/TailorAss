@@ -1,0 +1,46 @@
+{
+  "source_commit": "d449629979028123a5c4dc9e732a2ec19b7fce31",
+  "source_fixture_sha256": "b0bf5e838f0bc8c7223cb014fe5fec89902c1f3a76b84b5fce8eafaec6d0090e",
+  "maximum_source_coordinate_delta_cm": 0.0,
+  "source_boundary_and_stitch_semantics_equal": true,
+  "official_source_metrics": {
+    "waist_cm": 109.63394,
+    "hem_cm": 109.63394,
+    "height_cm": 40.54146,
+    "area_cm2": 4444.719993152399
+  },
+  "official_final_3d_mesh_available": false,
+  "mesh_sha256": {
+    "skirt2-default": "9a4a3a540143921b55e0cd590b8d3227921c36711b39ffd7b1bf2dd09c4c01c1",
+    "skirt2-longer": "bf2976d3ed69af89b082bab62ccbf99bc75e5cf283d0f21571f206a6a1d30b1d",
+    "skirt2-flare10": "b237c8e4ccfca2356852026c7dbed1c1e9d93540dbe401ebcb588bea707d1f52",
+    "skirt2-soft": "62d0396488cb3f809afde894169154ff346bd3f706a0f05282912283353d5892",
+    "skirt2-firm": "e5a7ca8c21e5b34347566367abbc33518e0ac10f8b9b83aa5d23e47b8e01c196"
+  },
+  "generated_at": "2026-10-25T15:06:10+08:00",
+  "generated_file_sha256": {
+    "skirt2-default-diagnostics.json": "280ba15ea4557873555cd0a2de7498c14364ccc55e5a6af0e40b7503bd78c5d0",
+    "skirt2-default-mesh.json": "9a4a3a540143921b55e0cd590b8d3227921c36711b39ffd7b1bf2dd09c4c01c1",
+    "skirt2-default-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-default-views.png": "1a6276e804b8a001c7620588ad222c5952398f4e3bd7c6eba9c8d15bca43aeea",
+    "skirt2-default.obj": "dadacec3b371f94dca35b856ba29970ca8f72f5d35553bb607eaa42d9203dd4c",
+    "skirt2-firm-diagnostics.json": "aec68cb3d53ed9fb7912b0bd5cb4f7a5715f867da717d749adf75b2b0c114945",
+    "skirt2-firm-mesh.json": "e5a7ca8c21e5b34347566367abbc33518e0ac10f8b9b83aa5d23e47b8e01c196",
+    "skirt2-firm-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-firm.obj": "0278ec68b30f706a80839ab0a5de3fbddbee257f93e816400adfb35bdee3ea62",
+    "skirt2-flare10-diagnostics.json": "2958c9119988cbb3c1d4d7fbdbe5bb7130178894333e5ce5c5e2982a6e0cfad8",
+    "skirt2-flare10-mesh.json": "b237c8e4ccfca2356852026c7dbed1c1e9d93540dbe401ebcb588bea707d1f52",
+    "skirt2-flare10-pattern.json": "49c4664b4b594a758a929fd249fdfd79e878a3e8b7bc17401ed34a98fea0df68",
+    "skirt2-flare10-views.png": "df5f14065cba1370094b0ab01497cb8982af921b4b19826137ddf4dde1d16fa3",
+    "skirt2-flare10.obj": "9df8d89f4dab78aa7acd161dbab26132c3cdd967130aaa86e466ede0d6b05c40",
+    "skirt2-longer-diagnostics.json": "d01a511fcf881265b4805b4c5df9cbdf729d67f6aaab60ce4466c24318e1bac4",
+    "skirt2-longer-mesh.json": "bf2976d3ed69af89b082bab62ccbf99bc75e5cf283d0f21571f206a6a1d30b1d",
+    "skirt2-longer-pattern.json": "3b5ce3ca5e1893b021674a6eb7bc3af8c2ea8bda84d446d061e46022f7e48a83",
+    "skirt2-longer.obj": "88198f6bb9faef939a05366a805ca6edb534301a3a0a1321d9d4521607e726c2",
+    "skirt2-soft-diagnostics.json": "7a89afcfcde596e4d8003fefccad7c7f8ad2d4fe5a6590e7b53355e2fd4d918c",
+    "skirt2-soft-mesh.json": "62d0396488cb3f809afde894169154ff346bd3f706a0f05282912283353d5892",
+    "skirt2-soft-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-soft.obj": "a62960dd408dc52a8be576197b7243a15e4604f3897faf6a679c8833c51a8ad8",
+    "skirt2-summary.json": "281ae76470ca08e12afe73bf7742ec5b10adbbd856d0fb3b7c8a4ade278665b6"
+  }
+}

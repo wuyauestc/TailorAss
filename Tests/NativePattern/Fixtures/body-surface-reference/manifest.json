@@ -1,0 +1,64 @@
+{
+  "format": "tailorass-body-surface-authoring-proof-v1",
+  "contractSHA256": "6658a5ed298c82f36c0b1bce6df0823a10c0f0bb5aa67c136c142cb6bc5ce610",
+  "authoringGeneratorSHA256": "80c905956b7740979c73ec190f46c5777e0bbd535a7b5887a5e7768d8cbe8743",
+  "cc0ReconstructionHelperSHA256": "4024626bce7636996d7b4ecfab382e285424a0ea633b2b32903717577932d151",
+  "authoringTraceSHA256": "f2c4f9e653660c131d7fd57db336ddfca4fa0bb78c76ad1b2954b001b4c49177",
+  "referenceValuesSHA256": "147a0d4184e8bdec170815f8e5d64758d83728da339fa7a1560e7a1853ce959a",
+  "sourceCommit": "a8bc2d54ff0ac92e78ff71431b1023eda42bf482",
+  "sourceAssets": [
+    {
+      "filename": "base.obj",
+      "repositoryPath": "makehuman/data/3dobjs/base.obj",
+      "sourceURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/3dobjs/base.obj",
+      "sha256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+      "gitBlobSHA1": "d26635e9326e3cca30778fd7b9c00062b03cce09",
+      "bytes": 1749303,
+      "license": "CC0-1.0",
+      "licenseFilename": "LICENSE.CC0.txt"
+    },
+    {
+      "filename": "default.mhskel",
+      "repositoryPath": "makehuman/data/rigs/default.mhskel",
+      "sourceURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/rigs/default.mhskel",
+      "sha256": "7131071b0c48c07d03a80a58aaefb4e0a2f9f5aaecddc536742d1ddb91754a4d",
+      "gitBlobSHA1": "18e4b47560aad25cef5cca69a7d9b7ab2a15330b",
+      "bytes": 117791,
+      "license": "CC0-1.0",
+      "licenseFilename": "LICENSE.CC0.txt",
+      "embeddedCopyright": "(c) 2020 Data Collection AB, Joel Palmius, Jonas Hauquier"
+    },
+    {
+      "filename": "default_weights.mhw",
+      "repositoryPath": "makehuman/data/rigs/default_weights.mhw",
+      "sourceURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/rigs/default_weights.mhw",
+      "sha256": "0f3641d651ae3d00ad6b4ccee43142edb109d3bd909d27d9e4139ef1beed8625",
+      "gitBlobSHA1": "66185806afacf87749be8e5cf6dbf66496b2a6b0",
+      "bytes": 897521,
+      "license": "CC0-1.0",
+      "licenseFilename": "LICENSE.CC0.txt",
+      "embeddedCopyright": "(c) 2021 Data Collection AB, Joel Palmius, Jonas Hauquier"
+    },
+    {
+      "filename": "LICENSE.ASSETS.md",
+      "repositoryPath": "LICENSE.ASSETS.md",
+      "sourceURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/LICENSE.ASSETS.md",
+      "sha256": "f6089cba01cb570a24712b41ab8a586ccd3cc5ef53dc266ca50b95c288956d2c",
+      "gitBlobSHA1": "f3ede1fc3318f8d794e2cb51924186c62f02f71a",
+      "bytes": 6962,
+      "license": "CC0-1.0",
+      "licenseFilename": "LICENSE.CC0.txt"
+    }
+  ],
+  "python": "3.12.14",
+  "authoringNumpy": "1.26.4",
+  "authoringScipy": "1.13.1",
+  "optimizer": "L-BFGS-B inside fixed original triangle corridors; compare complete unsmoothed actual surface lengths; not global geodesic proof",
+  "preservedAttempts": [
+    "original edge-walk 0.6861445840663516m",
+    "smooth single corridor/past posterior guide retained in frozen delivery",
+    "first authoring reconstruction assertion rejected Python3.12 metadata summation difference; visible source geometry remained exact",
+    "runner syntax error before compilation retained in frozen delivery"
+  ],
+  "bodyFittingApplied": false
+}

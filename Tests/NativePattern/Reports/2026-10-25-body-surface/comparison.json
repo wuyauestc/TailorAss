@@ -1,0 +1,326 @@
+{
+  "sourceCommit": "d449629979028123a5c4dc9e732a2ec19b7fce31",
+  "mergedSnapshotProvenance": {
+    "executed": [
+      "flag-off-reference",
+      "skirt2-default",
+      "skirt2-longer",
+      "skirt2-flare10",
+      "skirt2-soft",
+      "skirt2-firm",
+      "circle-0.5",
+      "circle-0.75",
+      "circle-1.0"
+    ],
+    "passed": true,
+    "failures": [],
+    "scope": "Combined verified branch snapshots: five Skirt2 cases passed before a Circle.prepare-only offset-contour arc-length correction; three circle cases and both exact flag-off references passed afterward. Skirt2 solver/preparation branch was unchanged by that correction.",
+    "sourceRuns": [
+      {
+        "directory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "reusedPassedCases": [
+          "skirt2-default",
+          "skirt2-longer",
+          "skirt2-flare10",
+          "skirt2-soft",
+          "skirt2-firm"
+        ],
+        "excludedFailures": [
+          "circle-0.5",
+          "circle-0.75",
+          "circle-1.0"
+        ]
+      },
+      {
+        "directory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+        "passedSelectors": [
+          "flag-off-reference",
+          "circle-0.5",
+          "circle-0.75",
+          "circle-1.0"
+        ]
+      }
+    ],
+    "caseProvenance": [
+      {
+        "tag": "skirt2-default",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "sourceSummaryPassed": false,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "skirt2-longer",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "sourceSummaryPassed": false,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "skirt2-flare10",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "sourceSummaryPassed": false,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "skirt2-soft",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "sourceSummaryPassed": false,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "skirt2-firm",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+        "sourceSummaryPassed": false,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "circle-0.5",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+        "sourceSummaryPassed": true,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "circle-0.75",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+        "sourceSummaryPassed": true,
+        "caseChecksPassed": true
+      },
+      {
+        "tag": "circle-1.0",
+        "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+        "sourceSummaryPassed": true,
+        "caseChecksPassed": true
+      }
+    ],
+    "quality": "Unchanged max source strain <8%, motion <.025m/s, sampled SDF body penetration <3mm, zero cloth self-crossings, zero actual visible-body triangle crossings independently checked by Moller/Trumbore oracle; converged=true.",
+    "numericalMarginsMeters": {
+      "exactMesh": 0.0005,
+      "sampledSDF": 0.0025,
+      "fixedWaistSupport": 0.005
+    },
+    "performancePlatform": "Mac command-line benchmark, not measured on iPhone"
+  },
+  "sourceChecks": {
+    "skirt2-default": {
+      "sourceMetrics": {
+        "garmentStyle": "Skirt2",
+        "lengthLabel": "垂直裙长",
+        "waistCM": 109.63394,
+        "hemCM": 109.63394,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 4444.719993152399
+      },
+      "flatAreaRelativeError": 1.5346771616222886e-14,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320"
+    },
+    "skirt2-longer": {
+      "sourceMetrics": {
+        "garmentStyle": "Skirt2",
+        "lengthLabel": "垂直裙长",
+        "waistCM": 109.63394,
+        "hemCM": 109.63394,
+        "lengthCM": 53.334779999999995,
+        "analyticAreaCM2": 5847.302070433199
+      },
+      "flatAreaRelativeError": 1.8820450455430517e-14,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "f1bf75a2dcf8db7457f993730c1e97c7437b014094264fd981038351ec2bb277"
+    },
+    "skirt2-flare10": {
+      "sourceMetrics": {
+        "garmentStyle": "Skirt2",
+        "lengthLabel": "垂直裙长",
+        "waistCM": 109.63394,
+        "hemCM": 149.63394,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 5255.549193152399
+      },
+      "flatAreaRelativeError": 2.076650036021965e-15,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "49c4664b4b594a758a929fd249fdfd79e878a3e8b7bc17401ed34a98fea0df68"
+    },
+    "skirt2-soft": {
+      "sourceMetrics": {
+        "garmentStyle": "Skirt2",
+        "lengthLabel": "垂直裙长",
+        "waistCM": 109.63394,
+        "hemCM": 109.63394,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 4444.719993152399
+      },
+      "flatAreaRelativeError": 1.5346771616222886e-14,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320"
+    },
+    "skirt2-firm": {
+      "sourceMetrics": {
+        "garmentStyle": "Skirt2",
+        "lengthLabel": "垂直裙长",
+        "waistCM": 109.63394,
+        "hemCM": 109.63394,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 4444.719993152399
+      },
+      "flatAreaRelativeError": 1.5346771616222886e-14,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320"
+    },
+    "circle-0.5": {
+      "sourceMetrics": {
+        "garmentStyle": "SkirtCircle",
+        "lengthLabel": "径向裙长",
+        "waistCM": 84.33379999999998,
+        "hemCM": 211.6985529018044,
+        "lengthCM": 40.541459999999994,
+        "analyticAreaCM2": 6000.791896937192
+      },
+      "flatAreaRelativeError": 0.00042786756205192997,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "2ec1a712311264f0d76581f88786436a4e5a9c3d5e9bf039291c62dc384d99d7"
+    },
+    "circle-0.75": {
+      "sourceMetrics": {
+        "garmentStyle": "SkirtCircle",
+        "lengthLabel": "径向裙长",
+        "waistCM": 84.33379999999998,
+        "hemCM": 275.38092935270663,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 7291.680155731789
+      },
+      "flatAreaRelativeError": 0.0005781968128988108,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "2a50e492a46b6b061789ed614af9a90ad177a7b7ce85a39ed5562637c1f1718d"
+    },
+    "circle-1.0": {
+      "sourceMetrics": {
+        "garmentStyle": "SkirtCircle",
+        "lengthLabel": "径向裙长",
+        "waistCM": 84.3338,
+        "hemCM": 339.0633058036089,
+        "lengthCM": 40.54146,
+        "analyticAreaCM2": 8582.568414526388
+      },
+      "flatAreaRelativeError": 0.0006849629382769712,
+      "previousSourceMaximumDeltaCM": 0.0,
+      "patternSHA256": "b5e09884a1ea7f4268b3ac936efc4487fddc2c10e0fb93b651841b8ab0803310"
+    }
+  },
+  "officialSourceOracles": {
+    "Skirt2": {
+      "fixtureSHA256": "b0bf5e838f0bc8c7223cb014fe5fec89902c1f3a76b84b5fce8eafaec6d0090e",
+      "maximumDeltaCM": 0.0,
+      "stitchSemanticsEqual": true
+    },
+    "SkirtCircle": {
+      "fixtureSHA256": "0b150d9839f18cf093be4a3ab7f91ef817483823546872a48545fb96713ed7b6",
+      "maximumDeltaCM": 3.552713678800501e-15,
+      "stitchSemanticsEqual": true
+    }
+  },
+  "fieldCoverage": {
+    "dimensions": [
+      128,
+      181,
+      65
+    ],
+    "origin": [
+      -0.6337,
+      -1.1137,
+      -0.3037
+    ],
+    "spacingMeters": 0.01,
+    "sampleMaximumY": 0.6863,
+    "visibleHeadMaximumY": 0.632175,
+    "fieldBytes": 6023680,
+    "fieldSHA256": "829194bfdc26a32c9eabb9aa7643d4f335c9e46631e1daa657bfa08aac31b2fa",
+    "legacyLowerFloatCount": 1106560,
+    "legacyLowerSHA256": "81251419a12a69de9946e8d85237a5ff77fe8c5775c992360e8b8878ca9d9172",
+    "legacyLowerHashMatches": true,
+    "oddRayRows": 0,
+    "allVisibleVerticesInsideGridBounds": true,
+    "bodyResourceSHA256": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+    "provenanceSHA256": "08e7906a34f3870e83ddb47e87d8ef019353b80df89a088a8b1ec094926b4bed"
+  },
+  "properCrossClassificationEpsilonMeters": 1e-07,
+  "numericalTargetsMeters": {
+    "exactMesh": 0.0005,
+    "sampledSDF": 0.0025,
+    "fixedWaistSupport": 0.005
+  },
+  "beforeAfter": {
+    "oldProperBodyPairs": 130,
+    "newProperBodyPairs": 0,
+    "oldInsideCentroids": 4,
+    "newInsideCentroids": 0,
+    "oldMeshSHA256": "9a4a3a540143921b55e0cd590b8d3227921c36711b39ffd7b1bf2dd09c4c01c1",
+    "newDefaultMeshSHA256": "b118f88978d86916af36f8ab8d2e928272496e4db750323d809e2119bf277218"
+  },
+  "flagOffControl": {
+    "exactPositionEqualityPassed": true,
+    "maximumPositionDeltaMeters": 0,
+    "evidence": "Latest passed flag-off-reference selector asserts complete vertex-array equality for both old circle and standard-body Skirt2; no separate current raw flag-off mesh was exported.",
+    "harnessSHA256": "be1a9c50489365323314cb45479e92d601dde06fa0d86fa6f623acf0eedc4f90",
+    "circleBaselineSHA256": "ba034d18100d98f136961418786894d04060ad780a02a1113b6675ec3c8e5e6f",
+    "skirtBaselineSHA256": "9a4a3a540143921b55e0cd590b8d3227921c36711b39ffd7b1bf2dd09c4c01c1"
+  },
+  "sourceCodeSHA256": {
+    "GarmentCodeCircleDrape.swift": "5aef149c62393f5a9e9051a678cffaaa2834cad39abd90033af7d6a2a930b3bc",
+    "GarmentCodeSkirtDrape.swift": "0518bf2901f6f98dcff6f9d53b089ae43067ec1db22b44657fca5db4e116ce19",
+    "GarmentCodeBodySurfaceContact.swift": "d1dd01e05d4feddbc3b6c261e10c798671e4c15e436fc85c8c6c5353483224f3",
+    "render-body-surface-report.py": "0ab34146a098dc5e73db24fcd0a6bce5ea7da2b092676ca041785712c51f291f"
+  },
+  "officialFinal3DMeshAvailable": false,
+  "sameVisibleBodyGeometry": {
+    "exactlyEqualAcrossBeforeAndAllCurrent": true,
+    "canonicalGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "vertexCount": 13380,
+    "triangleCount": 26756,
+    "closedManifoldVerified": true,
+    "signedVolumeM3": 0.07714651368533627
+  },
+  "generatedAt": "2026-10-25T18:42:55+08:00",
+  "generatedFileSHA256": {
+    "before-skirt2-default-mesh.json": "9a4a3a540143921b55e0cd590b8d3227921c36711b39ffd7b1bf2dd09c4c01c1",
+    "before-skirt2-default-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "before-skirt2-focus.png": "2c6c5c24bd82ce816bcfaccdcae368341b93b89a95bf983f69e1a65264d46df5",
+    "body-surface-summary.json": "1b88597fe3b59518cf71a5e3617f24328e04777d63a0eed710a18e1269dff920",
+    "circle-0.5-diagnostics.json": "96121e8dcbe70dfa74dd1f7793e2a8e3b17a71d3e36aba03d16c6a73344b4e27",
+    "circle-0.5-mesh.json": "8a8c12a92444d7d19661aded5050387a9b0205b91406ad17dd745988ede7536d",
+    "circle-0.5-pattern.json": "2ec1a712311264f0d76581f88786436a4e5a9c3d5e9bf039291c62dc384d99d7",
+    "circle-0.5.obj": "be03f0cf034599237e14aed79ca44d2e0a2464e36e3c181ec714237ce8ef4a3d",
+    "circle-0.75-diagnostics.json": "971ae6b051fe94c494d4cab80e14edea9f7688d4ed4a166aaf912fd9c34d6a17",
+    "circle-0.75-mesh.json": "d7ada4663b045ecf198b15fc7ddfa9a43d2dd6ee5bc12f241c68aa30ebad5b03",
+    "circle-0.75-pattern.json": "2a50e492a46b6b061789ed614af9a90ad177a7b7ce85a39ed5562637c1f1718d",
+    "circle-0.75-views.png": "9a7a17b6936a9ce7cacbfe18f34aeada7ad9ae9f428704d4c9196ac98c5de0f7",
+    "circle-0.75.obj": "f94d70ad3346451360443bcd323dac8090623255630af433e040f85e8296b7cd",
+    "circle-1.0-diagnostics.json": "22e2731a68113f836aca3b6aea7c690e4fa23feae7ed2ef0ea5d86ca57639824",
+    "circle-1.0-mesh.json": "9d75272a722dc47c035d7efd87eae5bc8d2c715bb05cbc974e3fe38fbab93f3f",
+    "circle-1.0-pattern.json": "b5e09884a1ea7f4268b3ac936efc4487fddc2c10e0fb93b651841b8ab0803310",
+    "circle-1.0.obj": "6eadd8a71948f1863e4233b603605dab69d77bbd926802b1cef9811ea4db074f",
+    "field-coverage-proof.json": "a3aaaf20a91e2bc835c2bd6898bb63244452545b8318efda3521102efb87ec00",
+    "independent-geometry.json": "4badfbefd9be04f4430a543c0568cf8d5f15b117ff28d00b5f3e805b6369174d",
+    "skirt2-default-diagnostics.json": "ce4b9496f614a47b36e2fa160c71ad0202c2ae327cfce44e8b3c2b0661d5a821",
+    "skirt2-default-focus.png": "d4d298a703523f96118286c0adc2de313b10b32d0b02aab8b66251390610050b",
+    "skirt2-default-mesh.json": "b118f88978d86916af36f8ab8d2e928272496e4db750323d809e2119bf277218",
+    "skirt2-default-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-default-views.png": "5ac20f9c62199a4d255663be0206353e80a5fe40bfd2253640f26c8575d50571",
+    "skirt2-default.obj": "18f5beb0ded4278efc858d351a0af34c4e0e5b34407738df7ff78638597e907e",
+    "skirt2-firm-diagnostics.json": "3bd0facdf839a92cade05187e6d370ddae8333e04a3e5a690fdb49b0c3a49d36",
+    "skirt2-firm-mesh.json": "84c0692fd748630aa7a4c7b20392fbe8bc147f550365183188f16a221e93a0af",
+    "skirt2-firm-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-firm.obj": "64aca618cc806826d1bf74f0176848fdac9edd819534c0e7a7cc3184c6e0d85e",
+    "skirt2-flare10-diagnostics.json": "9483ba14d063e4e88927c28ea91791a4f004eb913c2fe8f5a7faf5ad47886591",
+    "skirt2-flare10-mesh.json": "0e719c9d2dc4245dd7d2e9f2a1cae5b8a1c70e2c6f636658db18228a9c2f76e9",
+    "skirt2-flare10-pattern.json": "49c4664b4b594a758a929fd249fdfd79e878a3e8b7bc17401ed34a98fea0df68",
+    "skirt2-flare10-views.png": "bcae728ca92db07da189a5a58befd6830e4145cabcd030c96af855e948a4a7e3",
+    "skirt2-flare10.obj": "5683fc6017379628127d030b9afef4b6b9b98ff1492e2b467b51e9f70b297490",
+    "skirt2-longer-diagnostics.json": "68c7114692a59f90eccc42811cca4c5be361f5ec66d2b0a09b9d8c8c0b4e7fdd",
+    "skirt2-longer-mesh.json": "9a5271259182b8854921e974963549a9cfa026a6c66c6966eeb67c062c6e8086",
+    "skirt2-longer-pattern.json": "f1bf75a2dcf8db7457f993730c1e97c7437b014094264fd981038351ec2bb277",
+    "skirt2-longer.obj": "600f1fce0fdde96fea689966671fc70c3492fd60e1bf27c501723708a1911fb1",
+    "skirt2-soft-diagnostics.json": "46722d06d7b01caacc99394d73b3b1882a36f2f613405dcd66b395d054fb3dc6",
+    "skirt2-soft-mesh.json": "3a011ba900243cb9198a71a4aaf644fabcd34a3b242ce2ec4763b810b08db227",
+    "skirt2-soft-pattern.json": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+    "skirt2-soft.obj": "3a78e8c03d51ec63c795b07a0761e27314ec84e7d40da3a428672d858fab69cc"
+  }
+}

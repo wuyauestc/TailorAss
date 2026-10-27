@@ -1,0 +1,14 @@
+{
+  "scope": "Local depth-buffer rendering of saved actual numerical output, front/right/back; not App screenshot or browser UI verification",
+  "geometrySource": "/private/tmp/TailorAssGenericDefaultStylesFull/Skirt2/source-pattern/validated-output.json",
+  "geometrySHA256": "2714d1bec5bc652f24bd77b99e357d7f7ffe27ac94e0814a70b547b9e29208ae",
+  "renderer": "/Users/wuya/tailorAss/TailorAss/Tests/NativePattern/render-cloth-preview.py",
+  "rendererSHA256": "665069774e5ffae5957bc8d17fa27de73ebf05d2b54e658a7ea685cebf096059",
+  "image": "front-side-back.png",
+  "imageSHA256": "7ce053d2d10343967a30c9676cfb7a367cedabde3d23826a034fd555b6fb5d51",
+  "focusCloth": true,
+  "geometryModified": false,
+  "visuallyInspected": true,
+  "browserUIInspected": false,
+  "observedPlacement": "Upper skirt opening rests around hips; personal fit unverified."
+}

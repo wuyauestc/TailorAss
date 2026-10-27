@@ -1,0 +1,23 @@
+{
+  "format": "tailorass-joint-first-body-activation-v1",
+  "scope": "First real body potential activation with valid source metric. No accepted237, full body/self/bending dynamics or garment proof.",
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "originalInputSHA256": "4e3cebec242b4e01d2b0efb3537b3e622def0fff7afdf85b7e0286fd552b1050",
+  "originalSummarySHA256": "8d3a65c3720c8d5f0d9390c4c98bd8c06e373adb454c4ae5878c6592705ed37f",
+  "files": {
+    "accepted-r236.json": "0981f1ef29d489e83224cbdd7d77a8f0c184c28b6c0c6d0550457cbef51db46d",
+    "blocked-r237-trial.json": "3e4c44f00028f96edb97c6aec383987dc3e8d22173f762ca21d2580fdf89c345",
+    "expected.json": "d48dd971a8c20ae6e5abfb8037b90c9b3c2c8b8a2980325e2a01ca8dbbd749f0",
+    "masses-kg.json": "ac05bf55d30a82ecfa0eb1aa21353dbd2ee255899b4233b5c19146382c898f7d"
+  },
+  "sharedInputs": {
+    "Tests/NativePattern/Fixtures/3d-hinge/native-source-topology.json": "7871d9e36a6d29dcd1b2653c8f280e28c09437ed26ccfd66473ca41e52b3f95e",
+    "Tests/NativePattern/Fixtures/3d-hinge/native-full-plan.json": "5616e42273ff9ee28f19793f28f2a23b2efa95be46f8d417e1e9203fe7227e05",
+    "NativeClothCollision/Tests/NativeClothCollisionTests/Fixtures/IPCBodyContact/actual-case.json": "0f856a2bef54e54d0ff003f7bf03f4f36dfca968d9b1bae3eef64c1e0b1e3e51"
+  },
+  "sharedBodyAndReferenceComparedExactlyToOriginalInput": true,
+  "originalPaths": {
+    "accepted": "/private/tmp/TailorAssJointProductionPath63to480.hrrfovka/frame-237/previous-accepted-positions.json",
+    "blockedTrial": "/private/tmp/TailorAssJointProductionPath63to480.hrrfovka/frame-237/blocked-candidate-positions.json"
+  }
+}

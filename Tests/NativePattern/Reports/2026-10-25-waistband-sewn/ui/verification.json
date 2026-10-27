@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-25",
+  "environment": "Device Hub, iPhone 17 Simulator, iOS 27.0, Release arm64",
+  "physicalDeviceTested": false,
+  "backend": "GarmentCodeWaistbandAssembly -> verified PreparedInput -> GarmentCodeSewnDrape; separate source particles",
+  "observations": [
+    {
+      "style": "StraightWB",
+      "material": "medium",
+      "massGramsDisplayed": 7.1,
+      "vertices": 102,
+      "triangles": 128,
+      "secondsDisplayed": 1.2,
+      "maxSourceEdgeStrainPercentDisplayed": 6.1,
+      "maxActualSeamGapMillimetersDisplayed": 0.0,
+      "sourceTopCmDisplayed": 84.3,
+      "sourceDepthCmDisplayed": 4.7,
+      "selfIntersections": 0,
+      "bodyIntersections": 0,
+      "converged": true,
+      "screenshot": "app-straight-medium.jpg"
+    },
+    {
+      "style": "StraightWB",
+      "material": "soft",
+      "massGramsDisplayed": 4.8,
+      "vertices": 102,
+      "triangles": 128,
+      "secondsDisplayed": 1.2,
+      "maxSourceEdgeStrainPercentDisplayed": 6.1,
+      "maxActualSeamGapMillimetersDisplayed": 0.0,
+      "sourceTopCmDisplayed": 84.3,
+      "sourceDepthCmDisplayed": 4.7,
+      "selfIntersections": 0,
+      "bodyIntersections": 0,
+      "converged": true
+    },
+    {
+      "style": "FittedWB",
+      "material": "medium",
+      "massGramsDisplayed": 7.3,
+      "vertices": 148,
+      "triangles": 188,
+      "secondsDisplayed": 1.2,
+      "maxSourceEdgeStrainPercentDisplayed": 5.0,
+      "maxActualSeamGapMillimetersDisplayed": 0.0,
+      "sourceTopCmDisplayed": 84.3,
+      "sourceDepthCmDisplayed": 4.7,
+      "selfIntersections": 0,
+      "bodyIntersections": 0,
+      "converged": true,
+      "screenshot": "app-fitted-medium.jpg"
+    },
+    {
+      "style": "FittedWB",
+      "material": "firm",
+      "massGramsDisplayed": 11.3,
+      "vertices": 148,
+      "triangles": 188,
+      "secondsDisplayed": 1.2,
+      "maxSourceEdgeStrainPercentDisplayed": 5.0,
+      "maxActualSeamGapMillimetersDisplayed": 0.0,
+      "sourceTopCmDisplayed": 84.3,
+      "sourceDepthCmDisplayed": 4.7,
+      "selfIntersections": 0,
+      "bodyIntersections": 0,
+      "converged": true,
+      "screenshot": "app-fitted-firm.jpg"
+    }
+  ],
+  "interactionChecks": {
+    "materialChangeClearsPreviousOutput": true,
+    "materialRegeneration": true,
+    "orbitRotation": true,
+    "reset": true,
+    "hideAndShowBody": true,
+    "cameraRotationScreenshot": "app-rotated-camera.jpg",
+    "bodyHiddenScreenshot": "app-band-only.jpg",
+    "cameraNote": "24 degree perspective and an orbit outside the entire avatar; side views may be naturally occluded by arms, so the body toggle is available."
+  },
+  "export": {
+    "style": "StraightWB",
+    "material": "soft",
+    "destination": "Simulator Files, local Downloads",
+    "actualSavedFilename": "TailorAss-waistband-drape-840B3990-EA05-4F98-80A8-4CB56616F8E2.obj",
+    "retainedCopy": "app-straight-soft.obj",
+    "bytes": 1151932,
+    "sha256": "ff0b8e433c6753cc89d717850f6f87c6d99d43851075994da82dfcd679952e9f",
+    "independentVerification": "soft-export-verification.json"
+  },
+  "builds": {
+    "simulatorRelease": "BUILD SUCCEEDED",
+    "genericIOSRelease": "BUILD SUCCEEDED",
+    "nativeUIBinary": "Simulator Release arm64",
+    "finalSourceIncludesUnusedCircleAssembly": true,
+    "circleAssemblyWiredIntoApp": false,
+    "logs": [
+      "TailorAssFinalSimulatorBuild.log",
+      "TailorAssFinalDeviceBuild.log"
+    ]
+  },
+  "limits": "All values above are observed native UI readings. Displayed zero gap is rounded, not a physical precision claim. Only standalone default waistbands and the stated materials were checked through UI; separate CLI tests cover two 2-mm seam perturbations. Material presets are uncalibrated. Simulator timing is not iPhone timing. Final discrete collision checks do not establish continuous safety, complete outfits, all dimensions or physical fit.",
+  "evidenceSHA256": {
+    "app-band-only.jpg": "60984a9888e695f0876434918dac6faf2798961a9c00d14afa0c2d86fc896eae",
+    "app-fitted-firm-ax.txt": "ba49e02eacb6d871cdcd025a93d1083d043651d04703eaa32d4be053a6c58d30",
+    "app-fitted-firm.jpg": "dd34f833e03d09e9d8557a3f7f32281199875d924c0d94cdc1ce127a5849c1f5",
+    "app-fitted-medium.jpg": "c548441cb82cd9c3d21b2bc06dbcde703a7c55a8c209b58c2072e5ac6884008c",
+    "app-rotated-camera.jpg": "78c2da05edc83bc39db7aef120124b2c869a7844db1674f621fd71ba1a1ecf43",
+    "app-straight-medium.jpg": "9ec0fde430095b30841808f98ef694eba32d6432bf1d43c5b8454529f9bd3aab",
+    "app-straight-soft.obj": "ff0b8e433c6753cc89d717850f6f87c6d99d43851075994da82dfcd679952e9f",
+    "soft-export-verification.json": "b2014037bee5a23e36c26c59ee39f68e1d7ca3c3014225a57a42f3f05754fdbf"
+  },
+  "appViewSHA256": "2c38e16c1ac5298566b4c553bae5a14e71522e386e701d64e7821b5440eb59e2"
+}

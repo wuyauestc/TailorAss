@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-10-25T04:23:10+00:00",
+  "cases": {
+    "0.5": {
+      "file": "circle-0.5-mesh.json",
+      "sha256": "fbf991c5009cadb6b688fcf9a16d0982b21eb01ee12108421f90d7f9c5de5378",
+      "converged": true
+    },
+    "0.75": {
+      "file": "circle-0.75-mesh.json",
+      "sha256": "ba034d18100d98f136961418786894d04060ad780a02a1113b6675ec3c8e5e6f",
+      "converged": true
+    },
+    "1.0": {
+      "file": "circle-1.0-mesh.json",
+      "sha256": "3d3551e3b40575cc8fcfb102fbe69eaf05ff57c346ce479ce76e04b895e59781",
+      "converged": true
+    }
+  }
+}

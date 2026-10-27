@@ -1,0 +1,242 @@
+[
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-20/straight-default-mesh.json",
+    "meshSHA256": "d7f0b68eaae8bba6b98a0ec2741f038ce13869591f9e4b86f1e47410ca4d341b",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.05822020055315957,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 96,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 96
+    },
+    "triangleCentroids": {
+      "outside": 128,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 128
+    }
+  },
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-20/fitted-default-mesh.json",
+    "meshSHA256": "b35fbad9d732e25fc93f3a38edff1f7a787aca1dd91082d4159bbb82246bc938",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.050000000000000044,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 142,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 142
+    },
+    "triangleCentroids": {
+      "outside": 188,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 188
+    }
+  },
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-40/straight-default-mesh.json",
+    "meshSHA256": "95c9dfd1db8c98e95eda7acfad1d69d832bedea044c32537247db9956aba2651",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.0550405070135509,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 96,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 96
+    },
+    "triangleCentroids": {
+      "outside": 128,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 128
+    }
+  },
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-40/fitted-default-mesh.json",
+    "meshSHA256": "572e704f38e82e1417261b00cfd0bcbff6771252473914a8424dc844632c63fb",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.050000000000000044,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 142,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 142
+    },
+    "triangleCentroids": {
+      "outside": 188,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 188
+    }
+  },
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-80/straight-default-mesh.json",
+    "meshSHA256": "62c286c71a669e7eae2ed60308026122fd3377d4a400d9cde38573e4cc7df298",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.05307243351707269,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 96,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 96
+    },
+    "triangleCentroids": {
+      "outside": 128,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 128
+    }
+  },
+  {
+    "input": "/private/tmp/TailorAssWaistbandSensitivity/passes-80/fitted-default-mesh.json",
+    "meshSHA256": "38c5ef65121d2d2b07faa00d8553bc5e37bd8ad37e467ed7d0bf2ada4ada8f79",
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "bodySignedVolumeM3": 0.07714651368533627,
+    "bodyClosedManifold": true,
+    "rayAndSurfaceEpsilonMeters": 1e-07,
+    "method": "Independent +X/+Y/+Z ray parity on actual triangle geometry; no SDF. Any axis disagreement, near-surface origin or mixed-normal tangent-ray group is reported ambiguous. This is a discrete diagnostic, not physical-fit accuracy.",
+    "productionDiagnostics": {
+      "converged": true,
+      "maxEdgeStrain": 0.050000000000000044,
+      "maxBodyPenetrationMeters": 0,
+      "bodySurfaceIntersectionCount": 0,
+      "surfaceIntersectionCount": 0,
+      "bodySurfaceClearanceMeters": 0.0005,
+      "waistSupportClearanceMeters": 0.005
+    },
+    "vertices": {
+      "outside": 142,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 142
+    },
+    "triangleCentroids": {
+      "outside": 188,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 188
+    }
+  }
+]

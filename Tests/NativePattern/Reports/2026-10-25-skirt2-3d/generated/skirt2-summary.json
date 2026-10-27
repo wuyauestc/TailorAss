@@ -1,0 +1,17 @@
+{
+  "executed" : [
+    "circle-reference",
+    "skirt2-default",
+    "skirt2-longer",
+    "skirt2-flare10",
+    "skirt2-soft",
+    "skirt2-firm",
+    "prepare-boundaries"
+  ],
+  "failures" : [
+
+  ],
+  "gates" : "Existing sustained convergence, .025m\/s motion, 8% strain, 3mm body estimate and zero final cloth surface crossings; not real material calibration.",
+  "passed" : true,
+  "sourceFixture" : "skirt-two-panel.json"
+}

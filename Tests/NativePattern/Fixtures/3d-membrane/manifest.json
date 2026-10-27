@@ -1,0 +1,16 @@
+{
+  "scope": "Actual completed frame 469 from a rejected garment run. Not an accepted garment or source of valid cloth material calibration.",
+  "originalCaptureHashes": {
+    "/private/tmp/TailorAssNativeRigidCBC2400/native-initial-input.json": "4e3cebec242b4e01d2b0efb3537b3e622def0fff7afdf85b7e0286fd552b1050",
+    "/private/tmp/TailorAssNativeRigidCBC2400/cbc-frame-470.json": "e14d74fd0b19e6e3c597b892d12f8c43ca2d3115a6e4b518757f4ebfec7e827f",
+    "/private/tmp/TailorAssNativeRigidCBC2400/corrected-run-summary.json": "f7d0c83d553815f6fc639eecbcd0d383e4abe6299ae7703eb775838a9d519931",
+    "/private/tmp/TailorAssNativeRigidCBC2400/state-60-accepted-cbc-frame.json": "8b197edd352c24ad04c0b9c68f8dafe9be8e3f181a0a430677056558770fecb6"
+  },
+  "files": {
+    "native-rigid-469.json": "ee60eb415c32678e97c9c079aa51fe0ebf43fcc06f853f268c8df468d45b8035",
+    "complete-source.json": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+    "numpy-svd-oracle.json": "92cd1ccde86eb4141620f4395857c53bce669967233840e3e0750a110983ff71"
+  },
+  "fullSourceCanonicalSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "sourceOriginalRun": "/private/tmp/TailorAssNativeRigidCBC2400"
+}

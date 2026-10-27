@@ -1,0 +1,127 @@
+{
+  "scope": "Read-only bounded adaptive midpoint-Weyl proof, same original-frame affine F(t), no physical solve or state acceptance. Dense samples are not used by certificate.",
+  "actualBlockedR63": {
+    "status": "certified",
+    "triangles": 3472,
+    "nodes": 3474,
+    "leaves": 3473,
+    "maximumObservedDepth": 1,
+    "subdividedTriangleIDs": [
+      2860
+    ],
+    "lowerBound": 0.9366058482185132,
+    "upperBound": 1.0614355527133563,
+    "limits": {
+      "maximumDepth": 8,
+      "maximumGlobalIntervalNodes": 262144,
+      "numericAllowance": 1e-10
+    }
+  },
+  "analyticAndBudgetControls": [
+    {
+      "name": "isometricConstant",
+      "result": {
+        "status": "certified",
+        "triangles": 1,
+        "nodes": 1,
+        "leaves": 1,
+        "maximumObservedDepth": 0,
+        "subdividedTriangleIDs": [],
+        "lowerBound": 0.9999999999,
+        "upperBound": 1.0000000001,
+        "limits": {
+          "maximumDepth": 8,
+          "maximumGlobalIntervalNodes": 262144,
+          "numericAllowance": 1e-10
+        }
+      }
+    },
+    {
+      "name": "uniformScale1.06",
+      "result": {
+        "status": "certified",
+        "triangles": 1,
+        "nodes": 3,
+        "leaves": 2,
+        "maximumObservedDepth": 1,
+        "subdividedTriangleIDs": [
+          0
+        ],
+        "lowerBound": 0.9937867964644037,
+        "upperBound": 1.0662132035355965,
+        "limits": {
+          "maximumDepth": 8,
+          "maximumGlobalIntervalNodes": 262144,
+          "numericAllowance": 1e-10
+        }
+      }
+    },
+    {
+      "name": "flipBothAxesInteriorCollapse",
+      "result": {
+        "status": "domainWitness",
+        "nodes": 1,
+        "face": 0,
+        "time": 0.5,
+        "sigma": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "hingeRotate30deg",
+      "result": {
+        "status": "certified",
+        "triangles": 1,
+        "nodes": 15,
+        "leaves": 8,
+        "maximumObservedDepth": 3,
+        "subdividedTriangleIDs": [
+          0
+        ],
+        "lowerBound": 0.9341150933269634,
+        "upperBound": 1.032352380737815,
+        "limits": {
+          "maximumDepth": 8,
+          "maximumGlobalIntervalNodes": 262144,
+          "numericAllowance": 1e-10
+        }
+      }
+    },
+    {
+      "name": "hingeRotate60degMidCompression",
+      "result": {
+        "status": "domainWitness",
+        "nodes": 1,
+        "face": 0,
+        "time": 0.5,
+        "sigma": [
+          1.0,
+          0.8660254037844386
+        ]
+      }
+    },
+    {
+      "name": "realBlockedDepth0MustRemainUnknown",
+      "result": {
+        "status": "unknownDepth",
+        "nodes": 2861,
+        "face": 2860,
+        "depth": 0
+      }
+    },
+    {
+      "name": "realBlockedNodeBudgetMustRemainUnknown",
+      "result": {
+        "status": "unknownBudget",
+        "nodes": 100
+      }
+    }
+  ],
+  "minimumUniformSegmentsForRecordedBlockedPath": 2,
+  "maximumDepthProposed": 8,
+  "globalNodeBudgetProposed": 262144,
+  "productionOwnership": "root to decide; no production file modified",
+  "noCandidateAccepted": true
+}

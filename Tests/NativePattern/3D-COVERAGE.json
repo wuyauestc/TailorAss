@@ -1,0 +1,4938 @@
+{
+  "format": "tailorass.3d-scope-audit/1",
+  "date": "2026-10-26",
+  "objective": "完成全部3D功能",
+  "completionProven": false,
+  "scope": "All 12 existing GarmentCode native garment families, named components and valid meta-compositions retain their 2D source and gain native offline assembled 3D preview/real sewn correspondence, existing experimental materials/UI/cancel/OBJ behavior and verification. This ledger does not shrink the goal to four currently routed families.",
+  "method": "Static current-source review plus inspection/hash validation of recorded artifacts; no claim that every numerical suite was rerun during this audit.",
+  "counts": {
+    "styles": 12,
+    "designParameters": 122,
+    "bodyInputs": 26,
+    "bodyDerivedFormulas": 7,
+    "defaultNonemptyMetaSelections": 80
+  },
+  "styles": [
+    {
+      "id": "style.Shirt",
+      "name": "Shirt 宽松上衣",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D generator present; generic flat mesher validates representative front/back torso panels only.",
+      "remaining": "Runtime torso/arm placement, neck/arm openings, all real center/shoulder/side seams, full 3D solve and App route are missing.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePanelMesher.swift",
+        "Tests/NativePattern/PanelMesher.swift"
+      ],
+      "parameterPrefixes": [
+        "shirt",
+        "collar",
+        "sleeve"
+      ]
+    },
+    {
+      "id": "style.FittedShirt",
+      "name": "FittedShirt 合体上衣",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D generator and representative flat darted torso meshes present.",
+      "remaining": "Bust/waist darts, strapless support and complete source-facing sewn assembly have no garment-level 3D proof or App route.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift",
+        "Tests/NativePattern/PanelMesher.swift"
+      ],
+      "parameterPrefixes": [
+        "shirt",
+        "collar",
+        "sleeve",
+        "left"
+      ]
+    },
+    {
+      "id": "style.StraightWB",
+      "name": "StraightWB 直条腰头",
+      "status": "app_partial",
+      "currentEvidence": "Separate source particles and actual side sewing are wired. Default+2 mm seam perturbation pass alongside FittedWB (4 CLI cases total). Native UI medium/soft verified.",
+      "remaining": "Full catalog width/waist and low-rise regimes, additional bodies and composed outfits remain unverified; upper edge remains a numerical fixed support.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodeWaistbandAssembly.swift",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/generated/sewn-drape-summary.json",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/verification.json"
+      ],
+      "parameterPrefixes": [
+        "waistband"
+      ]
+    },
+    {
+      "id": "style.FittedWB",
+      "name": "FittedWB 贴体弧形腰头",
+      "status": "app_partial",
+      "currentEvidence": "Real annular source geometry, independent particles and side sewing wired. Default+2 mm perturbation pass. Native UI medium/firm verified.",
+      "remaining": "Same catalog/combination gaps as StraightWB; it is not already sewn to skirts/pants/tops.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodeWaistbandAssembly.swift",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/generated/sewn-drape-summary.json",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/verification.json"
+      ],
+      "parameterPrefixes": [
+        "waistband"
+      ]
+    },
+    {
+      "id": "style.SkirtCircle",
+      "name": "SkirtCircle 圆裙",
+      "status": "app_partial",
+      "currentEvidence": "App uses legacy structured source mesh with welded equal-length sides. Current body-surface report has .5/.75/1 cases; native .75 UI verified. New separate-particle factory has .5/.75/1 prepare proof and one explicitly limited .75 3D smoke, not wired.",
+      "remaining": "Catalog suns 1..1.95, cuts, low rise and combinations remain unsupported. New factory nil-limiter physics and .5/1 3D not verified. Replace/extend App route only after end-to-end proof.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "TrailorAss/Models/GarmentCodeCircleAssembly.swift",
+        "Tests/NativePattern/CircleAssembly.swift",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/comparison.json",
+        "/private/tmp/TailorAssCircleAssemblySmoke/summary.json",
+        "/private/tmp/TailorAssCircleAssemblyReproPrepare/circle-assembly-summary.json"
+      ],
+      "parameterPrefixes": [
+        "flare-skirt"
+      ]
+    },
+    {
+      "id": "style.AsymmSkirtCircle",
+      "name": "AsymmSkirtCircle 不对称圆裙",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D source exists; curve meshing is only a reusable primitive.",
+      "remaining": "Current circle adapter requires equal front/back radial geometry and rejects this family; needs real asymmetric placement, seams, gravity/contact and App proof.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "flare-skirt"
+      ]
+    },
+    {
+      "id": "style.Skirt2",
+      "name": "Skirt2 双片裙",
+      "status": "app_partial",
+      "currentEvidence": "Legacy welded side-seam solver is wired. Five body-surface cases (default/longer/flare10/soft/firm) and medium/soft UI verified; gathered waist is an auxiliary corrugated fixed support.",
+      "remaining": "True free waistband attachment, ruffle 1.5..2, bottom cut, low rise and complete outfit assembly lack integration. Existing shape is not a sewn real waistband.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSkirtDrape.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/comparison.json",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/ui/verification.json"
+      ],
+      "parameterPrefixes": [
+        "skirt"
+      ]
+    },
+    {
+      "id": "style.SkirtManyPanels",
+      "name": "SkirtManyPanels 多片裙",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D n_panels and panel_curve branches exist.",
+      "remaining": "No actual n-panel 3D placement/sewing/contact/output acceptance or App route; test 4..15 panels and every catalog curve option.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "flare-skirt.skirt-many-panels"
+      ]
+    },
+    {
+      "id": "style.PencilSkirt",
+      "name": "PencilSkirt 铅笔裙",
+      "status": "partial",
+      "currentEvidence": "Default full-source two-panel PencilSkirt retained four back darts and all eight real source seams, zero pins, and returned numerical R output at step744 after24 full-load quiet macros. Whole-side eased seam remains visibly unclosed: sparse tack maximum gap0.000564mm versus free-node separation up to8.77mm.",
+      "remaining": "Repair continuous eased-seam closure and revalidate appearance without changing source/rest/force/path gates. Slit/cut/hem and size variants, combinations, personal fit, native App generic routing and phone validation remain unverified.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift",
+        "TrailorAss/Models/GarmentCodePanelMesher.swift",
+        "Tests/NativePattern/Reports/2026-10-27-generic-3d/pencil-skirt/index.html",
+        "Tests/NativePattern/Reports/2026-10-27-generic-3d/pencil-skirt/preview-manifest.json"
+      ],
+      "parameterPrefixes": [
+        "pencil-skirt"
+      ],
+      "initialAudit": {
+        "status": "missing_end_to_end",
+        "currentEvidence": "2D shaped waist/darts/slits/decorative cuts exist; generic mesher can handle simple concave loops.",
+        "remaining": "Actual waist darts, front/back/side slits, sloped hem, decorative Sun/logo cuts and hip-conforming complete sewn solve are missing."
+      },
+      "visualSeamReviewPending": true
+    },
+    {
+      "id": "style.GodetSkirt",
+      "name": "GodetSkirt 插片裙",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D base Skirt2/PencilSkirt plus real insert panels/stitches exist.",
+      "remaining": "Must retain every insert and cut-mouth seam, folded waist darts for Pencil base, all insert counts/depth/width and contact. No full 3D factory or App proof.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "godet-skirt"
+      ]
+    },
+    {
+      "id": "style.SkirtLevels",
+      "name": "SkirtLevels 多层裙",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D supports four base choices and three tier choices with true joined edges.",
+      "remaining": "Tier placement, level_ruffle free nodes, 1..5 levels, mixed asymmetry and full-body/self contacts are missing.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "levels-skirt"
+      ]
+    },
+    {
+      "id": "style.Pants",
+      "name": "Pants 裤装",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D leg fronts/backs and optional cuff components exist; representative front/back flat meshes validated.",
+      "remaining": "Separate left/right leg placement, crotch curve/center seam, in/outseams, rise, per-leg cuffs and free waist attachment have no 3D garment proof. Known no-upper Pants+WB rise-path mismatch needs resolving.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift",
+        "Tests/NativePattern/PanelMesher.swift"
+      ],
+      "parameterPrefixes": [
+        "pants"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "component.necklines",
+      "name": "前/后领口 7 种 × 对称/左侧配置",
+      "status": "primitive_only",
+      "currentEvidence": "2D supports CircleNeckHalf/CurvyNeckHalf/VNeckHalf/SquareNeckHalf/TrapezoidNeckHalf/CircleArcNeckHalf/Bezier2NeckHalf. Generic Bezier/circle mesher exists.",
+      "remaining": "Each real upper neckline must remain an open boundary with correct fit/normal and seam attachment; no upper 3D exists.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodePanelMesher.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "collar",
+        "left.collar"
+      ]
+    },
+    {
+      "id": "component.collar",
+      "name": "Turtle / SimpleLapel / Hood2Panels 独立领部",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D panels and connection stitches exist.",
+      "remaining": "Neck/collar/hood/lapel placement and facing, hood center seam, lapel standing branch and genuine torso/neck contact unverified.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "collar.component"
+      ]
+    },
+    {
+      "id": "component.sleeve",
+      "name": "有袖/无袖、3 种袖窿、袖角与开口方向",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D ArmholeSquare/ArmholeAngle/ArmholeCurve, sleeve angle/length/width/orientation exist.",
+      "remaining": "Attach actual sleeve to armhole including right_wrong/direction, arm pose, free cuff edge and shoulder/body contacts; no sleeve 3D acceptance.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "sleeve",
+        "left.sleeve"
+      ]
+    },
+    {
+      "id": "component.standingShoulder",
+      "name": "立肩及立肩长度",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D standing_shoulder branch present.",
+      "remaining": "Real three-dimensional shoulder placement and sustained seam/shape proof missing.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "sleeve.standing_shoulder",
+        "left.sleeve.standing_shoulder"
+      ]
+    },
+    {
+      "id": "component.cuffs",
+      "name": "袖口/裤口 CuffBand / CuffSkirt / CuffBandSkirt",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D independent bands/flounces/mixed cuff panels and joints exist.",
+      "remaining": "Attach all actual pieces with top_ruffle/skirt_ruffle, skirt_fraction/flare and source lengths; test both arms and both legs.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "sleeve.cuff",
+        "left.sleeve.cuff",
+        "pants.cuff"
+      ]
+    },
+    {
+      "id": "component.asymmetry",
+      "name": "左右不对称上衣及单侧无肩带",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D left.enable_asym and left shirt/collar/sleeve variants exist.",
+      "remaining": "Do not mirror one solved half over a different source; all left/right panels and seams need independent placement and proof.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "TrailorAss/Models/GarmentCodePrograms.swift"
+      ],
+      "parameterPrefixes": [
+        "left"
+      ]
+    },
+    {
+      "id": "component.darts",
+      "name": "同片胸省/腰省/裙裤省道",
+      "status": "primitive_only",
+      "currentEvidence": "Sewing/shared dart-tip contact tests exist; generic mesher accepts representative darted FittedShirt source loops.",
+      "remaining": "Actual garment-level dart folding, correct side/facing, no crossing at tip and unchanged source metric have no 3D acceptance.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSewing.swift",
+        "Tests/NativePattern/Sewing.swift",
+        "Tests/NativePattern/SewnContact.swift",
+        "Tests/NativePattern/PanelMesher.swift"
+      ],
+      "parameterPrefixes": [
+        "shirt.strapless",
+        "pencil-skirt",
+        "pants"
+      ]
+    },
+    {
+      "id": "component.slitsCuts",
+      "name": "圆裙/双片裙/铅笔裙开衩与装饰切口",
+      "status": "primitive_only",
+      "currentEvidence": "Generic flat mesher includes cut Skirt2 and concave U examples.",
+      "remaining": "Preserve open cut/slit edges in assembled surfaces, do not close across them; current skirt adapters explicitly reject cuts.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSkirtDrape.swift",
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "Tests/NativePattern/PanelMesher.swift"
+      ],
+      "parameterPrefixes": [
+        "skirt.bottom_cut",
+        "flare-skirt.cut",
+        "pencil-skirt"
+      ]
+    },
+    {
+      "id": "component.gatherEase",
+      "name": "抽褶、吃势与保留自由褶节点",
+      "status": "primitive_only",
+      "currentEvidence": "Sparse finite-tack plans, true free-node checks and source-edge refinement request -> actual remeshing pass in Sewing tests.",
+      "remaining": "No actual gathered/eased composed garment 3D solve is yet accepted; fixed corrugated Skirt2 support is a different experiment. Define intent from verified known programs rather than guessing imports from ratio.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSewing.swift",
+        "TrailorAss/Models/GarmentCodePanelMesher.swift",
+        "Tests/NativePattern/Sewing.swift",
+        "TrailorAss/Models/GarmentCodeSewnInput.swift"
+      ],
+      "parameterPrefixes": [
+        "skirt.ruffle",
+        "sleeve.connect_ruffle",
+        "sleeve.cuff",
+        "pants.cuff",
+        "levels-skirt.level_ruffle"
+      ]
+    },
+    {
+      "id": "component.lowRise",
+      "name": "低腰及腰头与下装腰位一致",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D catalog rise .5..1 exists.",
+      "remaining": "Standard-body skirt assemblies require natural waist. Pants+WB without upper currently chooses skirt.rise for belt vs pants.rise for pants. Resolve upstream parity and establish real lower-body attachment.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "TrailorAss/Models/GarmentCodeSkirtDrape.swift",
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift"
+      ],
+      "parameterPrefixes": [
+        "skirt.rise",
+        "flare-skirt.rise",
+        "pencil-skirt.rise",
+        "levels-skirt.rise",
+        "pants.rise"
+      ]
+    }
+  ],
+  "compositions": [
+    {
+      "id": "composition.waistband_lower",
+      "name": "腰头 + 每种裙装/裤装",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D NativeGenerator composition exists; no such App 3D route.",
+      "remaining": "Current standalone factories reject additional panels. Combine full source document, preserve all attachment lengths/intent, pin only appropriate garment support and let waist joins move.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    },
+    {
+      "id": "composition.upper_waistband",
+      "name": "上衣 + 腰头",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D NativeGenerator composition exists; no such App 3D route.",
+      "remaining": "Upper placement and torso-to-band actual joints must be added.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    },
+    {
+      "id": "composition.upper_lower",
+      "name": "上衣 + 下装（无腰头）",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D NativeGenerator composition exists; no such App 3D route.",
+      "remaining": "Direct waist interface joins, lengths/ruffle and support strategy absent.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    },
+    {
+      "id": "composition.upper_waistband_lower",
+      "name": "上衣 + 腰头 + 下装",
+      "status": "missing_end_to_end",
+      "currentEvidence": "2D NativeGenerator composition exists; no such App 3D route.",
+      "remaining": "Full connected garment, every source piece/join and inter-component contact unverified.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeNativeGenerator.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    }
+  ],
+  "platform": [
+    {
+      "id": "pipeline.placement",
+      "name": "二维裁片 → 人台周围初始装配",
+      "status": "partial",
+      "currentEvidence": "Circle/WB/Skirt2 have specialized initializers. Imported JSON retains placement fields; newly generated PatternFile deliberately sets translation/rotation zero and includes_3d_placement=false.",
+      "remaining": "General source-faithful placement for torso/arms/legs/darts/tiers/inserts/collars and valid imported rotation/translation is absent. A flat mesh alone does not satisfy this step.",
+      "evidence": [
+        "TrailorAss/Models/PatternDesignModels.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    },
+    {
+      "id": "pipeline.source",
+      "name": "源边长/面积/质量/完整源 SHA 与三角法向",
+      "status": "foundation_verified",
+      "currentEvidence": "PreparedInput validates all panels, disjoint particles, complete source boundaries/stitches, directed faces, mass and same collision/render body; read-only panelBindings retained. 38 negative/cancel/budget cases recorded.",
+      "remaining": "Each new factory must pass this full factory with its complete document and supply actual runtime integration evidence; do not bypass for complex shapes.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSewnInput.swift",
+        "Tests/NativePattern/SewnInput.swift"
+      ]
+    },
+    {
+      "id": "pipeline.seams",
+      "name": "真实缝合方向、正反面和连续普通边",
+      "status": "partial",
+      "currentEvidence": "Sewing accepts explicit A/B direction and rightWrong metadata; WB genuine ordinary seams accepted. Legacy skirts are welded controls.",
+      "remaining": "Current adapters reject rightWrong=true. All actual non-WB seams, mixed facing, one-to-many subdivided interfaces and same-panel darts require explicit known mappings and integration. Weldequal seams alone cannot prove independent sewing.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSewing.swift",
+        "TrailorAss/Models/GarmentCodeWaistbandAssembly.swift",
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "TrailorAss/Models/GarmentCodeSkirtDrape.swift"
+      ]
+    },
+    {
+      "id": "pipeline.contacts",
+      "name": "同源人体距离场/面接触/布片自接触",
+      "status": "foundation_verified",
+      "currentEvidence": "Full visible closed-body mesh and SDF, actual body triangle intersection checks and cloth contact tests exist. Body-surface report covers 8 skirt cases, not all clothes.",
+      "remaining": "New sleeves/collars/crotch/tiers/layered regions need discrete final intersection and independent inside/outside/centroid tests plus visual pose checks. Current scheme does not provide continuous collision guarantees.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeStandardBody.swift",
+        "TrailorAss/Models/GarmentCodeBodySurfaceContact.swift",
+        "TrailorAss/Models/GarmentCodeClothContact.swift",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/comparison.json"
+      ]
+    },
+    {
+      "id": "body.dimensions",
+      "name": "人体尺寸与姿态",
+      "status": "partial",
+      "currentEvidence": "Full CC0 mesh is visible; fitting uses height/waist/hips/hips_line/_waist_level with bounded scaling, same body used for rendering/contact.",
+      "remaining": "Bust, underbust, neck, shoulders, arms/wrists, thigh/crotch and arm_pose_angle do not independently fit this mannequin. Upper/leg assembly needs either dimension-consistent fitting or explicitly validated body-shape limits; no personal scan is required.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeStandardBody.swift",
+        "TrailorAss/Resources/GarmentCodeParameterCatalog.json"
+      ]
+    },
+    {
+      "id": "material.presets",
+      "name": "柔软/中等/挺括实验面料",
+      "status": "app_partial",
+      "currentEvidence": "120/180/280 g/m² numerical presets, SI reference area mass, compliance/damping and material regeneration are implemented. Supported garment UI preset changes recorded.",
+      "remaining": "No measured cloth calibration (user explicitly accepted experimental presets). Verify each new garment remains stable and preserves area/mass under all presets. Do not turn lack of unavailable sample measurements into a requirement for this phase.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeClothMaterial.swift",
+        "Tests/NativePattern/ClothMaterial.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/verification.json"
+      ]
+    },
+    {
+      "id": "ui.preview",
+      "name": "App 旋转/缩放/接缝/人体显示/复位",
+      "status": "app_partial",
+      "currentEvidence": "RealityKit native preview and actual supported-skirt/WB UI records exist; WB close camera handles full-body orbit bounds.",
+      "remaining": "Composed garment/full-body framing, upper/lower/hood/extreme sleeves views, multi-component seam identity and all new UI routes need final native verification.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/ui/verification.json",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/verification.json"
+      ]
+    },
+    {
+      "id": "ui.async",
+      "name": "离线后台生成/进度/取消/失败",
+      "status": "app_partial",
+      "currentEvidence": "Task.detached, progress callback, runID freshness guards, cancellation and visible quality/failure summary present. Core cancellation tests exist.",
+      "remaining": "Complex preparation is still actor-bound; measure UI responsiveness/cancel during meshing, preparation and long multi-panel solve, plus no stale result after dismiss/configuration change.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "Tests/NativePattern/SewnDrape.swift",
+        "Tests/NativePattern/CircleAssembly.swift"
+      ]
+    },
+    {
+      "id": "export.obj",
+      "name": "实际 3D 数据导出",
+      "status": "app_partial",
+      "currentEvidence": "OBJ metre/Y-up cloth+body export and local Files export proven for soft Skirt2 and StraightWB.",
+      "remaining": "All new multi-panel source identities, faces/normals, seams and final geometry need export/reimport verification. OBJ currently uses one cloth object name with skirt/WB cases; add appropriate full-garment naming. GLB/AR are not explicit newly authorized deliverables.",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeCircleDrape.swift",
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift",
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/soft-export-verification.json"
+      ]
+    },
+    {
+      "id": "persistence.cache",
+      "name": "重复生成/保存的输入与输出来源",
+      "status": "not_implemented",
+      "currentEvidence": "UI holds output and temporary OBJ for current view; no 3D cache/session archive was found in inspected 3D files.",
+      "remaining": "If repeated results/session saving are retained in current product plan, bind source/body/material/solver version to cached output and invalidate correctly; not required to reproduce obsolete Unity/GLB plan blindly.",
+      "evidence": [
+        "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift"
+      ]
+    },
+    {
+      "id": "device.performance",
+      "name": "iPhone 17 Pro / iOS 27.0.1 真机性能",
+      "status": "unverified",
+      "currentEvidence": "Recorded Release simulator/generic iOS builds pass and actual Simulator UI runs exist. Explicit separate Circle .75 smoke reports 56.7 s on Mac.",
+      "remaining": "Physical device run, elapsed preparation+solve/render time, peak memory, responsiveness/thermal behavior and largest supported full garments remain unmeasured. Mac/Simulator timings are not a phone benchmark.",
+      "evidence": [
+        "Tests/NativePattern/Reports/2026-10-25-waistband-sewn/ui/verification.json",
+        "/private/tmp/TailorAssCircleAssemblySmoke/summary.json"
+      ]
+    },
+    {
+      "id": "comparison.reference",
+      "name": "GarmentCode / Design2GarmentCode 效果对照",
+      "status": "partial",
+      "currentEvidence": "Pinned official 2D source geometry and public qualitative 3D reference reports retained. Report explicitly says no matched official final 3D mesh.",
+      "remaining": "For each completed family, compare same input source/panel topology, named 3D views and shape changes. Numeric 3D equivalence cannot be claimed without matched official body/material/final mesh; functional equivalent iOS backend remains allowed.",
+      "evidence": [
+        "Tests/NativePattern/Reports/2026-10-25-3d-refined/comparison.json",
+        "Tests/NativePattern/Reports/2026-10-25-body-surface/comparison.json"
+      ]
+    },
+    {
+      "id": "regression.2d",
+      "name": "保留二维/打印功能",
+      "status": "partial",
+      "currentEvidence": "run-acceptance.sh covers source geometry, interfaces, import, localization, seams, PDF/manufacturing and basic adapter. 3D suites deliberately separate.",
+      "remaining": "After shared model/generator changes rerun affected 2D/printing gates and show current source paper/export bytes unchanged. Existing 356-pattern 2D claim is not 3D coverage.",
+      "evidence": [
+        "Tests/NativePattern/run-acceptance.sh",
+        "Tests/NativePattern/Smoke.swift"
+      ]
+    }
+  ],
+  "designParameterTrace": [
+    {
+      "path": "meta.upper",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "FittedShirt",
+        "Shirt",
+        null
+      ],
+      "coverageRows": [
+        "meta.component_selection"
+      ]
+    },
+    {
+      "path": "meta.wb",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "StraightWB",
+        "FittedWB",
+        null
+      ],
+      "coverageRows": [
+        "meta.component_selection"
+      ]
+    },
+    {
+      "path": "meta.bottom",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "SkirtCircle",
+        "AsymmSkirtCircle",
+        "GodetSkirt",
+        "Pants",
+        "Skirt2",
+        "SkirtManyPanels",
+        "PencilSkirt",
+        "SkirtLevels",
+        null
+      ],
+      "coverageRows": [
+        "meta.component_selection"
+      ]
+    },
+    {
+      "path": "waistband.waist",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1.0,
+        2
+      ],
+      "coverageRows": [
+        "style.StraightWB",
+        "style.FittedWB"
+      ]
+    },
+    {
+      "path": "waistband.width",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        0.1,
+        1.0
+      ],
+      "coverageRows": [
+        "style.StraightWB",
+        "style.FittedWB"
+      ]
+    },
+    {
+      "path": "shirt.strapless",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.darts"
+      ]
+    },
+    {
+      "path": "shirt.length",
+      "default": 1.2,
+      "type": "float",
+      "range": [
+        0.5,
+        3.5
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt"
+      ]
+    },
+    {
+      "path": "shirt.width",
+      "default": 1.05,
+      "type": "float",
+      "range": [
+        1.0,
+        1.3
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt"
+      ]
+    },
+    {
+      "path": "shirt.flare",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.7,
+        1.6
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt"
+      ]
+    },
+    {
+      "path": "collar.f_collar",
+      "default": "CircleNeckHalf",
+      "type": "select",
+      "range": [
+        "CircleNeckHalf",
+        "CurvyNeckHalf",
+        "VNeckHalf",
+        "SquareNeckHalf",
+        "TrapezoidNeckHalf",
+        "CircleArcNeckHalf",
+        "Bezier2NeckHalf"
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.b_collar",
+      "default": "CircleNeckHalf",
+      "type": "select",
+      "range": [
+        "CircleNeckHalf",
+        "CurvyNeckHalf",
+        "VNeckHalf",
+        "SquareNeckHalf",
+        "TrapezoidNeckHalf",
+        "CircleArcNeckHalf",
+        "Bezier2NeckHalf"
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.width",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        -0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.fc_depth",
+      "default": 0.4,
+      "type": "float",
+      "range": [
+        0.3,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.bc_depth",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.fc_angle",
+      "default": 95,
+      "type": "int",
+      "range": [
+        70,
+        110
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.bc_angle",
+      "default": 95,
+      "type": "int",
+      "range": [
+        70,
+        110
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.f_bezier_x",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.f_bezier_y",
+      "default": 0.55,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.b_bezier_x",
+      "default": 0.15,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.b_bezier_y",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.f_flip_curve",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.b_flip_curve",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines"
+      ]
+    },
+    {
+      "path": "collar.component.style",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "Turtle",
+        "SimpleLapel",
+        "Hood2Panels",
+        null
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines",
+        "component.collar"
+      ]
+    },
+    {
+      "path": "collar.component.depth",
+      "default": 7,
+      "type": "int",
+      "range": [
+        2,
+        8
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines",
+        "component.collar"
+      ]
+    },
+    {
+      "path": "collar.component.lapel_standing",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines",
+        "component.collar"
+      ]
+    },
+    {
+      "path": "collar.component.hood_depth",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines",
+        "component.collar"
+      ]
+    },
+    {
+      "path": "collar.component.hood_length",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        1.5
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.necklines",
+        "component.collar"
+      ]
+    },
+    {
+      "path": "sleeve.sleeveless",
+      "default": true,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.armhole_shape",
+      "default": "ArmholeCurve",
+      "type": "select",
+      "range": [
+        "ArmholeSquare",
+        "ArmholeAngle",
+        "ArmholeCurve"
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.length",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.1,
+        1.15
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.connecting_width",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        0,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.end_width",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.2,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.sleeve_angle",
+      "default": 10,
+      "type": "int",
+      "range": [
+        10,
+        50
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.opening_dir_mix",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        -0.9,
+        0.8
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.standing_shoulder",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.standingShoulder"
+      ]
+    },
+    {
+      "path": "sleeve.standing_shoulder_len",
+      "default": 5.0,
+      "type": "float",
+      "range": [
+        4,
+        10
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.connect_ruffle",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.smoothing_coeff",
+      "default": 0.25,
+      "type": "float",
+      "range": [
+        0.1,
+        0.4
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.type",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "CuffBand",
+        "CuffSkirt",
+        "CuffBandSkirt",
+        null
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.top_ruffle",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        3
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.cuff_len",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        0.05,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.skirt_fraction",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.1,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.skirt_flare",
+      "default": 1.2,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "sleeve.cuff.skirt_ruffle",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1,
+        1.5
+      ],
+      "coverageRows": [
+        "style.Shirt",
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "left.enable_asym",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.shirt.strapless",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.shirt.width",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1.0,
+        1.3
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.shirt.flare",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.7,
+        1.6
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.f_collar",
+      "default": "CircleNeckHalf",
+      "type": "select",
+      "range": [
+        "CircleNeckHalf",
+        "CurvyNeckHalf",
+        "VNeckHalf",
+        "SquareNeckHalf",
+        "TrapezoidNeckHalf",
+        "CircleArcNeckHalf",
+        "Bezier2NeckHalf"
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.b_collar",
+      "default": "CircleNeckHalf",
+      "type": "select",
+      "range": [
+        "CircleNeckHalf",
+        "CurvyNeckHalf",
+        "VNeckHalf",
+        "SquareNeckHalf",
+        "TrapezoidNeckHalf",
+        "CircleArcNeckHalf",
+        "Bezier2NeckHalf"
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.width",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0,
+        1
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.fc_angle",
+      "default": 95,
+      "type": "int",
+      "range": [
+        70,
+        110
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.bc_angle",
+      "default": 95,
+      "type": "int",
+      "range": [
+        70,
+        110
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.f_bezier_x",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.f_bezier_y",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.b_bezier_x",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.b_bezier_y",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.f_flip_curve",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.collar.b_flip_curve",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.necklines",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.sleeveless",
+      "default": true,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.armhole_shape",
+      "default": "ArmholeCurve",
+      "type": "select",
+      "range": [
+        "ArmholeSquare",
+        "ArmholeAngle",
+        "ArmholeCurve"
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.length",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.1,
+        1.15
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.connecting_width",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        0,
+        2
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.end_width",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.2,
+        2
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.sleeve_angle",
+      "default": 10,
+      "type": "int",
+      "range": [
+        10,
+        50
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.opening_dir_mix",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        -0.9,
+        0.8
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.standing_shoulder",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.standingShoulder",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.standing_shoulder_len",
+      "default": 5.0,
+      "type": "float",
+      "range": [
+        4,
+        10
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.connect_ruffle",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.smoothing_coeff",
+      "default": 0.25,
+      "type": "float",
+      "range": [
+        0.1,
+        0.4
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.type",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "CuffBand",
+        "CuffSkirt",
+        "CuffBandSkirt",
+        null
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.top_ruffle",
+      "default": 1,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.cuff_len",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        0.05,
+        0.9
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.skirt_fraction",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.1,
+        0.9
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.skirt_flare",
+      "default": 1.2,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "left.sleeve.cuff.skirt_ruffle",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1,
+        1.5
+      ],
+      "coverageRows": [
+        "style.FittedShirt",
+        "component.sleeve",
+        "component.cuffs",
+        "component.asymmetry"
+      ]
+    },
+    {
+      "path": "skirt.length",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        -0.2,
+        0.95
+      ],
+      "coverageRows": [
+        "style.Skirt2"
+      ]
+    },
+    {
+      "path": "skirt.rise",
+      "default": 1,
+      "type": "float",
+      "range": [
+        0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.Skirt2",
+        "component.lowRise"
+      ]
+    },
+    {
+      "path": "skirt.ruffle",
+      "default": 1.3,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Skirt2",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "skirt.bottom_cut",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Skirt2",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "skirt.flare",
+      "default": 0,
+      "type": "int",
+      "range": [
+        0,
+        20
+      ],
+      "coverageRows": [
+        "style.Skirt2"
+      ]
+    },
+    {
+      "path": "flare-skirt.length",
+      "default": 0.2,
+      "type": "float",
+      "range": [
+        -0.2,
+        0.95
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle"
+      ]
+    },
+    {
+      "path": "flare-skirt.rise",
+      "default": 1,
+      "type": "float",
+      "range": [
+        0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "component.lowRise"
+      ]
+    },
+    {
+      "path": "flare-skirt.suns",
+      "default": 0.75,
+      "type": "float",
+      "range": [
+        0.1,
+        1.95
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle"
+      ]
+    },
+    {
+      "path": "flare-skirt.skirt-many-panels.n_panels",
+      "default": 4,
+      "type": "int",
+      "range": [
+        4,
+        15
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "style.SkirtManyPanels"
+      ]
+    },
+    {
+      "path": "flare-skirt.skirt-many-panels.panel_curve",
+      "default": 0,
+      "type": "select",
+      "range": [
+        -0.35,
+        -0.25,
+        -0.15,
+        0,
+        0.15,
+        0.25,
+        0.35,
+        0.45
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "style.SkirtManyPanels"
+      ]
+    },
+    {
+      "path": "flare-skirt.asymm.front_length",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.1,
+        0.9
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle"
+      ]
+    },
+    {
+      "path": "flare-skirt.cut.add",
+      "default": false,
+      "type": "bool",
+      "range": [
+        true,
+        false
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "flare-skirt.cut.depth",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.05,
+        0.95
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "flare-skirt.cut.width",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        0.05,
+        0.4
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "flare-skirt.cut.place",
+      "default": -0.5,
+      "type": "float",
+      "range": [
+        -1,
+        1
+      ],
+      "coverageRows": [
+        "style.SkirtCircle",
+        "style.AsymmSkirtCircle",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "godet-skirt.base",
+      "default": "PencilSkirt",
+      "type": "select",
+      "range": [
+        "Skirt2",
+        "PencilSkirt"
+      ],
+      "coverageRows": [
+        "style.GodetSkirt"
+      ]
+    },
+    {
+      "path": "godet-skirt.insert_w",
+      "default": 15,
+      "type": "int",
+      "range": [
+        10,
+        50
+      ],
+      "coverageRows": [
+        "style.GodetSkirt"
+      ]
+    },
+    {
+      "path": "godet-skirt.insert_depth",
+      "default": 20,
+      "type": "int",
+      "range": [
+        10,
+        50
+      ],
+      "coverageRows": [
+        "style.GodetSkirt"
+      ]
+    },
+    {
+      "path": "godet-skirt.num_inserts",
+      "default": 4,
+      "type": "select",
+      "range": [
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "coverageRows": [
+        "style.GodetSkirt"
+      ]
+    },
+    {
+      "path": "godet-skirt.cuts_distance",
+      "default": 5,
+      "type": "int",
+      "range": [
+        0,
+        10
+      ],
+      "coverageRows": [
+        "style.GodetSkirt"
+      ]
+    },
+    {
+      "path": "pencil-skirt.length",
+      "default": 0.4,
+      "type": "float",
+      "range": [
+        0.2,
+        0.95
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.rise",
+      "default": 1,
+      "type": "float",
+      "range": [
+        0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts",
+        "component.lowRise"
+      ]
+    },
+    {
+      "path": "pencil-skirt.flare",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.6,
+        1.5
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.low_angle",
+      "default": 0,
+      "type": "int",
+      "range": [
+        -30,
+        30
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.front_slit",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        0.9
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.back_slit",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        0.9
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.left_slit",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        0.9
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.right_slit",
+      "default": 0,
+      "type": "float",
+      "range": [
+        0,
+        0.9
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "pencil-skirt.style_side_cut",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "Sun",
+        "SIGGRAPH_logo"
+      ],
+      "coverageRows": [
+        "style.PencilSkirt",
+        "component.darts",
+        "component.slitsCuts"
+      ]
+    },
+    {
+      "path": "levels-skirt.base",
+      "default": "PencilSkirt",
+      "type": "select",
+      "range": [
+        "Skirt2",
+        "PencilSkirt",
+        "SkirtCircle",
+        "AsymmSkirtCircle"
+      ],
+      "coverageRows": [
+        "style.SkirtLevels"
+      ]
+    },
+    {
+      "path": "levels-skirt.level",
+      "default": "Skirt2",
+      "type": "select",
+      "range": [
+        "Skirt2",
+        "SkirtCircle",
+        "AsymmSkirtCircle"
+      ],
+      "coverageRows": [
+        "style.SkirtLevels"
+      ]
+    },
+    {
+      "path": "levels-skirt.num_levels",
+      "default": 1,
+      "type": "int",
+      "range": [
+        1,
+        5
+      ],
+      "coverageRows": [
+        "style.SkirtLevels"
+      ]
+    },
+    {
+      "path": "levels-skirt.level_ruffle",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1,
+        1.7
+      ],
+      "coverageRows": [
+        "style.SkirtLevels",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "levels-skirt.length",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.2,
+        0.95
+      ],
+      "coverageRows": [
+        "style.SkirtLevels"
+      ]
+    },
+    {
+      "path": "levels-skirt.rise",
+      "default": 1,
+      "type": "float",
+      "range": [
+        0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.SkirtLevels",
+        "component.lowRise"
+      ]
+    },
+    {
+      "path": "levels-skirt.base_length_frac",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.2,
+        0.8
+      ],
+      "coverageRows": [
+        "style.SkirtLevels"
+      ]
+    },
+    {
+      "path": "pants.length",
+      "default": 0.3,
+      "type": "float",
+      "range": [
+        0.2,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.darts"
+      ]
+    },
+    {
+      "path": "pants.width",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1.0,
+        1.5
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.darts"
+      ]
+    },
+    {
+      "path": "pants.flare",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.5,
+        1.2
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.darts"
+      ]
+    },
+    {
+      "path": "pants.rise",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        0.5,
+        1
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.darts",
+        "component.lowRise"
+      ]
+    },
+    {
+      "path": "pants.cuff.type",
+      "default": null,
+      "type": "select_null",
+      "range": [
+        "CuffBand",
+        "CuffSkirt",
+        "CuffBandSkirt",
+        null
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "pants.cuff.top_ruffle",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "pants.cuff.cuff_len",
+      "default": 0.1,
+      "type": "float",
+      "range": [
+        0.05,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "pants.cuff.skirt_fraction",
+      "default": 0.5,
+      "type": "float",
+      "range": [
+        0.1,
+        0.9
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "pants.cuff.skirt_flare",
+      "default": 1.2,
+      "type": "float",
+      "range": [
+        1,
+        2
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    },
+    {
+      "path": "pants.cuff.skirt_ruffle",
+      "default": 1.0,
+      "type": "float",
+      "range": [
+        1,
+        1.5
+      ],
+      "coverageRows": [
+        "style.Pants",
+        "component.cuffs",
+        "component.darts",
+        "component.gatherEase"
+      ]
+    }
+  ],
+  "bodyInputs": {
+    "arm_length": 53.9697,
+    "arm_pose_angle": 45.483,
+    "armscye_depth": 12.8679,
+    "back_width": 47.6761,
+    "bum_points": 18.2342,
+    "bust": 99.8407,
+    "bust_line": 25.6947,
+    "bust_points": 16.9463,
+    "crotch_hip_diff": 8.81363,
+    "head_l": 26.3262,
+    "height": 171.99,
+    "hip_back_width": 54.8237,
+    "hip_inclination": 9.86489,
+    "hips": 103.478,
+    "hips_line": 23.4837,
+    "leg_circ": 60.2039,
+    "neck_w": 18.9328,
+    "shoulder_incl": 21.6777,
+    "shoulder_w": 36.4568,
+    "underbust": 86.2455,
+    "vert_bust_line": 21.1388,
+    "waist": 84.3338,
+    "waist_back_width": 39.1358,
+    "waist_line": 36.8913,
+    "waist_over_bust_line": 40.5603,
+    "wrist": 16.5945
+  },
+  "bodyDerivedFormulas": {
+    "_waist_level": "height - head_l - waist_line",
+    "_leg_length": "_waist_level - hips_line",
+    "_base_sleeve_balance": "shoulder_w - 2",
+    "_bust_line": "(1 - 1.0/3) * vert_bust_line + (1.0/3) * bust_line; when vert_bust_line is absent: bust_line",
+    "_hip_inclination": "hip_inclination / 2",
+    "_shoulder_incl": "shoulder_incl",
+    "_armscye_depth": "armscye_depth + 2.5"
+  },
+  "recordedProof": {
+    "sewnReportGeneratedArtifactHashes": {
+      "fittedwb-default-acceptance.json": true,
+      "fittedwb-default-diagnostics.json": true,
+      "fittedwb-default-mesh.json": true,
+      "fittedwb-default-plan.json": true,
+      "fittedwb-default-reference.json": true,
+      "fittedwb-default-source.json": true,
+      "fittedwb-default-waist-views.png": true,
+      "fittedwb-default.obj": true,
+      "fittedwb-free-bottom-2mm-acceptance.json": true,
+      "fittedwb-free-bottom-2mm-diagnostics.json": true,
+      "fittedwb-free-bottom-2mm-mesh.json": true,
+      "fittedwb-free-bottom-2mm-plan.json": true,
+      "fittedwb-free-bottom-2mm-reference.json": true,
+      "fittedwb-free-bottom-2mm-source.json": true,
+      "fittedwb-free-bottom-2mm-waist-views.png": true,
+      "fittedwb-free-bottom-2mm.obj": true,
+      "sewn-drape-summary.json": true,
+      "straightwb-default-acceptance.json": true,
+      "straightwb-default-diagnostics.json": true,
+      "straightwb-default-mesh.json": true,
+      "straightwb-default-plan.json": true,
+      "straightwb-default-reference.json": true,
+      "straightwb-default-source.json": true,
+      "straightwb-default-waist-views.png": true,
+      "straightwb-default.obj": true,
+      "straightwb-free-bottom-2mm-acceptance.json": true,
+      "straightwb-free-bottom-2mm-diagnostics.json": true,
+      "straightwb-free-bottom-2mm-mesh.json": true,
+      "straightwb-free-bottom-2mm-plan.json": true,
+      "straightwb-free-bottom-2mm-reference.json": true,
+      "straightwb-free-bottom-2mm-source.json": true,
+      "straightwb-free-bottom-2mm-waist-views.png": true,
+      "straightwb-free-bottom-2mm.obj": true
+    },
+    "sewnReportCurrentSourceHashes": {
+      "GarmentCodeSewing.swift": true,
+      "GarmentCodeSewnInput.swift": false,
+      "GarmentCodeSewnDrape.swift": true,
+      "GarmentCodeWaistbandAssembly.swift": true,
+      "GarmentCodeWaistbandDrape.swift": true,
+      "GarmentCodeClothContact.swift": true,
+      "GarmentCodeBodySurfaceContact.swift": true,
+      "GarmentCodePanelMesher.swift": false,
+      "GarmentCodeClothMaterial.swift": true
+    },
+    "note": "All recorded generated artifacts remain intact. Mesher/Input factory source changes mean the old manifest remains a historical run, not automatic proof of the current whole tree. New end-to-end proofs must record the new source hashes; do not edit old hashes to imply a rerun."
+  },
+  "completionEvidenceRequired": [
+    "Every supported garment family and named discrete component has actual full-source placement, sewing and App routing; no panel/component is silently omitted or approximated by another style.",
+    "Representative default nonempty meta selections (80 known 2D combinations), both existing body profiles, each named component choice and critical size/rise/ruffle/cut limits have explicit 3D outcomes. Distinguish geometric/physical input failures from unsupported implementation gates; do not require all infinite continuous combinations to settle.",
+    "Complete source SHA/bindings/edge rest lengths/area/mass/source-facing normals and real seam gap/fold freedom are independently checked for each new integration.",
+    "Original convergence gates remain: strain <8%, sustained speed <.025 m/s, penetration estimate <3 mm, actual independent seam gaps <.5 mm, nondegenerate mesh, final cloth and body crossings zero; inspect actual positions and independent body volume samples, not only counters.",
+    "Native preview and OBJ saved through UI match the actual completed output; body/material changes invalidate results, cancel prevents stale publication, source 2D/PDF behavior remains intact.",
+    "New family views and parameter response are compared with pinned source/reference behavior; matched official 3D numerical parity is explicitly unproven unless evidence becomes available.",
+    "Current Release simulator and generic iOS builds plus actual target iPhone performance/interaction evidence cover the new completed family scope; Mac/Simulator timings alone do not satisfy phone measurement."
+  ],
+  "sourceSHA256": {
+    "README.md": "e3ca36908e5bd1a8da2b0dadd9c2849a15c169c482aa5322e25d810d3890a5b4",
+    "Tests/NativePattern/CircleAssembly.swift": "fd0bc7ef44e80d4cd048907043164f362707f061b6669f57208eed5cfbd2391e",
+    "Tests/NativePattern/PanelMesher.swift": "abda6b5424eceb46e7b74ce95ec7dae9de1a90adba789b56ffa03a3212def097",
+    "Tests/NativePattern/README.md": "9bcb61a08b4f1fc365f9121701c6ba9e2a4d454ac515969d9e43e1e47b68b428",
+    "Tests/NativePattern/run-acceptance.sh": "c133ea73a043064f9f77ff81983b5ffd561ff8c1ea2b649c4687d80989a65363",
+    "TrailorAss/Models/GarmentCodeCircleDrape.swift": "ff34f112ac0a355523b4d2544c1bd114a2948f60296ba85cb5678bc2e0193cbb",
+    "TrailorAss/Models/GarmentCodeNativeGenerator.swift": "355bf7a055fb7901d46cc5bb93f1a12f299b6e7045d11e56d6426931df0a084c",
+    "TrailorAss/Models/GarmentCodePanelMesher.swift": "81d63e53d7a092f785e90adb58081264077a5d7f65e646631952f5cc765d2a83",
+    "TrailorAss/Models/GarmentCodePrograms.swift": "eb37673debf13255fad3947cd8c2e9926cabc71b479a43fd8d12b3a7ff627f70",
+    "TrailorAss/Models/GarmentCodeSewing.swift": "c2c89fff7f14d83dc0450441e8999e77a79fe42a62748d9ae8364a1569097860",
+    "TrailorAss/Models/GarmentCodeSewnDrape.swift": "858fed14209db38384917f3fda2f08f55413e141275e3665fd6a323637f9f99a",
+    "TrailorAss/Models/GarmentCodeSewnInput.swift": "06cd0c4a7d80f082e209173da3ecf96100612993005be1d5f13454c432400ba5",
+    "TrailorAss/Models/GarmentCodeSkirtDrape.swift": "0518bf2901f6f98dcff6f9d53b089ae43067ec1db22b44657fca5db4e116ce19",
+    "TrailorAss/Models/GarmentCodeStandardBody.swift": "af4672f69ab5fdedab0c7f9bca65af711862bfcebfe4b72f86596d2e80216056",
+    "TrailorAss/Models/GarmentCodeWaistbandAssembly.swift": "8feaec526771682e26096faed5707f88eee1ebe58ddc2c49750f082144489c3b",
+    "TrailorAss/Models/PatternDesignModels.swift": "0984e4ebba7e239c5e07a4ae1e744cad13e5498616d01c0f2da58caa24ab18df",
+    "TrailorAss/Resources/GarmentCodeParameterCatalog.json": "db026c2f8128afeed7ec0b4347737cd5c7fd87942a030417a3d4ff3a2b0987f9",
+    "TrailorAss/Views/Garment/GarmentCodeDrapeView.swift": "2c38e16c1ac5298566b4c553bae5a14e71522e386e701d64e7821b5440eb59e2"
+  },
+  "excludedObsoleteAssumptions": [
+    "Unity/Obi requirement",
+    "fixed-T-shirt-only final scope",
+    "iPhone 12 fixed performance promise",
+    "mandatory GLB or AR in this phase",
+    "measured cloth calibration despite user accepting experimental presets"
+  ],
+  "subsequentProgress": [
+    {
+      "capability": "local_source_edge_sewing_refinement",
+      "state": "verified_foundation",
+      "evidence": [
+        "Tests/NativePattern/PanelMesher.swift",
+        "Tests/NativePattern/Sewing.swift"
+      ],
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "shared_full_source_assembly",
+      "state": "verified_on_existing_waistbands",
+      "evidence": [
+        "Tests/NativePattern/AssemblyBuilder.swift",
+        "TrailorAss/Models/GarmentCodeAssemblyBuilder.swift"
+      ],
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "source_panel_output_and_OBJ_groups",
+      "state": "actual_existing_waistband_physics_and_export_verified",
+      "evidence": [
+        "Tests/NativePattern/AssemblyBuilder.swift"
+      ],
+      "legacyOBJByteCompatibilityVerified": true
+    },
+    {
+      "capability": "imported_source_placement",
+      "state": "14_panel_and_480_torso_formula_verification",
+      "evidence": [
+        "Tests/NativePattern/PanelPlacement.swift",
+        "Tests/NativePattern/verify-torso-placement.py",
+        "Tests/NativePattern/3D-PLACEMENT.md"
+      ],
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "circle_plus_waistband",
+      "state": "full_source_preparation_passed_integrated_physics_rejected",
+      "actualFirstStrictFailure": "Finite final source strain above stability guard; skirt fell away from waist despite initial small seam gap. No App route enabled.",
+      "evidence": [
+        "Tests/NativePattern/SkirtWaistbandAssembly.swift"
+      ],
+      "latestStrictIntegration": {
+        "source": "/private/tmp/TailorAssComposedIntegrated3/straight-default-smoke.json",
+        "converged": false,
+        "maximumIndependentSourceStrain": 0.27393070218964355,
+        "maximumActualSeamGapMeters": 0.0005913415792604597,
+        "maximumFinalSpeedMetersPerSecond": 0.044310254669801465,
+        "bodyTriangleCrossings": 0,
+        "selfTriangleCrossings": 0,
+        "independentInsideVertices": 0,
+        "independentInsideCentroids": 0,
+        "originalAcceptanceThresholdsRetained": true
+      },
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "upper_torso",
+      "state": "six_source_preparations_passed_strict_physics_rejected",
+      "evidence": [
+        "Tests/NativePattern/UpperTorsoAssembly.swift"
+      ],
+      "appCoverageExpanded": false,
+      "limitation": "Source strain and final speed remain outside original acceptance thresholds. Sleeves and collars are not assembled."
+    },
+    {
+      "capability": "source_mesh_all_family_foundation",
+      "state": "27_cases_174_actual_panels_64360_triangles_passed",
+      "evidence": [
+        "Tests/NativePattern/SourceMeshCoverage.swift",
+        "Tests/NativePattern/run-source-mesh-coverage.sh"
+      ],
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "sewn_contact_junction_and_source_ribbon",
+      "state": "local_analytic_source_and_legacy_regressions_passed",
+      "evidence": [
+        "Tests/NativePattern/SewnContact.swift",
+        "Tests/NativePattern/SewnProximityRibbon.swift"
+      ],
+      "doesNotProveFullGarmentConvergence": true
+    },
+    {
+      "capability": "virtual_sewing_point_body_contact",
+      "state": "analytic_and_actual_c62_local_projection_passed",
+      "evidence": [
+        "Tests/NativePattern/SewnBodyContact.swift"
+      ],
+      "actualLocalGapBeforeMeters": 0.000603963,
+      "actualLocalGapAfterMeters": 3.61668e-06,
+      "doesNotProveFullGarmentConvergence": true
+    },
+    {
+      "capability": "source_derived_path_upper_bounds",
+      "state": "analytic_and_real_input_projections_passed_integration_still_rejected",
+      "evidence": [
+        "Tests/NativePattern/SourceTethers.swift"
+      ],
+      "addsFixedPoints": false,
+      "changesSourceMetricOrMass": false
+    },
+    {
+      "capability": "simultaneous_final_point_sewing",
+      "state": "module_and_existing_waistband_physics_passed_composed_strain_rejected",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeSewnPointBlock.swift",
+        "Tests/NativePattern/SewnPointBlock.swift",
+        "Tests/NativePattern/AssemblyBuilder.swift",
+        "Tests/NativePattern/run-sewn-point-block.sh"
+      ],
+      "defaultScalarBehaviorPreserved": true,
+      "real69RowLinearOracleMaximumPositionErrorMeters": 7.850462293418876e-17,
+      "currentFullComposedRun": {
+        "source": "/private/tmp/TailorAssProductionPointBlockIntegration/straight-default-smoke.json",
+        "maximumActualSeamGapMeters": 0.0004757034644349611,
+        "maximumFinalSpeedMetersPerSecond": 0.006316635454139082,
+        "maximumIndependentSourceStrain": 0.324208148488351,
+        "selfCrossings": 0,
+        "bodyCrossings": 0,
+        "insideSamples": 0,
+        "converged": false
+      },
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "panel_mesher_actor_safe_construction",
+      "state": "pure_value_behavior_preserved_main_actor_callback_fixed",
+      "evidence": [
+        "Tests/NativePattern/run-panel-mesher.sh",
+        "Tests/NativePattern/run-source-mesh-coverage.sh"
+      ],
+      "standaloneSwift5MainActorStrictConcurrencyWarningsAsErrorsPassed": true,
+      "byteIdenticalCompleteMeshes": 189,
+      "byteIdenticalTotalJSONArtifacts": 233
+    },
+    {
+      "capability": "native_lower_garment_initial_placement",
+      "state": "eight_lower_families_and_real_components_374_official_panels_two_bodies_passed",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeLowerPlacement.swift",
+        "Tests/NativePattern/LowerPlacement.swift",
+        "Tests/NativePattern/run-lower-placement.sh",
+        "Tests/NativePattern/LOWER-PLACEMENT.md"
+      ],
+      "maximumFixtureTranslationErrorMeters": 4.768371919539088e-09,
+      "completeSourceSHARequired": true,
+      "fullGarmentConvergenceProven": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "lower_composition_2d_source_branch_consistency",
+      "state": "25_official_cases134_panels_and_existing356_plus_printing_baseline_passed",
+      "evidence": [
+        "Tests/NativePattern/LowerBranches.swift",
+        "Tests/NativePattern/run-lower-branches.sh",
+        "Tests/NativePattern/Fixtures/lower-branch-oracles.json"
+      ],
+      "fixedBranches": [
+        "no_upper_Pants_WB_uses_pants_rise",
+        "Godet_Pencil_base_suppresses_all_four_slits"
+      ],
+      "originalDesignProvenancePreserved": true,
+      "postFix374LowerPlacementMatrixPassed": true,
+      "app3DPhysicsExpanded": false
+    },
+    {
+      "capability": "point_block_lower_branch_release_build",
+      "state": "simulator_and_generic_ios_release_passed",
+      "sourceManifest": "/private/tmp/TailorAssPointBlockLowerRelease.0mwbheg2/source-manifest.json",
+      "summary": "/private/tmp/TailorAssPointBlockLowerRelease.0mwbheg2/release-build-summary.json",
+      "appInstalledOrLaunched": false,
+      "physicalDeviceTested": false
+    },
+    {
+      "capability": "native_upper_full_component_placement",
+      "state": "108_cases_868_same_source_panels_passed",
+      "evidence": [
+        "Tests/NativePattern/UPPER-PLACEMENT.md",
+        "Tests/NativePattern/INVERSE-SLEEVE.md",
+        "Tests/NativePattern/run-upper-placement-complete.sh"
+      ],
+      "original107SourceHashesPreserved": true,
+      "fullGarmentConvergenceProven": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "meta_component_initial_stacking",
+      "state": "160_cases_1116_panels_passed",
+      "proof": "/private/tmp/TailorAssCompositionPlacementOriginalInterfaces/composition-placement-summary.json",
+      "maximumBasisPointDifferenceMeters": 6.753e-16,
+      "scope": "Original component interfaces and isolated upstream transforms; not runtime child recipe/physics proof",
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "fitted_upper_flared_lower_natural_rise",
+      "state": "48_official_full_paper_and_placement_cases_passed",
+      "proof": "/private/tmp/TailorAssCompositionRiseAfterFix/composition-rise-summary.json",
+      "maximumGeometryErrorCentimeters": 2.5032724730098415e-06,
+      "originalDesignRetained": true,
+      "fullGarmentConvergenceProven": false
+    },
+    {
+      "capability": "rigid_panel_initial_body_clearance",
+      "state": "analytic_rejection_and_real_waistband_circle_initialization_passed",
+      "proof": "/private/tmp/TailorAssRigidBodyClearance/rigid-initialization-summary.json",
+      "bodyCrossingsBefore": 226,
+      "bodyCrossingsAfter": 0,
+      "insideVerticesAfter": 0,
+      "insideCentroidsAfter": 0,
+      "actualInitialSeamGapMeters": 0.5948249956264858,
+      "sourceMetricsMassDOFPinsPreserved": true,
+      "physicalAcceptance": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "app_continuous_body_motion_adapter",
+      "state": "actual_native_package_bridge_analytic_and_real_upper_body_path_passed",
+      "proof": "/private/tmp/TailorAssAppContinuousBodyFinal/summary.json",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeContinuousBodyContact.swift",
+        "Tests/NativePattern/ContinuousBodyContact.swift",
+        "Tests/NativePattern/run-continuous-body-contact.py"
+      ],
+      "sourceSHA256": {
+        "GarmentCodeContinuousBodyContact.swift": "564ea593225d305d35e474c27064b017aa6b144381c6fb6202820e39e990001f",
+        "GarmentCodeSewnDrape.swift": "9198c11798be9b7864d37a26f88d1c215bcca389920faded5cb0ed76fee93bb5",
+        "GarmentCodeCircleDrape.swift": "e8a656a2d7b35e1f3148ab489f6390e851b5ecdf1b520b296926ee7e1240e801"
+      },
+      "existingSewnDefaultsRemainOff": true,
+      "fullGarmentConvergenceProven": false,
+      "clothSelfContinuousCollisionProven": false,
+      "appGenerationRouteEnabled": false
+    },
+    {
+      "capability": "app_native_body_guard_release_build",
+      "state": "ios_and_simulator_release_link_passed",
+      "proof": "/private/tmp/TailorAssNativeGuardAppRelease.ayz90uun/release-build-summary.json",
+      "exactSourceSnapshotUnchanged": true,
+      "currentWorktreeDifferences": [],
+      "installedOrLaunched": false,
+      "physicalDeviceTested": false,
+      "app3DGenerationScopeExpanded": false
+    },
+    {
+      "capability": "source_boundary_recovery_mesh",
+      "state": "female_standing_sleeve_recovered_189_mesh_233_json_byte_compatibility_passed",
+      "proof": "/private/tmp/TailorAssBoundaryRecoveryFinal/delivery-manifest.json",
+      "sourceSHA256": "842290de0d11025787314d628ecb996efbeb108eb3765d672d58dc884b01082d",
+      "recoveryOnlyAfterOriginalRefinementFailure": true,
+      "maximumAttempts": 2,
+      "targetFlatnessVertexTriangleLimitsUnchanged": true
+    },
+    {
+      "capability": "all_native_component_full_input_preparation",
+      "state": "211_full_source_preparations_passed_no_known_incomplete_case",
+      "proof": "/private/tmp/TailorAssNativeAssemblyAfterBoundaryRecovery/native-assembly-summary.json",
+      "completeSourceAndRestMassZeroPinsPreserved": true,
+      "physicalAcceptanceProven": false,
+      "appRouteExpanded": false
+    },
+    {
+      "capability": "all_native_body_only_clearance_screen",
+      "state": "211_initializations_body_clear_14_cloth_intersection_cases",
+      "proof": "/private/tmp/TailorAssNativeClearanceScreen/results/clearance-screen-summary.json",
+      "cases": 211,
+      "bodyCrossingOrInsideCases": 0,
+      "clothConflictCases": 14,
+      "allBodyAndSelfClearCases": 197,
+      "physicalAcceptanceProven": false,
+      "clothingClearanceDefaultChanged": false
+    },
+    {
+      "capability": "continuous_body_guard_rigid_full_run",
+      "state": "requested2400_actual469_completed_stopped_before_candidate470",
+      "proof": "/private/tmp/TailorAssNativeRigidCBC2400/corrected-run-summary.json",
+      "actualCompletedFrames": 469,
+      "stoppedAtCandidateFrame": 470,
+      "returnedOutput": false,
+      "acceptedPreviousSourceStrain": 1.1271033769663537,
+      "acceptedPreviousSelfCrossings": 3,
+      "originalQualityGatesRetained": true
+    },
+    {
+      "capability": "continuous_triangle_non_degeneracy_certificate",
+      "state": "bounded_interval_norm_fallback_36_native_tests_and_device_simulator_links_passed",
+      "proof": "/private/tmp/TailorAssContinuousBodyContactNormFinal/summary.json",
+      "independentExactArithmeticProof": "/private/tmp/TailorAssProductionTriangleNormAuditFinal/independent-exact-verification.json",
+      "vendorFileCountUnchanged": 196,
+      "publicAPISwiftBodyGuardUnchanged": true,
+      "entireRejected470PathCertified": false,
+      "clothPhysicsRerun": false
+    },
+    {
+      "capability": "source_triangle_membrane_joint_energy_foundation",
+      "state": "source_metric_NH_energy_gradient_Hv_principal_barrier_and_path_limit_passed",
+      "proof": "/private/tmp/TailorAssMembraneFinal/membrane-summary.json",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeMembrane.swift",
+        "Tests/NativePattern/MEMBRANE.md",
+        "Tests/NativePattern/run-membrane.sh",
+        "Tests/NativePattern/Fixtures/3d-membrane/manifest.json"
+      ],
+      "sourceSHA256": "04d50b6a405512e5d34cec81fa057b5673db755214a017ee22b38b23a2f47fa6",
+      "independentSVDGradientRelativeError": 6.097950213849626e-09,
+      "exactHessianFiniteDifferenceRelativeError": 2.6001230889339707e-10,
+      "principalBarrierHessianRelativeError": 6.3058026605532185e-09,
+      "actual60FrameMaximumSourceEdgeStrain": 0.05003576272613475,
+      "actual60FrameMaximumPrincipalStretch": 1.1834271181129858,
+      "jointGarmentSolverProven": false,
+      "appEnabled": false
+    },
+    {
+      "capability": "membrane_recovery_triangle_norm_release_build",
+      "state": "complete_app_ios_and_simulator_release_passed",
+      "proof": "/private/tmp/TailorAssMembraneNormAppRelease.wh58dl4p/release-build-summary.json",
+      "exactSourceFileCount": 324,
+      "snapshotUnchanged": true,
+      "currentRuntimeSourceMatches": true,
+      "installedOrLaunched": false,
+      "physicalDeviceTested": false,
+      "newWholeGarmentAppRoutes": false
+    },
+    {
+      "capability": "rigid_body_and_cloth_clearance_all_native_inputs",
+      "state": "211_initializations_passed_197_unchanged_14_repaired",
+      "proof": "/private/tmp/TailorAssNativeRigidClothFull/delivery-manifest.json",
+      "cases": 211,
+      "oldModeStateSignaturesUnchanged": 422,
+      "initialSeamGapDirectionError": 0,
+      "tethersGraphsRebuiltCases": 211,
+      "addsPinsOrChangesSourceMass": false,
+      "nearContactsProvenZero": false,
+      "fullPhysicalGarmentProven": false,
+      "appRouteExpanded": false
+    },
+    {
+      "capability": "joint_source_and_scalar_sewing_increment_one",
+      "state": "true_nonlinear_equilibrium_at_r1_over480_dynamic_sew_sparse_preconditioner",
+      "proof": "/private/tmp/TailorAssJointSparseDynamic.mul1olax/summary.json",
+      "scope": "Actual 2000-vertex circle+straight-band source, original mass/dt/compliance and69 real constraints; first increment only, no bending/contact force",
+      "productionCodeAdded": false,
+      "garmentAccepted": false,
+      "nonlinearGradientInfinityNewton": 1.98270126e-08,
+      "allLinearSystemsMeetTrueResidual": true,
+      "sourceMaximumEdgeStrain": 0.001066,
+      "actualSeamGapMetersApprox": 0.5936,
+      "solverSecondsOnMac": 0.9959,
+      "phoneBenchmark": false,
+      "bodyPathClear": true,
+      "selfEndpointCrossings": 0,
+      "selfWholePathCertified": false
+    },
+    {
+      "capability": "joint_native_source_assembly_prefix",
+      "state": "native_sparse_assembly_verified_r1_passed_r2_rejected_KKT",
+      "proof": "/private/tmp/TailorAssJointNativePrefix.zv8n_762/summary.json",
+      "nativeAssemblyHessianVectorError": 2.01e-16,
+      "actualAcceptedIncrements": 1,
+      "firstRejectedIncrement": 2,
+      "rejectedCandidateGradientInfinityNewton": 4.4053e-06,
+      "unchangedRequiredAbsoluteGradientThreshold": 1e-06,
+      "laterIncrementsExecuted": false,
+      "sourceBodySelfAndTargetResidualPassedAtRejectedCandidate": true,
+      "numericalEnergyDifferenceCauseUnderInvestigation": true,
+      "garmentAccepted": false
+    },
+    {
+      "capability": "full_initialization_current_app_release",
+      "state": "ios_and_simulator_release_passed_325_frozen_inputs",
+      "proof": "/private/tmp/TailorAssFullInitialAppRelease.l6dbuqa7/release-build-summary.json",
+      "exactSourceSnapshotUnchanged": true,
+      "installedOrLaunched": false,
+      "physicalDeviceTested": false,
+      "newWholeGarmentAppBackendEnabled": false
+    },
+    {
+      "capability": "source_internal_hinge_bending",
+      "state": "independent_energy_gradient_exact_and_psd_hessian_verified",
+      "proof": "/private/tmp/TailorAssHingeProductionFinal/delivery-manifest.json",
+      "sourceSHA256": "56df11fad09678288b762c18e44df7a1eeba020a8f6e758e172f6083c8487699",
+      "sourceHinges": 4948,
+      "sewingHingesAdded": false,
+      "newWholeGarmentAppBackendEnabled": false
+    },
+    {
+      "capability": "stable_incremental_energy_line_search",
+      "state": "actual_25_candidates_checked_with_decimal_80_100_and_16_step_true_kkt_prefix",
+      "proof": "/private/tmp/TailorAssJointStablePrefix.n9hylf4a/summary.json",
+      "acceptedSteps": 16,
+      "principalBarrierActive": false,
+      "bodyContactForceIncluded": false,
+      "bendingIncluded": false,
+      "completeSewingRamp": false,
+      "productionSolverEnabled": false
+    },
+    {
+      "capability": "polar_source_preconditioner",
+      "state": "frozen_actual_step16_comparison_passed_with_unchanged_true_phi_g_hv",
+      "proof": "/private/tmp/TailorAssJointPolarR16.b96vt5f8/summary.json",
+      "seconds": 0.664,
+      "oldSeconds": 7.307,
+      "allCGConverged": true,
+      "maximumFinalPositionDifferenceMeters": 7.7e-08,
+      "physicalDeviceTested": false
+    },
+    {
+      "capability": "hinge_current_app_release",
+      "state": "ios_and_simulator_release_passed_326_frozen_inputs",
+      "proof": "/private/tmp/TailorAssHingeFullInitialAppRelease._lp9b2m6/release-build-summary.json",
+      "exactSourceSnapshotUnchanged": true,
+      "installedOrLaunched": false,
+      "physicalDeviceTested": false,
+      "newWholeGarmentAppBackendEnabled": false
+    },
+    {
+      "capability": "stable_production_elastic_increment",
+      "state": "double_estimate_with_explicit_domain_precision_rejection_and_29_real_controls",
+      "proof": "/private/tmp/TailorAssElasticDeltaFinal/delivery-manifest.json",
+      "sourceSHA256": "f448b0cfe622de3e34fd52d7fe7a0e7807169dd633c9de44b38d46b18176eb22",
+      "universalSignGuarantee": false,
+      "newWholeGarmentAppBackendEnabled": false
+    },
+    {
+      "capability": "production_joint_energy_objective",
+      "state": "inertia_nh_stretchbarrier_sourcehinge_actual_scalar_sewing_energy_gradient_exact_hv_and_delta_verified",
+      "proof": "/private/tmp/TailorAssJointObjectiveElasticIntegrated/delivery-manifest.json",
+      "sourceSHA256": "8f7d6e6dff20fe68b996ab2fd44c3c45829bf9d40969fcd3f9098fc471481f37",
+      "actualSourceVertices": 2000,
+      "actualSourceTriangles": 3472,
+      "actualSewingRows": 69,
+      "actualSourceHinges": 4948,
+      "maximumJointFDRelativeError": 6.31e-09,
+      "bodyForceIncluded": false,
+      "selfContactIncluded": false,
+      "physicalStepAccepted": false,
+      "newWholeGarmentAppBackendEnabled": false
+    },
+    {
+      "capability": "strict_positive_source_initialization",
+      "state": "211_complete_sources_passed_full_primitive_distance_body_volume_and_633_old_signatures",
+      "proof": "/private/tmp/TailorAssNativePositiveClearanceFinal/delivery-manifest.json",
+      "minimumCrossPanelDistanceMeters": 5.000099999999397e-05,
+      "minimumSamePanelNonAdjacentDistanceMeters": 0.00026384717754198393,
+      "zeroOr10nmPrimitives": 0,
+      "projectionFootprintFallbackCases": 2,
+      "noArtificialPins": true,
+      "physicalAcceptance": false
+    },
+    {
+      "capability": "production_source_wholepath_subdivision",
+      "state": "r63_same_original_path_certified_without_relaxing_domain",
+      "proof": "/private/tmp/TailorAssMembranePathFirst/delivery-manifest.json",
+      "sourceSHA256": "98eaee5227d31f77920b5b40b3d982c857587ee8978e833a28d60119bfbd8fb4",
+      "maximumDepth": 8,
+      "maximumNodes": 262144,
+      "actualNodes": 3474,
+      "actualDepth": 1,
+      "physicalStepAccepted": false
+    },
+    {
+      "capability": "precontact_true_joint_prefix",
+      "state": "r17_60_and_r63_236_source_body_path_kkt_pass_then_first_real_body_activation_stopped",
+      "proofThrough60": "/private/tmp/TailorAssJointGuardedPrefix17to60.v2bq1ukn/summary.json",
+      "firstBodyActivation": "/private/tmp/TailorAssJointProductionPath63to480.hrrfovka/frame-237/summary.json",
+      "lastAcceptedInNoBodyForceControl": 236,
+      "blockedTrial": 237,
+      "noBodyForceControlContinuedAfterActivation": false,
+      "wholeGarmentAccepted": false
+    },
+    {
+      "capability": "production_signed_body_contact_potential",
+      "state": "original_full_builder_goldens_mac45_and_59_compile_link_checks_passed",
+      "proof": "/private/tmp/TailorAssIPCBodyProductionFinal/delivery-manifest.json",
+      "vendorFiles": 335,
+      "oldVendorFilesUnchanged": 196,
+      "physicalDeviceExecuted": false,
+      "clothSelfContactIncluded": false
+    },
+    {
+      "capability": "production_full_source_joint_input_bridge",
+      "state": "actual_circle_band_and_sleeved_hood_shirt_source_body_seams_si_mass_preserved",
+      "proof": "/private/tmp/TailorAssJointInputFinal/delivery-manifest.json",
+      "physicalStepAccepted": false
+    },
+    {
+      "capability": "production_body_coupled_objective",
+      "state": "joint_e_g_exact_hv_active_source_barrier_and_signed_body_force_fd_passed",
+      "proof": "/private/tmp/TailorAssJointBodyCurrentZeroBending/delivery-manifest.json",
+      "realFirstContactEnergyMatchesFrozenConsumer": true,
+      "realBodyFeaturePairs": 54,
+      "realBodyStencils": 1,
+      "clothSelfContactIncluded": false
+    },
+    {
+      "capability": "production_newton_first_body_subproblem",
+      "state": "independent_quadratic_and_actual_source237_body_coupled_kkt_passed",
+      "proof": "/private/tmp/TailorAssJointNewtonFinal/delivery-manifest.json",
+      "newtonIterations": 18,
+      "allInnerCGConverged": true,
+      "gradientInfinityNewton": 8.807338831547454e-08,
+      "maximumSourceEdgeStrain": 0.01416602112186971,
+      "sourceSelfEndpointIntersections": 0,
+      "bendingStiffness": 0,
+      "gravityIncluded": false,
+      "selfForceIncluded": false,
+      "physicalGarmentAccepted": false
+    },
+    {
+      "capability": "complete_body_self_objective_and_source_cache",
+      "state": "verified_joint_derivatives_not_whole_garment",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeJointGarmentObjective.swift",
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssJointGarmentCached/delivery-manifest.json",
+        "/private/tmp/TailorAssJointNewtonCached/delivery-manifest.json",
+        "/private/tmp/TailorAssIPCAndSelfCCDAABBFinal/delivery-manifest.json",
+        "/private/tmp/TailorAssElasticLinearizationProductionFinal2/delivery-manifest.json"
+      ],
+      "allNativePackageTests": 72,
+      "physicalStepAccepted": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "complete_joint_serial_time_integration",
+      "state": "real_circle_prefix_pass_shirt_first_step_rejected",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeJointSimulation.swift",
+        "Tests/NativePattern/JointSimulation.swift",
+        "/private/tmp/TailorAssJointSimulationSmoke2/delivery-summary.json"
+      ],
+      "fixedStaticAssemblySteps": 480,
+      "fixedGravityRampSteps": 240,
+      "timeStepSeconds": 0.004166666666666667,
+      "circleAcceptedPrefix": 8,
+      "shirtCommittedSteps": 0,
+      "shirtFailure": "Newton32 budget, final gradient infinity 0.0031777404707798995 N; complete source and 552 self stencils retained",
+      "physicalGarmentAccepted": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "exact_visible_body_distance_and_containment",
+      "state": "verified_geometry_query_not_full_body_fitter",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeBodyMeshQueries.swift",
+        "Tests/NativePattern/BodyMeshQueries.swift",
+        "/private/tmp/TailorAssBodyMeshQueries.3y25_gtg/summary.json",
+        "/private/tmp/TailorAssBodyMeshPlatforms.yndzbg23/summary.json"
+      ],
+      "profiles": 54,
+      "surfaceVertices": 26760,
+      "independentFullScanQueries": 540,
+      "full26FieldBodyFit": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "frozen_body_newton_app_release_both_sdks",
+      "state": "actual_build_not_install_or_runtime",
+      "evidence": [
+        "/private/tmp/TailorAssJointContactAppRelease.b_u9dpwu/release-build-summary.json"
+      ],
+      "frozenInputs": 706,
+      "iOSReleaseExitCode": 0,
+      "simulatorReleaseExitCode": 0,
+      "physicalDeviceTested": false,
+      "laterSourceAdditionsCovered": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "exact_visible_body_final_independent_inspection",
+      "state": "verified_static_controls_and_real_prefixes_not_garment",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeVisibleBodyInspection.swift",
+        "Tests/NativePattern/VisibleBodyInspection.swift",
+        "/private/tmp/TailorAssVisibleBodyInspectionReview/delivery-manifest.json",
+        "/private/tmp/TailorAssVisibleBodyInspectionSATFinal/summary.json",
+        "/private/tmp/TailorAssVisibleBodyInspectionPlatformsFinal/summary.json"
+      ],
+      "analyticGroups": 17,
+      "allVertexEdgeMidpointAndTriangleCentroidSamples": true,
+      "intervalTriangleSeparationRequired": true,
+      "oldFiniteSamplingFalsePassesRejected": true,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "joint_contact_preconditioner_full_sparse_blocks",
+      "state": "verified_preconditioner_not_physical_objective_substitution",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeJointContactPreconditioner.swift",
+        "/private/tmp/TailorAssContactPreconditionerFinal/delivery-manifest.json",
+        "/private/tmp/TailorAssHingePreconditionerDelivery/delivery-manifest.json"
+      ],
+      "scope": "Pre-homotopy source frozen; later read-only solve residual metadata and new schedule require separate snapshots",
+      "nativePhiGradientRawHvUnchanged": true,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "quadratic_sewing_continuation_and_scaled_stopping",
+      "state": "full_source_actual_prefixes_body_CCD_still_blocks_completion",
+      "evidence": [
+        "TrailorAss/Models/GarmentCodeJointSimulation.swift",
+        "TrailorAss/Models/GarmentCodeJointObjective.swift",
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssJointObjectiveContinuation/joint-objective-summary.json",
+        "/private/tmp/TailorAssJointSimulationContinuationFull/delivery-manifest.json",
+        "/private/tmp/TailorAssJointNewtonScaledStoppingRegression/joint-newton-summary.json"
+      ],
+      "initialSewingStiffnessNewtonPerMeter": 0.001,
+      "finalSewingComplianceUnchanged": true,
+      "finalObjectiveGradientRawHvBitwiseIdentical": true,
+      "newtonMaximumWorkIterations": 64,
+      "absoluteForceLimitNewton": 1e-06,
+      "preconditionedCorrectionLimitMeters": 1e-07,
+      "preconditionedSolveRelativeResidualLimit": 1e-06,
+      "relativeToInitialForceReportedAsDiagnostic": true,
+      "actualCircleCommittedSteps": 110,
+      "actualSleevedShirtCommittedSteps": 84,
+      "fullGarmentAccepted": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "all_current_joint_models_viewer_export_app_release_snapshot",
+      "state": "both_actual_release_builds_passed_not_UI_or_physical_device",
+      "evidence": [
+        "/private/tmp/TailorAssJointGarmentAppRelease.10x7z67w/release-build-summary.json"
+      ],
+      "frozenInputs": 726,
+      "iosReleaseExitCode": 0,
+      "simulatorReleaseExitCode": 0,
+      "genericAppRouteEnabled": false,
+      "physicalDeviceTested": false,
+      "laterMembranePathDepth12Covered": false,
+      "appCoverageExpanded": false
+    },
+    {
+      "capability": "native_body_euclidean_path_certificate",
+      "state": "87_release_tests_and_both_ios17_static_clients_passed",
+      "evidence": [
+        "/private/tmp/TailorAssNativeContactCertificateIntegratedFirst/delivery-manifest.json"
+      ],
+      "originalVendorBytesUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "static_configuration_polyline",
+      "state": "actual_full_source_runs_stop_at_newton_work_budget_before_gravity",
+      "evidence": [
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssJointNewtonTrajectoryContract/summary.json",
+        "/private/tmp/TailorAssJointResultPolylineControls/summary.json",
+        "/private/tmp/TailorAssJointResultRequested2400Polyline/summary.json"
+      ],
+      "circleAcceptedAssemblyIterations": 153,
+      "circleRejectedIteration": 154,
+      "shirtAcceptedAssemblyIterations": 146,
+      "shirtRejectedIteration": 147,
+      "dynamicSimulatedSeconds": 0,
+      "allActualAcceptedSegmentsCertified": true,
+      "physicalDynamicPathUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native_preparation_worker_boundary",
+      "state": "actual_worker_cancellation_and_legacy_compatibility_passed",
+      "evidence": [
+        "Tests/NativePattern/PREPARATION-BOUNDARY.md",
+        "/private/tmp/TailorAssPreparationBoundaryRun-20261026-7j25jgz7/final-validation-summary.json"
+      ],
+      "oldCompleteMeshesBitwiseUnchanged": 189,
+      "oldPaperJSONBitwiseUnchanged": 233,
+      "oldAssemblyModeSignaturesUnchanged": 633,
+      "completeInitializationCases": 211,
+      "maximumObservedMainActorCaptureSeconds": 0.51,
+      "phonePerformanceMeasured": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "joint_experimental_fabric_factory",
+      "state": "SI_binding_and_actual_constitutive_responses_passed",
+      "evidence": [
+        "Tests/NativePattern/JOINT-FABRIC.md",
+        "/private/tmp/TailorAssJointFabricFinal/delivery-manifest.json"
+      ],
+      "mediumMatchesCurrentBaselineBitwise": true,
+      "physicalFabricCalibrated": false,
+      "finishedGarmentSensitivityVerified": false
+    },
+    {
+      "capability": "complete_source_async_workflow",
+      "state": "strict_build_and_8_real_cancellation_failure_controls_passed_not_app_routed",
+      "evidence": [
+        "Tests/NativePattern/JOINT-WORKFLOW.md",
+        "/private/tmp/TailorAssJointWorkflowFirst/summary.json"
+      ],
+      "productionSourceSHA256": "f6fe9480aa9616841213e6c37aac4620b232f131219c6a38e23b05d80b498afa",
+      "onlyValidatedCanReturn": true,
+      "parentCancellationWaitsForWorkerExit": true,
+      "lateOrRegressiveProgressRejected": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "actual_source_path_newton_proposal",
+      "state": "previous_blocked_steps_passed_full_runs_still_incomplete",
+      "evidence": [
+        "Tests/NativePattern/JOINT-BODY-NEWTON.md",
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssJointWeylAB/delivery-manifest.json",
+        "/private/tmp/TailorAssJointResultActualProposalProduction/requested2400/summary.json"
+      ],
+      "circleAcceptedAssemblyIterations": 217,
+      "circleRejectedIteration": 218,
+      "shirtAcceptedAssemblyIterations": 163,
+      "shirtRejectedIteration": 164,
+      "dynamicSimulatedSeconds": 0,
+      "acceptanceThresholdsUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "generic_preview_page_and_complete_app_release",
+      "state": "page_controls_and_both_release_builds_passed_not_routed",
+      "evidence": [
+        "Tests/NativePattern/JOINT-DRAPE-VIEW.md",
+        "Tests/NativePattern/APP-RELEASE-RESOURCES.md",
+        "/private/tmp/TailorAssJointDrapeViewMemberVisibilityFinal/delivery-manifest.json",
+        "/private/tmp/TailorAssJointDrapeLifecycleFinal/summary.json",
+        "/private/tmp/TailorAssCurrentFullAppReleaseFixed-3vgr6hdg/delivery-manifest.json"
+      ],
+      "frozenAppInputFiles": 746,
+      "iosReleaseBuilt": true,
+      "simulatorReleaseBuilt": true,
+      "packagedResourcesLoadedWithProductionSwiftOnMac": true,
+      "genericRouteEnabled": false,
+      "installedOrLaunchedOnIOS": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "joint_newton96_complete_source_shirt",
+      "state": "174_assembly_steps_accepted_step175_line_search_rejected",
+      "evidence": [
+        "Tests/NativePattern/JOINT-BODY-NEWTON.md",
+        "/private/tmp/TailorAssJointShirt96ProductionFull/delivery-manifest.json",
+        "/private/tmp/TailorAssJointNewtonBudget96/summary.json"
+      ],
+      "deliverySHA256": "1cbb827570cb28ca2e4c76262363889e43d3476e89aa7ace90f51675ac768bcb",
+      "newtonDefaultAndMaximum": 96,
+      "fromActualInitialSource": true,
+      "checkpointLoaded": false,
+      "acceptedAssemblySteps": 174,
+      "recordedAcceptedSegments": 1474,
+      "rejectedStep": 175,
+      "dynamicSimulatedSeconds": 0,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "oriented_contact_identity_correction",
+      "state": "native91_and_joint_source_derivative_Newton_controls_passed_full_run_pending",
+      "evidence": [
+        "NativeClothCollision/IPCOrientationIdentityManifest.json",
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssIPCOrientationIdentityIntegratedFinal/delivery-manifest.json",
+        "/private/tmp/TailorAssJointGarmentOrientationFixed/summary.json",
+        "/private/tmp/TailorAssJointNewtonOrientationFixed/summary.json",
+        "/private/tmp/TailorAssJointShirt175Trace/DIAGNOSIS.md"
+      ],
+      "nativeDeliverySHA256": "427bd55c9ec018b52f83471417975f6dbeafd1d293f5d02271c7e9d58c9ab82d",
+      "actualThirdPartySourceBytesUnchanged": true,
+      "ownedBodyAndSelfWrappersCorrected": true,
+      "macNativeTests": 91,
+      "dualSDKCommandsPassed": 92,
+      "actualShirtSelfStencils": 560,
+      "actualShirtNegativeStencils": 418,
+      "historicalReferenceFilesPreserved": true,
+      "physicalAcceptanceThresholdsUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "principal_stretch_barrier_preconditioner",
+      "state": "source_PSD_pullback_and_real250_conditioning_controls_passed",
+      "evidence": [
+        "Tests/NativePattern/PRINCIPAL-BARRIER-PRECONDITIONER.md",
+        "/private/tmp/TailorAssBarrierPreconditionerFinal/delivery-manifest.json"
+      ],
+      "deliverySHA256": "43d81b856784720daa361bbd3a15dd6f16143904f1066dee75d34867491137da",
+      "actualBarrierToPRatioBefore": 6533,
+      "actualBarrierToPRatioAfter": 0.999847,
+      "trueEnergyGradientHessianFunctionsUnchanged": true,
+      "sourceGraphUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "stable_complete_contact_energy_increment",
+      "state": "native100_and_high_precision_real_leaf_controls_passed",
+      "evidence": [
+        "NativeClothCollision/CONTACT-ENERGY-DELTA.md",
+        "/private/tmp/TailorAssContactEnergyDeltaThird/delivery-manifest.json",
+        "/private/tmp/TailorAssJointGarmentStableContactAndBarrier/summary.json"
+      ],
+      "deliverySHA256": "5cee430bff14d65e821e92aae72030b64fdb927f3fb2297e99253232ea6fb49b",
+      "macNativeTests": 100,
+      "realFixedContactLeaves": 1705,
+      "analyticCases": 25,
+      "independentDecimalDigits": [
+        80,
+        100
+      ],
+      "originalContactEnergyGradientHessianUnchanged": true,
+      "explicitRoundedFallbackOnIncompatibleStructure": true,
+      "universalCorrectSignClaim": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "barrier_and_contact_delta_complete_initial_runs",
+      "state": "circle386_and_shirt342_accepted_then_self_path_unknown_no_output",
+      "evidence": [
+        "Tests/NativePattern/JOINT-GARMENT.md",
+        "/private/tmp/TailorAssJointCombinedFinalProductionFull/delivery-manifest.json"
+      ],
+      "deliverySHA256": "c3c46ebe3e38ca9f9f0fd8599f9503cda36c3966694224a15acf99347baed8cf",
+      "fromActualInitialSource": true,
+      "checkpointLoaded": false,
+      "acceptedStaticSteps": {
+        "circleWithStraightWB": 386,
+        "sleevedShirt": 342
+      },
+      "dynamicSimulatedSeconds": 0,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "self_CCD_whole_interval_euclidean_supplement",
+      "state": "actual_rejected_paths_independently_certified_native105_dual_SDK_passed",
+      "evidence": [
+        "NativeClothCollision/README.md",
+        "/private/tmp/TailorAssCircle387SelfPathDiagnostic/delivery-manifest.json",
+        "/private/tmp/TailorAssShirt343SelfPathDiagnostic/delivery-manifest.json",
+        "/private/tmp/TailorAssSelfEuclideanSupplementIntegratedFinal/delivery-manifest.json"
+      ],
+      "deliverySHA256": "590d99d5cea85697cd34acfba45adb2ce56269a1f33e7f8966b7de3a6e5f032d",
+      "macNativeTests": 105,
+      "actualCommandsPassed": 101,
+      "unchangedCppHeaderFiles": 511,
+      "originalFeatureCertificateUnchanged": true,
+      "fullQueryFeatures": {
+        "circle387": 702,
+        "shirt343": 1989
+      },
+      "allFeaturesAndDomainsChecked": true,
+      "physicalAcceptanceThresholdsUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "optional_fixed_body_reference_arm_pose",
+      "state": "independent_surface_authorization_full_preparation_and_failure_controls_passed",
+      "evidence": [
+        "Tests/NativePattern/BODY-RIG-POSE.md",
+        "/private/tmp/TailorAssFixedBodyAssemblyDefaultAngles/delivery-manifest.json"
+      ],
+      "deliverySHA256": "057dc00bcbf0239d8fdd6c12ff671a382f5ea6202fe99ba190d21d0880dd8cdf",
+      "completePreparationCases": 16,
+      "negativeControls": 134,
+      "legacyWholeStateByteChecks": 12,
+      "sameSurfaceUsedForClearanceContactAndDisplay": true,
+      "all26BodyFieldsIndependentlyFitted": false,
+      "posedGarmentDynamicsAccepted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "monotonic_workflow_pose_selection_and_complete_JSON_input",
+      "state": "actual_workflow_and_viewmodel_cancellation_controls_and_bounded_prefixes_passed",
+      "evidence": [
+        "Tests/NativePattern/JOINT-WORKFLOW.md",
+        "Tests/NativePattern/JOINT-DRAPE-VIEW.md",
+        "/private/tmp/TailorAssJointWorkflowStableContactAndBarrier/summary.json",
+        "/private/tmp/TailorAssJointDrapeLifecyclePose/summary.json",
+        "/private/tmp/TailorAssJointResultMonotonicAndBodyCapabilities/summary.json",
+        "/private/tmp/TailorAssJointCombinedFinalProductionFull/additional-input-checks/summary.json"
+      ],
+      "actualWorkflowControls": 10,
+      "actualViewModelControls": 5,
+      "viewModelExtractedFromProductionSource": true,
+      "workflowMocked": false,
+      "fakeValidatedConstructed": false,
+      "stepAndWorkerTimingUsesMonotonicClock": true,
+      "completeNativeJSONRestoreBeforeSimulation": true,
+      "legacyAndPosedBoundedPrefixesChecked": true,
+      "genericRouteEnabled": false,
+      "uiRendered": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "official_final_simulation_comparison_data_boundary",
+      "state": "primary_metadata_verified_no_comparable_final_simulation_mesh_obtained",
+      "evidence": [
+        "/private/tmp/TailorAssOfficialGarmentCodeDataSubset-20261026/manifest.json",
+        "/private/tmp/TailorAssOfficialGarmentCodeDataSubset-20261026/COMPARISON-BOUNDARY.md"
+      ],
+      "manifestSHA256": "cd391edef693759db7a1a1d630912fa6327f2d8fb346a3cfee06c29bf305fbb7",
+      "downloadedDatasetArchiveBytes": 0,
+      "officialFinalSimulationMeshAvailable": false,
+      "numericGarmentCodeOrDesign2GarmentCodeParityClaim": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "full_app_release105_and_authenticated_packaged_fixed_body",
+      "state": "both_release_builds_actual_input_and_packaged_resource_checks_passed_not_launched",
+      "evidence": [
+        "Tests/NativePattern/APP-RELEASE-RESOURCES.md",
+        "/private/tmp/TailorAssCurrentFullAppReleaseSelf105-_ag8ai6g/delivery-manifest.json"
+      ],
+      "deliverySHA256": "2cb720e6d19d6a847a9e5b97ddacc9bdf1b5cf47980f586a7d1ab798b58ebc9a",
+      "frozenAppInputFiles": 779,
+      "appSwiftInputs": 115,
+      "nativeSwiftInputs": 9,
+      "nativeCxxInputs": 25,
+      "iosReleaseBuilt": true,
+      "simulatorReleaseBuilt": true,
+      "actualResourceFilesChecked": 12,
+      "productionPackagedBodyAndRigLoadedOnMac": true,
+      "packagedFixedBodyAuthenticatedReplayedAndExactQueryBoundOnMac": true,
+      "nativeCompiledSourcesAndPackageManifestMatch105Reference": true,
+      "nativeWholePackageMatches105Reference": false,
+      "noncompiledNativeDifference": [
+        "README.md"
+      ],
+      "genericRouteEnabled": false,
+      "installedOrLaunchedOnIOS": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "complete_catalog_native_source_inputs_and_cuff_restore",
+      "state": "618_source_inputs_and_24_positive_10_negative_controls_passed_no_3D_preparation",
+      "evidence": [
+        "Tests/NativePattern/NATIVE-CATALOG-INPUTS.md",
+        "/private/tmp/TailorAssNativeCatalogInputsFinal/delivery-manifest.json"
+      ],
+      "deliverySHA256": "9ac6af7e7bd6ad75d55cd2f0297b8c63f395b07569a5607aa83aac4308e65918",
+      "completeCases": 618,
+      "uniqueCompletePatterns": 548,
+      "rawBodyProfiles": 2,
+      "discreteNonMetaSelectPaths": 16,
+      "allOriginal211CaseIDsPreserved": true,
+      "sharedSourceMeshDefinitions": 27,
+      "restorePositiveControls": 24,
+      "restoreNegativeControls": 10,
+      "generationOrRestoreRejections": 0,
+      "independentProcessExportBytesIdentical": true,
+      "restoreSourceSHA256": "4b53abdf28bef96c06c2c1960fddff97a47265be41eef224f241fd53e6f052fd",
+      "meshOrPhysicsRun": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native105_two_complete_initial_runs",
+      "state": "circle689_and_shirt402_accepted_then_actual_line_search_rejections",
+      "evidence": [
+        "/private/tmp/TailorAssJointSelfEU105ProductionFull/conclusion.json",
+        "/private/tmp/TailorAssJointSelfEU105ProductionFull/delivery-manifest.json"
+      ],
+      "deliverySHA256": "79707503dd4f12dca71a682866f673dba130171ea93c99aaae978bdf41e20ba9",
+      "fromActualInitialSource": true,
+      "checkpointLoaded": false,
+      "circle": {
+        "acceptedSteps": 689,
+        "staticSteps": 480,
+        "physicalSteps": 209,
+        "dynamicSimulatedSeconds": 0.8708333333333333,
+        "rejectedStep": 690,
+        "gravityFractionAtRejectedStep": 0.875,
+        "finalStableResult": false
+      },
+      "shirt": {
+        "acceptedSteps": 402,
+        "physicalSteps": 0,
+        "rejectedStep": 403,
+        "finalStableResult": false
+      },
+      "recordedStaticSegments": {
+        "circle": 2724,
+        "shirt": 2916
+      },
+      "allOriginalSourceAndNativeBindingsUnchanged": true,
+      "historicalCurrentPCorrectionAndPzWereRecorded": false,
+      "validatedOutputProduced": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "complete_618_input_actual_preparation",
+      "state": "536_distinct_ready_12_genuine_rejections_before_tier_fix",
+      "evidence": [
+        "/private/tmp/TailorAssJointPreparation618Self105-v5x_i4ro/delivery-manifest.json"
+      ],
+      "deliverySHA256": "d42cd91987d350e513f5aa2f5b02c4516296d76d5db345143ec892f98b571313",
+      "inputCases": 618,
+      "distinctSources": 548,
+      "readySources": 536,
+      "readyCases": 606,
+      "rejections": {
+        "tierSourceReplay": 8,
+        "originalContourSelfIntersection": 4
+      },
+      "sameSourceAreaMassPanelsAndZeroPinsIndependentlyChecked": true,
+      "newtonOrPhysicsExecuted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "asymmetric_tier_bottom_interface_source_fix",
+      "state": "24_pinned_upstream_cases_pass_legacy24_mismatches_reproduced",
+      "evidence": [
+        "Tests/NativePattern/LEVELS-HEM.md",
+        "/private/tmp/TailorAssLevelsAsymmetricFixValidation/delivery-manifest.json"
+      ],
+      "deliverySHA256": "2b3f0d737b7ae75b12535da6291247a6038128d4ff3d411066a7be2920cad31f",
+      "fixedMaximumGeometryErrorCentimeters": 4.672029859875693e-06,
+      "changedCatalogSources": 8,
+      "unchangedCatalogCases": 610,
+      "original211SourceHashesUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "eight_corrected_tier_actual_preparations",
+      "state": "six_ready_two_rigid_cloth_work_budget_rejections",
+      "evidence": [
+        "/private/tmp/TailorAssLevelsHemFixedPreparation8-y59oext_/delivery-manifest.json"
+      ],
+      "deliverySHA256": "549a63bab66998c0ad25642c57dcd069b6bce8e696b524a79d021800cd4f6791",
+      "freshActualCases": 8,
+      "sourceFirstPointRejections": 0,
+      "ready": 6,
+      "rigidClothBudgetRejected": 2,
+      "nativeBinding": "sealed105; current in-progress FeatureSeparationCertificate not compiled in this evidence",
+      "combinedDifferentBuildsReadyDistinctSources": 542,
+      "combinedDifferentBuildsReadyCases": 612,
+      "all548RetestedWithCurrentSources": false,
+      "newtonOrPhysicsExecuted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "four_original_contour_crossings_independent_pinned_upstream_diagnosis",
+      "state": "actual_source_and_unchanged_upstream_both_invalid_for_these_parameters",
+      "evidence": [
+        "/private/tmp/TailorAssActualSourceCrossingDiagnostic-smsmv0i9/delivery-manifest.json"
+      ],
+      "deliverySHA256": "c994a895019e6778d7ad9267eb2450a651c4a5e3692697baebec552390f9f844",
+      "exactLineAndCircleSourceIntersectionEvidence": true,
+      "pinnedUnmodifiedUpstreamAssemblyExecuted": true,
+      "actualRendererCalls": 0,
+      "cases": 4,
+      "entireStyleOrOptionDisabled": false,
+      "early2DProductDiagnosticImplemented": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "current_p_gradient_fallback_after_cg_line_search_exhaustion",
+      "state": "production_same_failed_inner_kkt_and_paths_pass",
+      "evidence": [
+        "Tests/NativePattern/JOINT-BODY-NEWTON.md",
+        "/private/tmp/TailorAssJointNewtonPGradientFallbackDelivery/delivery-manifest.json"
+      ],
+      "deliverySHA256": "6a6bb4bb5401e60d0cc0622b5d337942453406ca8121b69efd5cdd474d10e9cc",
+      "sameInnerOriginalFailed": true,
+      "sameInnerNewAcceptedSegments": 13,
+      "sameInnerActualPGradientSegments": 8,
+      "sameInnerFinalForceInfinityNewton": 9.57491465669591e-07,
+      "freshOuterNewAndOldBothPassed": true,
+      "freshOuterSuccessNotAttributedToFallback": true,
+      "forceEnergyPathAndOriginal96Newton400CG32BacktrackGatesUnchanged": true,
+      "maximumDirectionsPerIteration": 2,
+      "iosStrictTypecheckPassed": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "correlated_moving_normal_feature_separation",
+      "state": "native111_mac_full_suite_fraction_and_two_sdk_actual_clients_pass",
+      "evidence": [
+        "/private/tmp/TailorAssCorrelatedFSCNativeFirst/delivery-manifest.json"
+      ],
+      "deliverySHA256": "be9956b17867d86410195b290be7fa26d25cc23cfd5af4719271ebcd793e2e7c",
+      "macTestsExecuted": 111,
+      "independentFractionMotions": 15,
+      "independentMovingNormalLeaves": 57,
+      "circle690OriginalWholeChordAllFeatures": 1552,
+      "circle690OriginalWholeChordCertifiedClear": true,
+      "cppHeadersAndVendorUnchangedFrom105": true,
+      "physicalFloorDepthWorkAndCancellationUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "rigid_cloth_bvh_preserving_narrow_phase_and_budgets",
+      "state": "eight_new_levels_and_211_old_actual_preparations_pass",
+      "evidence": [
+        "Tests/NativePattern/RIGID-CLOTH-BROADPHASE.md",
+        "/private/tmp/TailorAssRCCBroadPhaseFinal-43xh5ark/delivery-manifest.json"
+      ],
+      "deliverySHA256": "3f0532e0b2fbb99906f320a6c9188b05d8616c171946ecd5a92fee2334fae25a",
+      "newLevelsReady": 8,
+      "oldCases": 211,
+      "oldFullPreparedStatesAndPlansUnchanged": true,
+      "narrowPhaseAndLimitsUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native111_pgradient_full_initial0_terminal",
+      "state": "both_terminal_failed_no_accepted_garment",
+      "evidence": [
+        "/private/tmp/TailorAssJointFSC111PGradientFull/delivery-manifest.json"
+      ],
+      "deliverySHA256": "53cfbebaad6e63c09db4ef1296dd07f0c59e1e61690e6f02d10f1afb00299ffe",
+      "sameBinary": true,
+      "controlsPassed": true,
+      "initialStep": 0,
+      "checkpointLoaded": false,
+      "circleAcceptedSteps": 689,
+      "circleFailedStep": 690,
+      "shirtAcceptedSteps": 404,
+      "shirtFailedStep": 405,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "bounded_exact_expansion_feature_separation",
+      "state": "native117_single_full_mac_fraction_and_two_sdk_pass",
+      "evidence": [
+        "/private/tmp/TailorAssFSCExpansionIntegratedFinal/delivery-manifest.json"
+      ],
+      "deliverySHA256": "73e08acadc92dfc0cd98eee1019b41875a1608521a7a446f78f1b57ef28a25b0",
+      "singleMacSuiteTests": 117,
+      "exactArithmeticPairs": 199,
+      "newIndependentMotions": 9,
+      "circleActualInnerFeatures": 626,
+      "circleActualWholeFeatures": 1552,
+      "bothActualSavedPathsCompletelyClear": true,
+      "cppAndPhysicalFloorUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "early_source_contour_diagnostics_semicircle_and_actual_app_ui",
+      "state": "two_platform_release_builds_and_simulator_generation_import_export_pass",
+      "evidence": [
+        "Tests/NativePattern/SOURCE-CONTOUR-DIAGNOSTICS.md",
+        "/private/tmp/TailorAssCurrentFullAppReleaseFSC111Arc/delivery-manifest.json"
+      ],
+      "deliverySHA256": "7ff898b821fcff0f6d0bb482bdc3d91c58d551ba8c9542a163479869f1705a40",
+      "frozenAppFiles": 788,
+      "appNativeSuite": 111,
+      "subsequentNative117NotIncluded": true,
+      "early2DProductDiagnosticImplemented": true,
+      "partialDiagnosticIsNotSimpleLoopCertificate": true,
+      "sameStyleValidParametersAccepted": true,
+      "invalidJSONRawBytesPreserved": true,
+      "invalidPDFDrafting3DDisabled": true,
+      "actualInstalledSimulatorFilesMatched": 15,
+      "physicalDeviceTested": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "unified_current548_fresh_prepare111",
+      "state": "actual_preparation_finished_independent_geometry_audit_pending",
+      "evidence": [
+        "/private/tmp/TailorAssUnifiedCurrent548Prepare111-s0l187gz/"
+      ],
+      "distinctInputs": 548,
+      "processedThisProcess": 548,
+      "reusedOldRecords": 0,
+      "prepareReady": 544,
+      "sourceSelfIntersectingRejected": 4,
+      "mappedCaseReady": 614,
+      "allPreparedGeometryIndependentlyAccepted": false,
+      "newtonPerformed": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "bounded_representable_coordinate_after_zero_rounded_trial",
+      "state": "production_saved405_fresh405_and_negative_controls_pass",
+      "evidence": [
+        "/private/tmp/TailorAssJointCoordinateFallbackDelivery/delivery-manifest.json",
+        "/private/tmp/TailorAssJointCoordinateIndependentReview/review.json"
+      ],
+      "deliverySHA256": "b13143f32e9b04dec1ba72346aa356dd5122c7e765b8023232b3e414fee30d36",
+      "newtonSHA256": "5f3c325510793781a7baf2801692d53bfbe50e301b9a807b128637e21f74ef23",
+      "forceEnergyCompletePathAndKKTGatesUnchanged": true,
+      "savedInnerActualCoordinateSteps": 1,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "app795_native117_scroll_layout_and_normal_preview",
+      "state": "two_release_builds_installed_simulator_ui_pass",
+      "evidence": [
+        "/private/tmp/TailorAssCurrentFullAppReleaseFSC117Scrollable/delivery-manifest.json"
+      ],
+      "deliverySHA256": "dbd22dac1fb93a7285d1e502ba6cdab1e5d5877a07bb8c267f7c5d91a07fb5c1",
+      "frozenAppFiles": 795,
+      "appNativeSuite": 117,
+      "installedFilesMatched": 15,
+      "longWarningAndExpandedJSONFooterVisible": true,
+      "normalSelectionSeamPanFitAndExportMenuPassed": true,
+      "genericFullGarmentUIRouted": false,
+      "physicalDeviceTested": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native117_coordinate_full_initial0",
+      "state": "controls_pass_full_simulation_running",
+      "evidence": [
+        "/private/tmp/TailorAssJointFSC117CoordinateFull/run-binding.json",
+        "/private/tmp/TailorAssJointFSC117CoordinateFull/controls-receipt.json"
+      ],
+      "sameBinary": true,
+      "initialStep": 0,
+      "checkpointLoaded": false,
+      "requestedMaximumSteps": 2400,
+      "finalResultAvailable": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "unified_current548_fresh_prepare111_independent_final",
+      "state": "548_fresh_preparations_544_independent_pass_4_source_crossings",
+      "evidence": [
+        "/private/tmp/TailorAssUnifiedCurrent548Prepare111-s0l187gz/delivery-manifest.json"
+      ],
+      "deliverySHA256": "4d52079af68cfb7af20a76ecbaf7ea4e521d7cfc5b40f40f47f4b5d80edce319",
+      "distinctInputs": 548,
+      "freshProcessed": 548,
+      "reusedOldRecords": 0,
+      "readyAndIndependentlyAccepted": 544,
+      "sourceCrossingsRejected": 4,
+      "mappedCaseReady": 614,
+      "bodyOutsideSamples": 4854164,
+      "exactSupplementalRayCases": 20,
+      "allIndependentVFEEChecksPassed": true,
+      "preservedSourceAreaMassZeroPinsAndCompleteSewing": true,
+      "appModelsSnapshot": 788,
+      "nativeSnapshot": 111,
+      "newtonPerformed": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native117_coordinate_full_initial0_terminal",
+      "state": "both_terminal_failed_no_accepted_garment",
+      "evidence": [
+        "/private/tmp/TailorAssJointFSC117CoordinateFull/summary.json",
+        "/private/tmp/TailorAssJointFSC117CoordinateFull/root-terminal-receipt.json"
+      ],
+      "controlsPassed": true,
+      "sameBinary": true,
+      "initialStep": 0,
+      "checkpointLoaded": false,
+      "circleAcceptedSteps": 689,
+      "circleFailedStep": 690,
+      "shirtAcceptedSteps": 405,
+      "shirtFailedStep": 406,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native117_coordinate_full_independent_terminal_audit",
+      "state": "full_run_sealed_both_garments_rejected",
+      "evidence": [
+        "/private/tmp/TailorAssJointFSC117CoordinateFull/delivery-manifest.json",
+        "/private/tmp/TailorAssJointFSC117CoordinateIndependentAudit/conclusion.json"
+      ],
+      "deliverySHA256": "d11a7d23a7d7c8bb7d961890811717a86f24012324ad0fa7c46842d93f07fe4b",
+      "independentManifestSHA256": "fea4c0d0cbbfaba0b77dd2247d34c05ff7a605cbb9088ccd4b322318a895b2fb",
+      "actualStaticSegments": {
+        "circle": 2731,
+        "shirt": 3052
+      },
+      "actualCirclePhysicalSteps": 209,
+      "actualAcceptedOneULPCoordinateSegments": 5,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "source_bound_reference_body_measurements",
+      "state": "strict_mac_analytical_actual_six_sections_independent_and_ios_typecheck_pass",
+      "evidence": [
+        "Tests/NativePattern/BODY-MEASUREMENTS.md",
+        "/private/tmp/TailorAssBodyMeasurementsDelivery/delivery-manifest.json"
+      ],
+      "deliverySHA256": "5b7430c83e887413abfd8ac6ab258a846d94b430cad069fa95e6ea300ed00ad3",
+      "modelSHA256": "78713fa225a127e9d6f2d01d584c86c588d0dcd0ce5450f98e2a26d204d58859",
+      "sourceAndParameterSHARecorded": true,
+      "allOriginalLoopsAndSourceIDsPreserved": true,
+      "strictUniqueAnchorContainingLoop": true,
+      "anatomicalDefinitionsEstablished": false,
+      "bodyFittingImplemented": false,
+      "appRoutingChanged": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native123_bounded_exact_degree_elevation",
+      "state": "complete_native_suite_and_saved_motion_replay_pass",
+      "evidence": [
+        "/private/tmp/TailorAssFSCElevationIntegratedFinal/delivery-manifest.json"
+      ],
+      "deliverySHA256": "a40e0467e695ab56c574bce2b2a42c8de87a6c66b59ec4833f802837908c7098",
+      "actualSingleMacTestCount": 123,
+      "old117Included": true,
+      "sdkFinalLinksPassed": true,
+      "savedCircle690LocalFeaturesClear": 626,
+      "savedCircle690WholeFrameFeaturesClear": 1552,
+      "fresh690StepPassed": false,
+      "fresh690StepState": "pending_separate_check",
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "newton_normal_candidate_coordinate_competition",
+      "state": "production_v2_with_final_native123_generic_controls_pass",
+      "evidence": [
+        "Tests/NativePattern/JOINT-BODY-NEWTON.md",
+        "/private/tmp/TailorAssJointNewtonCompetitionFinal123/delivery-manifest.json",
+        "/private/tmp/TailorAssShirt406Representability-kvm4gwze/delivery-manifest.json"
+      ],
+      "deliverySHA256": "36ae716396d5df25c5d6a64f1fb45d0928d7edd429cef921ba3d2aef8924bfac",
+      "newtonSHA256": "bc91f4a181aeb0f0d5291e65a4368d6ca7651e105b531270fd63ba1ee3dbbff0",
+      "newCompetitionControls": 5,
+      "maximumNewtonIterations": 96,
+      "maximumCoordinateCandidatesPerSearch": 64,
+      "originalStrictEnergyAndGeometryGatesPreserved": true,
+      "unknownAlternativeNeverReplacesCertifiedNormalCandidate": true,
+      "appRoutingChanged": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "joint_configuration_trajectory_certificate_binding",
+      "state": "production_binding_focused_controls_and_ios_typecheck_pass",
+      "evidence": [
+        "Tests/NativePattern/JOINT-TRAJECTORY-BINDING.md",
+        "/private/tmp/TailorAssJointTrajectoryBindingDelivery/delivery-manifest.json"
+      ],
+      "deliverySHA256": "28594fa312dc28e7fdb2db6f90c19444647ec1b02833f367185bdc1d06dcdb56",
+      "simulationSHA256": "8ea3fa020fe15281e6b2e0ad60950442dda9f5c3f92360628f7f2d45cec083b7",
+      "focusedNativeVersion": 117,
+      "actualInitialStepsPerStyle": 8,
+      "actualSaved406AcceptedAndClearCandidates": [
+        [
+          14,
+          16
+        ],
+        [
+          23,
+          26
+        ],
+        [
+          9,
+          18
+        ]
+      ],
+      "unknownOrCancelledStateNotCommitted": true,
+      "maximumActualSegments": 96,
+      "maximumCheckedCandidates": 192,
+      "physicalLinearStepSemanticsUnchanged": true,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native123_production_coordinate_403_405_406_regression",
+      "state": "six_actual_math_subproblems_and_controls_pass",
+      "evidence": [
+        "/private/tmp/TailorAssCoordinateRegressionFinal123Second-jsexaa29/delivery-manifest.json"
+      ],
+      "deliverySHA256": "b0d5d3349862993dfb4d03796485c3e9ffadbb1453d5e32f1ca5f1cb5ce41076",
+      "actualSubproblemCount": 6,
+      "allFreshKKTAndFullSelectedPathsPassed": true,
+      "firstCompileFailurePreserved": true,
+      "originalSessionCommitted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "full_app804_native123_current_solver_build_and_ui_smoke",
+      "state": "device_and_two_simulator_architectures_release_plus_actual_simulator_launch_pass",
+      "evidence": [
+        "Tests/NativePattern/APP-RELEASE-RESOURCES.md",
+        "/private/tmp/TailorAssAppReleaseNative123NbcS8ea-8dos_5f9/delivery-manifest.json",
+        "/private/tmp/TailorAssApp804UISmoke/delivery-manifest.json"
+      ],
+      "buildManifestSHA256": "1670f27a005478d8870c115048b505dc7eb85535cc359c1e29a56b3930649716",
+      "uiManifestSHA256": "015fb38253fb733bea0b3ef4d818f4c56fb7d197c337742f4e8dbf191ce8b92b",
+      "frozenInputFiles": 804,
+      "appProjectSwiftFiles": 117,
+      "generatedAppSwiftFiles": 1,
+      "nativeSwiftFiles": 9,
+      "nativeCXXFiles": 25,
+      "resourceFilesVerified": 12,
+      "installedBundleFilesExact": 15,
+      "generatedSkirt2Panels": 2,
+      "pairedSeamHighlightObserved": true,
+      "exportMenuEnabled": true,
+      "exportFileRegenerated": false,
+      "genericAppRouteEnabled": false,
+      "phonePerformanceMeasured": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native123_fresh_circle690_production_step",
+      "state": "driver_passed_physical_step_rejected",
+      "evidence": [
+        "/private/tmp/TailorAssCircle690ProductionReplaySecond/delivery-manifest.json",
+        "/private/tmp/TailorAssCircle690ProductionReplaySecond/result/replay-summary.json"
+      ],
+      "deliverySHA256": "01441c7aa4c2823a24e818e3cc85d6b42eb113497f28345c69a0c582ee05a6d4",
+      "originalProductionSPrefixPreserved": true,
+      "testOnlyLoaderAppended": true,
+      "loadedExactAcceptedStep": 689,
+      "attemptedStep": 690,
+      "accepted": false,
+      "newtonReason": "lineSearchFailed",
+      "newtonAcceptedInnerSegments": 25,
+      "finalGradientInfinityNewton": 0.012970987169688142,
+      "sessionRemainedAtStep": 689,
+      "fullInitial0RunStarted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native129_critical_value_separation_certificate",
+      "state": "full_native_and_independent_positive_interval_proofs_pass",
+      "evidence": [
+        "/private/tmp/TailorAssFSCCriticalIntegratedSecond/delivery-manifest.json",
+        "/private/tmp/TailorAssCriticalCertificateIndependent/delivery-manifest.json",
+        "/private/tmp/TailorAssNative129RootEvidenceAudit/summary.json"
+      ],
+      "deliverySHA256": "d33a9c71dc5b324894b39e0a66473c5500c5002d1242d6b134b4a1f4330e5e9f",
+      "independentDeliverySHA256": "8e3a2a2a7a2fe9db1f5f01dcac5f182745c6307fb9e81e53a49446984be10709",
+      "nativeMacTestsExecuted": 129,
+      "nativeCommandsExitZero": 131,
+      "saved123InnerFeaturesComplete": 626,
+      "saved123WholeFeaturesComplete": 1552,
+      "physicalThresholdsChanged": false,
+      "installedAppContainsThisVersion": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "native129_fresh_circle690_true_outer_path_crossing",
+      "state": "actual_physical_step_rejected_correctly_exact_two_intersections",
+      "evidence": [
+        "/private/tmp/TailorAssCircle690CriticalProductionReplay/result/replay-summary.json",
+        "/private/tmp/TailorAssCircle690CriticalProductionReplay/diagnostic-self/exact-actual-ee-intersection.json",
+        "/private/tmp/TailorAssCircle690TrueCrossingIndependent/intersection-proof.json"
+      ],
+      "actualLoadedAcceptedStep": 689,
+      "attemptedStep": 690,
+      "accepted": false,
+      "newtonUpdates": 17,
+      "newtonStatus": "lineSearchFailed",
+      "newtonFinalGradientInfinityNewton": 0.01297098711274812,
+      "actualMotionSHA256": "6cd6d2d089beedd7e0caf69df53c9b3bf2d2259b2b43d87a8464004b7a1650a2",
+      "witnessEdgeVertexIDs": [
+        60,
+        61,
+        1597,
+        1598
+      ],
+      "exactCrossingRootsIsolated": 2,
+      "localNewtonPathClearDoesNotProvePhysicalOuterPath": true,
+      "nextAction": "Verify bounded real time substeps from exact accepted positions and velocities; rebuild predictor, inertia and loading at each physical endpoint. Do not reuse optimizer segments as time.",
+      "productionSubstepsImplemented": false,
+      "fullInitial0RunStarted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "circle690_two_real_physical_halfsteps_diagnostic",
+      "state": "both_true_halfsteps_pass_original_fresh_and_path_gates",
+      "evidence": [
+        "/private/tmp/TailorAssCircle690PhysicalHalfStepProbeSecond/delivery-manifest.json",
+        "/private/tmp/TailorAssPhysicalSubstepIndependent/summary.json"
+      ],
+      "deliverySHA256": "eb139d1c042f393e637be5e1cb6359b802a081913312d97258a05e055b4cfc1d",
+      "actualHalves": 2,
+      "timeStepPerHalfSeconds": 0.0020833333333333333,
+      "totalPhysicalSeconds": 0.004166666666666667,
+      "freshGradientInfinityNewton": [
+        9.396522671067942e-09,
+        1.6689511994627537e-08
+      ],
+      "independentBitwisePredictorScalars": 10074,
+      "independentBitwiseVelocityScalars": 10074,
+      "initialStateExactAccepted689": true,
+      "secondHalfUsesActualFirstHalfState": true,
+      "privateDiagnosticOnly": true,
+      "productionIntegration": "in_progress",
+      "RValidatedProduced": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "source_bound_body_surface_reference_measurements",
+      "state": "seven_reference_measurements_verified_for_two_profiles_and_scaling",
+      "evidence": [
+        "Tests/NativePattern/BODY-SURFACE-MEASUREMENTS.md",
+        "/private/tmp/TailorAssBodySurfaceMeasurementsFinal-jew93d4l/delivery-manifest.json"
+      ],
+      "deliverySHA256": "b005bf8b632b1fd5e686076b0e4668ff874f1e760e63a99eeb9e44846d018132",
+      "sourceBoundMeasurements": 7,
+      "defaultAndFemaleProfilesTested": true,
+      "independentSurfaceSegmentsChecked": 1560,
+      "strictMacAndTwoIOSTypechecks": true,
+      "unchangedDefaultBodyAndResources": true,
+      "rootDefaultDiagramVisuallyInspected": true,
+      "bodyFittingApplied": false,
+      "actualNewAppBundleVerified": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "atomic_physical_substeps_core_and_result_boundary_controls",
+      "state": "strict_current_S_R_build_and_two_initial_source_controls_pass",
+      "evidence": [
+        "/private/tmp/TailorAssJointPhysicalSubsteps129Controls/delivery-manifest.json"
+      ],
+      "deliverySHA256": "6890373c39a736ef4553c8b2b2b4e4762d8ccf20e9f80883abd2c37c23230aff",
+      "simulationSHA256": "3d798d256b71c0bb1b30756652e89e7f14d20717164ee52c062916d26a136190",
+      "resultSHA256": "56490fe920664ccb3c81ae846fe8e9f5781db6cb622bb71b7339c2e5bf3c7d56",
+      "newtonSHA256": "bc91f4a181aeb0f0d5291e65a4368d6ca7651e105b531270fd63ba1ee3dbbff0",
+      "nativeVersionTests": 129,
+      "maximumSubdivisionDepth": 1,
+      "maximumPhysicalAttemptsPerMacroStep": 3,
+      "kinematicPositiveAndNegativeControls": 19,
+      "completeSourceControls": [
+        "circle-straight-band",
+        "shirt-sleeved"
+      ],
+      "actualStaticFramesPerSource": 1,
+      "originalQuietMacroSteps": 24,
+      "quietPhysicalSeconds": 0.1,
+      "dynamicProductionStepAndRollbackVerification": "pending_separate_focused_run",
+      "fullInitial0RunStarted": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "production_adaptive_circle690_and_mid_macro_cancellation",
+      "state": "real_two_leaf_step_fresh_result_proof_tamper_rejection_and_atomic_cancel_pass",
+      "evidence": [
+        "/private/tmp/TailorAssPhysicalSubstepProductionDelivery/delivery-manifest.json",
+        "/private/tmp/TailorAssCircle690AdaptiveProduction/delivery-manifest.json",
+        "/private/tmp/TailorAssCircle690AtomicHalfCancellationSecond/delivery-manifest.json"
+      ],
+      "combinedSHA256": "b8cadfe842f2efe85cc08b90a1e7ad76e17b15c6b17db43bc1decea999d6ea4b",
+      "positiveSHA256": "f49f4f0d67b024c38a042344610a102feecc935df054698fc73071e30d935d82",
+      "cancellationSHA256": "e872a5199f8ee384df17ff028642d372dac8a640b13976fd980eb445fb6fa760",
+      "productionMacroStepAccepted": 690,
+      "physicalLeaves": 2,
+      "physicalAttempts": 3,
+      "realLeafTamperRejections": 7,
+      "freshMaximumForceNewton": 1.5463079705568816e-08,
+      "freshMaximumPCorrectionMeters": 7.870090768542404e-13,
+      "cancelAfterFirstRealAcceptedHalf": true,
+      "secondHalfStartedInCancellationControl": false,
+      "publicStateAndJournalBitwiseUnchangedAfterCancellation": true,
+      "fullInitial0Run": "/private/tmp/TailorAssJointPhysicalSubsteps129Full",
+      "fullInitial0RunStarted": true,
+      "fullInitial0Completion": "running_at_record_creation",
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "full_app812_native129_adaptive_build_and_simulator_install",
+      "state": "three_architecture_release_and_verified_simulator_launch_pass_ui_pending",
+      "evidence": [
+        "Tests/NativePattern/APP-RELEASE-RESOURCES.md",
+        "/private/tmp/TailorAssAppReleaseNative129Adaptive-fvlmi5sd/delivery-manifest.json",
+        "/private/tmp/TailorAssApp812UISmoke/installation-manifest.json"
+      ],
+      "buildSHA256": "73aca54bd917ccb2ce52955d8b78316538c2cd4077692da1c12e563ef1d3f4d2",
+      "installationSHA256": "976bbf468cebe80077f6a39ce67de7f1c1ba4f6229f28808dc45491ed87a2869",
+      "frozenInputs": 812,
+      "projectAppSwiftFiles": 118,
+      "generatedAppSwiftFiles": 1,
+      "nativeSwiftFiles": 9,
+      "nativeCXXFiles": 25,
+      "resourceFiles": 13,
+      "installedBundleFilesExact": 16,
+      "launchPID": 88637,
+      "uiPendingReason": "Mac locked; user unlock requested",
+      "targetPhoneTested": false,
+      "generic3DRouteEnabled": false,
+      "fullGarmentAccepted": false
+    },
+    {
+      "capability": "committed_physical_seed_forest_and_force_priority_newton",
+      "state": "strict_45_model_controls_passed_new_full_initial0_run_started",
+      "evidence": [
+        "Tests/NativePattern/JOINT-PHYSICAL-SEED-FOREST-DESIGN.md",
+        "/private/tmp/TailorAssJointSeedForestControls/delivery-manifest.json",
+        "/private/tmp/TailorAssNewtonForceCoverageDelivery/delivery-manifest.json",
+        "/private/tmp/TailorAssJointSeedForestFull/run-binding.json"
+      ],
+      "pureDataControlsPassed": 57,
+      "realFirstStaticSourceFramesPassed": 2,
+      "fullRunFromInitialSource": true,
+      "fullRunCheckpointLoaded": false,
+      "genericFinalGarmentsValidated": 0,
+      "phoneTested": false
+    },
+    {
+      "capability": "shared_body_fit_visible_auxiliary_consumer",
+      "state": "sealed_consumer_pass_runtime_body_factory_and_complete_surface_validator_in_development",
+      "evidence": [
+        "Tests/NativePattern/FIT-DEFORMATION-REPLAY.md",
+        "Tests/NativePattern/FITTED-BODY-INTEGRATION-DESIGN.md",
+        "/private/tmp/TailorAssBodyFitSharedReplayFinal-sltlaihu/delivery-manifest.json"
+      ],
+      "actualCommandsPassed": 9,
+      "defaultRouteModified": false,
+      "all26BodyFieldsFitted": false,
+      "fullAppBuildPerformedForThisVersion": false
+    },
+    {
+      "capability": "runtime_fitted_body_full_source_route",
+      "state": "four_real_assemblies_and_two_fresh_joint_static_steps_passed_opt_in_only",
+      "evidence": [
+        "Tests/NativePattern/FITTED-BODY-INTEGRATION-DESIGN.md",
+        "/private/tmp/TailorAssFittedAssemblyIntegrationDelivery/delivery-manifest.json",
+        "/private/tmp/TailorAssFittedJointControls/delivery-manifest.json",
+        "/private/tmp/TailorAssFittedBodyFactorySealed-w4jwrf88/delivery-manifest.json"
+      ],
+      "bodyRecipeFromSamePaperParameters": true,
+      "sourceRestAreaMassAndZeroPinsPreserved": true,
+      "legacySDFUsed": false,
+      "defaultAppRouteChanged": false,
+      "all26BodyFieldsFitted": false,
+      "fullFittedGarmentValidated": false
+    },
+    {
+      "capability": "default complete Skirt2 accepted through generic full-source solver",
+      "state": "numerically accepted on standard mannequin; personal fit and App route unverified",
+      "caseID": "source-mesh:default:Skirt2",
+      "sourceSHA256": "565b91b5bda4b91a1df7743cb993aa7b7db2c0b96dd1244c75cbbccefe283429",
+      "evidence": "/private/tmp/TailorAssGenericDefaultStylesFull/Skirt2/delivery-manifest.json",
+      "deliveryManifestSHA256": "bb75e8eacbab6e5ce2531917f2ca289e0eb462fa4da3adf1515ab4721c21aa52",
+      "terminalAuditSHA256": "6d2f8b48251032195efded9db6ed95d5e490a939e92c5257676c1464f4ae4fcb",
+      "report": "Reports/2026-10-27-generic-3d/two-panel-skirt/index.html",
+      "completedSteps": 1358,
+      "finalQuietMacroSteps": 24,
+      "finalQuietPhysicalSeconds": 0.1,
+      "finalWindowPhysicalLeaves": 72,
+      "macWallSeconds": 1511.494474916,
+      "dynamicSimulatedSeconds": 3.658333333333333,
+      "clothPanels": 2,
+      "clothVertices": 707,
+      "clothTriangles": 1282,
+      "sourceStitches": 2,
+      "pins": 0,
+      "maximumSourceEdgeRelativeChange": 0.06567548813890478,
+      "maximumActualSeamGapMeters": 5.307315691133311e-07,
+      "maximumSpeedMetersPerSecond": 0.006741015777316976,
+      "outsideVisibleBodySamples": 3976,
+      "bodyIntersections": 0,
+      "selfIntersections": 0,
+      "OBJIncludesBody": true,
+      "actualOBJVertices": 14087,
+      "actualOBJFaces": 28038,
+      "visualPlacement": "skirt opening rests around hips",
+      "personalFitVerified": false,
+      "allStylesAndParameterRangesValidated": false,
+      "nativeAppGenericRouteVerified": false,
+      "physicalPhoneVerified": false,
+      "simulationReexecutedForAudit": false,
+      "liveBatchSealed": false,
+      "sourceSHA256Scope": "Recorded Swift canonical complete PaperJSON; saved JSON-byte identity is separately recorded in terminal-audit.json."
+    },
+    {
+      "capability": "default complete-source PencilSkirt numerical R output with unresolved visual eased-seam gap",
+      "state": "numerically accepted on standard mannequin; full eased-boundary visual closure pending",
+      "caseID": "source-mesh:default:PencilSkirt",
+      "sourceSHA256": "25eb54e9285d9ffc3bc4351d725d655edf9efc38ad6e14d2db2aefe167e38480",
+      "evidence": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/delivery-manifest.json",
+      "deliveryManifestSHA256": "5c94c6115bbbc4b12e7e6fd272c3397d5a851a663605cff3c3bd6f8a5493e6db",
+      "terminalAuditSHA256": "f36c70adc1474efd4cfb48f0f128da5cba73ca1aa6a8e74efbe7a23d461b87bb",
+      "continuousSeamReview": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/source-pattern/continuous-seam-review.json",
+      "continuousSeamReviewSHA256": "f9e949c0d574c16d0bd99f64c4c7c3ebd4c5aec8e7fb7e73b93be087229326e0",
+      "report": "Reports/2026-10-27-generic-3d/pencil-skirt/index.html",
+      "previewManifestSHA256": "4abc39f5c40618341f01d04b2622f79ffadc45024ae80816d1d9c28b1bc7bd16",
+      "completedSteps": 744,
+      "allActualStaticSegmentsAudited": 2260,
+      "allActualPhysicalLeavesAudited": 264,
+      "finalQuietMacroSteps": 24,
+      "finalQuietPhysicalSeconds": 0.1,
+      "finalWindowPhysicalLeaves": 24,
+      "macWallSeconds": 1071.01856975,
+      "dynamicSimulatedSeconds": 1.1,
+      "clothPanels": 2,
+      "clothVertices": 1031,
+      "clothTriangles": 1802,
+      "sourceStitches": 8,
+      "samePanelDartStitches": 4,
+      "frontBackSideStitches": 4,
+      "sewingConstraints": 82,
+      "pins": 0,
+      "sourceAreaSquareMeters": 0.584808560572455,
+      "fabricMassKg": 0.10526554090304209,
+      "maximumSourceEdgeRelativeChange": 0.06665417309115051,
+      "maximumActualTackGapMeters": 5.638667188820629e-07,
+      "maximumSpeedMetersPerSecond": 0.0002450647822479213,
+      "outsideVisibleBodySamples": 5664,
+      "bodyIntersections": 0,
+      "selfIntersections": 0,
+      "OBJIncludesBody": true,
+      "actualOBJVertices": 14411,
+      "actualOBJFaces": 28558,
+      "presetSlitsAllZero": true,
+      "visualSeamReviewPending": true,
+      "easedInterfaces": [
+        "native-5",
+        "native-6"
+      ],
+      "sourceLengthRatioApproximately": 1.0514111288,
+      "untackedBoundaryVerticesPerSide": 9,
+      "maximumFreeVertexToOppositePolylineMeters": [
+        0.008772489753423695,
+        0.008660731008775655
+      ],
+      "maximumMatchedArcPolylineGapMeters": [
+        0.008789302453269884,
+        0.008680391529586148
+      ],
+      "wholeEdgeGapDistinguishedFromTackGap": true,
+      "visualPlacement": "complete narrow skirt, opening above hips, rear/hem folds and thin upper side line; natural-waist and personal fit not established",
+      "personalFitVerified": false,
+      "allStylesAndParameterRangesValidated": false,
+      "nativeAppGenericRouteVerified": false,
+      "physicalPhoneVerified": false,
+      "simulationReexecutedForAudit": false,
+      "liveBatchSealed": false
+    },
+    {
+      "capability": "all twelve default standalone styles have historical initial-source terminal runs; exact full-boundary gap review",
+      "state": "incomplete: five historical numerical outputs, only three pass the new continuous-seam check; seven solver stops",
+      "defaultStyleCount": 12,
+      "historicalNumericalOutputCount": 5,
+      "defaultOutputsPassingContinuousSeamCheck": [
+        "StraightWB",
+        "FittedWB",
+        "Skirt2"
+      ],
+      "defaultOutputsFailingContinuousSeamCheck": [
+        "PencilSkirt",
+        "SkirtLevels"
+      ],
+      "terminalReview": "/private/tmp/TailorAssDefaultStylesTerminalReviewV1/review.json",
+      "terminalReviewSHA256": "fa5b193c8df8148c11b23a4dc07fb55786a3f3d6f3bfe90df2817a82344067da",
+      "continuousSeamReview": "/private/tmp/TailorAssFullBoundaryAuditsV2/summary.json",
+      "continuousSeamReviewSHA256": "2ea658bc2b870c70b82123c457a2c232b88dd1ddb9bbf5912f21a65b21a697c3",
+      "batch": {
+        "scope": "Read-only terminal/source/last-state and saved final-window association review of the eleven-style historical initial-source batch; not fresh force/path reexecution or all-parameter acceptance",
+        "frozenBinary": "/private/tmp/TailorAssJointResolutionBudgetDriverControls/joint-result",
+        "frozenBinarySHA256": "bb14c90b725d87331c02495a83a642b61ee6edfc66bbabb273a51432982dd48a",
+        "terminalProcessExitCode": 0,
+        "rows": [
+          {
+            "style": "FittedWB",
+            "sourceSHA256": "464787e01591289c72baa5f0b23d85d466e59e9d38aa94c0a6b177d9cac82086",
+            "stepsAccepted": 743,
+            "attemptedStep": 743,
+            "oldNumericalValidatorAccepted": true,
+            "secondsMac": 51.0979255,
+            "pins": 0,
+            "sewingConstraints": 6,
+            "maximumAnchorGapMeters": 4.040775489285559e-07,
+            "maximumExactContinuousGapMetersApprox": 4.040775489285559e-07,
+            "completeContinuousClosurePassed": true,
+            "gatheredExcluded": 0
+          },
+          {
+            "style": "Skirt2",
+            "sourceSHA256": "565b91b5bda4b91a1df7743cb993aa7b7db2c0b96dd1244c75cbbccefe283429",
+            "stepsAccepted": 1358,
+            "attemptedStep": 1358,
+            "oldNumericalValidatorAccepted": true,
+            "secondsMac": 1511.494474916,
+            "pins": 0,
+            "sewingConstraints": 46,
+            "maximumAnchorGapMeters": 5.307315691133311e-07,
+            "maximumExactContinuousGapMetersApprox": 5.307315691129594e-07,
+            "completeContinuousClosurePassed": true,
+            "gatheredExcluded": 0
+          },
+          {
+            "style": "PencilSkirt",
+            "sourceSHA256": "25eb54e9285d9ffc3bc4351d725d655edf9efc38ad6e14d2db2aefe167e38480",
+            "stepsAccepted": 744,
+            "attemptedStep": 744,
+            "oldNumericalValidatorAccepted": true,
+            "secondsMac": 1071.01856975,
+            "pins": 0,
+            "sewingConstraints": 82,
+            "maximumAnchorGapMeters": 5.638667188820629e-07,
+            "maximumExactContinuousGapMetersApprox": 0.008789302453269884,
+            "completeContinuousClosurePassed": false,
+            "gatheredExcluded": 0
+          },
+          {
+            "style": "Pants",
+            "sourceSHA256": "8fc77664f349d48781b6c727b21ce164fb1cb55691767a7065b1d405f814f359",
+            "stepsAccepted": 170,
+            "attemptedStep": 171,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 224.6610727909997,
+            "pins": 0,
+            "sewingConstraints": 252,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 0.1508047948983441,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "FittedShirt",
+            "sourceSHA256": "2883f2ee63aef93863a779f3e2b8071db8744348b588e0607d116e259b323db4",
+            "stepsAccepted": 175,
+            "attemptedStep": 176,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 77.05107520799993,
+            "pins": 0,
+            "sewingConstraints": 102,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 19.45010816829838,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "Shirt",
+            "sourceSHA256": "8e6925080c83e924f31592569d99c5dcd2bb086ded0be77f60907c544d4712bb",
+            "stepsAccepted": 159,
+            "attemptedStep": 160,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 67.53776187499989,
+            "pins": 0,
+            "sewingConstraints": 70,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 98.44617130332604,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "SkirtManyPanels",
+            "sourceSHA256": "53e2b91f208220d2c753780a5418a98c0eed169f660d178a3bfc361caee6f492",
+            "stepsAccepted": 182,
+            "attemptedStep": 183,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 202.38625858299974,
+            "pins": 0,
+            "sewingConstraints": 68,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 303.5358064917087,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "SkirtLevels",
+            "sourceSHA256": "8eb9675b0b293ec4ce765bc10ae2a3f042610774757d0a94e63cce36d68be250",
+            "stepsAccepted": 743,
+            "attemptedStep": 743,
+            "oldNumericalValidatorAccepted": true,
+            "secondsMac": 1133.871038791,
+            "pins": 0,
+            "sewingConstraints": 126,
+            "maximumAnchorGapMeters": 6.20619120753229e-07,
+            "maximumExactContinuousGapMetersApprox": 0.00822428416756191,
+            "completeContinuousClosurePassed": false,
+            "gatheredExcluded": 0
+          },
+          {
+            "style": "GodetSkirt",
+            "sourceSHA256": "a0f180afd0c36c321506e36172b67ca575ee72fc93c7f7c42dccb190d00747d1",
+            "stepsAccepted": 250,
+            "attemptedStep": 251,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 187.1427940830008,
+            "pins": 0,
+            "sewingConstraints": 150,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 820.2237659234447,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "SkirtCircle",
+            "sourceSHA256": "7b100de966d50cef7a3b4ee94a521420c400371402e5051c78c43203b46cfbbc",
+            "stepsAccepted": 750,
+            "attemptedStep": 751,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 1213.1115973749993,
+            "pins": 0,
+            "sewingConstraints": 46,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 0.004373872824892544,
+            "noValidatedOutput": true
+          },
+          {
+            "style": "AsymmSkirtCircle",
+            "sourceSHA256": "6a3f8483beacc1112995dc9a0fcb0c3e978fd30f71a6396f2f2c8c0db3912d7b",
+            "stepsAccepted": 187,
+            "attemptedStep": 188,
+            "oldNumericalValidatorAccepted": false,
+            "secondsMac": 75.2139819160002,
+            "pins": 0,
+            "sewingConstraints": 26,
+            "stopReason": "Newton newtonBudget",
+            "finalRejectedGradientInfinityNewton": 58.541911470377734,
+            "noValidatedOutput": true
+          }
+        ],
+        "oldNumericalOutputs": 4,
+        "failedRuns": 7,
+        "acceptedOutputsWithFullBoundaryGapFailure": [
+          "PencilSkirt",
+          "SkirtLevels"
+        ],
+        "allParametersValidated": false,
+        "appOrPhoneVerified": false
+      },
+      "exactSeamChecks": [
+        {
+          "style": "StraightWB",
+          "continuousClosurePassed": true,
+          "maximumGapMeters": 4.6701718221656955e-07,
+          "sourceSHA256": "990109f48a0d6444284c7bdf5d1bae5667cf6eca1ca88ca970e51b8860bb6d92",
+          "gatheredExcluded": 0
+        },
+        {
+          "style": "FittedWB",
+          "continuousClosurePassed": true,
+          "maximumGapMeters": 4.040775489285559e-07,
+          "sourceSHA256": "464787e01591289c72baa5f0b23d85d466e59e9d38aa94c0a6b177d9cac82086",
+          "gatheredExcluded": 0
+        },
+        {
+          "style": "Skirt2",
+          "continuousClosurePassed": true,
+          "maximumGapMeters": 5.307315691129594e-07,
+          "sourceSHA256": "565b91b5bda4b91a1df7743cb993aa7b7db2c0b96dd1244c75cbbccefe283429",
+          "gatheredExcluded": 0
+        },
+        {
+          "style": "PencilSkirt",
+          "continuousClosurePassed": false,
+          "maximumGapMeters": 0.008789302453269884,
+          "sourceSHA256": "25eb54e9285d9ffc3bc4351d725d655edf9efc38ad6e14d2db2aefe167e38480",
+          "gatheredExcluded": 0
+        },
+        {
+          "style": "SkirtLevels",
+          "continuousClosurePassed": false,
+          "maximumGapMeters": 0.00822428416756191,
+          "sourceSHA256": "8eb9675b0b293ec4ce765bc10ae2a3f042610774757d0a94e63cce36d68be250",
+          "gatheredExcluded": 0
+        }
+      ],
+      "scopeComplete": false,
+      "allParametersValidated": false,
+      "appOrPhoneVerified": false,
+      "independentPhysicsReexecuted": false
+    },
+    {
+      "capability": "continuous_eased_budget_fallback_preparation",
+      "state": "544_ready_from_534_identical_plans_plus_10_full_preparations_4_original_contour_failures",
+      "proof": [
+        "/private/tmp/TailorAssCurrent548ContinuousEase137/delivery-manifest.json",
+        "/private/tmp/TailorAssEasedBudgetFallbackDelivery/delivery-manifest.json"
+      ],
+      "sourceRestMassPinsAndThresholdsUnchanged": true,
+      "ordinaryGatheredAndAdmissiblePrimaryPlansUnchanged": true,
+      "data": {
+        "state": "544_ready_from_534_identical_plans_plus_10_full_preparations_4_original_contour_failures",
+        "distinctSources": 548,
+        "caseAssociations": 618,
+        "ready": 544,
+        "readyCaseAssociations": 614,
+        "knownOriginalSourceContourFailures": 4,
+        "originalFreshPreparationReady": 534,
+        "previouslyReadyCompletePlanBytesUnchanged": 534,
+        "newPreviouslyBudgetRejectedSourcesPreparedFresh": 10,
+        "all548RerunAfterPatch": false,
+        "nativeVersion": 137,
+        "appModelFiles": 50,
+        "originalFreshPreparationDelivery": "/private/tmp/TailorAssCurrent548ContinuousEase137/delivery-manifest.json",
+        "originalFreshPreparationDeliverySHA256": "b8e338c590e53e07b368aafea5fbbbc47d423f02634aad94ad35a0009aeed65c",
+        "easedBudgetFallbackDelivery": "/private/tmp/TailorAssEasedBudgetFallbackDelivery/delivery-manifest.json",
+        "easedBudgetFallbackDeliverySHA256": "ccad2a6f7ae55bff909121508e3043b44e0c1aa718fce2b545d7212c29f60a91",
+        "productionSewingSHA256": "467188f1d7f16e4bafe9ce42f5b23a909f024662d6e163f9d6b1d7b4afac992a",
+        "defaultMaximumAnchorIntervalsPerStitchUnchanged": 256,
+        "scope": "Preparation only. Complete previous plans preserved; all ten fresh preparations keep entire original source. Gathered closure is still explicitly unproven.",
+        "readyWithCompleteContinuousClosureModel": 504,
+        "readyWithGatheredClosureUnproven": 40,
+        "independentNewFullBoundarySeams": 154,
+        "newtonExecuted": false,
+        "physicsExecuted": false,
+        "newCompleteGarmentQualificationFromPreparation": false
+      }
+    }
+  ],
+  "sourceSHA256Scope": "Original coverage audit snapshot; later source versions and their verification are recorded separately in subsequentProgress, not substituted into old reports.",
+  "currentSnapshot": {
+    "observedUTC": "2026-10-26T23:52:32.106646+00:00",
+    "scopeComplete": false,
+    "subjectiveOverallDeliveryMaturityPercent": 50,
+    "percentageIsNotTestPassRate": true,
+    "originalTablesAreHistorical": true,
+    "nativeTestCount": 137,
+    "nativeProof": "/private/tmp/TailorAssFSCCommonAffineIntegratedFirst/delivery-manifest.json",
+    "continuousEasedSewingProduction": true,
+    "completeBoundaryCheckRequiredByCurrentValidator": true,
+    "continuousEasedDelivery": "/private/tmp/TailorAssContinuousEaseDelivery/delivery-manifest.json",
+    "historicalDefaultStandaloneRunsCompleted": 12,
+    "historicalDefaultNumericalOutputs": 5,
+    "historicalOutputsPassingIndependentWholeBoundaryCheck": [
+      "StraightWB",
+      "FittedWB",
+      "Skirt2"
+    ],
+    "historicalOutputsFailingIndependentWholeBoundaryCheck": [
+      "PencilSkirt",
+      "SkirtLevels"
+    ],
+    "currentValidatorWholeGarmentOutputCount": 1,
+    "fullInitialSourceRunsAtLastObservation": [
+      {
+        "case": "circle-straight-band",
+        "directory": "/private/tmp/TailorAssContinuousEaseCircleFull-d1e7ff36",
+        "state": "running_last_polled"
+      }
+    ],
+    "historicalPreparation": {
+      "ready": 544,
+      "total": 548,
+      "knownSourceContourFailures": 4,
+      "nativeVersion": 111,
+      "currentContinuousEasedPreparationMatrixNotYetVerified": false,
+      "supersededByCurrentContinuousEasedPreparationEvidence": true
+    },
+    "newGenericAppRouteInSource": true,
+    "bodyShapeAndPoseSelectionInSource": true,
+    "bodyMeasurementsIndependentlyFitted": false,
+    "uiDualSDKTypecheckPassed": true,
+    "uiLifecycleControlsPassed": 9,
+    "actualNativeUIInteractionVerifiedForNewRoute": true,
+    "currentFullAppBuild": "/private/tmp/TailorAssAppReleaseContinuousEase137",
+    "currentFullAppBuildState": "passed_both_platforms_installed_finite_ui_progress_cancel_restart_verified_no_final_result_or_export",
+    "latestInstalledAppInputs": 826,
+    "latestInstalledAppNativeVersion": 137,
+    "physicalTargetPhoneTested": false,
+    "officialMatched3DNumericalParityProven": false,
+    "currentValidatorWholeGarmentOutputs": [
+      {
+        "case": "default PencilSkirt",
+        "sourceSHA256": "25eb54e9285d9ffc3bc4351d725d655edf9efc38ad6e14d2db2aefe167e38480",
+        "directory": "/private/tmp/TailorAssContinuousEasePencilFull",
+        "completedSteps": 743,
+        "quietFrames": 24,
+        "maximumExactWholeSeamGapMetersApprox": 1.0481083008934878e-06,
+        "sourceStitches": 8,
+        "appOrPersonalFitVerified": false,
+        "delivery": "/private/tmp/TailorAssContinuousEasePencilFull/delivery-manifest.json",
+        "deliverySHA256": "0689674ad030aba6bc47b47d164ca19a06adf4d20474ed787f3d1bafc288ca75",
+        "independentAuditSHA256": "722e46cce2b9e33e34950802a799abf03bb43b0a495c85e8b33fad7d769a2a37",
+        "report": "Reports/2026-10-27-generic-3d/pencil-skirt-continuous/index.html",
+        "frozenBeforeBudgetFallback": true
+      }
+    ],
+    "currentAppBuiltInputs": 826,
+    "currentPreparationBeforeBudgetFallback": {
+      "freshSources": 548,
+      "ready": 534,
+      "originalSourceContourFailures": 4,
+      "additionalSourceUnionBudgetRejections": 10,
+      "newtonExecuted": false,
+      "delivery": "/private/tmp/TailorAssCurrent548ContinuousEase137/delivery-manifest.json"
+    },
+    "currentPreparation": {
+      "state": "544_ready_from_534_identical_plans_plus_10_full_preparations_4_original_contour_failures",
+      "distinctSources": 548,
+      "caseAssociations": 618,
+      "ready": 544,
+      "readyCaseAssociations": 614,
+      "knownOriginalSourceContourFailures": 4,
+      "originalFreshPreparationReady": 534,
+      "previouslyReadyCompletePlanBytesUnchanged": 534,
+      "newPreviouslyBudgetRejectedSourcesPreparedFresh": 10,
+      "all548RerunAfterPatch": false,
+      "nativeVersion": 137,
+      "appModelFiles": 50,
+      "originalFreshPreparationDelivery": "/private/tmp/TailorAssCurrent548ContinuousEase137/delivery-manifest.json",
+      "originalFreshPreparationDeliverySHA256": "b8e338c590e53e07b368aafea5fbbbc47d423f02634aad94ad35a0009aeed65c",
+      "easedBudgetFallbackDelivery": "/private/tmp/TailorAssEasedBudgetFallbackDelivery/delivery-manifest.json",
+      "easedBudgetFallbackDeliverySHA256": "ccad2a6f7ae55bff909121508e3043b44e0c1aa718fce2b545d7212c29f60a91",
+      "productionSewingSHA256": "467188f1d7f16e4bafe9ce42f5b23a909f024662d6e163f9d6b1d7b4afac992a",
+      "defaultMaximumAnchorIntervalsPerStitchUnchanged": 256,
+      "scope": "Preparation only. Complete previous plans preserved; all ten fresh preparations keep entire original source. Gathered closure is still explicitly unproven.",
+      "readyWithCompleteContinuousClosureModel": 504,
+      "readyWithGatheredClosureUnproven": 40,
+      "independentNewFullBoundarySeams": 154,
+      "newtonExecuted": false,
+      "physicsExecuted": false,
+      "newCompleteGarmentQualificationFromPreparation": false,
+      "productionFocusedRegression": {
+        "directory": "/private/tmp/TailorAssEasedBudgetProductionPersistent",
+        "passed": true,
+        "groupedControls": 41,
+        "fractionCases": 13,
+        "fractionContinuousSeams": 164,
+        "nativeRecompiled": false,
+        "newtonExecuted": false,
+        "fullGarmentSimulationExecuted": false
+      }
+    },
+    "easedBudgetFallbackProduction": true,
+    "latestInstalledAppIncludesEasedBudgetFallback": false,
+    "installedAppUI": {
+      "directory": "/private/tmp/TailorAssApp826UISmoke",
+      "installedBindingSHA256": "89b194be5734e9dd3140c431eee3b83157928abe2c2aec1ed1e488f8ba7356e1",
+      "observationsSHA256": "79ffd41d96e7cbcdd83ff7533f5f10eca781892c3713623f252f4c9de1de8718",
+      "installedBundleFiles": 17,
+      "allBundleBytesMatch": true,
+      "installationPreservedUserDataBeforeLaunch": true,
+      "observedSourcePanels": 2,
+      "observedPairedSourceSeams": 2,
+      "actualProgressObserved": true,
+      "cancelAndRestartObserved": true,
+      "userRunNotInterrupted": true,
+      "wholeGarmentResultObserved": false,
+      "exportTested": false,
+      "physicalPhoneTested": false,
+      "includesSubsequentBudgetFallback": false
+    }
+  },
+  "historicalSnapshots": [
+    {
+      "archivedAtUTC": "2026-10-26T23:52:32.106646+00:00",
+      "snapshot": {
+        "observedUTC": "2026-10-26T22:45:59.514275+00:00",
+        "originalAuditDateRetained": "2026-10-26",
+        "originalTablesAreHistorical": true,
+        "genericFinalGarmentsValidated": 2,
+        "uniqueSourcePreparationsReady": 544,
+        "uniqueSourcePreparationsTotal": 548,
+        "knownOriginalContourFailures": 4,
+        "nativeTestCount": 129,
+        "physicalAdaptiveDepth": 3,
+        "physicalStep690ProductionFocusedAccepted": true,
+        "midMacroCancellationAtomicVerified": true,
+        "activeFullInitial0Run": null,
+        "fullRunState": "shirt_elastic_barrier_fix_initial0_terminal417",
+        "fullRunCases": [
+          "shirt-sleeved"
+        ],
+        "latestInstalledAppInputs": 817,
+        "latestInstalledAppNativeVersion": 129,
+        "currentAppUIState": "installed_and_launched_ui_read_interrupted_no_current_ui_verification",
+        "bodySurfaceReferenceDefinitions": 7,
+        "bodyLocalFitState": "opt_in_runtime_factory_and_full_source_assembly_verified_default_route_off",
+        "fittedBodyDefaultRouteEnabled": false,
+        "physicalTargetPhoneTested": false,
+        "scopeComplete": false,
+        "latestFullInitial0Run": "/private/tmp/TailorAssJointPhysicalSubsteps129Full",
+        "fullRunOutcome": {
+          "circle-straight-band": {
+            "acceptedSteps": 922,
+            "rejectedStep": 923,
+            "phase": "settling",
+            "wholeGarmentAccepted": false
+          },
+          "shirt-sleeved": {
+            "acceptedSteps": 406,
+            "rejectedStep": 407,
+            "phase": "staticAssembly",
+            "wholeGarmentAccepted": false
+          }
+        },
+        "fullRunDeliverySHA256": "e0477ca9c0963e8c223f09dcfd5e23d4c34a1ea4a6e5421cb00392f91c10f7c4",
+        "bodyLocalFitDeliverySHA256": "f7ce6445ef7a7bb298a58e25c36c159f10f4f013baef21de802da8ac384d2492",
+        "circle923IndependentActualCrossings": {
+          "fullStep": 2,
+          "firstHalf": 2,
+          "vertexIDs": [
+            959,
+            960,
+            1640,
+            1641
+          ],
+          "productionGuardRejectionCorrect": true
+        },
+        "circle923Depth3DiagnosticPassed": true,
+        "circle923Depth3DiagnosticLeaves": 5,
+        "circle923Depth3DiagnosticAttempts": 9,
+        "circle923Depth3DiagnosticDeliverySHA256": "e56c3ecd2d0227bdab184673bdbbd886a2a36c40ff803717c5cfb5377a457e54",
+        "productionDepth3Status": "focused_validation_and_deep_cancellation_passed_full_initial0_pending",
+        "productionDepth3Controls": "/private/tmp/TailorAssJointDepth3Controls",
+        "productionDepth3ActualFrame": "/private/tmp/TailorAssCircle923AdaptiveProduction",
+        "productionDepth3ControlsPassed": 30,
+        "productionDepth3Actual923Accepted": true,
+        "productionDepth3RealRecordTamperControlsPassed": 9,
+        "productionDepth3ActualFrameSHA256": "0517429d3de87881fbe2e222280461b7595901d6382fd14cea0abba2ff757c86",
+        "latestInstalledAppPhysicalDepth": 3,
+        "productionDepth3CancellationAtomicVerified": true,
+        "productionDepth3CancellationInterval": [
+          6,
+          7,
+          8
+        ],
+        "productionDepth3CancellationSHA256": "c1ffe047e01ed280117bc477041a6fe497654bc92ca7652a8d0e0665abeb52d5",
+        "fullRunOutcomeRefersTo": "/private/tmp/TailorAssJointPhysicalSubsteps129Full",
+        "latestCompletedFullInitial0Run": "/private/tmp/TailorAssShirtEFTFull",
+        "productionSeedForestStatus": "actual923924_and_atomic_controls_passed_cross_run_bitwise481_failed_with_baseline_nondeterminism",
+        "productionSeedForestControlsPassed": 57,
+        "productionSeedForestControlsDeliverySHA256": "13ca76ef70dacea754a4ae46fbe2b89d99535e4c9bfefb68eb5b69c7a407cc7e",
+        "newtonForceCoverageFixStatus": "actual407_and_related_subproblems_passed_full_run_pending",
+        "newtonForceCoverageDeliverySHA256": "3950941538cda01be6d861ab01e774929e4c5e353a8bc9667cc262b58dbf8e13",
+        "bodySharedReplayDeliverySHA256": "c6f1429c7746fe60c096df923a92d0283ca76734bfb1b0137e1f89fdcd5d985e",
+        "fittedBodyRuntimeReceiptAvailable": true,
+        "fittedBodyAssemblyCasesPassed": 4,
+        "fittedBodyAssemblyNegativeControlsPassed": 32,
+        "fittedBodyAssemblyDeliverySHA256": "3ba7b96426a72f0432929a6c7c94dc374744d1893f24e93c15d7a8c934af94f4",
+        "fittedBodyJointStaticCasesPassed": 2,
+        "fittedBodyJointControlsSHA256": "2c20d52ac71f0ee2f5e5fa1a136876261cc09b76d29194fd83dd31bc8fc22415",
+        "fittedBodyFactoryDeliverySHA256": "289b10b36f7d6ea13f5b946890b1c69e7583ef2dcae5f8c5e326a2e731e70946",
+        "productionSeedForestFocusedSHA256": "263e5409bad3facdb6e3d2c49e3a6da75a561c676edb4281cb00ac748dd4b6cc",
+        "activeFullRunKnownOutcomes": {
+          "circle-straight-band": {
+            "state": "terminal",
+            "acceptedSteps": 1130,
+            "rejectedStep": 1131,
+            "phase": "settling",
+            "reason": "Newton lineSearchFailed",
+            "wholeGarmentAccepted": false
+          },
+          "shirt-sleeved": {
+            "state": "terminal",
+            "acceptedSteps": 412,
+            "rejectedStep": 413,
+            "phase": "staticAssembly",
+            "reason": "Newton newtonBudget",
+            "wholeGarmentAccepted": false
+          }
+        },
+        "latestBuiltAppInputs": 817,
+        "latestBuiltAppDeliverySHA256": "58998aa5d9af8c9694e1684a6f102236e13f90bfba53c2ed2947d7a0cc2dfbfa",
+        "activeFittedBodyFullRun": {
+          "directory": "/private/tmp/TailorAssFittedShirtFull",
+          "case": "shirt-sleeved",
+          "bodyShapeSelection": "surfaceMeasurements",
+          "bodyPoseSelection": "matchPatternReference",
+          "fromInitialSource": true,
+          "checkpointLoaded": false,
+          "state": "terminal",
+          "wholeGarmentAccepted": false,
+          "acceptedSteps": 400,
+          "rejectedStep": 401,
+          "phase": "staticAssembly",
+          "reason": "Newton newtonBudget",
+          "terminalIndependentAudit": "passed_integrity_and_record_audit_no_final_garment",
+          "terminalIndependentAuditSHA256": "7a646ca3de9f0040e9e852ca55f9b99f8b459ac527fe0679dbad4a1cbb128c97"
+        },
+        "latestCompletedFullRunDeliverySHA256": "90c1acf902ea3a4110a913ac2e157f84cc653ffeeae185b79fa3d770682acbd3",
+        "activeFullRunKnownOutcomesRefersTo": "/private/tmp/TailorAssJointSeedForestFull",
+        "deliveryMaturityEstimate": {
+          "percent": 50,
+          "basis": "subjective engineering estimate of complete all-style 3D delivery; not a test pass rate or accepted-style fraction",
+          "scopeComplete": false,
+          "genericFinalGarmentsValidated": 2
+        },
+        "circle1131IndependentActualCrossings": {
+          "attemptIndices": [
+            0,
+            2
+          ],
+          "crossingsEach": 2,
+          "vertexIDs": [
+            958,
+            959,
+            1640,
+            1641
+          ],
+          "productionGuardRejectionCorrect": true,
+          "innerMotionsClear": true,
+          "deliverySHA256": "b4ff8ef9691e173f824c7625055544f609c0371e5cadaa34b7e0f47f2f72a4ca"
+        },
+        "circle1131FinerTimeDiagnostic": {
+          "qualifiedLeaves": 2,
+          "interval": [
+            2,
+            4,
+            16
+          ],
+          "original45ModelsUnchanged": true,
+          "completeMacroStepAccepted": false,
+          "wholeGarmentAccepted": false,
+          "deliverySHA256": "187f83652d27a4fcc0ec517ca07f4b5cc10b1f0c078f512f0ded9922325de6af"
+        },
+        "elasticBarrier413Fix": {
+          "modelSHA256": "efd674f4da99293215874f8af360783a534b8460f6f60da66ae5de210bf91cfe",
+          "deliverySHA256": "f0ace66dbf6f16a0ed99f6caea486b2b65e7d3784efa06769697bf3d485c2e92",
+          "actualSingleStepAccepted": true,
+          "allPhysicalGatesUnchanged": true,
+          "phoneTested": false,
+          "fullInitial0Pending": false,
+          "fullRunOutcome": "passed_original413_stop_then_rejected417_no_final_garment"
+        },
+        "latestJointControls": {
+          "directory": "/private/tmp/TailorAssJointResolutionBudgetDriverControls",
+          "models": 50,
+          "pureDataControlsPassed": 66,
+          "actualStaticSourcesPassed": 2,
+          "completeGarmentsAccepted": 0,
+          "purpose": "Latest production S/R and diagnostic driver budget error handling strict compile/control run; separate full style runs provide actual positives."
+        },
+        "activeElasticBarrierFullRun": {
+          "directory": "/private/tmp/TailorAssShirtEFTFull",
+          "case": "shirt-sleeved",
+          "bodyShapeSelection": "scaledTemplate",
+          "bodyPoseSelection": "legacyTemplate",
+          "fromInitialSource": true,
+          "checkpointLoaded": false,
+          "state": "terminal",
+          "wholeGarmentAccepted": false,
+          "previous413StopPassed": true,
+          "acceptedSteps": 416,
+          "rejectedStep": 417,
+          "phase": "staticAssembly",
+          "reason": "Newton newtonBudget",
+          "deliverySHA256": "90c1acf902ea3a4110a913ac2e157f84cc653ffeeae185b79fa3d770682acbd3"
+        },
+        "physicalTimeResolutionImplementation": {
+          "supportedMaximumDepth": 4,
+          "defaultDepth": 3,
+          "maximumActualAttemptsPerMacroStep": 15,
+          "policyVersion": "committedPartition-v2",
+          "controlsPassed": 66,
+          "controlsDeliverySHA256": "4a3871b71aa43f611744f7e0a22c870b71a8eb6c8cc4b023bcd51d908fcbdde4",
+          "actual1131And1132": "1131_rejected_after14_actual_attempts_at_9_10_over16_1132_not_executed",
+          "actualBudgetRollback": "passed_actual7_solve_cap_after_real_accepted_prefix",
+          "actualCancellationRollback": "passed_after_actual_accepted_3_4_over16_leaf",
+          "completeGarmentAccepted": false,
+          "outcomeAuditPath": "/private/tmp/TailorAssPhysicalResolutionOutcomeAudit/delivery-manifest.json",
+          "outcomeAuditSHA256": "e73c2c14fda5f0198a24ca48e8e01e0ecad62f15da527c59a9ed330f378a028d",
+          "defaultDepthChanged": false
+        },
+        "independentCircle1131Review": {
+          "deliverySHA256": "beca58a79530545e4815cd70a16ed57328f044dd24b29723aed9f889fa35e619",
+          "path": "/private/tmp/TailorAssCircle1131IndependentReview/delivery-manifest.json"
+        },
+        "physicalResolutionSourceReview": {
+          "deliverySHA256": "39858b9fbb83f1fd5484b9fd09c711a264a09a96cb4735cd0883397371064d86",
+          "path": "/private/tmp/TailorAssPhysicalResolutionBudgetReview/delivery-manifest.json"
+        },
+        "latestInstalledAppDeliverySHA256": "be673d7d828790af61275e2a1cacdfc5d5e9fa5baa29443f38fdc26c7e6755e4",
+        "latestInstalledAppDataRetentionVerified": false,
+        "physicalTargetPhoneListed": false,
+        "workflowCancellationErrorRace": {
+          "checksPassed": 12,
+          "path": "/private/tmp/TailorAssWorkflowBudgetCancellation/workflow-tests.json",
+          "parentCancellationWinsWorkerFailure": true,
+          "uncancelledWorkerErrorPreserved": true,
+          "outcomeAuditSHA256": "e73c2c14fda5f0198a24ca48e8e01e0ecad62f15da527c59a9ed330f378a028d"
+        },
+        "fitted401Diagnostic": {
+          "path": "/private/tmp/TailorAssFittedShirt401IntegratedDiagnosticFinal/delivery-manifest.json",
+          "sha256": "a4a1dc7a940dfc18e62013de852f4b2eb95692b96b0bfd981ad7c968882f5891",
+          "completeGarmentAccepted": false,
+          "findings": [
+            "early_nonconvex_self_contact_quadratic_model_mismatch",
+            "late_tangent_second_order_stretch_can_increase_barrier_force"
+          ]
+        },
+        "genericFinalOutputsValidated": 4,
+        "genericFinalStandaloneComponentsValidated": 2,
+        "genericFinalOutputScope": "Four numerically R-accepted default outputs: two standalone waistband components (StraightWB/FittedWB) and two complete-source lower garments (Skirt2/PencilSkirt). PencilSkirt retains an actual eased-seam visual gap up to 8.77 mm at free nodes; numerical tack-gap acceptance does not certify whole-edge visual closure. No complete upper or composed outfit accepted. All parameter ranges, personal fit, native App generic route and physical phone remain unverified.",
+        "genericDefaultStyleSweep": {
+          "state": "running",
+          "directory": "/private/tmp/TailorAssGenericDefaultStylesFull",
+          "sessionId": 74559,
+          "firstSeparateOutput": "/private/tmp/TailorAssGenericStraightWBFull",
+          "firstSeparateDeliverySHA256": "d9ca0b6b647ce9a0e123dfbf4c6e6dd15d8f8e6b347050582ce34b4598ee98e8",
+          "validatedDefaultStyles": [
+            "StraightWB",
+            "FittedWB",
+            "Skirt2",
+            "PencilSkirt"
+          ],
+          "allFromInitialSource": true,
+          "checkpointLoaded": false,
+          "allParameterRangesValidated": false,
+          "specializedBackendUsed": false,
+          "visualSeamReviewPendingStyles": [
+            "PencilSkirt"
+          ],
+          "numericalOutputsAreNotVisualDeliveryProof": true
+        },
+        "workflowPositiveFinalOutput": {
+          "checksPassed": 13,
+          "defaultStyle": "StraightWB",
+          "completedSteps": 743,
+          "verifiedQuietMacroSteps": 24,
+          "sourceSHA256": "990109f48a0d6444284c7bdf5d1bae5667cf6eca1ca88ca970e51b8860bb6d92",
+          "path": "/private/tmp/TailorAssWorkflowPositiveStraightWB/delivery-manifest.json",
+          "sha256": "3e865adcc9fce5928cb89961b4851258df3d022f487b51b9d30081ddaa8c245b",
+          "actualAppWorkflowAPI": true,
+          "actualAppUI": false,
+          "physicalPhoneTested": false
+        },
+        "genericFinalCompleteLowerGarmentsValidated": 2,
+        "genericFinalCompleteCombinationsValidated": 0,
+        "genericDefaultSkirt2FinalOutput": {
+          "capability": "default complete Skirt2 accepted through generic full-source solver",
+          "state": "numerically accepted on standard mannequin; personal fit and App route unverified",
+          "caseID": "source-mesh:default:Skirt2",
+          "sourceSHA256": "565b91b5bda4b91a1df7743cb993aa7b7db2c0b96dd1244c75cbbccefe283429",
+          "evidence": "/private/tmp/TailorAssGenericDefaultStylesFull/Skirt2/delivery-manifest.json",
+          "deliveryManifestSHA256": "bb75e8eacbab6e5ce2531917f2ca289e0eb462fa4da3adf1515ab4721c21aa52",
+          "terminalAuditSHA256": "6d2f8b48251032195efded9db6ed95d5e490a939e92c5257676c1464f4ae4fcb",
+          "report": "Reports/2026-10-27-generic-3d/two-panel-skirt/index.html",
+          "completedSteps": 1358,
+          "finalQuietMacroSteps": 24,
+          "finalQuietPhysicalSeconds": 0.1,
+          "finalWindowPhysicalLeaves": 72,
+          "macWallSeconds": 1511.494474916,
+          "dynamicSimulatedSeconds": 3.658333333333333,
+          "clothPanels": 2,
+          "clothVertices": 707,
+          "clothTriangles": 1282,
+          "sourceStitches": 2,
+          "pins": 0,
+          "maximumSourceEdgeRelativeChange": 0.06567548813890478,
+          "maximumActualSeamGapMeters": 5.307315691133311e-07,
+          "maximumSpeedMetersPerSecond": 0.006741015777316976,
+          "outsideVisibleBodySamples": 3976,
+          "bodyIntersections": 0,
+          "selfIntersections": 0,
+          "OBJIncludesBody": true,
+          "actualOBJVertices": 14087,
+          "actualOBJFaces": 28038,
+          "visualPlacement": "skirt opening rests around hips",
+          "personalFitVerified": false,
+          "allStylesAndParameterRangesValidated": false,
+          "nativeAppGenericRouteVerified": false,
+          "physicalPhoneVerified": false,
+          "simulationReexecutedForAudit": false,
+          "liveBatchSealed": false,
+          "sourceSHA256Scope": "Recorded Swift canonical complete PaperJSON; saved JSON-byte identity is separately recorded in terminal-audit.json."
+        },
+        "genericFinalOutputsWithVisualSeamReviewPending": [
+          "PencilSkirt"
+        ],
+        "genericDefaultPencilSkirtFinalOutput": {
+          "capability": "default complete-source PencilSkirt numerical R output with unresolved visual eased-seam gap",
+          "state": "numerically accepted on standard mannequin; full eased-boundary visual closure pending",
+          "caseID": "source-mesh:default:PencilSkirt",
+          "sourceSHA256": "25eb54e9285d9ffc3bc4351d725d655edf9efc38ad6e14d2db2aefe167e38480",
+          "evidence": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/delivery-manifest.json",
+          "deliveryManifestSHA256": "5c94c6115bbbc4b12e7e6fd272c3397d5a851a663605cff3c3bd6f8a5493e6db",
+          "terminalAuditSHA256": "f36c70adc1474efd4cfb48f0f128da5cba73ca1aa6a8e74efbe7a23d461b87bb",
+          "continuousSeamReview": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/source-pattern/continuous-seam-review.json",
+          "continuousSeamReviewSHA256": "f9e949c0d574c16d0bd99f64c4c7c3ebd4c5aec8e7fb7e73b93be087229326e0",
+          "report": "Reports/2026-10-27-generic-3d/pencil-skirt/index.html",
+          "previewManifestSHA256": "4abc39f5c40618341f01d04b2622f79ffadc45024ae80816d1d9c28b1bc7bd16",
+          "completedSteps": 744,
+          "allActualStaticSegmentsAudited": 2260,
+          "allActualPhysicalLeavesAudited": 264,
+          "finalQuietMacroSteps": 24,
+          "finalQuietPhysicalSeconds": 0.1,
+          "finalWindowPhysicalLeaves": 24,
+          "macWallSeconds": 1071.01856975,
+          "dynamicSimulatedSeconds": 1.1,
+          "clothPanels": 2,
+          "clothVertices": 1031,
+          "clothTriangles": 1802,
+          "sourceStitches": 8,
+          "samePanelDartStitches": 4,
+          "frontBackSideStitches": 4,
+          "sewingConstraints": 82,
+          "pins": 0,
+          "sourceAreaSquareMeters": 0.584808560572455,
+          "fabricMassKg": 0.10526554090304209,
+          "maximumSourceEdgeRelativeChange": 0.06665417309115051,
+          "maximumActualTackGapMeters": 5.638667188820629e-07,
+          "maximumSpeedMetersPerSecond": 0.0002450647822479213,
+          "outsideVisibleBodySamples": 5664,
+          "bodyIntersections": 0,
+          "selfIntersections": 0,
+          "OBJIncludesBody": true,
+          "actualOBJVertices": 14411,
+          "actualOBJFaces": 28558,
+          "presetSlitsAllZero": true,
+          "visualSeamReviewPending": true,
+          "easedInterfaces": [
+            "native-5",
+            "native-6"
+          ],
+          "sourceLengthRatioApproximately": 1.0514111288,
+          "untackedBoundaryVerticesPerSide": 9,
+          "maximumFreeVertexToOppositePolylineMeters": [
+            0.008772489753423695,
+            0.008660731008775655
+          ],
+          "maximumMatchedArcPolylineGapMeters": [
+            0.008789302453269884,
+            0.008680391529586148
+          ],
+          "wholeEdgeGapDistinguishedFromTackGap": true,
+          "visualPlacement": "complete narrow skirt, opening above hips, rear/hem folds and thin upper side line; natural-waist and personal fit not established",
+          "personalFitVerified": false,
+          "allStylesAndParameterRangesValidated": false,
+          "nativeAppGenericRouteVerified": false,
+          "physicalPhoneVerified": false,
+          "simulationReexecutedForAudit": false,
+          "liveBatchSealed": false
+        }
+      }
+    }
+  ]
+}

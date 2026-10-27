@@ -1,0 +1,45 @@
+{
+  "format": "GarmentCodeNativeCatalogDefinitions/v1",
+  "scope": "Complete current NativeGenerator PaperJSON inputs; no mesh, initialization or physical acceptance",
+  "originalInitializationDefinitionCount": 211,
+  "originalSourceMeshDefinitionCount": 27,
+  "profiles": ["default", "female"],
+  "fixtureFiles": [
+    "meta-grid-defaults.json",
+    "meta-grid-female.json",
+    "upper-placement-oracles.json",
+    "native-assembly-levels-oracles.json",
+    "composition-rise-oracles.json",
+    "lower-branch-oracles.json",
+    "native-initialization-three-mode-goldens.json"
+  ],
+  "originalDefinitionReaders": [
+    "160 meta selections with original exact IDs",
+    "all 108 upper-placement override/body cases, including former replay failures",
+    "12 Levels-rise and 48 composition-rise original override/body cases",
+    "25 lower-branch overrides, replayed for both existing profiles",
+    "original 27 SourceMeshCaseDefinitions cases, replayed for both profiles",
+    "original 3 NativeAssembly Pants+cuff cases plus female replays"
+  ],
+  "catalogSupplement": [
+    "all left neck, armhole and cuff choices with asymmetry enabled on Shirt and FittedShirt",
+    "front/back neck curve flip booleans on symmetric and asymmetric Shirt/FittedShirt",
+    "all Levels base x tier choices with three actual tiers",
+    "all Godet base x insert-count choices",
+    "all ManyPanels panel-curve choices",
+    "both Pencil side cuts on Pencil, Godet/Pencil and Levels/Pencil",
+    "selected catalog endpoints: circle suns, many-panel count, tier count/ruffle, Skirt2 ruffle, Pencil flare, Pants rise",
+    "Circle and Asymm cut enabled"
+  ],
+  "hashes": {
+    "paperJSONBytesSHA256": "Exact saved file bytes, pretty JSON",
+    "sourceSHA256": "Complete source canonical JSON encoding; includes full original body/design",
+    "uiDocumentSignatureSHA256": "Current UI GarmentCodeJointParameters.signature; same canonical algorithm, not the resource-URL-appended configurationID"
+  },
+  "continuousParameterSpaceExhaustive": false,
+  "allCrossProductsExhaustive": false,
+  "meshingPerformed": false,
+  "initializationPerformed": false,
+  "simulationPerformed": false,
+  "completeGarmentAccepted": false
+}

@@ -1,0 +1,92 @@
+{
+  "caseQuality" : [
+    {
+      "allowsQualityRejection" : false,
+      "case" : "straight-default",
+      "maxEdgeStrain" : 0.055040507013550899,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.20000000000000001
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "fitted-default",
+      "maxEdgeStrain" : 0.050000000000000044,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.20000000000000001
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "straight-narrow",
+      "maxEdgeStrain" : 0.050000000000000044,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.10000000000000001
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "fitted-narrow",
+      "maxEdgeStrain" : 0.036245166854524058,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.10000000000000001
+    },
+    {
+      "allowsQualityRejection" : true,
+      "case" : "straight-wide",
+      "maxEdgeStrain" : 0.15888015000671141,
+      "qualityPassed" : false,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.34999999999999998
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "fitted-wide",
+      "maxEdgeStrain" : 0.062416221050823451,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.34999999999999998
+    },
+    {
+      "allowsQualityRejection" : true,
+      "case" : "straight-wide-ease",
+      "maxEdgeStrain" : 0.10179870346554765,
+      "qualityPassed" : false,
+      "waistMultiplier" : 1.05,
+      "widthRatio" : 0.34999999999999998
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "straight-soft",
+      "maxEdgeStrain" : 0.055068724242719469,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.20000000000000001
+    },
+    {
+      "allowsQualityRejection" : false,
+      "case" : "fitted-firm",
+      "maxEdgeStrain" : 0.049999999999996048,
+      "qualityPassed" : true,
+      "waistMultiplier" : 1,
+      "widthRatio" : 0.20000000000000001
+    }
+  ],
+  "executed" : [
+    "straight-default",
+    "fitted-default",
+    "straight-narrow",
+    "fitted-narrow",
+    "straight-wide",
+    "fitted-wide",
+    "straight-wide-ease",
+    "straight-soft",
+    "fitted-firm"
+  ],
+  "failures" : [
+
+  ],
+  "passed" : true,
+  "settings" : "Standard visible body, actual paper metrics, source mass, welded admissible equal-length side seams; unchanged 8% strain, .025m\/s speed, 3mm vertex and zero cloth\/body-face crossing gates. A regression pass includes truthful rejection of the unchanged wide Straight source; consult each caseQuality\/diagnostic, not only passed. The separate wide-ease case explicitly changes its source waist multiplier to 1.05. Mac CLI timings only."
+}

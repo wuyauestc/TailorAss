@@ -1,0 +1,38 @@
+[
+  {
+    "name": "default-pose-30",
+    "geometrySHA256": "51eafae612065397254aa5dddc4a7a414f79cff81ada3b825e164158e2f61830",
+    "candidateTrianglePairs": 177186,
+    "expectedTopologicalTouchPairs": 161820
+  },
+  {
+    "name": "default-pose-45",
+    "geometrySHA256": "67765c25a056eeb0e9f487fb40b9f0ae1d3a70e5c6f3fcdbf27c20b8a799ff50",
+    "candidateTrianglePairs": 177374,
+    "expectedTopologicalTouchPairs": 161820
+  },
+  {
+    "name": "default-pose-60",
+    "geometrySHA256": "9ceed0879906b6c4cee4127bc4aa6930bb7d989c53b1809b44fa88e05d3da0d0",
+    "candidateTrianglePairs": 176786,
+    "expectedTopologicalTouchPairs": 161820
+  },
+  {
+    "name": "female-pose-30",
+    "geometrySHA256": "982030c5b466e8b551a400b196347a4b4e18aaed1cb06a2d5771559923b64f12",
+    "candidateTrianglePairs": 176289,
+    "expectedTopologicalTouchPairs": 161820
+  },
+  {
+    "name": "female-pose-45",
+    "geometrySHA256": "1fcacd6eb26658aca494dd52541fe41631061d241555b8b5a0997b179ced284d",
+    "candidateTrianglePairs": 177021,
+    "expectedTopologicalTouchPairs": 161820
+  },
+  {
+    "name": "female-pose-60",
+    "geometrySHA256": "eec5d6e41a9cf19461b79e599bbfe1882024bf64cb7c198b64bd0f7cc1792e73",
+    "candidateTrianglePairs": 176639,
+    "expectedTopologicalTouchPairs": 161820
+  }
+]

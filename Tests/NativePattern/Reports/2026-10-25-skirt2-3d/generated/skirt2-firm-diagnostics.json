@@ -1,0 +1,33 @@
+{
+  "bodyModel" : "MakeHuman CC0 标准人台（有限尺寸拟合）",
+  "closeSurfacePairCount" : 0,
+  "computationSeconds" : 1.3356419801712036,
+  "converged" : true,
+  "garmentStyle" : "Skirt2",
+  "hemCircumferenceMeters" : 1.0963394,
+  "materialName" : "挺括（实验预设）",
+  "maxBodyPenetrationMeters" : 0.00020007802884547635,
+  "maxEdgeStrain" : 0.0765975292464891,
+  "maxSeamGapMeters" : 0,
+  "maxSpeedMetersPerSecond" : 0.006936107023847354,
+  "meanEdgeStrain" : 0.00890862910810072,
+  "patternLengthLabel" : "垂直裙长",
+  "patternLengthMeters" : 0.4054146,
+  "radialLengthMeters" : 0.4054146,
+  "referenceAreaSquareMeters" : 0.4444719993152468,
+  "simulatedSeconds" : 2.1666666666666665,
+  "supportWaistCircumferenceMeters" : 0.8433379999999999,
+  "surfaceIntersectionCount" : 0,
+  "totalFabricMassKg" : 0.1244521598082663,
+  "triangleCount" : 1152,
+  "vertexCount" : 624,
+  "waistCircumferenceMeters" : 1.0963394,
+  "waistGatherRatio" : 1.3,
+  "warnings" : [
+    "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+    "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+    "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+    "弯曲仍用二阶距离近似；人体接触的质量指标仅检查布片顶点，不能证明所有面片完全没有穿体。",
+    "双片裙腰口采用按原裁片边长构造的外向褶皱支撑环；它是抽褶装配实验，不代表已缝制真实腰头。"
+  ]
+}

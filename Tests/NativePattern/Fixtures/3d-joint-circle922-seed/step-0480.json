@@ -1,0 +1,767 @@
+{
+  "accepted" : true,
+  "attemptedStep" : 480,
+  "bodyContactEnergyJoules" : 0.0014373937990109732,
+  "bodyContactStencils" : 856,
+  "bodySurface" : {
+    "candidateTrianglePairs" : 3073,
+    "degenerateClothTriangles" : 0,
+    "intersectingTrianglePairs" : 0,
+    "maximumPlaneOverlapMeters" : 0
+  },
+  "completedStepsBefore" : 479,
+  "computationSeconds" : 5.5372882919999995,
+  "consecutiveQuietSteps" : 0,
+  "exactVisibleBodyContainmentVerified" : false,
+  "gravityFraction" : 0,
+  "maximumActualSeamGapMeters" : 5.326788267778745e-07,
+  "maximumSewingTargetResidualMeters" : 5.326788267778745e-07,
+  "maximumSourceEdgeRelativeChange" : 0.06971996977156025,
+  "maximumSpeedMetersPerSecond" : 0.0362316495152405,
+  "newton" : {
+    "coordinateSearches" : [
+
+    ],
+    "finalGradientInfinityNewton" : 1.2421153883224179e-08,
+    "finalGradientRelativeToInitial" : 4.8226128687901846e-09,
+    "finalPreconditionedGradientInfinityMeters" : 2.5167756504752204e-16,
+    "finalPreconditionerRelativeResidual" : 1.679363749734419e-15,
+    "history" : [
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -3.1360678403419637e-09,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -1.5676434055917328e-05,
+        "gradientInfinityNewton" : 0.034309788661779805,
+        "index" : 1,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 95,
+          "reason" : "converged",
+          "trueRelativeResidual" : 9.101101124153295e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0698799394364156,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9411457973113556,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3042,
+          "baseAssemblySeconds" : 0.008535981178283691,
+          "baseRefactorSeconds" : 0.0008070468902587891,
+          "bodyBlocks" : 855,
+          "clothBlocks" : 625,
+          "contactAssemblySeconds" : 0.015815019607543945,
+          "contactRefactorSeconds" : 0.0009720325469970703,
+          "contactSymbolicSeconds" : 0.0028499364852905273,
+          "generation" : 1,
+          "lowerNonzeros" : 89409,
+          "maximumRelativeBlockAsymmetry" : 2.3459572017641187e-16,
+          "rebuiltSymbolicPattern" : true
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0698799394364156,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9411457973113556,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 8.875924327171103e-08,
+        "armijoIncrementJoules" : -4.947690894959078e-18,
+        "backtracks" : 20,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -1.9700592578159466e-14,
+        "gradientInfinityNewton" : 0.034195051319059644,
+        "index" : 2,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 131,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 36194.07173018074
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877344378905,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321625024288,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008121013641357422,
+          "baseRefactorSeconds" : 0.0008620023727416992,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015681028366088867,
+          "contactRefactorSeconds" : 0.001011967658996582,
+          "contactSymbolicSeconds" : 0.0027769804000854492,
+          "generation" : 2,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.55461139881585e-16,
+          "rebuiltSymbolicPattern" : true
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877344378905,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321625024288,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1.0640358980025018e-07,
+        "armijoIncrementJoules" : -9.575165692270434e-17,
+        "backtracks" : 20,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -5.461013462645952e-13,
+        "gradientInfinityNewton" : 0.03426350572340908,
+        "index" : 3,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 88,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 39053.997105019705
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877649216727,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321537191737,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.009219050407409668,
+          "baseRefactorSeconds" : 0.0009119510650634766,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015923023223876953,
+          "contactRefactorSeconds" : 0.0009760856628417969,
+          "contactSymbolicSeconds" : 2.491474151611328e-05,
+          "generation" : 3,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.343897381808667e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877649216727,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321537191737,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 5.8831849287580115e-08,
+        "armijoIncrementJoules" : -4.394102736951266e-17,
+        "backtracks" : 21,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -2.81906672753552e-13,
+        "gradientInfinityNewton" : 0.034313181402360726,
+        "index" : 4,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 138,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 43448.68040580659
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877296486666,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322934004802,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.0082319974899292,
+          "baseRefactorSeconds" : 0.0007948875427246094,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.01559901237487793,
+          "contactRefactorSeconds" : 0.0009919404983520508,
+          "contactSymbolicSeconds" : 2.5033950805664062e-05,
+          "generation" : 4,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.297611705237718e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877296486666,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322934004802,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1.0167224553752375e-07,
+        "armijoIncrementJoules" : -1.3152775655433968e-16,
+        "backtracks" : 20,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -4.68553265007518e-13,
+        "gradientInfinityNewton" : 0.03436506607262402,
+        "index" : 5,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 107,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 52009.55604590885
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877663396564,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322213098821,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008488059043884277,
+          "baseRefactorSeconds" : 0.0008178949356079102,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015763044357299805,
+          "contactRefactorSeconds" : 0.000988006591796875,
+          "contactSymbolicSeconds" : 2.5033950805664062e-05,
+          "generation" : 5,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.7408942920474783e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877663396564,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322213098821,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 4.510908067998276e-08,
+        "armijoIncrementJoules" : -1.1895656918403348e-16,
+        "backtracks" : 21,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -1.1510843045139065e-13,
+        "gradientInfinityNewton" : 0.03439669369745957,
+        "index" : 6,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 125,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 49991.88632324529
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877327174243,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322013460734,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008319973945617676,
+          "baseRefactorSeconds" : 0.0008620023727416992,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015514969825744629,
+          "contactRefactorSeconds" : 0.0009680986404418945,
+          "contactSymbolicSeconds" : 2.491474151611328e-05,
+          "generation" : 6,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 3.04618885712069e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877327174243,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413322013460734,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 7.051853397815488e-08,
+        "armijoIncrementJoules" : -2.820256974900052e-17,
+        "backtracks" : 20,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -2.2398355341799354e-13,
+        "gradientInfinityNewton" : 0.03450822968768108,
+        "index" : 7,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 115,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 40452.7544406004
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877474280642,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321690431149,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008319973945617676,
+          "baseRefactorSeconds" : 0.000782012939453125,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015769004821777344,
+          "contactRefactorSeconds" : 0.0010200738906860352,
+          "contactSymbolicSeconds" : 2.491474151611328e-05,
+          "generation" : 7,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 3.113617408662881e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877474280642,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321690431149,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1.967924929007609e-07,
+        "armijoIncrementJoules" : -7.210555182202588e-17,
+        "backtracks" : 19,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -9.239608144259076e-14,
+        "gradientInfinityNewton" : 0.034194204542508544,
+        "index" : 8,
+        "linear" : {
+          "converged" : false,
+          "iterations" : 94,
+          "reason" : "nonpositiveCurvature",
+          "trueRelativeResidual" : 41614.88751531261
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787757716404,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321352578771,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008973002433776855,
+          "baseRefactorSeconds" : 0.0010639429092407227,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.01668703556060791,
+          "contactRefactorSeconds" : 0.0011769533157348633,
+          "contactSymbolicSeconds" : 2.8014183044433594e-05,
+          "generation" : 8,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.4618783128848903e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787757716404,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413321352578771,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -6.322856850150967e-14,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -3.1240070472110573e-10,
+        "gradientInfinityNewton" : 0.030176139371462796,
+        "index" : 9,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 334,
+          "reason" : "converged",
+          "trueRelativeResidual" : 8.159965397316384e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697881116699208,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413311837738213,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008687019348144531,
+          "baseRefactorSeconds" : 0.000782012939453125,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.016131997108459473,
+          "contactRefactorSeconds" : 0.001006007194519043,
+          "contactSymbolicSeconds" : 2.6106834411621094e-05,
+          "generation" : 9,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.455896458334508e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697881116699208,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413311837738213,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -5.120301169809203e-16,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -2.599338583402811e-12,
+        "gradientInfinityNewton" : 0.00020995289812475448,
+        "index" : 10,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 292,
+          "reason" : "converged",
+          "trueRelativeResidual" : 7.048690897444914e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877184213238,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341066497996,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008332967758178711,
+          "baseRefactorSeconds" : 0.000843048095703125,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015743017196655273,
+          "contactRefactorSeconds" : 0.0009790658950805664,
+          "contactSymbolicSeconds" : 2.5987625122070312e-05,
+          "generation" : 10,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.4575659157434893e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877184213238,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341066497996,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -3.4691266004607426e-17,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -9.675630585558636e-14,
+        "gradientInfinityNewton" : 0.005734856840817315,
+        "index" : 11,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 305,
+          "reason" : "converged",
+          "trueRelativeResidual" : 5.659761862513366e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713847008,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127050127,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008213043212890625,
+          "baseRefactorSeconds" : 0.0008629560470581055,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.015496015548706055,
+          "contactRefactorSeconds" : 0.0009630918502807617,
+          "contactSymbolicSeconds" : 2.5987625122070312e-05,
+          "generation" : 11,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 3.234297217953959e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713847008,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127050127,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -1.6623224094300578e-17,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -8.317350848437679e-14,
+        "gradientInfinityNewton" : 1.7127763527469142e-06,
+        "index" : 12,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 158,
+          "reason" : "converged",
+          "trueRelativeResidual" : 8.44052587768198e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877137935687,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127232538,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.008310079574584961,
+          "baseRefactorSeconds" : 0.0008389949798583984,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.01580798625946045,
+          "contactRefactorSeconds" : 0.0009360313415527344,
+          "contactSymbolicSeconds" : 2.5033950805664062e-05,
+          "generation" : 12,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.7735107581797635e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.0697877137935687,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127232538,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -1.1869351199628781e-20,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -5.935158499085997e-17,
+        "gradientInfinityNewton" : 2.0416806378875663e-06,
+        "index" : 13,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 308,
+          "reason" : "converged",
+          "trueRelativeResidual" : 7.497319847095624e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713791937,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127253508,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.00824892520904541,
+          "baseRefactorSeconds" : 0.0022259950637817383,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.01578199863433838,
+          "contactRefactorSeconds" : 0.0012360811233520508,
+          "contactSymbolicSeconds" : 2.5987625122070312e-05,
+          "generation" : 13,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 3.7274873091085925e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713791937,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127253508,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      },
+      {
+        "alpha" : 1,
+        "armijoIncrementJoules" : -2.1050073169682783e-24,
+        "backtracks" : 0,
+        "directionKind" : "conjugateGradient",
+        "energyDeltaEstimateJoules" : -1.0523262025120881e-20,
+        "gradientInfinityNewton" : 1.2421153883224179e-08,
+        "index" : 14,
+        "linear" : {
+          "converged" : true,
+          "iterations" : 297,
+          "reason" : "converged",
+          "trueRelativeResidual" : 9.538056160632613e-10
+        },
+        "localSourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713791794,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127255317,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        },
+        "preconditioner" : {
+          "additionalLowerNonzeros" : 3033,
+          "baseAssemblySeconds" : 0.009117960929870605,
+          "baseRefactorSeconds" : 0.0008980035781860352,
+          "bodyBlocks" : 856,
+          "clothBlocks" : 622,
+          "contactAssemblySeconds" : 0.016875028610229492,
+          "contactRefactorSeconds" : 0.0010960102081298828,
+          "contactSymbolicSeconds" : 2.8014183044433594e-05,
+          "generation" : 14,
+          "lowerNonzeros" : 89400,
+          "maximumRelativeBlockAsymmetry" : 2.4575662278384915e-16,
+          "rebuiltSymbolicPattern" : false
+        },
+        "sourcePath" : {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 2830,
+          "maximumCertifiedPrincipalStretch" : 1.069787713791794,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9413341127255317,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 2830
+        }
+      }
+    ],
+    "initialGradientInfinityNewton" : 2.575606672392965,
+    "status" : "converged",
+    "stoppingCriterion" : "forceBelow1e-6N_and_currentPCorrectionBelow1e-7m_with_relativePzResidualBelow1e-6",
+    "trajectoryMode" : "configurationPolyline"
+  },
+  "numericallyStableCandidate" : false,
+  "path" : {
+    "bodyEuclideanCertificateAttempts" : 350,
+    "bodyEuclideanCertificateNodes" : 350,
+    "bodyEuclideanCertifiedAfterPrecisionLimit" : 0,
+    "bodyEuclideanCertifiedFeatures" : 350,
+    "bodyNativeQueries" : 310782,
+    "bodySeconds" : 0.329742084,
+    "bodyTrianglePairs" : 43032,
+    "calls" : 14,
+    "completeBodyQueries" : 14,
+    "completeSelfQueries" : 14,
+    "limitedBodyQueries" : 0,
+    "limitedSelfQueries" : 0,
+    "rejectedBodyQueries" : 0,
+    "rejectedSelfQueries" : 0,
+    "selfAABBPrunedPrimitiveVisits" : 1819737,
+    "selfCertifiedEdges" : 63070,
+    "selfCertifiedTriangles" : 39620,
+    "selfEuclideanCertificateAttempts" : 504,
+    "selfEuclideanCertificateNodes" : 504,
+    "selfEuclideanCertifiedAfterPrecisionLimit" : 504,
+    "selfEuclideanCertifiedFeatures" : 504,
+    "selfNativeQueries" : 10619,
+    "selfSeconds" : 0.46855520500000003,
+    "selfTrianglePairs" : 231648
+  },
+  "phase" : "staticAssembly",
+  "physicalSubdivisionDepth" : 0,
+  "physicalSubstepAttempts" : 0,
+  "physicalSubstepCount" : 0,
+  "selfContactEnergyJoules" : 0.006343418606427395,
+  "selfContactStencils" : 622,
+  "selfSurface" : {
+    "candidateTrianglePairs" : 768,
+    "closeSurfacePairs" : 431,
+    "degenerateTriangles" : 0,
+    "intersectingTrianglePairs" : 0,
+    "maximumSurfaceOverlapMeters" : 0.0004999451100638758
+  },
+  "sewingRamp" : 1,
+  "sewingStiffnessNewtonPerMeter" : 100000000,
+  "sourceSHA256" : "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "trajectoryMode" : "configurationPolyline",
+  "usesQuadraticSewingContinuation" : true
+}

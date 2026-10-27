@@ -1,0 +1,86 @@
+{
+  "format": "tailorass-membrane-path-r63-fixture-v1",
+  "scope": "Source-domain path certificate regression only; no garment/pass/solver-convergence claim for the blocked endpoint. Runtime is fully local and uses only fixture files.",
+  "sourcePatternSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "nativeSourceRawSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "nativeInputRawSHA256": "4e3cebec242b4e01d2b0efb3537b3e622def0fff7afdf85b7e0286fd552b1050",
+  "actualPreparedExportRawSHA256": "088ed472c2d8a8e1922fb93b6628b0b4014b467c5b4969b096a7b3598ccf552f",
+  "membraneModelSHA256": "04d50b6a405512e5d34cec81fa057b5673db755214a017ee22b38b23a2f47fa6",
+  "vertexCount": 2000,
+  "referenceTriangleCount": 3472,
+  "start": {
+    "acceptedFrame": 62,
+    "positionsFile": "start-r62-accepted.json",
+    "rawSHA256": "8fd9b0ec3bfbdc6efff741138c10cbec10e70c0f4844d95dedce224548db05f5",
+    "originalFrame62AcceptedRawSHA256": "8fd9b0ec3bfbdc6efff741138c10cbec10e70c0f4844d95dedce224548db05f5",
+    "allDoubleValuesEqualToFrame62Accepted": true
+  },
+  "candidate": {
+    "attemptedFrame": 63,
+    "NewtonIteration": 3,
+    "positionsFile": "candidate-r63-newton3-blocked.json",
+    "rawSHA256": "7803b9aa37f995bf63941b0a9fccb8306625889ed8022c5c64d61e713ce58913",
+    "wasAccepted": false,
+    "reasonAtCapture": "Single-segment original-frame midpoint-Weyl envelope could not certify unchanged strain domain; body/self/source endpoint gates were fine."
+  },
+  "domain": {
+    "lowerPrincipalStretch": 0.93,
+    "upperPrincipalStretch": 1.07,
+    "openInterval": true,
+    "sameOriginalStraightPath": true,
+    "noIntermediateProjection": true
+  },
+  "expected": {
+    "singleSegmentNotCertified": true,
+    "minimumUniformSegments": 2,
+    "adaptiveMaximumObservedDepth": 1,
+    "adaptiveGlobalIntervalNodes": 3474,
+    "adaptiveLeaves": 3473,
+    "onlySubdividedTriangleIDs": [
+      2860
+    ],
+    "adaptiveCertifiedLowerBound": 0.9366058482185132,
+    "adaptiveCertifiedUpperBound": 1.0614355527133563,
+    "uniformTwoCertifiedLowerBound": 0.9603227331431783,
+    "uniformTwoCertifiedUpperBound": 1.0381939346791214,
+    "denseSamplingIsNotProof": true
+  },
+  "provenanceOriginalPaths": {
+    "start-r62-accepted.json": "/private/tmp/TailorAssJointPrecontact61to480.n66jrt5w/frame-063/previous-accepted-positions.json",
+    "candidate-r63-newton3-blocked.json": "/private/tmp/TailorAssJointPrecontact61to480.n66jrt5w/frame-063/blocked-candidate-positions.json",
+    "source-pattern.json": "/private/tmp/TailorAssJointPrecontact61to480.n66jrt5w/inputs/native-full-source.json",
+    "temporary-certificate-proof.json": "/private/tmp/TailorAssJointPrecontact61to480.n66jrt5w/adaptive-source-path-proof.json"
+  },
+  "files": [
+    {
+      "path": "candidate-r63-newton3-blocked.json",
+      "bytes": 148511,
+      "sha256": "7803b9aa37f995bf63941b0a9fccb8306625889ed8022c5c64d61e713ce58913"
+    },
+    {
+      "path": "prepared-triangles.json",
+      "bytes": 623423,
+      "sha256": "7680b5c0383acb430b7bd2d876ca955c2f87fc8f127bbbb741cd6affeb904b88"
+    },
+    {
+      "path": "reference-mesh.json",
+      "bytes": 158351,
+      "sha256": "c5bfe638a0590c99bb2e5a0c9894ea6d73344d6f953f7e5e5c8abc54b0d6cb02"
+    },
+    {
+      "path": "source-pattern.json",
+      "bytes": 12448,
+      "sha256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35"
+    },
+    {
+      "path": "start-r62-accepted.json",
+      "bytes": 148462,
+      "sha256": "8fd9b0ec3bfbdc6efff741138c10cbec10e70c0f4844d95dedce224548db05f5"
+    },
+    {
+      "path": "temporary-certificate-proof.json",
+      "bytes": 3104,
+      "sha256": "9164897974142c044e853a211b7475fbfcd392a4e88f1b5da704d75ff83d5f60"
+    }
+  ]
+}

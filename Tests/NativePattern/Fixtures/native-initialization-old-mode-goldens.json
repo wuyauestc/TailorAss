@@ -1,0 +1,897 @@
+{
+  "format": "GarmentCodeNativeInitializationOldModeGoldens/v1",
+  "scope": "Pre-new-option actual values for211cases \u00d7 two old initializations. Signature includes all world/reference/body points, topology/DOFs/pins, source masses/rest springs, all meshes and full plan including initialGap/directions.",
+  "stateHasherSHA256": "328966efe9d61e8d7c6d51f568c86c196814bd86886375a00293fe13f7c30501",
+  "preChangeInputManifest": {
+    "scope": "Pre-cloth-option exact values baseline, two old NativeAssembly options across all211 input cases",
+    "sha256": {
+      "Tests/NativePattern/Fixtures/composition-rise-oracles.json": "8c3a6715a39dace8fc532fd4c00d80255dcf3e4064397a23ec98650e9d43a2cb",
+      "Tests/NativePattern/Fixtures/meta-grid-defaults.json": "b6235f147b80c6d3f3b6d100da52cf0d702bde531e56919f04a90a01ca8e96bb",
+      "Tests/NativePattern/Fixtures/meta-grid-female.json": "984d86544804fba1bed214d8bdec0554a94c923aed351aecfe7bfb84be71e111",
+      "Tests/NativePattern/Fixtures/native-assembly-levels-oracles.json": "9cb5242dae366c294587fe2903b63b2d175d442e7525fbb7353b31bbf4ea50f5",
+      "Tests/NativePattern/Fixtures/upper-placement-oracles.json": "915b8d1c0afc173f1d98dbd4dfb8086bfabdf843634faf481a5eecadb4848a6e",
+      "Tests/NativePattern/GenerateNativeAssemblyLevelsGoldens.py": "1ac6431aaa44a72585b8b7a9b624852df443c1c81039265e0acf34190ce62e62",
+      "Tests/NativePattern/NativeAssembly.swift": "9ca531c4f7102a2db222b287e6fc47d7371dd2b3930de84d5936ba4ca9f383ff",
+      "Tests/NativePattern/NativeInitializationState.swift": "328966efe9d61e8d7c6d51f568c86c196814bd86886375a00293fe13f7c30501",
+      "TrailorAss/Models/GarmentCodeAssemblyBuilder.swift": "560014705c65380b29a9ac57ce51a67140916a03c81d29b665c01817b4859026",
+      "TrailorAss/Models/GarmentCodeBodySurfaceContact.swift": "d1dd01e05d4feddbc3b6c261e10c798671e4c15e436fc85c8c6c5353483224f3",
+      "TrailorAss/Models/GarmentCodeCircleDrape.swift": "e8a656a2d7b35e1f3148ab489f6390e851b5ecdf1b520b296926ee7e1240e801",
+      "TrailorAss/Models/GarmentCodeClothContact.swift": "7c917917aa3a0b53767b611109758e788aeaed00da9e5cf3bd432d035006117e",
+      "TrailorAss/Models/GarmentCodeClothMaterial.swift": "a9445faa4400d65143615996875ceb88aaf32fe7ae230e50e3292cf47d8cd087",
+      "TrailorAss/Models/GarmentCodeCompositionPlacement.swift": "324e277a5dc6c67943e8e0c112845a7624a6ed1a057fe823da5fb7b4d4ac2ef6",
+      "TrailorAss/Models/GarmentCodeContinuousBodyContact.swift": "564ea593225d305d35e474c27064b017aa6b144381c6fb6202820e39e990001f",
+      "TrailorAss/Models/GarmentCodeGeometry.swift": "1612e45bd16769dec832834a49449361aa55d95c3682cc2f2cfd914bae59524e",
+      "TrailorAss/Models/GarmentCodeLowerPlacement.swift": "7bbcdb8ce0d75043f10d8b24a98211e2c06aed8dfaf74a0963b18d9bb94caeba",
+      "TrailorAss/Models/GarmentCodeNativeAssembly.swift": "7455f40f9256fb32b3936719091ebcdb4fa2461763224853a0b7a2ff3347303d",
+      "TrailorAss/Models/GarmentCodeNativeGenerator.swift": "7b79f5305746f1dd2e14aa73be0983f124aff9268aed469e64fed4aecf8b424c",
+      "TrailorAss/Models/GarmentCodePanelMesher.swift": "842290de0d11025787314d628ecb996efbeb108eb3765d672d58dc884b01082d",
+      "TrailorAss/Models/GarmentCodePanelPlacement.swift": "b80ca5e9a243f297c0b77e66870414dab5c2d6372fd2319b25448fa55538e892",
+      "TrailorAss/Models/GarmentCodePrograms.swift": "dee27fac5acb7f029a8d56a2137d0e94c189b295cd0e12df969ce9b681409d94",
+      "TrailorAss/Models/GarmentCodeRigidBodyClearance.swift": "07fc079a31c5e8d8f54b45c4b0eaed77830d6c0ece02b514ac1a276640f64fe8",
+      "TrailorAss/Models/GarmentCodeSewing.swift": "c2c89fff7f14d83dc0450441e8999e77a79fe42a62748d9ae8364a1569097860",
+      "TrailorAss/Models/GarmentCodeSewnBodyContact.swift": "51bc4a58abf38c4fe05e80979768978e7681a2aa3f55b9fd039525ded5c7903a",
+      "TrailorAss/Models/GarmentCodeSewnDrape.swift": "9198c11798be9b7864d37a26f88d1c215bcca389920faded5cb0ed76fee93bb5",
+      "TrailorAss/Models/GarmentCodeSewnInput.swift": "06cd0c4a7d80f082e209173da3ecf96100612993005be1d5f13454c432400ba5",
+      "TrailorAss/Models/GarmentCodeSewnPointBlock.swift": "229834440ea21b3e3b61ec98305ed8172da4b969a1cdfffc7ea8d2d8843a2c6b",
+      "TrailorAss/Models/GarmentCodeSourceTethers.swift": "a38c9cce9b12ca441065a8cb38a6562c3efddc85bfcc771a5810fd933adc9c9c",
+      "TrailorAss/Models/GarmentCodeStandardBody.swift": "af4672f69ab5fdedab0c7f9bca65af711862bfcebfe4b72f86596d2e80216056",
+      "TrailorAss/Models/GarmentCodeUpperPlacement.swift": "ab6459d23c7b74548e532d0cca1155ce96e975533d831ad8f554c031d5098b36",
+      "TrailorAss/Models/PatternDesignModels.swift": "0984e4ebba7e239c5e07a4ae1e744cad13e5498616d01c0f2da58caa24ab18df",
+      "TrailorAss/Resources/GarmentCodeParameterCatalog.json": "db026c2f8128afeed7ec0b4347737cd5c7fd87942a030417a3d4ff3a2b0987f9",
+      "TrailorAss/Resources/GarmentCodeSiggraphShape.json": "51d3e729d1d346ab7a58710e499ef6867f66e80168388125e5a0edc81f22a5e1",
+      "TrailorAss/Resources/GarmentCodeStandardBody.json": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+      "TrailorAss/Resources/GarmentCodeStandardBodySDF.bin": "829194bfdc26a32c9eabb9aa7643d4f335c9e46631e1daa657bfa08aac31b2fa",
+      "TrailorAss/Resources/GarmentCodeStandardBodySource.json": "08e7906a34f3870e83ddb47e87d8ef019353b80df89a088a8b1ec094926b4bed",
+      "TrailorAss/Resources/GarmentCodeTShirtSample.json": "86123bf9d8e200ae62c5310042927dc6f4f0ce7e21d09980cbe6c4bfbd731322",
+      "TrailorAss/Resources/MakeHuman-CC0-LICENSE.txt": "b013de2613ddf67dd3d1780fe66c803374f6387fab8bf5e56b90add741764640",
+      "TrailorAss/Resources/README.md": "251ddf138bcbb791d34498dcb69087621fd0c25055850b31b864ac38f69eacc8",
+      "TrailorAss/Resources/ThirdPartyLicenses.txt": "eac3f273ccc508b6c8887e288856c5298de0ef8f8e781a0b556d784ae125df4d"
+    }
+  },
+  "cases": {
+    "meta-grid-defaults:FittedShirt|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "73ad2fd2bbc6ee346522a5c1e8b96634f243f2413427d7718425c7d40e93fdd6",
+      "rigidBodyClearance": "87dc2032f5067d5aa0e1468b4da1e873a305cb38f548cce615cc6487eb1c1994"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|GodetSkirt": {
+      "nativeConstruction": "06d384f119a21913474c2c58fff873974d837b6f11824b0953fb2fa79603a4d6",
+      "rigidBodyClearance": "65bdfb5fcab92f0b90f46707766d9cbd9c818637abbdb3968cb532d6524ab20b"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|None": {
+      "nativeConstruction": "bf3a2b657a4b8b84463ef35be97b4fd961ee4c2016b88711ab9db03f27286610",
+      "rigidBodyClearance": "c026150e983380f3f0f6b3d4d0dc320b59e91f533031ffb2dff5f5e27f2e25f5"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|Pants": {
+      "nativeConstruction": "0102b1bb92a9b1653ed3c32386119175f3a545b3df8991a5fee9578841ceaad5",
+      "rigidBodyClearance": "3ad5d5e8a0b2f7dda4e0d797414f35eb8b1b9c5a8ab9582fd65ff02f025a7419"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|PencilSkirt": {
+      "nativeConstruction": "6df0aff01198edefb38e44582d82fe5338519962540574e5f49143a6e9f0901e",
+      "rigidBodyClearance": "b7704fb027aca25ed1c71064e40ab928b509a91fde0948bf4ae960eb64582449"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|Skirt2": {
+      "nativeConstruction": "0097c9991bd770cb268602745f216aef98872721ae2140c603112b752ea925b9",
+      "rigidBodyClearance": "0e2ef11720bc4c8e38e1285b4f4490cee7e62721b1d14b7762657f96ef711430"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|SkirtCircle": {
+      "nativeConstruction": "1e74f0a89d1bc5821e9c7f4a53e73ed98e48ff7d479654dd9aa360bbdea53d91",
+      "rigidBodyClearance": "7352f4c6801254cbf6328fc91309deacf5efbe60e8a3c8d3c9cda7a844c44a87"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|SkirtLevels": {
+      "nativeConstruction": "20b35c47f6cd45bf4f72cbd71265a81b79202b9d2352bceefa5e819d791ee8de",
+      "rigidBodyClearance": "3a16ac381310f8be7b099f3276f0dbe831028d3c8a4e79caf999a39ae1da577c"
+    },
+    "meta-grid-defaults:FittedShirt|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "4879de3bcee88751d3f08b9ed957c0eb69af366cb3b2401daa190294d3a7ac25",
+      "rigidBodyClearance": "35f943857af0816c9538b9c021a9caabb791a6491a7df89d3f0bf1120dee9078"
+    },
+    "meta-grid-defaults:FittedShirt|None|AsymmSkirtCircle": {
+      "nativeConstruction": "c06343d9236bf0ea19f579151238f1c9121e9285d6d5b95d232d95355c0578b1",
+      "rigidBodyClearance": "45b6e71529d03fc029f5f3d04219a0294fb4a0275b9cee4ccf6e31196948099c"
+    },
+    "meta-grid-defaults:FittedShirt|None|GodetSkirt": {
+      "nativeConstruction": "7c4f7c8848586524fdc2f0010af4ca3b653dc50479e2783f80d5d9ccccb9025a",
+      "rigidBodyClearance": "7c4f7c8848586524fdc2f0010af4ca3b653dc50479e2783f80d5d9ccccb9025a"
+    },
+    "meta-grid-defaults:FittedShirt|None|None": {
+      "nativeConstruction": "ef1ae87492d792b146b3dca906db1bb2911e9571862a40daeb121aa8e04a13ce",
+      "rigidBodyClearance": "ef1ae87492d792b146b3dca906db1bb2911e9571862a40daeb121aa8e04a13ce"
+    },
+    "meta-grid-defaults:FittedShirt|None|Pants": {
+      "nativeConstruction": "303a07f3cdf5f14d6364b676cdeb8ef472dbb58bf0799ac26af1d375b599a918",
+      "rigidBodyClearance": "303a07f3cdf5f14d6364b676cdeb8ef472dbb58bf0799ac26af1d375b599a918"
+    },
+    "meta-grid-defaults:FittedShirt|None|PencilSkirt": {
+      "nativeConstruction": "6fc1ef87fe2e8966b6da52277ce74ceaa55ce3d08548d2564c9261a345c97d69",
+      "rigidBodyClearance": "6fc1ef87fe2e8966b6da52277ce74ceaa55ce3d08548d2564c9261a345c97d69"
+    },
+    "meta-grid-defaults:FittedShirt|None|Skirt2": {
+      "nativeConstruction": "65fa3def9ad1ac63b94d3b907a1f82a1dca1878ada38fe1f0e3fe50ca34d8e93",
+      "rigidBodyClearance": "65fa3def9ad1ac63b94d3b907a1f82a1dca1878ada38fe1f0e3fe50ca34d8e93"
+    },
+    "meta-grid-defaults:FittedShirt|None|SkirtCircle": {
+      "nativeConstruction": "f65c6e4d42d502a81c36ef8714dd0cbc41f0560e68e79b07f322cc96ac4e3576",
+      "rigidBodyClearance": "f0a7efe6bf59d100a4875db6066fe216d8ee3358041b7f5d2dce31c958f47643"
+    },
+    "meta-grid-defaults:FittedShirt|None|SkirtLevels": {
+      "nativeConstruction": "e483f711d3406f229f75c51b37f7543a0252a889784c0ad1b15c739b5a2372c0",
+      "rigidBodyClearance": "e483f711d3406f229f75c51b37f7543a0252a889784c0ad1b15c739b5a2372c0"
+    },
+    "meta-grid-defaults:FittedShirt|None|SkirtManyPanels": {
+      "nativeConstruction": "116634e36d59a85ff670df807f839ca60446ad7f484c83ba3bd72f5987d3df16",
+      "rigidBodyClearance": "713c54db0970744896dd5d978a8ac4744a27aa57a533be2360f060ebc3582ed2"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "240d0e9d86540943ca244fcf811f9be78861cfa47cc2c556cbf564f6aa380a8f",
+      "rigidBodyClearance": "e2f9dd489b8bbae6ea84f8afb709da949a94924d6e734505e4c517bff9ddf51b"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|GodetSkirt": {
+      "nativeConstruction": "eb62ff7b0c17bc59ce051d48228845a6f8902f1a9458a0a761da19c1c79cd652",
+      "rigidBodyClearance": "2d5c599a782e83182f191b262a337853b50bfa0fc78a8857e1879e7826ca3e54"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|None": {
+      "nativeConstruction": "c99f9b661106065232c6b255d3c115f89e113b7edbc525f77f6a878f9114354d",
+      "rigidBodyClearance": "ec50ab1b8250e67eed275f625c7f86ca950edfa92f5b69656abac40cad3ca0c8"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|Pants": {
+      "nativeConstruction": "ed1fe5f6d2925526671b8a920d09499f9d134985025514e4c81e5a57a9cbf107",
+      "rigidBodyClearance": "f2c88becb13c4647118d49da36be314a079dd35ad483c00b2f0a5e96d27e860a"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|PencilSkirt": {
+      "nativeConstruction": "6f6797a7ae089c79d195377a3c42015d2a5372c4e8be03a6fb5f9efb0eeadc3f",
+      "rigidBodyClearance": "dbdda5da2a7a3296ec46519bdc999a77d8777747ab19be4f0819983d9c7f8e09"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|Skirt2": {
+      "nativeConstruction": "f95b2860bdf8aecadfb45ae0510db4017d8a5827adff92203c7f347e96b9b712",
+      "rigidBodyClearance": "9b07da3bf16d1ed5178e7823fa1582175b9a2229c6655a19162749c29b14d201"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|SkirtCircle": {
+      "nativeConstruction": "fd0f3d94edf692fba5e61dcaba96128d7e098aa9a2d0f11dd731ac60cac2b505",
+      "rigidBodyClearance": "2f38c3df3913d625ca2af7e6b39726e8c5e1295be9a11763f06380a8ad2b89ff"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|SkirtLevels": {
+      "nativeConstruction": "ebe73edbef0d4d3464f63ad70fd3a3cf2d9abc58f223c7741cf99b2bfa573c22",
+      "rigidBodyClearance": "02eecad3c5df9ccb7c490aa57f8969c4c08c086071a2e98a8b1ff35d3df95096"
+    },
+    "meta-grid-defaults:FittedShirt|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "a9777f6006f18bb9b85408c5f04cdb44b8ad55f1a223cff2e608d65a38c9c0db",
+      "rigidBodyClearance": "b4f941b117fd78377667011db7a1e555c54df80dcdf37bac6dfc9612f878931d"
+    },
+    "meta-grid-defaults:None|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "d9cb745cfe461cefcba78ea1a6db3b0d0ea05e20e3aba5c86d8ba17d446a12e6",
+      "rigidBodyClearance": "2158e4b907dd69f4928c36cc1b583493304d16141653432aaa077e95aec35580"
+    },
+    "meta-grid-defaults:None|FittedWB|GodetSkirt": {
+      "nativeConstruction": "50aeaabd5eb5b8b4fb511c4317eca7077bcaa707c79ccc4e17204a04fdac0763",
+      "rigidBodyClearance": "50aeaabd5eb5b8b4fb511c4317eca7077bcaa707c79ccc4e17204a04fdac0763"
+    },
+    "meta-grid-defaults:None|FittedWB|None": {
+      "nativeConstruction": "d4c8bb486a9389ba1889bbbd679e321f96c99d71919daf9789ecf908ce06105c",
+      "rigidBodyClearance": "d4c8bb486a9389ba1889bbbd679e321f96c99d71919daf9789ecf908ce06105c"
+    },
+    "meta-grid-defaults:None|FittedWB|Pants": {
+      "nativeConstruction": "852687cbf804371265298aa828eb2f71900c55808d72de87c1be61f85512bbf6",
+      "rigidBodyClearance": "852687cbf804371265298aa828eb2f71900c55808d72de87c1be61f85512bbf6"
+    },
+    "meta-grid-defaults:None|FittedWB|PencilSkirt": {
+      "nativeConstruction": "cb224d775cbe28eba888f0daf3dd2d5f4a4fdbf3338eb6a7b446dcf2e6f890d1",
+      "rigidBodyClearance": "cb224d775cbe28eba888f0daf3dd2d5f4a4fdbf3338eb6a7b446dcf2e6f890d1"
+    },
+    "meta-grid-defaults:None|FittedWB|Skirt2": {
+      "nativeConstruction": "e29a6f21f33af44ed609af2ac84165189778d3586bb06792dd331955eaf6077d",
+      "rigidBodyClearance": "e29a6f21f33af44ed609af2ac84165189778d3586bb06792dd331955eaf6077d"
+    },
+    "meta-grid-defaults:None|FittedWB|SkirtCircle": {
+      "nativeConstruction": "c8a2114cd34e8d19b2faed4338c701f34744f4db3958e19b96555670b017385a",
+      "rigidBodyClearance": "fdc310cc7432d9c6549803cf21925c00ec99af2848310a425da077f020e97ab7"
+    },
+    "meta-grid-defaults:None|FittedWB|SkirtLevels": {
+      "nativeConstruction": "c8ebeba8389e9c343e0ca0c0cca18b1f68e2f07e71588e8e4d1c3f9cec015892",
+      "rigidBodyClearance": "c8ebeba8389e9c343e0ca0c0cca18b1f68e2f07e71588e8e4d1c3f9cec015892"
+    },
+    "meta-grid-defaults:None|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "2fc3ea868c228c9b291cee82dc92112f2f1b37ac6e9dbebeabc76b03db1d13de",
+      "rigidBodyClearance": "ee94996990febd2a27a2a0c03bb0340227a7911b8b59759c025865772e354fff"
+    },
+    "meta-grid-defaults:None|None|AsymmSkirtCircle": {
+      "nativeConstruction": "3a4181bfeb319c6cafa7f5007029f40a253d78b568e62fc342c2450f71e89f12",
+      "rigidBodyClearance": "0bc0e34614273719e39a81f33dcc8dcc7a4ebd98e796d9ac70c347f22e250529"
+    },
+    "meta-grid-defaults:None|None|GodetSkirt": {
+      "nativeConstruction": "cccd13a06efd8ce2ee6516afd823c985fe1fb141f70bf34fdd85b97e52df5e1b",
+      "rigidBodyClearance": "cccd13a06efd8ce2ee6516afd823c985fe1fb141f70bf34fdd85b97e52df5e1b"
+    },
+    "meta-grid-defaults:None|None|Pants": {
+      "nativeConstruction": "d930431b7090648a7e5c29f8a22a3f49b655620da38c7f23850bc62dbc901503",
+      "rigidBodyClearance": "d930431b7090648a7e5c29f8a22a3f49b655620da38c7f23850bc62dbc901503"
+    },
+    "meta-grid-defaults:None|None|PencilSkirt": {
+      "nativeConstruction": "36a409593186c90b4821a84cc71325b797bb71ddf24890148cebbb8e685e63eb",
+      "rigidBodyClearance": "36a409593186c90b4821a84cc71325b797bb71ddf24890148cebbb8e685e63eb"
+    },
+    "meta-grid-defaults:None|None|Skirt2": {
+      "nativeConstruction": "509c4bc1903f6657d274fd8c78fe044a3adb0c6e6a026147991a639211d45b9b",
+      "rigidBodyClearance": "509c4bc1903f6657d274fd8c78fe044a3adb0c6e6a026147991a639211d45b9b"
+    },
+    "meta-grid-defaults:None|None|SkirtCircle": {
+      "nativeConstruction": "05574e0fe18e05abf75472fcb215b08b36f7105d1372e28af82d97a4f21231b4",
+      "rigidBodyClearance": "d08fa371a2679968dc9497639c6a0117ee114656d6948cef4d9767d2bbefb7d0"
+    },
+    "meta-grid-defaults:None|None|SkirtLevels": {
+      "nativeConstruction": "c5741c6a220da464c4623fdaaf461a5779e264ddc3a71b566266cd3a80e8b87f",
+      "rigidBodyClearance": "c5741c6a220da464c4623fdaaf461a5779e264ddc3a71b566266cd3a80e8b87f"
+    },
+    "meta-grid-defaults:None|None|SkirtManyPanels": {
+      "nativeConstruction": "b514fa92d6ef318fa834b0dec802e2d87ed7738a8bf75b2cf92f9ccd5e0eadba",
+      "rigidBodyClearance": "c8ba2909287eb9d165b28e5138a0be5345bb24a89e61e14b88a19c89890a63e1"
+    },
+    "meta-grid-defaults:None|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "fe80b91fb9b9ed7d0a421db7d8c3d550a5a8528006c6ca7a817c9d71d39383fa",
+      "rigidBodyClearance": "f4cedc39dac924731bf33698f3d4b9a551a58aae1ec8c46bde13ab7b16337e19"
+    },
+    "meta-grid-defaults:None|StraightWB|GodetSkirt": {
+      "nativeConstruction": "14971fe99b1b32d8290a413f524f1a80df7ca44139d32f1aa39005247bb69800",
+      "rigidBodyClearance": "14971fe99b1b32d8290a413f524f1a80df7ca44139d32f1aa39005247bb69800"
+    },
+    "meta-grid-defaults:None|StraightWB|None": {
+      "nativeConstruction": "35b92ccc4d11a47b50c4d66c6c1feeea8b27da85448adb42124b360990b8c1e6",
+      "rigidBodyClearance": "35b92ccc4d11a47b50c4d66c6c1feeea8b27da85448adb42124b360990b8c1e6"
+    },
+    "meta-grid-defaults:None|StraightWB|Pants": {
+      "nativeConstruction": "8740cdfadeae4982f2dde83ccb415a1548ea6cf403537d1c96517c61cba96311",
+      "rigidBodyClearance": "8740cdfadeae4982f2dde83ccb415a1548ea6cf403537d1c96517c61cba96311"
+    },
+    "meta-grid-defaults:None|StraightWB|PencilSkirt": {
+      "nativeConstruction": "b6ec15f991c2c61cfff7f15cb8aba0640c1cd66d623151691b362dd1c0a20805",
+      "rigidBodyClearance": "b6ec15f991c2c61cfff7f15cb8aba0640c1cd66d623151691b362dd1c0a20805"
+    },
+    "meta-grid-defaults:None|StraightWB|Skirt2": {
+      "nativeConstruction": "62a20fbe801cf7b5859121cc6a5de4dbd4758991aebac5bb0e24ecece9ce400b",
+      "rigidBodyClearance": "62a20fbe801cf7b5859121cc6a5de4dbd4758991aebac5bb0e24ecece9ce400b"
+    },
+    "meta-grid-defaults:None|StraightWB|SkirtCircle": {
+      "nativeConstruction": "4046b54c4a6fbdfdb142c4e0d4fe782296fbd6108a8b88046214688a6185f79f",
+      "rigidBodyClearance": "a911206f687096986683e1c1e76e25fc6739746e49524224fa1c91399e45d8d4"
+    },
+    "meta-grid-defaults:None|StraightWB|SkirtLevels": {
+      "nativeConstruction": "bbe071d1fda98c092338d13103e3a9ac7718c6abf567f8ec8f9aa59366a7aedd",
+      "rigidBodyClearance": "bbe071d1fda98c092338d13103e3a9ac7718c6abf567f8ec8f9aa59366a7aedd"
+    },
+    "meta-grid-defaults:None|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "2f866c791b97f49efea69488d6026d5513e9685cc33349d8bd1450e85150a639",
+      "rigidBodyClearance": "8fa0b07249db31921959dcc6d5e0b7887b41a278a65157ccdc79db66237d7a74"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "aed3bd47fdcdb43e12983d3bb31a28bb2a1847f29cacda1e82373925153d2038",
+      "rigidBodyClearance": "bc9e99b7d38203413827bea968f7a38a405e75ccd05fecb8b4587ba66f8deab0"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|GodetSkirt": {
+      "nativeConstruction": "777c120514639552df72d799b0910d6a7d998fa5687756dda0b5356296dcd7a0",
+      "rigidBodyClearance": "964de01c136441d32832734d191ec4ce4efdb7f6743e001ea8074ca468f3116d"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|None": {
+      "nativeConstruction": "89abe3845b4675d4a0c80261054d586da7ba988002ff3ba8c2412a54073ee97f",
+      "rigidBodyClearance": "3b4bd9845936c074890592e841ef5764aab8de9a4d5a72dc727af1e756573413"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|Pants": {
+      "nativeConstruction": "d9c5763c5b5c9231d1257ea8a2850c2ab61dda37de2ecb18ae1a586932f453a4",
+      "rigidBodyClearance": "d3ea7946c157a97b33550372d84173a83b31048fd3aa2b8ca1271251f8748d32"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|PencilSkirt": {
+      "nativeConstruction": "046cd750615980507b772cb6aebb10e8fa9d86217bb9e0550cea6fd5ecbbb821",
+      "rigidBodyClearance": "bd28f7ce4d3e3683960d064a3f2d504bf5e599cc53a2a1e5e004388d283a822a"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|Skirt2": {
+      "nativeConstruction": "29a2882a229f2161c35353d535bbba2a008fb5458edcff5a9d69161332fda2ae",
+      "rigidBodyClearance": "04c207250cc6d889968f0494042139f4c252d481431b6b84853780a61403c268"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|SkirtCircle": {
+      "nativeConstruction": "a541bdd647fed21229a89954c3607d605574c799244ea6c3115d07dce57fad31",
+      "rigidBodyClearance": "369561d2044427669aa05b237670dd27954fab194207f2c6a2429d57ba7d3c0a"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|SkirtLevels": {
+      "nativeConstruction": "05b49cc7d81dcbb33ef8dd962b9f72b53868bdf1a0bf510345deb6f22f104991",
+      "rigidBodyClearance": "c9d38a3120f127f9d6589441ce214498e77b84d7946c75702ec0a4e542458925"
+    },
+    "meta-grid-defaults:Shirt|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "55c69880cd2790fe7857abb0c4e244f0fd28f1ae04baab0787cd143535d938e8",
+      "rigidBodyClearance": "a50744b15b6af916ce23ff21819efe7704b36652f7b319f489d0f9ea8d4da134"
+    },
+    "meta-grid-defaults:Shirt|None|AsymmSkirtCircle": {
+      "nativeConstruction": "4faf4f115b50e98c180c04646c08656dcb88cdc82dedf8a6f9172408215cb29d",
+      "rigidBodyClearance": "0d41d992a6ab46cd63853322dd7ebdf9b91ba9be1e171d8195043d8b96454a38"
+    },
+    "meta-grid-defaults:Shirt|None|GodetSkirt": {
+      "nativeConstruction": "4654a854657dd81e20dfa0631948bb918d9614f41563fe1c54dfee242b2b4649",
+      "rigidBodyClearance": "4654a854657dd81e20dfa0631948bb918d9614f41563fe1c54dfee242b2b4649"
+    },
+    "meta-grid-defaults:Shirt|None|None": {
+      "nativeConstruction": "f665bdf067452e12d75a107e4bd357939f0f0dc00874a830f7e323b441e826dc",
+      "rigidBodyClearance": "f665bdf067452e12d75a107e4bd357939f0f0dc00874a830f7e323b441e826dc"
+    },
+    "meta-grid-defaults:Shirt|None|Pants": {
+      "nativeConstruction": "56cad5a10617bb5671e0e62f6034ddc18865fa2b9e7e9d3cd13820e18ab47dfa",
+      "rigidBodyClearance": "56cad5a10617bb5671e0e62f6034ddc18865fa2b9e7e9d3cd13820e18ab47dfa"
+    },
+    "meta-grid-defaults:Shirt|None|PencilSkirt": {
+      "nativeConstruction": "1dcc3cc8dd6ae98617639c46c2bb8be33b1a8101d996a008e88ae2bf3694f544",
+      "rigidBodyClearance": "1dcc3cc8dd6ae98617639c46c2bb8be33b1a8101d996a008e88ae2bf3694f544"
+    },
+    "meta-grid-defaults:Shirt|None|Skirt2": {
+      "nativeConstruction": "7daf8e906bddb7122dd8328426be54e69bf3a52e31c64f33414bd1a532ed3711",
+      "rigidBodyClearance": "7daf8e906bddb7122dd8328426be54e69bf3a52e31c64f33414bd1a532ed3711"
+    },
+    "meta-grid-defaults:Shirt|None|SkirtCircle": {
+      "nativeConstruction": "df97e6d7dda0a67446b678dd99a5133244d79b6d940f3dfa972eef28dc8c0054",
+      "rigidBodyClearance": "811a4e7759dc43e2ebf23a120f7c90d058422cf892bd1a9eee3871db1ee2778d"
+    },
+    "meta-grid-defaults:Shirt|None|SkirtLevels": {
+      "nativeConstruction": "9bc62fa348aa7f346c8536d3708c4cfc62d6337d9250f7b1c892b8864c4ba335",
+      "rigidBodyClearance": "9bc62fa348aa7f346c8536d3708c4cfc62d6337d9250f7b1c892b8864c4ba335"
+    },
+    "meta-grid-defaults:Shirt|None|SkirtManyPanels": {
+      "nativeConstruction": "8c0428d399fc16ca3603ddb57f1068292e72cd81ed5ccd09ad1fb3dae6c1e747",
+      "rigidBodyClearance": "8c0428d399fc16ca3603ddb57f1068292e72cd81ed5ccd09ad1fb3dae6c1e747"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "4ed3adcf8c373e9486992d5e1c9d07d8341a4d15ee305ed299e87ef533153ee5",
+      "rigidBodyClearance": "c5a1c8ebb631eb851986742e4a3798e72f0f207f48b1c32398d27e4fa5453205"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|GodetSkirt": {
+      "nativeConstruction": "3d347553a25717cdeb601e7e4e4842c10a4edf4e087b814516ead28cb5cdaec0",
+      "rigidBodyClearance": "224d42a7bde31defad597b34d6827b6eb27857dbaa9589d1f9e325a5c978cb6c"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|None": {
+      "nativeConstruction": "2012304be8058753c6cdf6bd3fff140e4bb8685c7abe2553e1d44380fef7ec9a",
+      "rigidBodyClearance": "a929504d78f6207660fab620b605dcd3a12e384284779d29438113b16ce4c2d5"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|Pants": {
+      "nativeConstruction": "df8e7439047a88ae723df9ef87a514587eac0d2ae0f3d324253c700fb2da791a",
+      "rigidBodyClearance": "d957a5cbe4dfc30f2ebfed6f26fbd1ef630468fa19eddbc27663ffd9903e24cb"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|PencilSkirt": {
+      "nativeConstruction": "fbe205ecba5a225fa31080ab9088c8940d96ce987763ba06d429c2763b84598b",
+      "rigidBodyClearance": "48fc4f677a9bb4fa036b617994b3f31c9d6a4f5b52854daee8e9a39bad2cc3fe"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|Skirt2": {
+      "nativeConstruction": "d5299f8b4263a4ff1985891bbab2031685425844d34ab080fabb9609671e37ef",
+      "rigidBodyClearance": "e6d89447d2ed0af81659b9aaaf0223140156bf73170128c8910fef036c84cbd0"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|SkirtCircle": {
+      "nativeConstruction": "d8943002b497f02a577d80fd1d9bd517679bdfca4f6e7a7fe8eebb22e25e266d",
+      "rigidBodyClearance": "16322d6e43cb11f13a8afd9ba7fa43b4dfbcf65ba29a1b4d95ee4f18fa2cd106"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|SkirtLevels": {
+      "nativeConstruction": "542019fa7bf834fd30db9975734794ea85fb2bb2182254a039e591199b505a2d",
+      "rigidBodyClearance": "8e57657658227271e97e33d6e84a3a7791aafdf4104ae1eb2d4989f2ebf1d094"
+    },
+    "meta-grid-defaults:Shirt|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "744c60f4bad79360274619740caeef8cc1203f2b141b3cac9258ecdc822811ce",
+      "rigidBodyClearance": "3bd6c5e039ed3cbd73818868a4098b6f90a6298f04c62bf137d18218e0394e5c"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "8ec7700c34485416a6c4a1db15608354d2f0f020e8e4ee80963f4b9b378a59c3",
+      "rigidBodyClearance": "5b7108ec9db1d120aec26830268e7407ef4a46d3f515246ccc15a231d89fb52e"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|GodetSkirt": {
+      "nativeConstruction": "05a9a0b9ad6d9c79c6aa40344ec5f3c5e1773859ed3ea2f9bbd088218724eba7",
+      "rigidBodyClearance": "15f0d12be93a92bc837897125a546978704dc298890322f34e8ab3756840a014"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|None": {
+      "nativeConstruction": "0b3e06f305d5c142ea70bb56ce4021f61557acf221d507b45c3602fafebd51d2",
+      "rigidBodyClearance": "6753226c101dec96873041c4d968ce30d431a5ef4c0abba15251fc0c0fcbb886"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|Pants": {
+      "nativeConstruction": "05b4952a251bc1e1559768f06a0517b6ac575a4732f5cfce5bddf775c9828ced",
+      "rigidBodyClearance": "a3173adc9134d42d25415ebd051214ed4af15447fc3ee57c83847463d92590e7"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|PencilSkirt": {
+      "nativeConstruction": "c809dd15b484f80ef6e4d680ed75c80b16a69b497472820041945a59de1b9d98",
+      "rigidBodyClearance": "7e745575a14822467f2f9ac45726666549525f2aaaa0f8c91c9176eaef6eefc0"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|Skirt2": {
+      "nativeConstruction": "72ddbe5b698772d3d01441e45f41bc6e95f2bf9b28fa01b458e10fca6eed40c2",
+      "rigidBodyClearance": "5ebdd02718866a792df36ee352a6573b2348e467c2703c04904c26bd69e4c02c"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|SkirtCircle": {
+      "nativeConstruction": "46953fd2fc756e51a866bf19fed4053c203ce9bcc62c091f31adb08959bb1d3d",
+      "rigidBodyClearance": "f3f6d0de35a4002f895f3da1eefc2e58df20ea8d4e23c7f9778078b207e52e4a"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|SkirtLevels": {
+      "nativeConstruction": "742de638597316228d7f21cc69d7d17bdb20d604ce9b58a2dc1f5842bf8b6e76",
+      "rigidBodyClearance": "aa4c21a210ccbd08c5a97b92302dc1b9b8c86ee379a7219085126d89265a22d8"
+    },
+    "meta-grid-female:FittedShirt|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "69e51f65e278550e211d50443a2512869e8d74da773a548698d730fa3c3a6980",
+      "rigidBodyClearance": "5184336aec78359d283280f5db9c2e4269e9185f83837ae3f315cbba87b6ed69"
+    },
+    "meta-grid-female:FittedShirt|None|AsymmSkirtCircle": {
+      "nativeConstruction": "57b9cabe2faacd95057c590751fdd250450c7017d0d4b630bf2cc5c7bb5a6b94",
+      "rigidBodyClearance": "b2dd98416b42de928a012b162f472398ad8be3d10fe65e98a85490bb5d909919"
+    },
+    "meta-grid-female:FittedShirt|None|GodetSkirt": {
+      "nativeConstruction": "2d1386dbef8bc3ac2e4695ca0ebe370c54362f0ad3d4f06e5143b6f6ea56dd25",
+      "rigidBodyClearance": "2d1386dbef8bc3ac2e4695ca0ebe370c54362f0ad3d4f06e5143b6f6ea56dd25"
+    },
+    "meta-grid-female:FittedShirt|None|None": {
+      "nativeConstruction": "d4d608c07f3687e94c936d2c72039965a5855cd068db92d1aa034833582ab992",
+      "rigidBodyClearance": "d4d608c07f3687e94c936d2c72039965a5855cd068db92d1aa034833582ab992"
+    },
+    "meta-grid-female:FittedShirt|None|Pants": {
+      "nativeConstruction": "f049d5c752d3eb41bf0cb68d739f6419be7d8e645e5d99c78c3bd54c1051cdd1",
+      "rigidBodyClearance": "f049d5c752d3eb41bf0cb68d739f6419be7d8e645e5d99c78c3bd54c1051cdd1"
+    },
+    "meta-grid-female:FittedShirt|None|PencilSkirt": {
+      "nativeConstruction": "c27141b658f00cb4e4aca58d6c1a6fa965c28ea4812bad47613dde2802830f56",
+      "rigidBodyClearance": "c27141b658f00cb4e4aca58d6c1a6fa965c28ea4812bad47613dde2802830f56"
+    },
+    "meta-grid-female:FittedShirt|None|Skirt2": {
+      "nativeConstruction": "0ddf3102b13d108ee67df69b5e386ce1859fa173746d7b667b00bb75f1c0a703",
+      "rigidBodyClearance": "0ddf3102b13d108ee67df69b5e386ce1859fa173746d7b667b00bb75f1c0a703"
+    },
+    "meta-grid-female:FittedShirt|None|SkirtCircle": {
+      "nativeConstruction": "df0791df626e2ffb975e716aca49f718df036d4e18e03f8eb121c5382f1b400b",
+      "rigidBodyClearance": "e24c346821c4b2feb92ebbd7bcc0b40f3ff3ec0fb5dc275e19d6fef0d716b2b9"
+    },
+    "meta-grid-female:FittedShirt|None|SkirtLevels": {
+      "nativeConstruction": "a9e26e5e8afc6e4f3b4f57839bd676bfde4ae5edb98784e3fc5a9a19ad3ae3e4",
+      "rigidBodyClearance": "a9e26e5e8afc6e4f3b4f57839bd676bfde4ae5edb98784e3fc5a9a19ad3ae3e4"
+    },
+    "meta-grid-female:FittedShirt|None|SkirtManyPanels": {
+      "nativeConstruction": "74b7fd3e8d4931c5b2273dd888979f46c107dae03dd818f0aeb2873671c2b784",
+      "rigidBodyClearance": "f69ab4f3f3f301f7a069ddc5c764a013d39770aa3ac0e55ccfc98cbe528e27c7"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "2642e0e501f4f178d93b1d20a3c1aeef18b42da658170c534fe140a28bf0ca19",
+      "rigidBodyClearance": "539d8bf6c68aca5816000610faa9c2f25a78a7ea36fe4c092d0d019520ea873f"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|GodetSkirt": {
+      "nativeConstruction": "d416ab4d7bb01b90647b59baa196ac76861fa0e3c6bb2cd6e7119db3a12cd297",
+      "rigidBodyClearance": "9b4a49426c789ac2ff994ad90ff49dc09da5a5418b7f79b5a888e5d073b1eea3"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|None": {
+      "nativeConstruction": "2ae0b43372e77863264197d3decf7eebe4806dab66edf192c40a21f4cd17fa99",
+      "rigidBodyClearance": "277c1bcb18d20f420f1c9b2fcf81254968abd05155673f8305a516fc3af2a88e"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|Pants": {
+      "nativeConstruction": "32e9a96feaf018db9465f8c5ba1b12236366c434cd7f802099e0f8b7754c9256",
+      "rigidBodyClearance": "235b7aeca19edc24c80a6c22dde7a2584bc9df4df26f92415b1d493fa7977e71"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|PencilSkirt": {
+      "nativeConstruction": "313e01804ece6f90c6c796f12c0694fdd4cf9d1e9b7e17fad3633163cfa2103e",
+      "rigidBodyClearance": "55388abf9df894f787f9d28c5ab05643052fc27989d26ebd783555b732b5c524"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|Skirt2": {
+      "nativeConstruction": "bef52ec7f1bae027585ef280eea75560a05cb3980f15ece6656f21745be1e9e3",
+      "rigidBodyClearance": "e21a6e4a1aa0c2af28ad8038bc461c4720fa16ff226d47f7b92434b79c3bde75"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|SkirtCircle": {
+      "nativeConstruction": "162657c2653cfec3f4667b56c3a56e0b7c416afd6dc10f491fef8f702d07dbfe",
+      "rigidBodyClearance": "f9b9e03e3b6abd2c8bc7f5c8016e2f405734a0ec4fdb5ed3c7d786a1bafb7505"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|SkirtLevels": {
+      "nativeConstruction": "356faf8d5dc3a37bd6f58b43bcad30d56637a8c11674d7181ab3fc9db73432f1",
+      "rigidBodyClearance": "44c42cf31937fd385165d2e0e0a29643e4b4cd1757187ca0251062685bd7accf"
+    },
+    "meta-grid-female:FittedShirt|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "28e6ce72d619f08467e21c698f78a3366e46622a1d8e38b6b2083087863b7c49",
+      "rigidBodyClearance": "65eedb8f161544a388f9952cd8d4746affae23941a3a85575fd5ce6cd8826a57"
+    },
+    "meta-grid-female:None|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "44aaaf1b34c05a5488c8984ff5cdd32f071eb0416850851b4f810479254abdca",
+      "rigidBodyClearance": "096f716d95eff94c1fb0596ebbc9263b2071d73356edf51148660f74df224b5a"
+    },
+    "meta-grid-female:None|FittedWB|GodetSkirt": {
+      "nativeConstruction": "aa3ea2643904198f22685dad5a6811b8eede873b51b2b34c666efd6c76ebe2cb",
+      "rigidBodyClearance": "aa3ea2643904198f22685dad5a6811b8eede873b51b2b34c666efd6c76ebe2cb"
+    },
+    "meta-grid-female:None|FittedWB|None": {
+      "nativeConstruction": "9a064116c3506dbf57c2116519080a04481c8d15a9df5048ffd7a317e86f0ea5",
+      "rigidBodyClearance": "9a064116c3506dbf57c2116519080a04481c8d15a9df5048ffd7a317e86f0ea5"
+    },
+    "meta-grid-female:None|FittedWB|Pants": {
+      "nativeConstruction": "d1032217330b03887726aa8cda214c4042b089899e5db1cefab341fa09298bf5",
+      "rigidBodyClearance": "d1032217330b03887726aa8cda214c4042b089899e5db1cefab341fa09298bf5"
+    },
+    "meta-grid-female:None|FittedWB|PencilSkirt": {
+      "nativeConstruction": "53bf9e30e7e8334a7aaec11c9b298b83fb347bcd6448aad46c11412dc5aaff2c",
+      "rigidBodyClearance": "53bf9e30e7e8334a7aaec11c9b298b83fb347bcd6448aad46c11412dc5aaff2c"
+    },
+    "meta-grid-female:None|FittedWB|Skirt2": {
+      "nativeConstruction": "3610dc05d3220081303e9d5da5707732e5916ac6b197eb226095a47d4c103d03",
+      "rigidBodyClearance": "3610dc05d3220081303e9d5da5707732e5916ac6b197eb226095a47d4c103d03"
+    },
+    "meta-grid-female:None|FittedWB|SkirtCircle": {
+      "nativeConstruction": "43a71645544b83186d71d4f8cc90846eb94083cb29344f6bf84cd1453fae0dd7",
+      "rigidBodyClearance": "47c99e66f02085b1f6f4ccea4f1aed0625bf00243fe7a042bb20b5baa7aacca6"
+    },
+    "meta-grid-female:None|FittedWB|SkirtLevels": {
+      "nativeConstruction": "ef5d893abf5fef5c91cd97c8a4f55029609699bfbe12d888e9d8b203e9c08d32",
+      "rigidBodyClearance": "ef5d893abf5fef5c91cd97c8a4f55029609699bfbe12d888e9d8b203e9c08d32"
+    },
+    "meta-grid-female:None|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "112d518d9e500116c7dd78b7a44a8c99b5783db18d75704b7539743dcdf6c117",
+      "rigidBodyClearance": "11ba096a8b3cc5b4aa67f20a24cd2ece075ee4ac01cb187e64d88928ee1d5cab"
+    },
+    "meta-grid-female:None|None|AsymmSkirtCircle": {
+      "nativeConstruction": "b210602d7a063e9db4f6cb3cab812ba326e5a566b155652082e7dea344be883e",
+      "rigidBodyClearance": "bec99c49bf882db2d4d5b3c8bd1420e1eff2fc82a00e99fa81eb289ca0eac23a"
+    },
+    "meta-grid-female:None|None|GodetSkirt": {
+      "nativeConstruction": "c9141fc5818fc900c1d73de3bde6c9dba36e773d10ccb4b1060eec0a857ba1d5",
+      "rigidBodyClearance": "c9141fc5818fc900c1d73de3bde6c9dba36e773d10ccb4b1060eec0a857ba1d5"
+    },
+    "meta-grid-female:None|None|Pants": {
+      "nativeConstruction": "90a3a1e8f14604a15164ce737a85b1907e1b1dc1606fbe682122ac83f105c139",
+      "rigidBodyClearance": "90a3a1e8f14604a15164ce737a85b1907e1b1dc1606fbe682122ac83f105c139"
+    },
+    "meta-grid-female:None|None|PencilSkirt": {
+      "nativeConstruction": "fa94b8257c9974abacd35edcf2a2145fdc0ef49b9852f82d9443b1dd9f05188b",
+      "rigidBodyClearance": "fa94b8257c9974abacd35edcf2a2145fdc0ef49b9852f82d9443b1dd9f05188b"
+    },
+    "meta-grid-female:None|None|Skirt2": {
+      "nativeConstruction": "0fb5a96630e67d021f04246846394ab91ec4eb047bcc0b3d9e7038ec0acfe1bd",
+      "rigidBodyClearance": "0fb5a96630e67d021f04246846394ab91ec4eb047bcc0b3d9e7038ec0acfe1bd"
+    },
+    "meta-grid-female:None|None|SkirtCircle": {
+      "nativeConstruction": "0ad1715868f4f94eabbba5a14dc22c0038187820bbb53ae2b821db9d315ee863",
+      "rigidBodyClearance": "b6fe1e2a13cbdfffcf2f89748c961629cdc8ed6af27daa22cbfe723d06ea4ecd"
+    },
+    "meta-grid-female:None|None|SkirtLevels": {
+      "nativeConstruction": "fe0d8abd2658fbb8500604058226e75a0ab349acb217ca53ebc4b1d3a1a94c62",
+      "rigidBodyClearance": "fe0d8abd2658fbb8500604058226e75a0ab349acb217ca53ebc4b1d3a1a94c62"
+    },
+    "meta-grid-female:None|None|SkirtManyPanels": {
+      "nativeConstruction": "a99153ab394baa42cc4bae236abcf54dc9ef68792b6faeaf1c2557fd829012e3",
+      "rigidBodyClearance": "b91e65bcc9e2c424d9f5b00385481fdb2de56f42df244bebb58b9afba1f41386"
+    },
+    "meta-grid-female:None|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "e7eb930fc53159b3373ff32d187e79f2ef07a11a38c52a045d4364d248581927",
+      "rigidBodyClearance": "6fa7f9ce574b86d69059ab18bc876c4395f8dd488eee959a53c38bc2e4925761"
+    },
+    "meta-grid-female:None|StraightWB|GodetSkirt": {
+      "nativeConstruction": "d830c92dd4652dd426e4c4108b6ac66e511d78a3653c047fe0cce1110fb480b7",
+      "rigidBodyClearance": "d830c92dd4652dd426e4c4108b6ac66e511d78a3653c047fe0cce1110fb480b7"
+    },
+    "meta-grid-female:None|StraightWB|None": {
+      "nativeConstruction": "c81299f91c4380e0b0d0681b5be18272dd2cd31f2864fe4a7a4e39eedc9fb13c",
+      "rigidBodyClearance": "c81299f91c4380e0b0d0681b5be18272dd2cd31f2864fe4a7a4e39eedc9fb13c"
+    },
+    "meta-grid-female:None|StraightWB|Pants": {
+      "nativeConstruction": "4835d2e94bd6902eb6b491f029ea7ad1db140e049930e4708b7d0851d0507303",
+      "rigidBodyClearance": "4835d2e94bd6902eb6b491f029ea7ad1db140e049930e4708b7d0851d0507303"
+    },
+    "meta-grid-female:None|StraightWB|PencilSkirt": {
+      "nativeConstruction": "7b953ca1cdcf9a2f7735d1252f544d97dd37689a794a5887cdbf2838028d21e2",
+      "rigidBodyClearance": "7b953ca1cdcf9a2f7735d1252f544d97dd37689a794a5887cdbf2838028d21e2"
+    },
+    "meta-grid-female:None|StraightWB|Skirt2": {
+      "nativeConstruction": "51bbce9e8bbf4cfe0fec1791844017696074920f4ad1d59dfdfbf318dd8343ca",
+      "rigidBodyClearance": "51bbce9e8bbf4cfe0fec1791844017696074920f4ad1d59dfdfbf318dd8343ca"
+    },
+    "meta-grid-female:None|StraightWB|SkirtCircle": {
+      "nativeConstruction": "8a587b9f7a6fbf40ab0828aae4e4551655495ee181c85b8312fb7f5bc87641f1",
+      "rigidBodyClearance": "be8d7c4ee93bca1eb8d914162cb5230046b8c69952cf4cd15784a2510ec37511"
+    },
+    "meta-grid-female:None|StraightWB|SkirtLevels": {
+      "nativeConstruction": "7e6534e5df453ce607a6d157253f665702c107097e8a45fdcd214355ed1f1450",
+      "rigidBodyClearance": "7e6534e5df453ce607a6d157253f665702c107097e8a45fdcd214355ed1f1450"
+    },
+    "meta-grid-female:None|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "2167155027b17694ea4dfbade3a66cef0e10403055bc40cf32d8fa9ac3bacdb4",
+      "rigidBodyClearance": "e5d079a8ccfd60310ef2f2737fa245a8abc2ba0bec3b3e8b2dd96d4c5755fdd6"
+    },
+    "meta-grid-female:Shirt|FittedWB|AsymmSkirtCircle": {
+      "nativeConstruction": "17ebb42537f471eb77dba969661ae25431470d7ae456537cf0384d4aea790175",
+      "rigidBodyClearance": "fac6f4f064708c4788003c83637798966ec2502fa9bf5738b6c7d1af373d1836"
+    },
+    "meta-grid-female:Shirt|FittedWB|GodetSkirt": {
+      "nativeConstruction": "12ec763106cd5bb511ed21aaa68cc42eeba02e697e6bade82c3cfe10001a397e",
+      "rigidBodyClearance": "af6755c635b9a1ee916e78a141edb6834834073a90a84716d21acde3bda653a3"
+    },
+    "meta-grid-female:Shirt|FittedWB|None": {
+      "nativeConstruction": "06dc231ac7a4dc2ebf90c708cbdb8ee699e94b618589616da2d1e24b500d1013",
+      "rigidBodyClearance": "a25d1e540d1770f02b927b432f56b390094eea77c52cc3d9438480a199324710"
+    },
+    "meta-grid-female:Shirt|FittedWB|Pants": {
+      "nativeConstruction": "bb152b5ee54e4ff0fb455fdfe88ba8f4b6b76d0fd5a550776f5fa4c895894f3e",
+      "rigidBodyClearance": "f02de5e11eb2087d2284a67d4c34f8dabe2b112c3651a58936b3f82b7fbd9145"
+    },
+    "meta-grid-female:Shirt|FittedWB|PencilSkirt": {
+      "nativeConstruction": "1e1f348c3ee91352a033e1f2bec672e92d3983b4da6df7cac6bd86ba57f8ffe4",
+      "rigidBodyClearance": "9ad266e5bd53f0ddee6560cf41790df7fbac184078bcdc9bbf4350f67d3b7e2f"
+    },
+    "meta-grid-female:Shirt|FittedWB|Skirt2": {
+      "nativeConstruction": "9555700a95a97d6cb2825bbc21d87d58f2e591a7d02c5a91dcecef5f729d32df",
+      "rigidBodyClearance": "a35018caf760ce365946c15e6e3b9bd5d40b27d5a06ef42047a5030e2d6d7a7a"
+    },
+    "meta-grid-female:Shirt|FittedWB|SkirtCircle": {
+      "nativeConstruction": "43f28c8ea1a72677311c5f092aa7074cccab972181c75e6f4c884fd19e8e3cd8",
+      "rigidBodyClearance": "8d77e354fe2847bc61d7c296714c6c54993f4b695adf07413c27c4f08eef3695"
+    },
+    "meta-grid-female:Shirt|FittedWB|SkirtLevels": {
+      "nativeConstruction": "795aa394bce37524adb3e5746f2d75ba79b7914f0f5397248f6793baeb1bb0c2",
+      "rigidBodyClearance": "63aa1ae8749a7d1408ac8533254608aab410a5f486d2ecd7105fce7e36f4c41f"
+    },
+    "meta-grid-female:Shirt|FittedWB|SkirtManyPanels": {
+      "nativeConstruction": "17767a97c9914a1815e8917de70f117343f4f36327052e7cc2d26de88fd53e5d",
+      "rigidBodyClearance": "bdb95b82ba7cfbafa30eac83e18ec52bf45a0942651ad9a617f42460bc15fbcf"
+    },
+    "meta-grid-female:Shirt|None|AsymmSkirtCircle": {
+      "nativeConstruction": "8c1d9f8da0811c45f92c03b20a66f68cab35e6fe84929d00d9843241d62c615f",
+      "rigidBodyClearance": "99fa3622b731d6577b47a0973aca39922e352dfdfd1a75b446c579083ff51686"
+    },
+    "meta-grid-female:Shirt|None|GodetSkirt": {
+      "nativeConstruction": "8c1bc8c965e46eecdea3733120aefba795ebe2bf597966db7214ce4ba6409ee4",
+      "rigidBodyClearance": "8c1bc8c965e46eecdea3733120aefba795ebe2bf597966db7214ce4ba6409ee4"
+    },
+    "meta-grid-female:Shirt|None|None": {
+      "nativeConstruction": "8a427313f7311f63026e20d454ed93b58d7dbe512b9c06b626ea7a1cbd50b13f",
+      "rigidBodyClearance": "8a427313f7311f63026e20d454ed93b58d7dbe512b9c06b626ea7a1cbd50b13f"
+    },
+    "meta-grid-female:Shirt|None|Pants": {
+      "nativeConstruction": "304de348a9a31ec1769a50568a86fc1058f903910f1368c9b85636e11cee6040",
+      "rigidBodyClearance": "304de348a9a31ec1769a50568a86fc1058f903910f1368c9b85636e11cee6040"
+    },
+    "meta-grid-female:Shirt|None|PencilSkirt": {
+      "nativeConstruction": "0a23f1eb7f4c399f0ebc8411534e069029aa4906daf99c74c16c82732525603e",
+      "rigidBodyClearance": "0a23f1eb7f4c399f0ebc8411534e069029aa4906daf99c74c16c82732525603e"
+    },
+    "meta-grid-female:Shirt|None|Skirt2": {
+      "nativeConstruction": "121b28bceabe5250f5d0ff18ebb91d365547e8300c0613bd2420d45e624f1b2e",
+      "rigidBodyClearance": "121b28bceabe5250f5d0ff18ebb91d365547e8300c0613bd2420d45e624f1b2e"
+    },
+    "meta-grid-female:Shirt|None|SkirtCircle": {
+      "nativeConstruction": "9489d0462eaf726daf0496f31c94af5ea7ca1b19f90180045a15f08a43898cc8",
+      "rigidBodyClearance": "c17029466e761992921a587b732b39162b93efdbf901a2b65040c52a8dbb9341"
+    },
+    "meta-grid-female:Shirt|None|SkirtLevels": {
+      "nativeConstruction": "787657a7e91fee92e3713cb8b119256c0790609e94fd4e2a70512d1abd6cd78b",
+      "rigidBodyClearance": "787657a7e91fee92e3713cb8b119256c0790609e94fd4e2a70512d1abd6cd78b"
+    },
+    "meta-grid-female:Shirt|None|SkirtManyPanels": {
+      "nativeConstruction": "ecbbe7a4575668fa7eb1c9c37595f671854d7c8d581b5b7b4a775c8254bfc719",
+      "rigidBodyClearance": "ecbbe7a4575668fa7eb1c9c37595f671854d7c8d581b5b7b4a775c8254bfc719"
+    },
+    "meta-grid-female:Shirt|StraightWB|AsymmSkirtCircle": {
+      "nativeConstruction": "56dd75d421057df05fd7dbea2e801ede8b9323c22080a8f54c66f1d35628cb3a",
+      "rigidBodyClearance": "27fdde49405d2677868f60127c19da1823ff379e99681bcfe7502b1aabc13395"
+    },
+    "meta-grid-female:Shirt|StraightWB|GodetSkirt": {
+      "nativeConstruction": "f504de5d2d9dc563110924752ae6f97de35388466e34bddd9ca167cd7f094fc2",
+      "rigidBodyClearance": "1daed74cc9394bc8ff69cb326b0a281299c6cb559026bfc9250ec4101c793f9d"
+    },
+    "meta-grid-female:Shirt|StraightWB|None": {
+      "nativeConstruction": "b9a3d93187db1218131b76c3971c75745b6a4f6453b3ade2bde322486656ce26",
+      "rigidBodyClearance": "1f167cc80c6532f8e526f6039638b8f97dd90425147d6244fef8aa2366d06cc5"
+    },
+    "meta-grid-female:Shirt|StraightWB|Pants": {
+      "nativeConstruction": "087fa574b066c982d229dba957e70fb16cd24dad9c58162c287db243135617f6",
+      "rigidBodyClearance": "fe43015083f04d15c866a8d471ce40094091590f8603249efdecf769dbe3074b"
+    },
+    "meta-grid-female:Shirt|StraightWB|PencilSkirt": {
+      "nativeConstruction": "cf978fce7097c4123c8c007238893ad28f7a05bf932793141e7122906f24bfa6",
+      "rigidBodyClearance": "c0f6d2e416d63cb621561e45cb8b5d3802b76e1a495dd8514149311d277222cb"
+    },
+    "meta-grid-female:Shirt|StraightWB|Skirt2": {
+      "nativeConstruction": "682201e3e1de0be43b27d585c204db9f06230de7722d86ed0f71066e893c1d71",
+      "rigidBodyClearance": "ca3e0f7fe8ca5a0b64caa28f810431399381c9b7ec788af3b0818bc919d7cf64"
+    },
+    "meta-grid-female:Shirt|StraightWB|SkirtCircle": {
+      "nativeConstruction": "8fb3b68bc2286585ef22c1d12d23a7a39c86fe2cbe3f31998edcb30c742c0257",
+      "rigidBodyClearance": "559f542cafead1a39055c980950290d9df82e6a87bf6105e3a742831ae09bd64"
+    },
+    "meta-grid-female:Shirt|StraightWB|SkirtLevels": {
+      "nativeConstruction": "352859dbc49b6613b670d3b84091a5f94bff0d9325c77dba4460ed02c60e8317",
+      "rigidBodyClearance": "85c0581789ce1d6259df4de022f98499c4eb1b7aefe59ced4c94fc7b876436e8"
+    },
+    "meta-grid-female:Shirt|StraightWB|SkirtManyPanels": {
+      "nativeConstruction": "1d99e1305bb2f97bc3070f7de2a2dc4f3e2279279e8c20cc045177bd98e3fbfd",
+      "rigidBodyClearance": "4bf8deda3affc9a469c4608e6d48c3e4957910c471718a866bb953fe444b5c95"
+    },
+    "upper:all-Shirt-sleeved": {
+      "nativeConstruction": "41ba5c943e1c985ea1088d34e1bc2df4447c20ee2426f0d160333ad34793fc44",
+      "rigidBodyClearance": "ada4347ab6827f2431051e503d903f9fe759ecf6ddf6329284b22a9ab9f14596"
+    },
+    "upper:all-Shirt-standing": {
+      "nativeConstruction": "719b72160014381fccc7b0b3e68d839686163072e606a96464aab4f46afae631",
+      "rigidBodyClearance": "6b12458b9596451f866ce54e092a1adccfd2b65adce7be19aabc6a91410e25d0"
+    },
+    "upper:all-Shirt-connect-ruffle": {
+      "nativeConstruction": "41e37dfd05863eb892573c73717b87e2d90d83871f4c565bb75c875f40e9f245",
+      "rigidBodyClearance": "dc62e00ac43c9369efd059dcb6f36e0d5c132739862fda8c877eb35eeba609de"
+    },
+    "upper:all-Shirt-CuffBand": {
+      "nativeConstruction": "ffad47c4ced077fd3bf41a46ac6a6edc117748a12a04436a7f822719440589e3",
+      "rigidBodyClearance": "cee468aa79e1c4ced24da0a30e6c5550ea4e31f19b67eff76d706845b82a88e2"
+    },
+    "upper:all-Shirt-CuffSkirt": {
+      "nativeConstruction": "46c06bf59e1aebfe37b6d5aed4cad77fcd85b1de0d55f6c1e826d2dd8461d2ca",
+      "rigidBodyClearance": "101282ce163b74157c8cd45f76fb2cd4ff7aaf83b72002dad44a8cc384c227b7"
+    },
+    "upper:all-Shirt-CuffBandSkirt": {
+      "nativeConstruction": "883026a1474d359d4450a92a7e9611cbbf01e91e89b1d629651e2cfe1f3c8ca9",
+      "rigidBodyClearance": "d04e97a973ceca852dd2c5c566cb2366698298838e30c97d8849a27db0ab125e"
+    },
+    "upper:all-Shirt-sleeved-Turtle": {
+      "nativeConstruction": "9e936dec6ae96d9df3230af62e503dc4708a4ed03f688f34fc35a2b68985eeec",
+      "rigidBodyClearance": "1d54fdc358904e727ba11809c57ead0eb8c1dd04a4c1b9b435be09a34d7c1e9a"
+    },
+    "upper:all-Shirt-sleeved-SimpleLapel": {
+      "nativeConstruction": "f2c433c3d96f4182e961fe1f4164f45f0e934373a9c3761d8fdfae0edb433bf9",
+      "rigidBodyClearance": "f6721e8d13d60e160a27963d2091a028e90dabc1871ca9c7eed44c015510b303"
+    },
+    "upper:all-Shirt-sleeved-Hood2Panels": {
+      "nativeConstruction": "5d6fd6cd2bec172c4f07b453d0b05e91d5f0ba5aa8e43dbc678b5ef985870898",
+      "rigidBodyClearance": "1e340df464303433534c6766d145e724f6262918050f5a9a459ef3302cae49e9"
+    },
+    "upper:all-FittedShirt-sleeved": {
+      "nativeConstruction": "7d5d2e7e9848e0b58ff1ea1b0e9bff93a729532971dbbbc423ae0519b332ea9a",
+      "rigidBodyClearance": "cc5fff83235dd58ce3f0924f5792abd6ae5c105bd986badf720421d9aa1d8ee8"
+    },
+    "upper:all-FittedShirt-standing": {
+      "nativeConstruction": "d6ba0b62823129562de8f113ac7e50fa3c0bd0b538e60472d5c588f38cd5a179",
+      "rigidBodyClearance": "c84c9553ed7168427dc470b2bc379438ee8f8d696bed9a6e5ffea9ba1c9f6459"
+    },
+    "upper:all-FittedShirt-connect-ruffle": {
+      "nativeConstruction": "dad579791ad9c885d0f93e0ac40b04fddfd5371c109868e55cb50b34f2b409bb",
+      "rigidBodyClearance": "627c9d99fb852daf6740caa4d65547ddaf90a95741c6e998a80713e928ef5718"
+    },
+    "upper:all-FittedShirt-CuffBand": {
+      "nativeConstruction": "32f0238a8d9f395ddb63f011aa53607e8460e488e6b4327580b2074267644572",
+      "rigidBodyClearance": "4e3c1d59dc65f8c8963ef784203ff72fce76a5c571a8e52d5a4a6da5a23fe082"
+    },
+    "upper:all-FittedShirt-CuffSkirt": {
+      "nativeConstruction": "e900c77113668f654515439b03304fbc0f03bfcce02c9f218505f6b34faa31a8",
+      "rigidBodyClearance": "57125f0613e39369fee4a72d09cc9fed90bcfb7fe0a3d1ca90cc6ed0e2e89817"
+    },
+    "upper:all-FittedShirt-CuffBandSkirt": {
+      "nativeConstruction": "9ec30d42e8be906c6dd5bb272684d3db7630914869d1b6a7b0432c5592a0233f",
+      "rigidBodyClearance": "4fbfac6ff3cc6ce52fe46594dc026c0e259ea9816aaa8cc46bd240df4af71af0"
+    },
+    "upper:all-FittedShirt-sleeved-Turtle": {
+      "nativeConstruction": "9cd923498181591591a707bc84df622bcff3f205566a706c40f6d6cb2c9560df",
+      "rigidBodyClearance": "de13909fccb7ac4f5bde23b2eb0566e5c7c8248206035a4a02e97839afc25eee"
+    },
+    "upper:all-FittedShirt-sleeved-SimpleLapel": {
+      "nativeConstruction": "ebd10876ee60993d4dfab3b5d12a177baec9d369f3f9febe47977899a139cd86",
+      "rigidBodyClearance": "9c8335b09ab405943cc5899fb8925a212443ceb037855caf4cb944e7f8c81796"
+    },
+    "upper:all-FittedShirt-sleeved-Hood2Panels": {
+      "nativeConstruction": "881ef757e9d0b66f22d06f4cd7e583adb5c3802da4be7cae4276f14f27e7750b",
+      "rigidBodyClearance": "c3deb81bf2ff8002a6b2e553fb687ed34163accd13558a9f110a98e3de8fc5a7"
+    },
+    "upper:female-Shirt-sleeved": {
+      "nativeConstruction": "f9f2b992788c9d32ff778e25ce731dd323ec78be07b6919da682035faf8e73d2",
+      "rigidBodyClearance": "62177ab2627bb869a3c705d7eb2bf4f1070fa053e6b57acd08efd21b1533ba19"
+    },
+    "upper:female-Shirt-standing": {
+      "nativeConstruction": "32be860c5c0464d05723c452a1133dd1f8ff158e5283c6ce3f03eca43fd6f1c1",
+      "rigidBodyClearance": "64e1170db24540f1e9e5ed2fdb1b5af6b116dc65809b0d68fc82f12d88917d19"
+    },
+    "upper:female-Shirt-connect-ruffle": {
+      "nativeConstruction": "303e6bb77b77ee98df3ad06e5cb774dff6cb7bef8fd17be7f60df953e70e8793",
+      "rigidBodyClearance": "21b6fdbd914a5bb124fced43a24a17431ca077c1b5f912ecaa04fc00ff3816f3"
+    },
+    "upper:female-Shirt-CuffBand": {
+      "nativeConstruction": "4aaa7e7691d71116ab1f5a33a68a04cf625eb37cd6f80ce838846d900d44eafb",
+      "rigidBodyClearance": "1d1434d08a0abc3ebf8a5848a6bcb2d926c3b46f353d35b0a380f74908a2e10f"
+    },
+    "upper:female-Shirt-CuffSkirt": {
+      "nativeConstruction": "ae9d14520955106b0d5e2c6af4e6c09aaa8b5e8a3b1368fcd51039568158e959",
+      "rigidBodyClearance": "2c99fe14d957691f40bd5bb4b778704da9b917a75c942cbcf17529a86c841200"
+    },
+    "upper:female-Shirt-CuffBandSkirt": {
+      "nativeConstruction": "1ef6ebbdaf24043a053b64a423cec0fa23bd982309b86807b7e0caab7df8ef5a",
+      "rigidBodyClearance": "d566f61c3121722a99a6033c5fe725c068ea10533cd4a1110fba23c3c226a2b2"
+    },
+    "upper:female-Shirt-sleeved-Turtle": {
+      "nativeConstruction": "0c00d0036f58477ccb7a1449470d5cd7d368debf09c7d7afc294da5155328fc3",
+      "rigidBodyClearance": "f3fe418a381c85a73e669e147075350a280637ad922983797c142dafcf5e3d99"
+    },
+    "upper:female-Shirt-sleeved-SimpleLapel": {
+      "nativeConstruction": "ac31bbf57e7bab5fbf7947de6b1246dce5ef42d2995c89aa73f57562feaf2a02",
+      "rigidBodyClearance": "c14a358e895540b4d6b8712f0a9d605d0ad5c70a9e292f2fb1aa0833ac7b16f0"
+    },
+    "upper:female-Shirt-sleeved-Hood2Panels": {
+      "nativeConstruction": "212f2d0edfb1e5beadffbeccb0a61b0882276f76a838cfa2a7e6cabc13ffb62d",
+      "rigidBodyClearance": "583fae4631ad26a1ba196a806e1572da25cb68f649ad17cd6b553bac75830145"
+    },
+    "upper:female-FittedShirt-sleeved": {
+      "nativeConstruction": "1311c26895b0be8220b64a5edc519eee6bb112daf3c569e1db0b18ee1795cec0",
+      "rigidBodyClearance": "0c49245f5efeba0a68fdce178329bebfb7293e4f4691a63bc642fb8344da5cf7"
+    },
+    "upper:female-FittedShirt-standing": {
+      "nativeConstruction": "c6f067087c7e37aa4eb46717d6cffc2ac890b38a8a9561101d7b647825bdc222",
+      "rigidBodyClearance": "6dd268f43aa12c1b217c2bd4dbe8eb00fa484133c291797b78b8462769127e55"
+    },
+    "upper:female-FittedShirt-connect-ruffle": {
+      "nativeConstruction": "02f7752f66993ace1329605dc12a6703eb95fa9be64f9c56039e3a312866ab61",
+      "rigidBodyClearance": "5e6f29637b44f58c4838d20eb098f4a6675c1a677be377d05448eb723f80f92f"
+    },
+    "upper:female-FittedShirt-CuffBand": {
+      "nativeConstruction": "cd8493331653d0e96a8ec7c505683b1e46a1bf7626f9eff18d5644bbf4fd1f8d",
+      "rigidBodyClearance": "7d5cd6cae668b0f75a9cbc6f320abb63b13c14bc8b9c54766f1e352fff5f5c81"
+    },
+    "upper:female-FittedShirt-CuffSkirt": {
+      "nativeConstruction": "ae76a7dcee0d7323754e73a183f6e1333562dd45992f23413b005604b402488c",
+      "rigidBodyClearance": "ccd40fea11740b0d2db1dd5bb22cbbfd98b382d00faeb11aefeba8a664075e04"
+    },
+    "upper:female-FittedShirt-CuffBandSkirt": {
+      "nativeConstruction": "60cf6d705d2171f917054029b50345cf6b0c6194371632264f6deafb5f0032a0",
+      "rigidBodyClearance": "87286ce628274da77c31991af509ca0c3144c4a2c153f7b5bfe99c92a37f8e18"
+    },
+    "upper:female-FittedShirt-sleeved-Turtle": {
+      "nativeConstruction": "844477c086131813e8c499b1b64df0ff2eee8630c751eabe75fae8d643e0de67",
+      "rigidBodyClearance": "193ce7b9def82f2f7db248646bdf1b5e6e71a2bdf67d80b0074128277dd729ca"
+    },
+    "upper:female-FittedShirt-sleeved-SimpleLapel": {
+      "nativeConstruction": "dcb89a6cfbd2ff18496e76a8b959dc718b961925971c59675401fa9d25e25d90",
+      "rigidBodyClearance": "ddfeec1ccec128f8f72963a4384360cce5f8863259b98ac16e0656944fa13813"
+    },
+    "upper:female-FittedShirt-sleeved-Hood2Panels": {
+      "nativeConstruction": "7d4105f1a7b418f907f799f1e918746cfb962ad69e8b31342a3d8a6c96ca823e",
+      "rigidBodyClearance": "bd1fd48715262b50b051fd4a6596e908707afc4607e32f765ff3c59c53b889d3"
+    },
+    "pants:CuffBand": {
+      "nativeConstruction": "0e4363e31916a708d2dde3bb28037d3d19511d4fa01da895f5d9efe1fdc042ca",
+      "rigidBodyClearance": "0e4363e31916a708d2dde3bb28037d3d19511d4fa01da895f5d9efe1fdc042ca"
+    },
+    "pants:CuffSkirt": {
+      "nativeConstruction": "19cb0e964dd1baa60c9d277385a2325d7d72029d83409bfe93668b9845408fff",
+      "rigidBodyClearance": "19cb0e964dd1baa60c9d277385a2325d7d72029d83409bfe93668b9845408fff"
+    },
+    "pants:CuffBandSkirt": {
+      "nativeConstruction": "9269c3501b19ae8389c99dfa792207b5f1a232bf3a0c05ad6988110a70932598",
+      "rigidBodyClearance": "9269c3501b19ae8389c99dfa792207b5f1a232bf3a0c05ad6988110a70932598"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-None-rise0.5": {
+      "nativeConstruction": "1ec988da0108f2cdcb10f409045e84d721c7f8d69856c80c8399aa7a15cd63b8",
+      "rigidBodyClearance": "1ec988da0108f2cdcb10f409045e84d721c7f8d69856c80c8399aa7a15cd63b8"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-StraightWB-rise0.5": {
+      "nativeConstruction": "45442c5b7f2a1bea74360a6fb09bf73725d9966158f56895ae0aecf05754c91b",
+      "rigidBodyClearance": "d60a3ab327aaa05dfab8be5c233d2317779da28791742a176aafb7a86fe1e5eb"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-FittedWB-rise0.5": {
+      "nativeConstruction": "226afd77e6fc2f2861789df46b5a288c841fe6884aa707caefae3d684f913312",
+      "rigidBodyClearance": "3bd20b23f544da564e8c47cc93ed3c62199131c055972e6beba0f9527dd3bc15"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-None-rise0.75": {
+      "nativeConstruction": "7a6f7482b4f98af1ddb375b05dc0fbe091a03487d26bdc323c6a846599d9ee9b",
+      "rigidBodyClearance": "7a6f7482b4f98af1ddb375b05dc0fbe091a03487d26bdc323c6a846599d9ee9b"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-StraightWB-rise0.75": {
+      "nativeConstruction": "39afadbc30bc1378a72de5d252410303733daf63190e5918853ee48bbea6cf79",
+      "rigidBodyClearance": "d6c4556e88641cb6387180339f3c55a9c20eefc32b275dd9b8a57f3be78ce372"
+    },
+    "levels-rise:default-FittedShirt-SkirtLevels-FittedWB-rise0.75": {
+      "nativeConstruction": "add30fbbc2a5e6fb379f43d940a4aa49ed416f4dcf1a86c715dfaf0a7a134767",
+      "rigidBodyClearance": "52eb747d09d6736c4ecc3ad6d1f3f4a79cc462383e0c81e04b4e6c1aeb216c5b"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-None-rise0.5": {
+      "nativeConstruction": "db2485b2fa81effd1b0f391aa507274ba1c6ac6710200ba4392f5f282c9339ef",
+      "rigidBodyClearance": "db2485b2fa81effd1b0f391aa507274ba1c6ac6710200ba4392f5f282c9339ef"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-StraightWB-rise0.5": {
+      "nativeConstruction": "047523c45d56f3d91143c0eb655421e08428785b84e587cc8fb71c58c96ba873",
+      "rigidBodyClearance": "0988e561cf2f537010e2e50fd9ea409637d423185a69f9ce42acf78ca6de640a"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-FittedWB-rise0.5": {
+      "nativeConstruction": "082d42f701f1614206da9a79edc36058b4a042dd4095f846b220f64dd8cc32bc",
+      "rigidBodyClearance": "4e3d1d1bb2ae02e32cd2d9d40841b18af994b8e5ed6056674af746c20bdc1e02"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-None-rise0.75": {
+      "nativeConstruction": "f798bec346d0ef7a0ccbc68f2a389a31303724e3650e4619f3da56e851fbd061",
+      "rigidBodyClearance": "f798bec346d0ef7a0ccbc68f2a389a31303724e3650e4619f3da56e851fbd061"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-StraightWB-rise0.75": {
+      "nativeConstruction": "d1cc17416b7540189b6bb5dfbe7283295fffbc0b367be9f51880718b17aaa648",
+      "rigidBodyClearance": "2290114c8271085da747e0c4f618e44483c60d5676fcf04ee5f8aa399797eb16"
+    },
+    "levels-rise:female-FittedShirt-SkirtLevels-FittedWB-rise0.75": {
+      "nativeConstruction": "a5f0026cb2817b4fb0f7a9a273c1a386d06b86e28d7c5288f52ee5bcd248a510",
+      "rigidBodyClearance": "0be99051332eccf6a579a41646692ae05afc2ae3c2fe693b8643a69b44727811"
+    }
+  }
+}

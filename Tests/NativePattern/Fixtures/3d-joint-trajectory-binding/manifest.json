@@ -1,0 +1,203 @@
+{
+  "gzipBytes": 7865966,
+  "gzipSHA256": "93855726c73da848d379d183cc832dd9f9413c19a9f327efda9d5e0d49493775",
+  "inputFiles": {
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-1.json": {
+      "bytes": 331946,
+      "sha256": "03612213eacab1d03db52182b2abf77099ecb8137517cef4832511ca18bd5030"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-10.json": {
+      "bytes": 331968,
+      "sha256": "f2bd3f0edae336276c3bba4fbc4157f616d0003780bdce8288499068c82f16b2"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-11.json": {
+      "bytes": 331980,
+      "sha256": "9139b08e4b211c44eb2c9ad13a61a15f5add4bf9be937621ad45957e882d1fb8"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-12.json": {
+      "bytes": 331987,
+      "sha256": "a1359c5968ba3f1de9e8b4163acf3d86dd2e225ed2df9900b20701b30923be09"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-13.json": {
+      "bytes": 331983,
+      "sha256": "d059c2b4bcb6b2455fae445d856e8309e72b677c853e63a406adaa8d422c02fc"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-14.json": {
+      "bytes": 331995,
+      "sha256": "5cbdbc43042a521b19969389faead870684725c987a18c4e24b9347c16df1ef3"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-15.json": {
+      "bytes": 332008,
+      "sha256": "174b420c9a72a83064466fa32d493423c9c32b8941b7cf52b9f3bbbbb70ba55d"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-16.json": {
+      "bytes": 332008,
+      "sha256": "bafa0253f2f1bcf474a5f9a064a8c42c728708ac19f381a739287fc2a0b65c83"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-17.json": {
+      "bytes": 332003,
+      "sha256": "c8e0337bf3856f957c9a4a0b15e580a5ab87ccd0ef668ce801f02edd07c61a3d"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-18.json": {
+      "bytes": 332004,
+      "sha256": "6703ad2c07ee8c639eb4d22efd426d045b73191f0d3683a387286b5f96cceab1"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-19.json": {
+      "bytes": 332006,
+      "sha256": "fb679e02510fb392784d524ae45828299f95d50b8e42229b17a102ccfac6d360"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-2.json": {
+      "bytes": 331953,
+      "sha256": "2ce5b4ef747c843c405bec3544317197497b4324a42e97f287e28899cb74f49c"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-20.json": {
+      "bytes": 332009,
+      "sha256": "6d4a6e6a17c036c0c38752baca3eb55f4528c053e237991b9f9311c27ab14779"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-21.json": {
+      "bytes": 332007,
+      "sha256": "bc17b0cbe1cf58ec77098baa37cfc519aa98b50448c550d590fd98463cfd222c"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-22.json": {
+      "bytes": 332009,
+      "sha256": "87c894e4ddd1108410275656fe19cb1b734985954f7452aa54a6c0b08cd129f1"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-23.json": {
+      "bytes": 332014,
+      "sha256": "21399ba8d352c9b4fefcef41360dec6c8efe8eb0cd536480ef476c5feb7952e5"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-24.json": {
+      "bytes": 332009,
+      "sha256": "2b4b0b18ccdd104a3712e82af21c485ca630834ae7d95758ae4bae83302c107b"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-25.json": {
+      "bytes": 331989,
+      "sha256": "c7d29ae6d3eb1b6af8599d9e3d33708ea9b220ca4983ee469c89d641922db80e"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-26.json": {
+      "bytes": 332008,
+      "sha256": "f9502b5b5826722cd898952f51ddb1da4d305112eebcda3d2cbbdb61402fd4e2"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-3.json": {
+      "bytes": 331901,
+      "sha256": "5b4c8c7a3ab862a1e2efbbf424da1e512a8d0f2ed3e0afb863b9eb8aa24c7851"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-4.json": {
+      "bytes": 331891,
+      "sha256": "5fbc72f994a959fdafcb79980deb03fea1f37baf4f6614b81c59bb46887ecc35"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-5.json": {
+      "bytes": 331920,
+      "sha256": "bdb7912de12363ef9b0cf332f6dc6759478711c4121bbba047dff49000b161ab"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-6.json": {
+      "bytes": 331935,
+      "sha256": "a9037bdb0d9e3b99fffdbca2409836e66c724443af7019c251c027f693653d6c"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-7.json": {
+      "bytes": 331957,
+      "sha256": "dbcb9e6e45df0b3004a8b9f0bb6c5a11fa9befb911cee73f3d8ade6d119c4c51"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-8.json": {
+      "bytes": 332027,
+      "sha256": "d05160f3617a33486d741a8b2e6eac26eee05b2d08893e6c793b34e79c152756"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/path-9.json": {
+      "bytes": 332032,
+      "sha256": "7a2730e1358cab41d1bbcd9210c55a956152aa33f38959bca072bd4ef4b0999a"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/positions.json": {
+      "bytes": 129943,
+      "sha256": "429c235253a87226f601e1992091bdb70d4d92720aab41fd18efbeb8b8d41f00"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/result.json": {
+      "bytes": 2554,
+      "sha256": "c015c4c6a5c382ff302e8190dfb29fa17577b1e642efb99139ecb0eb8b15a192"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab-attempt2/candidate/segments.json": {
+      "bytes": 5982446,
+      "sha256": "c7ce5645dc076ed5e951024b5d7ea00bbff95f70d4e9d199a4e39d25d7657a8e"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-1.json": {
+      "bytes": 331966,
+      "sha256": "398dd01ed1bb22e29e05beeceb3c7ea237cacf23811ef5bbd866549ef20c5686"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-10.json": {
+      "bytes": 331960,
+      "sha256": "4c8091002b445ea38e40cc16d65f99eb7f407c64f978a1fd54822aeca654c567"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-11.json": {
+      "bytes": 331981,
+      "sha256": "8b62595bed4d373b26b69bc392bf35e634026be96f9b48b3f19629acb2b52668"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-12.json": {
+      "bytes": 332031,
+      "sha256": "89755b9113789c8f32247a75d8911bdd571ad539d967e0cf887301c72f189ca3"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-13.json": {
+      "bytes": 332016,
+      "sha256": "a149eaf3bf7246d78621a56a5a1de9395a10cd44d11e5cd1ba07d8416e5fece7"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-14.json": {
+      "bytes": 332046,
+      "sha256": "a89b072b8cc3fbb866e1b9334cef05b0317f1d98485b1801957836b47d24d240"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-15.json": {
+      "bytes": 332057,
+      "sha256": "eaff5cd3ea4611e741c9391460e31cc669273e291785432a4af131582424b9d2"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-16.json": {
+      "bytes": 332045,
+      "sha256": "eca283cebf553d1430f9a8041797ac51e89f9f40ab1eb53cb89764dcb8f8dcbf"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-2.json": {
+      "bytes": 331979,
+      "sha256": "026d513c57c78f7d37fff5a6a149c1ce6b48c479504e8f552c15d78816a3a03e"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-3.json": {
+      "bytes": 331960,
+      "sha256": "156a38128f6477f53c009ac689adae44ddc9bfe2acd09ec62477e3a77b1d6d59"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-4.json": {
+      "bytes": 331950,
+      "sha256": "f652dcca0a212e8ffea07b17e799236d831c797aaaf0780f5a53446cbcd57396"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-5.json": {
+      "bytes": 331940,
+      "sha256": "07481385d96b124ab7c6aff712d437538c12dbcc20fd5ef62e85a8cbe3988571"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-6.json": {
+      "bytes": 331932,
+      "sha256": "5a25fc3aed571d0b657b27c12320a0cc2891b2e8b82f3ac45516b41182a7fff5"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-7.json": {
+      "bytes": 331941,
+      "sha256": "2d69e15eee3a3008ddc79b9ac482fb82f3d34fb17d052a6764eb426df8bd1ddb"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-8.json": {
+      "bytes": 332017,
+      "sha256": "2e931be9352d8b402d28dfcaf4110c04db5df5af8b38286845ac3d7b821cfb27"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/path-9.json": {
+      "bytes": 332021,
+      "sha256": "efd4796bd8bb534b029cf5622bee33367af9c4f8bd9d6c82d1887f1ce71bf4c9"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/positions.json": {
+      "bytes": 129947,
+      "sha256": "6a84ea94d0344946b6d894d482b560391631a5ec97ac31557e19249f899293e4"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/result.json": {
+      "bytes": 1981,
+      "sha256": "19e7320392fbce49a130412f7aee3310fbc62e847493265b17d17caedee8cdcb"
+    },
+    "/private/tmp/TailorAssShirt406Representability-kvm4gwze/whole-frame-ab/candidate/segments.json": {
+      "bytes": 3641830,
+      "sha256": "68689e1a4db0c9d8ea080864dd445b68c7fc9476f79e7b55e12ae2317ceb4723"
+    }
+  },
+  "origin": "/private/tmp/TailorAssShirt406Representability-kvm4gwze",
+  "payloadBytes": 19120813,
+  "payloadSHA256": "d9999f02ee476272a2929fb79a140ef7693279a3afca9a00cd87acfcb5a17cb7",
+  "schema": 1,
+  "scope": "Complete actual native checked-line and N accepted-trajectory endpoints/report traces; no garment/Session accepted"
+}

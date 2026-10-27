@@ -1,0 +1,2 @@
+flag-off-reference: circle +standard-body Skirt2 maximum_position_delta_m=0
+PASS: body-surface integration (flag-off-reference)

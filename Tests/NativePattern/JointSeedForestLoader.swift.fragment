@@ -1,0 +1,22 @@
+// TEST-ONLY append to copied S.swift. This imports no historical capability.
+extension GarmentCodeJointSimulation.Session {
+    nonisolated func diagnosticLoadSeedState(_ loaded:GarmentCodeJointSimulation.State,legacyOriginTag:UUID?)throws {
+        typealias S=GarmentCodeJointSimulation
+        guard state.completedSteps==0,lastAcceptedFrame==nil,consecutiveQuietFrames.isEmpty,committedSeedControl==initialSeedControl,
+              [480,922].contains(loaded.completedSteps),loaded.consecutiveQuietSteps==0,
+              loaded.positions.count==prepared.initialPositions.count,loaded.velocities.count==prepared.initialPositions.count,
+              loaded.positions.allSatisfy(\.isFinite),loaded.velocities.allSatisfy(\.isFinite) else {throw S.SimulationError.invalid("test-only exact legacy seed loader")}
+        var control=initialSeedControl
+        if loaded.completedSteps==922 {
+            guard limits.physicalSeedPolicy == .committedPartition,let tag=legacyOriginTag,limits.maximumPhysicalSubstepDepth>=1 else {throw S.SimulationError.invalid("legacy922 only seeds committed partition")}
+            let denominator=1<<limits.maximumPhysicalSubstepDepth
+            control = .init(policyVersion:control.policyVersion,contextIdentity:seedContextIdentity,sourceSHA256:control.sourceSHA256,
+                bodyGeometrySHA256:control.bodyGeometrySHA256,linearizationSourceIdentity:control.linearizationSourceIdentity,
+                baseTimeStepSeconds:control.baseTimeStepSeconds,maximumDepth:control.maximumDepth,originCompletedStep:922,
+                originAcceptedFrameIdentity:tag,nextSeeds:[.init(startTick:0,endTick:denominator/2,ticksPerMacroStep:denominator),
+                    .init(startTick:denominator/2,endTick:denominator,ticksPerMacroStep:denominator)])
+        } else {guard legacyOriginTag==nil else{throw S.SimulationError.invalid("first physical step cannot inherit a future tag")}}
+        _ = try checkedSeedRoots(before:loaded,control:control,phase:loaded.completedSteps==480 ? .gravityRamp:.settling)
+        state=loaded;committedSeedControl=control
+    }
+}

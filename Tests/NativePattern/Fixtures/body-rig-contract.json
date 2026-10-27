@@ -1,0 +1,32 @@
+{
+  "format": "tailorass-optional-body-rig-contract-v1",
+  "scope": "Prepared data for a future native pose/fitting implementation. No existing visible body or SDF is replaced, and no runtime fitter or skinning consumer is enabled.",
+  "assetBundle": "TrailorAss/Resources/GarmentCodeStandardBodyRig",
+  "assetCommit": "a8bc2d54ff0ac92e78ff71431b1023eda42bf482",
+  "assetLicense": "CC0-1.0; each original file is pinned and declared separately in bundle provenance",
+  "sourceIndices": "Zero-based indices in the complete 19158-vertex source OBJ. visibleToSource/sourceToVisible bind the unchanged 13380 visible vertices. Auxiliary joints are not inserted into the visible surface.",
+  "jointDefinition": "Mean of the individually normalized referenced CC0 source vertices. jointSourceVertexTable retains source coordinates, template coordinates and original IDs so a future shape field can transform each reference BEFORE recomputing the mean.",
+  "weightDefinition": "All 40156 original visible bone/vertex pairs retained; sourcePairOffsets trace the original per-bone arrays. rawValues remain unchanged; normalizedValues are raw/sum(raw) per current vertex. No four-influence pruning.",
+  "neutralPoseIdentity": "A future no-pose branch should return original positions directly for bitwise identity. The floating weighted identity blend is tested numerically, not advertised as byte-identical.",
+  "armPoseAngle": {
+    "operationalMeaningInPinnedGarmentCode": "Whole-sleeve Rz(+alpha) applied to the unmirrored construction coordinate frame, followed by the original left/right mirroring.",
+    "rightOutwardLongitudinalCoordinateAxis": "[-cos(alpha), -sin(alpha), 0]",
+    "leftOutwardLongitudinalCoordinateAxis": "[+cos(alpha), -sin(alpha), 0]",
+    "basisAngleBelowHorizontal": "alpha degrees",
+    "basisAngleToDownY": "90 - alpha degrees",
+    "anatomicalSide": "MakeHuman .L / garment left is the subject's left, with positive template X; it is not a screen-side label.",
+    "oracle": "Six complete unmodified MIT Shirt/FittedShirt constructions at 30/45/60 degrees; all 24 left/right/front/back directions also checked against native Swift placement.",
+    "notEstablishedByThisOracle": [
+      "The longitudinal coordinate basis is not the tapered sleeve's geometric centerline.",
+      "The construction rotation is not automatically a clinical shoulder-abduction measurement or a measured head-to-tail bone angle.",
+      "A future body pose must declare the mapping from its rest bone frame to the approved garment reference direction and recheck both conventions."
+    ]
+  },
+  "futureFittingBoundary": {
+    "surfaceLandmarks": "Author new triangle-ID/barycentric surface points, closed rings and surface paths with explicit definitions and template SHA. Bone proxies cannot silently become true shoulder/neck/bust measurements.",
+    "forbiddenInputs": "No MakeHuman AGPL measurement implementation or ruler/path-index dataset is incorporated.",
+    "sameBody": "Fit and pose once before cloth preparation; bind rendering, exact body queries, IPC force and continuous collision to the same final immutable mesh SHA. Current fixed-body collision support does not authorize animated body replacement during cloth simulation.",
+    "oldSDF": "The existing five-scale inverse SDF is not a distance field for independently fitted or posed geometry. It remains unchanged; a future mode needs exact final-mesh queries or a newly bound field.",
+    "remainingWork": "Native pose/skinning runtime, real surface measurement contracts, joint body fitter, body self-intersection validation and integration are not implemented by this resource preparation."
+  }
+}

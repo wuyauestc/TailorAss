@@ -1,0 +1,11 @@
+{
+  "format": "tailorass-fit-replay-goldens-v1",
+  "filesSHA256": {
+    "default-replay-golden.json": "c83af3f97fb5d92a943cc8380c0a5c9a0a9bfb333ac30d95cd8228b815624c8c",
+    "female-replay-golden.json": "92b02020f7f0218207377ef98902dc6309834975bb7c8df53a4cdac062b77c5d"
+  },
+  "templateResourceSHA256": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+  "rigResourceSHA256": "91e06b16078cb136678580fed690a0a4cd08f8284fca6c721e670aacfd7472ff",
+  "auxiliaryResourceSHA256": "47b71fabd69b9578cf2800ac2e0a7cd05a7fe6b009323d9a49dcfedb5b3aa6f4",
+  "scope": "Fixed four-control replay inputs and actual complete visible-geometry SHA, not an optimized fit/body capability/cloth fixture."
+}

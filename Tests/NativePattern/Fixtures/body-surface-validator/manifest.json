@@ -1,0 +1,80 @@
+{
+  "scope": "Six actual full surfaces only. Runtime validator still checks every newly supplied mesh; these goldens are not a universal body credential.",
+  "originalIndependentDelivery": {
+    "path": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/delivery-manifest.json",
+    "sha256": "b647233951bc3ebf299003d6aa25da11d87d704381aaa2d020613d3248d6760d"
+  },
+  "rows": [
+    {
+      "name": "default-pose-30",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/default-pose-30-result.json",
+      "sha256": "301e3789e4b43c6e74ec71f10f47944ea89968600124011101e3397c10f60fc8",
+      "actualPoseJSONSHA256": "c367c6190a6698b15bceaffaebfb1c7cf5ca2eb69e84af521e91bf1db4a02d6e",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 15366
+      }
+    },
+    {
+      "name": "default-pose-45",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/default-pose-45-result.json",
+      "sha256": "498b74cd1edbef20502dd4e2fd789479e0b67e038c621d2c3b980bd0e1b95934",
+      "actualPoseJSONSHA256": "ee94bf0ba177a8c09c69735c39a7c7215871b7fb3625cd062a707e174829a97d",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 15554
+      }
+    },
+    {
+      "name": "default-pose-60",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/default-pose-60-result.json",
+      "sha256": "d8f534ae09202a0e97a04dbd47af14ccccaf3e49193215233f2ca49a91e48601",
+      "actualPoseJSONSHA256": "ae43db9c7466475b50693170c304eb9466397f2becb26eef02f65208cf99d93f",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 14966
+      }
+    },
+    {
+      "name": "female-pose-30",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/female-pose-30-result.json",
+      "sha256": "f50d19f88d9ed978ae2200280db8aed93c6b52e680ee30e773b3d6b8c46d334b",
+      "actualPoseJSONSHA256": "68c6d9d2277a0ac0b84b2f3c7a4ec9dff28f7d32dffb9e5c53cb53ada9a75295",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 14469
+      }
+    },
+    {
+      "name": "female-pose-45",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/female-pose-45-result.json",
+      "sha256": "abd3a64b6946877d372b8c75420cff830310a3119305bfa40ebc2402e1de5a66",
+      "actualPoseJSONSHA256": "a3930f3ee562ab1a87ac580a06a20af8c91395d87f6eacdb59f5f9dfa7e8cc53",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 15201
+      }
+    },
+    {
+      "name": "female-pose-60",
+      "fullFractionResultOriginalPath": "/private/tmp/TailorAssFittedPoseExactAudit-u55jxg_e/female-pose-60-result.json",
+      "sha256": "8ee4b627a89a1accd9bfe596d3f0bca704ba034b7fd5af5dee477c9d858f5eff",
+      "actualPoseJSONSHA256": "aa9c129104a8f6302c1ae3047a5ebc711a9cad9f6780f07a59c7161d498729de",
+      "allTrianglePairs": 357928390,
+      "classification": {
+        "expectedTopologicalTouch": 161820,
+        "separated": 14819
+      }
+    }
+  ],
+  "files": {
+    "female-replay-golden.json": "92b02020f7f0218207377ef98902dc6309834975bb7c8df53a4cdac062b77c5d",
+    "pose-goldens.json": "57dd99075cf6d0331056c94a64a9c40de4be92bab896cb06518689c03bb87db1",
+    "default-replay-golden.json": "c83af3f97fb5d92a943cc8380c0a5c9a0a9bfb333ac30d95cd8228b815624c8c"
+  }
+}

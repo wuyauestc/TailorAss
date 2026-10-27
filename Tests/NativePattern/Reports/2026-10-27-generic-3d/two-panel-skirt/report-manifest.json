@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T06:13:35+08:00",
+  "historical": false,
+  "runRoot": "/private/tmp/TailorAssGenericDefaultStylesFull/Skirt2/source-pattern",
+  "generatorSHA256": "2c5427d44b24116ad2f21a0af8c26ce6c481deff274cd01c5c12c8f9df3df17a",
+  "reusedViewer": {
+    "path": "/Users/wuya/tailorAss/TailorAss/Tests/NativePattern/render-cloth-report.py",
+    "sha256": "d469caa66177f8b65c44979c1c462d08078f9482210ddcd0299d347872d4c666"
+  },
+  "actualSourceInputs": {
+    "case-summary.json": {
+      "sha256": "0f1164d1b668c25db03c4aedc1c8ec2a9605fe431061d13dc4a1fb6866bd9586",
+      "bytes": 8563
+    },
+    "complete-initial-input.json": {
+      "sha256": "0f719d03a91e85d59d297e96610da3a21ed7225def55ad231b3d4b1a464f0099",
+      "bytes": 2470060
+    },
+    "complete-paper-source.json": {
+      "sha256": "acd91e46c939896b06d6995346cc478ffe33ae11e6d831d758ea8bda159e8320",
+      "bytes": 28331
+    },
+    "complete-sewing-plan.json": {
+      "sha256": "5a24ee21812ca1a64b17bd98be54d3be7e6bf0538e15c137549d2d2856a44fb2",
+      "bytes": 746320
+    },
+    "initial-state.json": {
+      "sha256": "5cf50ce68fcab6eebe1b5698d40fd12b868a5f9ad95e4992d34dccdccdbbb0d2",
+      "bytes": 107834
+    },
+    "last-accepted-state.json": {
+      "sha256": "eb7d2e6322db4559a05644d99432279bab8b11fc7a753babbc2de945b0ed3135",
+      "bytes": 163127
+    },
+    "numerical-settings.json": {
+      "sha256": "2b8987a54b684f653a78943c48ca67f175dcd2a387c3bb592e854582c086e9ec",
+      "bytes": 993
+    },
+    "last-accepted-frame.json": {
+      "sha256": "7c16fe05910e2df24b77bf6d11077e67affa88d917d42b9744af546a24c8749a",
+      "bytes": 1901607
+    },
+    "validated-output.json": {
+      "sha256": "2714d1bec5bc652f24bd77b99e357d7f7ffe27ac94e0814a70b547b9e29208ae",
+      "bytes": 2287724
+    },
+    "validated-proof.json": {
+      "sha256": "55e15658f7e4fae3f0aaec51ab4f515fa4e27276f0e68dfbb77fc7ca6c83599b",
+      "bytes": 335332
+    },
+    "validated-metrics.json": {
+      "sha256": "0e33498a1022634778fc326aaf67234afa920a9eb5530c9b2a1b31bd2c06c9f2",
+      "bytes": 1431
+    },
+    "validated-seam-group-ids.json": {
+      "sha256": "82c402f1dabcfb032a1550878eea35b0420bcc0d50a0f87b00b79e4ad8a19f33",
+      "bytes": 22
+    },
+    "validated-output.obj": {
+      "sha256": "a0c809f57ceeec6e6c6ae006064b586ef3840af86cb168ba353ea0b55cf9baa6",
+      "bytes": 1213375
+    }
+  },
+  "inputBytesUnchanged": true,
+  "cases": [
+    {
+      "case": "source-pattern",
+      "acceptedOutputShown": true,
+      "actualCompletedSteps": 1358,
+      "stopReason": "stableValidated",
+      "warnings": [],
+      "sourceSHA256": "565b91b5bda4b91a1df7743cb993aa7b7db2c0b96dd1244c75cbbccefe283429",
+      "bodyGeometrySHA256": "f01f0e4ed4139eb08d8beb5aef6e39a975294407bf5577c708bf8a99ca332071",
+      "measurements": {
+        "initial": {
+          "sourceAreaSquareMeters": 0.44447199931524023,
+          "fabricMassKg": 0.08000495987674328,
+          "sourceEdges": 1987,
+          "sewingConstraints": 46,
+          "maximumSourceEdgeRelativeChange": 1.1324274851176597e-14,
+          "maximumActualSeamGapMeters": 0.4517742799230607,
+          "rmsActualSeamGapMeters": 0.45172231925927686
+        },
+        "final": {
+          "sourceAreaSquareMeters": 0.44447199931524023,
+          "fabricMassKg": 0.08000495987674328,
+          "sourceEdges": 1987,
+          "sewingConstraints": 46,
+          "maximumSourceEdgeRelativeChange": 0.06567548813890478,
+          "maximumActualSeamGapMeters": 5.307315691133311e-07,
+          "rmsActualSeamGapMeters": 3.7523861888872225e-07
+        }
+      }
+    }
+  ],
+  "newSimulationStarted": false,
+  "acceptanceReexecuted": false,
+  "diagnosticOBJWritten": false,
+  "externalAssets": false,
+  "reportFiles": {
+    "artifacts/source-pattern/validated-metrics.json": {
+      "sha256": "0e33498a1022634778fc326aaf67234afa920a9eb5530c9b2a1b31bd2c06c9f2",
+      "bytes": 1431
+    },
+    "artifacts/source-pattern/validated-output.json": {
+      "sha256": "2714d1bec5bc652f24bd77b99e357d7f7ffe27ac94e0814a70b547b9e29208ae",
+      "bytes": 2287724
+    },
+    "artifacts/source-pattern/validated-output.obj": {
+      "sha256": "a0c809f57ceeec6e6c6ae006064b586ef3840af86cb168ba353ea0b55cf9baa6",
+      "bytes": 1213375
+    },
+    "artifacts/source-pattern/validated-proof.json": {
+      "sha256": "55e15658f7e4fae3f0aaec51ab4f515fa4e27276f0e68dfbb77fc7ca6c83599b",
+      "bytes": 335332
+    },
+    "artifacts/source-pattern/validated-seam-group-ids.json": {
+      "sha256": "82c402f1dabcfb032a1550878eea35b0420bcc0d50a0f87b00b79e4ad8a19f33",
+      "bytes": 22
+    },
+    "index.html": {
+      "sha256": "e86c5143b55a4f8236ecee134088c4191fe5c325279c20d1d211e4c2441247b1",
+      "bytes": 1389269
+    }
+  }
+}

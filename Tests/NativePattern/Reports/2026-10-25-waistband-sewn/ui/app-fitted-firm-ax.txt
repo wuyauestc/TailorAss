@@ -1,0 +1,82 @@
+Window: "iPhone 17", App: Device Hub.
+0 standard window iPhone 17 – iOS 27.0, ID: com.apple.dt.DeviceKit.DeviceManagementWindow-AppWindow-1, Secondary Actions: Raise
+	1 split group
+		2 split group com.apple.dt.DeviceKit.DeviceManagementWindow-AppWindow-1, SidebarNavigationSplitView
+			3 scroll area
+				4 list Sidebar
+					5 row (selectable) Description: Available, Value: Expanded
+					6 row (selected) Description: iphone.gen3, Value: iPhone 17
+27.0
+Simulator
+					7 row (selectable) Description: iphone.gen3, Value: iPhone 18 Pro
+27.0
+Simulator
+			8 search text field (settable) Search
+				9 button Search
+			10 splitter (disabled, settable, float) 248
+			11 container
+				12 container
+					13 button Description: 返回纸样, Secondary Actions: Cancel
+					14 heading Description: 腰头 3D 试验, Secondary Actions: Cancel
+					15 text Description: 离线 3D 垂坠试验, Secondary Actions: Cancel
+					16 text Description: 使用当前直条腰头或贴体弧形腰头的真实裁片与侧缝，独立查看腰头曲面。顶口使用数值支撑；尚未与裙身或裤身缝合。, Secondary Actions: Cancel
+					17 pop up button Description: 人台, 标准人体（实验）, Secondary Actions: Cancel
+					18 pop up button Description: 面料实验预设, 挺括（实验预设）, Secondary Actions: Cancel
+					19 text Description: 280 g/m² · 三档为数值预设，尚未用实物样布标定。更改后需重新计算。, Secondary Actions: Cancel
+					20 switch Description: 人台, Value: 1, Secondary Actions: Cancel
+					21 switch Description: 接缝, Value: 1, Secondary Actions: Cancel
+					22 button Description: 复位, Secondary Actions: Cancel
+					23 text Description: 拖动旋转，双指缩放。侧视被手臂遮挡时可关闭人台；橙色线是原纸样侧缝。, Secondary Actions: Cancel
+					24 text Description: 计算结果, Secondary Actions: Cancel
+					25 text Description: 挺括（实验预设）, Secondary Actions: Cancel
+					26 text Description: 按参考裁片面积计算的布料质量 11.3 g, Secondary Actions: Cancel
+					27 text Description: 148 个顶点 · 188 个三角形, Secondary Actions: Cancel
+					28 text Description: 本次计算 1.2 秒 · 达到试验收敛条件, Secondary Actions: Cancel
+					29 text Description: 最大网格边长变化 5.0% · 缝合点最大间隙 0.00 mm, Secondary Actions: Cancel
+					30 text Description: 原纸样上口总长 84.3 cm · 腰头纸样宽度 4.7 cm, Secondary Actions: Cancel
+					31 text Description: 当前为独立腰头缝合预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；前后片保留独立源顶点和质量，侧缝通过实际缝合约束闭合，尚未包含裙身或完整成衣。, Secondary Actions: Cancel
+					32 text Description: 缝合保留各裁片独立顶点、原始边长和质量；接缝间隙测量实际附着点，没有通过合并顶点设为零。, Secondary Actions: Cancel
+					33 text Description: 面料是实验数值预设，人体按围度有限拟合；末态离散接触检查不能证明连续运动无穿插或实物合体。, Secondary Actions: Cancel
+					34 text Description: 使用 5% 的实验性应变限制目标；实际源边应变仍独立检测，目标不是实测面料参数。, Secondary Actions: Cancel
+					35 text Description: 末态布片自交检测：0 组非相邻三角面交叉, Secondary Actions: Cancel
+					36 text Description: 末态布片与人体相交检测：0 组三角面交叉, Secondary Actions: Cancel
+					37 text Description: 末态检查不等于连续运动无穿插；原二维纸样与 PDF 保持不变。, Secondary Actions: Cancel
+					38 button Description: 导出 3D 网格 OBJ, Secondary Actions: Cancel
+					39 button Description: 重新计算, Secondary Actions: Cancel
+					40 text Description: 试验范围, Secondary Actions: Cancel
+					41 text Description: 标准人体按腰臀围和高度有限拟合，不是个人体型重建。标准人体模式分别检查末态布片自交和布片与人体的三角面交叉；参考圆台保留原对照方式。这些检查仍不能保证连续运动无穿插，面料也尚未实物标定。, Secondary Actions: Cancel
+					42 text Description: 顶口固定支撑用于观察腰头曲面，不包含裙身、拉链和扣合工艺；结果不能代替实际试衣。, Secondary Actions: Cancel
+				43 button Description: Home, ID: app.grid.3x3
+				44 button Description: Screenshot, ID: camera.viewfinder
+				45 button Description: Record, ID: record.circle
+				46 button Rotate Left
+	47 toolbar
+		48 menu button Add, Help: Add Device, ID: plus
+		49 toggle button Description: Filter, Help: Sort and Filter, Value: off
+		50 button Description: Hide Sidebar, Secondary Actions: Increment, Decrement, Delete, Cancel
+		51 toggle button Description: Capture Keyboard, Value: off
+		52 toggle button Description: Resize mode, Help: Enter resize mode, Value: off
+		53 Zoom
+			54 radio button Description: Zoom Out, Value: 0, ID: minus.magnifyingglass
+			55 radio button Description: arrowtriangles.up.right.down.left.magnifyingglass, Help: Zoom to Fit, Value: 1
+			56 radio button Description: Zoom To Actual Size, Help: Physical Size, Value: 0, ID: 1.magnifyingglass
+			57 radio button Description: Zoom In, Value: 0, ID: plus.magnifyingglass
+		58 button Description: Open in New Window, Secondary Actions: Increment, Decrement, Delete, Cancel, Move previous, Move next, Remove from toolbar
+		59 menu button More, Help: More Actions, ID: ellipsis
+		60 Inspector Category
+			61 radio button Description: Edit, Help: Settings, Value: 0, ID: slider.horizontal.3
+			62 radio button Description: text.document, Help: Reports, Value: 0
+			63 radio button Description: Info, Value: 0, ID: info
+	64 close button
+	65 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	66 minimize button
+	67 text iPhone 17 iOS 27.0
+68 menu bar
+	69 Device Hub
+	70 File
+	71 Edit
+	72 View
+	73 Device
+	74 Controls
+	75 Window
+	76 Help

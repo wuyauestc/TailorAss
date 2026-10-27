@@ -1,0 +1,199 @@
+{
+  "scope": "NumPy LAPACK 3x2 SVD directly from original source Dm and captured actual frame469; energy differences use singular values, no native gradient implementation",
+  "fixtureSHA256": "ee60eb415c32678e97c9c079aa51fe0ebf43fcc06f853f268c8df468d45b8035",
+  "generatorSHA256": "2f3b193886ba8e8f9027f6e2361ad10871761182d975d94324426332631e0767",
+  "numpyVersion": "2.3.5",
+  "shearStiffnessNewtonPerMeter": 310.0,
+  "areaStiffnessNewtonPerMeter": 170.0,
+  "minimumPrincipalStretch": 0.19300721011025446,
+  "maximumPrincipalStretch": 2.127677416082647,
+  "minimumAreaRatio": 0.21048491421078983,
+  "referenceAreaSquareMeters": 0.7687490142067094,
+  "actualAreaSquareMeters": 0.7773229621123988,
+  "frame60MaximumEdgeStrain": 0.05003576272613475,
+  "frame60MaximumPrincipalStretch": 1.1834271181129856,
+  "energyJoules": 0.4769735562819545,
+  "gradientCentralDifferenceStepMeters": 1e-07,
+  "gradientProbes": [
+    {
+      "vertex": 0,
+      "axis": 0,
+      "gradientNewton": -0.07479960761891391
+    },
+    {
+      "vertex": 0,
+      "axis": 1,
+      "gradientNewton": -0.4050632060326187
+    },
+    {
+      "vertex": 0,
+      "axis": 2,
+      "gradientNewton": 0.03739925674706157
+    },
+    {
+      "vertex": 96,
+      "axis": 0,
+      "gradientNewton": -0.04190890356969845
+    },
+    {
+      "vertex": 96,
+      "axis": 1,
+      "gradientNewton": 0.043768416946310396
+    },
+    {
+      "vertex": 96,
+      "axis": 2,
+      "gradientNewton": 0.054008541805483645
+    },
+    {
+      "vertex": 208,
+      "axis": 0,
+      "gradientNewton": -0.12286802381078488
+    },
+    {
+      "vertex": 208,
+      "axis": 1,
+      "gradientNewton": -0.0026586491341795693
+    },
+    {
+      "vertex": 208,
+      "axis": 2,
+      "gradientNewton": 0.3004055468269762
+    },
+    {
+      "vertex": 350,
+      "axis": 0,
+      "gradientNewton": -0.04343423953834247
+    },
+    {
+      "vertex": 350,
+      "axis": 1,
+      "gradientNewton": 0.014056217301217089
+    },
+    {
+      "vertex": 350,
+      "axis": 2,
+      "gradientNewton": -0.1840792787644041
+    },
+    {
+      "vertex": 969,
+      "axis": 0,
+      "gradientNewton": 0.0727506466180472
+    },
+    {
+      "vertex": 969,
+      "axis": 1,
+      "gradientNewton": 0.008863463574204644
+    },
+    {
+      "vertex": 969,
+      "axis": 2,
+      "gradientNewton": -0.41579957865689465
+    },
+    {
+      "vertex": 1152,
+      "axis": 0,
+      "gradientNewton": 0.028795329731767794
+    },
+    {
+      "vertex": 1152,
+      "axis": 1,
+      "gradientNewton": -0.33760950785000077
+    },
+    {
+      "vertex": 1152,
+      "axis": 2,
+      "gradientNewton": 0.3300128723071616
+    },
+    {
+      "vertex": 1168,
+      "axis": 0,
+      "gradientNewton": 1.5460677910139609
+    },
+    {
+      "vertex": 1168,
+      "axis": 1,
+      "gradientNewton": -1.1960596985050032
+    },
+    {
+      "vertex": 1168,
+      "axis": 2,
+      "gradientNewton": 2.2162288043636735
+    },
+    {
+      "vertex": 1169,
+      "axis": 0,
+      "gradientNewton": -8.843207245090579
+    },
+    {
+      "vertex": 1169,
+      "axis": 1,
+      "gradientNewton": -8.744160881757335
+    },
+    {
+      "vertex": 1169,
+      "axis": 2,
+      "gradientNewton": -18.2978588361693
+    },
+    {
+      "vertex": 1170,
+      "axis": 0,
+      "gradientNewton": 5.663870303318497
+    },
+    {
+      "vertex": 1170,
+      "axis": 1,
+      "gradientNewton": 8.0394708990017
+    },
+    {
+      "vertex": 1170,
+      "axis": 2,
+      "gradientNewton": 14.70274738263333
+    },
+    {
+      "vertex": 1427,
+      "axis": 0,
+      "gradientNewton": 2.8180991007431544
+    },
+    {
+      "vertex": 1427,
+      "axis": 1,
+      "gradientNewton": 1.5800000555121763
+    },
+    {
+      "vertex": 1427,
+      "axis": 2,
+      "gradientNewton": 2.608189846875497
+    },
+    {
+      "vertex": 1740,
+      "axis": 0,
+      "gradientNewton": 0.5214491832772339
+    },
+    {
+      "vertex": 1740,
+      "axis": 1,
+      "gradientNewton": -0.10090824870134796
+    },
+    {
+      "vertex": 1740,
+      "axis": 2,
+      "gradientNewton": -0.09742246370736396
+    },
+    {
+      "vertex": 1999,
+      "axis": 0,
+      "gradientNewton": -0.19137019802162314
+    },
+    {
+      "vertex": 1999,
+      "axis": 1,
+      "gradientNewton": 1.952768658719517
+    },
+    {
+      "vertex": 1999,
+      "axis": 2,
+      "gradientNewton": 0.24000353454622925
+    }
+  ]
+}

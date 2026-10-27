@@ -1,0 +1,4791 @@
+{
+  "allBoundaryPaths" : [
+    {
+      "edge" : {
+        "edgeIndex" : 0,
+        "panelID" : "skirt_front"
+      },
+      "edgeID" : "skirt_front-e0",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 0,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.03125
+          ],
+          "vertexIDs" : [
+            0,
+            1
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.03125,
+            0.0625
+          ],
+          "vertexIDs" : [
+            1,
+            2
+          ]
+        },
+        {
+          "adjacentTriangleID" : 2,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.0625,
+            0.09375
+          ],
+          "vertexIDs" : [
+            2,
+            3
+          ]
+        },
+        {
+          "adjacentTriangleID" : 3,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.09375,
+            0.125
+          ],
+          "vertexIDs" : [
+            3,
+            4
+          ]
+        },
+        {
+          "adjacentTriangleID" : 4,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.125,
+            0.15625
+          ],
+          "vertexIDs" : [
+            4,
+            5
+          ]
+        },
+        {
+          "adjacentTriangleID" : 5,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.15625,
+            0.1875
+          ],
+          "vertexIDs" : [
+            5,
+            6
+          ]
+        },
+        {
+          "adjacentTriangleID" : 6,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.1875,
+            0.21875
+          ],
+          "vertexIDs" : [
+            6,
+            7
+          ]
+        },
+        {
+          "adjacentTriangleID" : 7,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.21875,
+            0.25
+          ],
+          "vertexIDs" : [
+            7,
+            8
+          ]
+        },
+        {
+          "adjacentTriangleID" : 8,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.25,
+            0.28125
+          ],
+          "vertexIDs" : [
+            8,
+            9
+          ]
+        },
+        {
+          "adjacentTriangleID" : 9,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.28125,
+            0.3125
+          ],
+          "vertexIDs" : [
+            9,
+            10
+          ]
+        },
+        {
+          "adjacentTriangleID" : 10,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.3125,
+            0.34375
+          ],
+          "vertexIDs" : [
+            10,
+            11
+          ]
+        },
+        {
+          "adjacentTriangleID" : 11,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.34375,
+            0.375
+          ],
+          "vertexIDs" : [
+            11,
+            12
+          ]
+        },
+        {
+          "adjacentTriangleID" : 12,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.375,
+            0.40625000000000006
+          ],
+          "vertexIDs" : [
+            12,
+            13
+          ]
+        },
+        {
+          "adjacentTriangleID" : 13,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.40625000000000006,
+            0.4375
+          ],
+          "vertexIDs" : [
+            13,
+            14
+          ]
+        },
+        {
+          "adjacentTriangleID" : 14,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.4375,
+            0.46875
+          ],
+          "vertexIDs" : [
+            14,
+            15
+          ]
+        },
+        {
+          "adjacentTriangleID" : 15,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.46875,
+            0.5
+          ],
+          "vertexIDs" : [
+            15,
+            16
+          ]
+        },
+        {
+          "adjacentTriangleID" : 16,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 16,
+          "sourceArcRange" : [
+            0.5,
+            0.53125
+          ],
+          "vertexIDs" : [
+            16,
+            17
+          ]
+        },
+        {
+          "adjacentTriangleID" : 17,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 17,
+          "sourceArcRange" : [
+            0.53125,
+            0.5625
+          ],
+          "vertexIDs" : [
+            17,
+            18
+          ]
+        },
+        {
+          "adjacentTriangleID" : 18,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 18,
+          "sourceArcRange" : [
+            0.5625,
+            0.59375
+          ],
+          "vertexIDs" : [
+            18,
+            19
+          ]
+        },
+        {
+          "adjacentTriangleID" : 19,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 19,
+          "sourceArcRange" : [
+            0.59375,
+            0.625
+          ],
+          "vertexIDs" : [
+            19,
+            20
+          ]
+        },
+        {
+          "adjacentTriangleID" : 20,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 20,
+          "sourceArcRange" : [
+            0.625,
+            0.65625
+          ],
+          "vertexIDs" : [
+            20,
+            21
+          ]
+        },
+        {
+          "adjacentTriangleID" : 21,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 21,
+          "sourceArcRange" : [
+            0.65625,
+            0.6875
+          ],
+          "vertexIDs" : [
+            21,
+            22
+          ]
+        },
+        {
+          "adjacentTriangleID" : 22,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 22,
+          "sourceArcRange" : [
+            0.6875,
+            0.71875
+          ],
+          "vertexIDs" : [
+            22,
+            23
+          ]
+        },
+        {
+          "adjacentTriangleID" : 23,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 23,
+          "sourceArcRange" : [
+            0.71875,
+            0.75
+          ],
+          "vertexIDs" : [
+            23,
+            24
+          ]
+        },
+        {
+          "adjacentTriangleID" : 24,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 24,
+          "sourceArcRange" : [
+            0.75,
+            0.78125
+          ],
+          "vertexIDs" : [
+            24,
+            25
+          ]
+        },
+        {
+          "adjacentTriangleID" : 25,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 25,
+          "sourceArcRange" : [
+            0.78125,
+            0.8125000000000001
+          ],
+          "vertexIDs" : [
+            25,
+            26
+          ]
+        },
+        {
+          "adjacentTriangleID" : 26,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 26,
+          "sourceArcRange" : [
+            0.8125000000000001,
+            0.8437500000000001
+          ],
+          "vertexIDs" : [
+            26,
+            27
+          ]
+        },
+        {
+          "adjacentTriangleID" : 27,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 27,
+          "sourceArcRange" : [
+            0.8437500000000001,
+            0.875
+          ],
+          "vertexIDs" : [
+            27,
+            28
+          ]
+        },
+        {
+          "adjacentTriangleID" : 28,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 28,
+          "sourceArcRange" : [
+            0.875,
+            0.90625
+          ],
+          "vertexIDs" : [
+            28,
+            29
+          ]
+        },
+        {
+          "adjacentTriangleID" : 29,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 29,
+          "sourceArcRange" : [
+            0.90625,
+            0.9375
+          ],
+          "vertexIDs" : [
+            29,
+            30
+          ]
+        },
+        {
+          "adjacentTriangleID" : 30,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 30,
+          "sourceArcRange" : [
+            0.9375,
+            0.96875
+          ],
+          "vertexIDs" : [
+            30,
+            31
+          ]
+        },
+        {
+          "adjacentTriangleID" : 31,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e0",
+          "segmentIndex" : 31,
+          "sourceArcRange" : [
+            0.96875,
+            1
+          ],
+          "vertexIDs" : [
+            31,
+            32
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625000000000006,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125000000000001,
+        0.8437500000000001,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1
+      ],
+      "sourceLengthMeters" : 0.5875739999999999,
+      "sourceParameters" : [
+        0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1
+      ],
+      "vertexIDs" : [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 1,
+        "panelID" : "skirt_front"
+      },
+      "edgeID" : "skirt_front-e1",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 185,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.06249999999999999
+          ],
+          "vertexIDs" : [
+            32,
+            33
+          ]
+        },
+        {
+          "adjacentTriangleID" : 176,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.06249999999999999,
+            0.12499999999999999
+          ],
+          "vertexIDs" : [
+            33,
+            34
+          ]
+        },
+        {
+          "adjacentTriangleID" : 153,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.12499999999999999,
+            0.18749999999999997
+          ],
+          "vertexIDs" : [
+            34,
+            35
+          ]
+        },
+        {
+          "adjacentTriangleID" : 142,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.18749999999999997,
+            0.24999999999999997
+          ],
+          "vertexIDs" : [
+            35,
+            36
+          ]
+        },
+        {
+          "adjacentTriangleID" : 134,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.24999999999999997,
+            0.31249999999999994
+          ],
+          "vertexIDs" : [
+            36,
+            37
+          ]
+        },
+        {
+          "adjacentTriangleID" : 127,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.31249999999999994,
+            0.37499999999999994
+          ],
+          "vertexIDs" : [
+            37,
+            38
+          ]
+        },
+        {
+          "adjacentTriangleID" : 126,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.37499999999999994,
+            0.4374999999999999
+          ],
+          "vertexIDs" : [
+            38,
+            39
+          ]
+        },
+        {
+          "adjacentTriangleID" : 119,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.4374999999999999,
+            0.4999999999999999
+          ],
+          "vertexIDs" : [
+            39,
+            40
+          ]
+        },
+        {
+          "adjacentTriangleID" : 40,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.4999999999999999,
+            0.5624999999999998
+          ],
+          "vertexIDs" : [
+            40,
+            41
+          ]
+        },
+        {
+          "adjacentTriangleID" : 41,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.5624999999999998,
+            0.6249999999999998
+          ],
+          "vertexIDs" : [
+            41,
+            42
+          ]
+        },
+        {
+          "adjacentTriangleID" : 42,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.6249999999999998,
+            0.6874999999999998
+          ],
+          "vertexIDs" : [
+            42,
+            43
+          ]
+        },
+        {
+          "adjacentTriangleID" : 43,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.6874999999999998,
+            0.7499999999999999
+          ],
+          "vertexIDs" : [
+            43,
+            44
+          ]
+        },
+        {
+          "adjacentTriangleID" : 44,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.7499999999999999,
+            0.8124999999999999
+          ],
+          "vertexIDs" : [
+            44,
+            45
+          ]
+        },
+        {
+          "adjacentTriangleID" : 45,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.8124999999999999,
+            0.8749999999999999
+          ],
+          "vertexIDs" : [
+            45,
+            46
+          ]
+        },
+        {
+          "adjacentTriangleID" : 46,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.8749999999999999,
+            0.9375
+          ],
+          "vertexIDs" : [
+            46,
+            47
+          ]
+        },
+        {
+          "adjacentTriangleID" : 47,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e1",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.9375,
+            1
+          ],
+          "vertexIDs" : [
+            47,
+            48
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.06249999999999999,
+        0.12499999999999999,
+        0.18749999999999997,
+        0.24999999999999997,
+        0.31249999999999994,
+        0.37499999999999994,
+        0.4374999999999999,
+        0.4999999999999999,
+        0.5624999999999998,
+        0.6249999999999998,
+        0.6874999999999998,
+        0.7499999999999999,
+        0.8124999999999999,
+        0.8749999999999999,
+        0.9375,
+        1
+      ],
+      "sourceLengthMeters" : 0.4054146,
+      "sourceParameters" : [
+        0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "vertexIDs" : [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "edgeID" : "skirt_front-e2",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 48,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.03125
+          ],
+          "vertexIDs" : [
+            48,
+            49
+          ]
+        },
+        {
+          "adjacentTriangleID" : 179,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.03125,
+            0.0625
+          ],
+          "vertexIDs" : [
+            49,
+            50
+          ]
+        },
+        {
+          "adjacentTriangleID" : 163,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.0625,
+            0.09375
+          ],
+          "vertexIDs" : [
+            50,
+            51
+          ]
+        },
+        {
+          "adjacentTriangleID" : 156,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.09375,
+            0.125
+          ],
+          "vertexIDs" : [
+            51,
+            52
+          ]
+        },
+        {
+          "adjacentTriangleID" : 147,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.125,
+            0.15625
+          ],
+          "vertexIDs" : [
+            52,
+            53
+          ]
+        },
+        {
+          "adjacentTriangleID" : 139,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.15625,
+            0.1875
+          ],
+          "vertexIDs" : [
+            53,
+            54
+          ]
+        },
+        {
+          "adjacentTriangleID" : 54,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.1875,
+            0.21875
+          ],
+          "vertexIDs" : [
+            54,
+            55
+          ]
+        },
+        {
+          "adjacentTriangleID" : 130,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.21875,
+            0.25
+          ],
+          "vertexIDs" : [
+            55,
+            56
+          ]
+        },
+        {
+          "adjacentTriangleID" : 125,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.25,
+            0.28125
+          ],
+          "vertexIDs" : [
+            56,
+            57
+          ]
+        },
+        {
+          "adjacentTriangleID" : 124,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.28125,
+            0.3125
+          ],
+          "vertexIDs" : [
+            57,
+            58
+          ]
+        },
+        {
+          "adjacentTriangleID" : 117,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.3125,
+            0.34375
+          ],
+          "vertexIDs" : [
+            58,
+            59
+          ]
+        },
+        {
+          "adjacentTriangleID" : 110,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.34375,
+            0.375
+          ],
+          "vertexIDs" : [
+            59,
+            60
+          ]
+        },
+        {
+          "adjacentTriangleID" : 111,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.375,
+            0.40625000000000006
+          ],
+          "vertexIDs" : [
+            60,
+            61
+          ]
+        },
+        {
+          "adjacentTriangleID" : 109,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.40625000000000006,
+            0.4375
+          ],
+          "vertexIDs" : [
+            61,
+            62
+          ]
+        },
+        {
+          "adjacentTriangleID" : 104,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.4375,
+            0.46875
+          ],
+          "vertexIDs" : [
+            62,
+            63
+          ]
+        },
+        {
+          "adjacentTriangleID" : 102,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.46875,
+            0.5
+          ],
+          "vertexIDs" : [
+            63,
+            64
+          ]
+        },
+        {
+          "adjacentTriangleID" : 103,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 16,
+          "sourceArcRange" : [
+            0.5,
+            0.53125
+          ],
+          "vertexIDs" : [
+            64,
+            65
+          ]
+        },
+        {
+          "adjacentTriangleID" : 100,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 17,
+          "sourceArcRange" : [
+            0.53125,
+            0.5625
+          ],
+          "vertexIDs" : [
+            65,
+            66
+          ]
+        },
+        {
+          "adjacentTriangleID" : 99,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 18,
+          "sourceArcRange" : [
+            0.5625,
+            0.59375
+          ],
+          "vertexIDs" : [
+            66,
+            67
+          ]
+        },
+        {
+          "adjacentTriangleID" : 97,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 19,
+          "sourceArcRange" : [
+            0.59375,
+            0.625
+          ],
+          "vertexIDs" : [
+            67,
+            68
+          ]
+        },
+        {
+          "adjacentTriangleID" : 95,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 20,
+          "sourceArcRange" : [
+            0.625,
+            0.65625
+          ],
+          "vertexIDs" : [
+            68,
+            69
+          ]
+        },
+        {
+          "adjacentTriangleID" : 69,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 21,
+          "sourceArcRange" : [
+            0.65625,
+            0.6875
+          ],
+          "vertexIDs" : [
+            69,
+            70
+          ]
+        },
+        {
+          "adjacentTriangleID" : 70,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 22,
+          "sourceArcRange" : [
+            0.6875,
+            0.71875
+          ],
+          "vertexIDs" : [
+            70,
+            71
+          ]
+        },
+        {
+          "adjacentTriangleID" : 71,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 23,
+          "sourceArcRange" : [
+            0.71875,
+            0.75
+          ],
+          "vertexIDs" : [
+            71,
+            72
+          ]
+        },
+        {
+          "adjacentTriangleID" : 72,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 24,
+          "sourceArcRange" : [
+            0.75,
+            0.78125
+          ],
+          "vertexIDs" : [
+            72,
+            73
+          ]
+        },
+        {
+          "adjacentTriangleID" : 73,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 25,
+          "sourceArcRange" : [
+            0.78125,
+            0.8125000000000001
+          ],
+          "vertexIDs" : [
+            73,
+            74
+          ]
+        },
+        {
+          "adjacentTriangleID" : 74,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 26,
+          "sourceArcRange" : [
+            0.8125000000000001,
+            0.8437500000000001
+          ],
+          "vertexIDs" : [
+            74,
+            75
+          ]
+        },
+        {
+          "adjacentTriangleID" : 75,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 27,
+          "sourceArcRange" : [
+            0.8437500000000001,
+            0.875
+          ],
+          "vertexIDs" : [
+            75,
+            76
+          ]
+        },
+        {
+          "adjacentTriangleID" : 76,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 28,
+          "sourceArcRange" : [
+            0.875,
+            0.90625
+          ],
+          "vertexIDs" : [
+            76,
+            77
+          ]
+        },
+        {
+          "adjacentTriangleID" : 77,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 29,
+          "sourceArcRange" : [
+            0.90625,
+            0.9375
+          ],
+          "vertexIDs" : [
+            77,
+            78
+          ]
+        },
+        {
+          "adjacentTriangleID" : 78,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 30,
+          "sourceArcRange" : [
+            0.9375,
+            0.96875
+          ],
+          "vertexIDs" : [
+            78,
+            79
+          ]
+        },
+        {
+          "adjacentTriangleID" : 79,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e2",
+          "segmentIndex" : 31,
+          "sourceArcRange" : [
+            0.96875,
+            1
+          ],
+          "vertexIDs" : [
+            79,
+            80
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625000000000006,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125000000000001,
+        0.8437500000000001,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1
+      ],
+      "sourceLengthMeters" : 0.5875739999999999,
+      "sourceParameters" : [
+        0,
+        0.03125,
+        0.0625,
+        0.09375,
+        0.125,
+        0.15625,
+        0.1875,
+        0.21875,
+        0.25,
+        0.28125,
+        0.3125,
+        0.34375,
+        0.375,
+        0.40625,
+        0.4375,
+        0.46875,
+        0.5,
+        0.53125,
+        0.5625,
+        0.59375,
+        0.625,
+        0.65625,
+        0.6875,
+        0.71875,
+        0.75,
+        0.78125,
+        0.8125,
+        0.84375,
+        0.875,
+        0.90625,
+        0.9375,
+        0.96875,
+        1
+      ],
+      "vertexIDs" : [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 3,
+        "panelID" : "skirt_front"
+      },
+      "edgeID" : "skirt_front-e3",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 183,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.06249999999999999
+          ],
+          "vertexIDs" : [
+            80,
+            81
+          ]
+        },
+        {
+          "adjacentTriangleID" : 174,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.06249999999999999,
+            0.12499999999999999
+          ],
+          "vertexIDs" : [
+            81,
+            82
+          ]
+        },
+        {
+          "adjacentTriangleID" : 151,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.12499999999999999,
+            0.18749999999999997
+          ],
+          "vertexIDs" : [
+            82,
+            83
+          ]
+        },
+        {
+          "adjacentTriangleID" : 144,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.18749999999999997,
+            0.24999999999999997
+          ],
+          "vertexIDs" : [
+            83,
+            84
+          ]
+        },
+        {
+          "adjacentTriangleID" : 136,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.24999999999999997,
+            0.31249999999999994
+          ],
+          "vertexIDs" : [
+            84,
+            85
+          ]
+        },
+        {
+          "adjacentTriangleID" : 129,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.31249999999999994,
+            0.37499999999999994
+          ],
+          "vertexIDs" : [
+            85,
+            86
+          ]
+        },
+        {
+          "adjacentTriangleID" : 128,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.37499999999999994,
+            0.4374999999999999
+          ],
+          "vertexIDs" : [
+            86,
+            87
+          ]
+        },
+        {
+          "adjacentTriangleID" : 121,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.4374999999999999,
+            0.4999999999999999
+          ],
+          "vertexIDs" : [
+            87,
+            88
+          ]
+        },
+        {
+          "adjacentTriangleID" : 114,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.4999999999999999,
+            0.5624999999999998
+          ],
+          "vertexIDs" : [
+            88,
+            89
+          ]
+        },
+        {
+          "adjacentTriangleID" : 122,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.5624999999999998,
+            0.6249999999999998
+          ],
+          "vertexIDs" : [
+            89,
+            90
+          ]
+        },
+        {
+          "adjacentTriangleID" : 123,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.6249999999999998,
+            0.6874999999999998
+          ],
+          "vertexIDs" : [
+            90,
+            91
+          ]
+        },
+        {
+          "adjacentTriangleID" : 132,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.6874999999999998,
+            0.7499999999999999
+          ],
+          "vertexIDs" : [
+            91,
+            92
+          ]
+        },
+        {
+          "adjacentTriangleID" : 154,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.7499999999999999,
+            0.8124999999999999
+          ],
+          "vertexIDs" : [
+            92,
+            93
+          ]
+        },
+        {
+          "adjacentTriangleID" : 164,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.8124999999999999,
+            0.8749999999999999
+          ],
+          "vertexIDs" : [
+            93,
+            94
+          ]
+        },
+        {
+          "adjacentTriangleID" : 172,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.8749999999999999,
+            0.9375
+          ],
+          "vertexIDs" : [
+            94,
+            95
+          ]
+        },
+        {
+          "adjacentTriangleID" : 180,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "skirt_front"
+          },
+          "edgeID" : "skirt_front-e3",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.9375,
+            1
+          ],
+          "vertexIDs" : [
+            95,
+            0
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.06249999999999999,
+        0.12499999999999999,
+        0.18749999999999997,
+        0.24999999999999997,
+        0.31249999999999994,
+        0.37499999999999994,
+        0.4374999999999999,
+        0.4999999999999999,
+        0.5624999999999998,
+        0.6249999999999998,
+        0.6874999999999998,
+        0.7499999999999999,
+        0.8124999999999999,
+        0.8749999999999999,
+        0.9375,
+        1
+      ],
+      "sourceLengthMeters" : 0.4054146,
+      "sourceParameters" : [
+        0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "vertexIDs" : [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        0
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 0,
+        "panelID" : "wb_front"
+      },
+      "edgeID" : "wb_front-e0",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 1264,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.06250000000000001
+          ],
+          "vertexIDs" : [
+            681,
+            682
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1265,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.06250000000000001,
+            0.12500000000000003
+          ],
+          "vertexIDs" : [
+            682,
+            683
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1266,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.12500000000000003,
+            0.18750000000000003
+          ],
+          "vertexIDs" : [
+            683,
+            684
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1267,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.18750000000000003,
+            0.25000000000000006
+          ],
+          "vertexIDs" : [
+            684,
+            685
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1268,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.25000000000000006,
+            0.3125
+          ],
+          "vertexIDs" : [
+            685,
+            686
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1269,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.3125,
+            0.375
+          ],
+          "vertexIDs" : [
+            686,
+            687
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1270,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.375,
+            0.4375
+          ],
+          "vertexIDs" : [
+            687,
+            688
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1271,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.4375,
+            0.5
+          ],
+          "vertexIDs" : [
+            688,
+            689
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1272,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.5,
+            0.5625
+          ],
+          "vertexIDs" : [
+            689,
+            690
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1273,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.5625,
+            0.625
+          ],
+          "vertexIDs" : [
+            690,
+            691
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1274,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.625,
+            0.6875
+          ],
+          "vertexIDs" : [
+            691,
+            692
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1275,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.6875,
+            0.75
+          ],
+          "vertexIDs" : [
+            692,
+            693
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1276,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.75,
+            0.8125
+          ],
+          "vertexIDs" : [
+            693,
+            694
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1277,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.8125,
+            0.875
+          ],
+          "vertexIDs" : [
+            694,
+            695
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1278,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.875,
+            0.9375
+          ],
+          "vertexIDs" : [
+            695,
+            696
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1279,
+          "edge" : {
+            "edgeIndex" : 0,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e0",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.9375,
+            1
+          ],
+          "vertexIDs" : [
+            696,
+            697
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.06250000000000001,
+        0.12500000000000003,
+        0.18750000000000003,
+        0.25000000000000006,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "sourceLengthMeters" : 0.45197999999999994,
+      "sourceParameters" : [
+        0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "vertexIDs" : [
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687,
+        688,
+        689,
+        690,
+        691,
+        692,
+        693,
+        694,
+        695,
+        696,
+        697
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 1,
+        "panelID" : "wb_front"
+      },
+      "edgeID" : "wb_front-e1",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 1328,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e1",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.5
+          ],
+          "vertexIDs" : [
+            697,
+            698
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1281,
+          "edge" : {
+            "edgeIndex" : 1,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e1",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.5,
+            1
+          ],
+          "vertexIDs" : [
+            698,
+            699
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.5,
+        1
+      ],
+      "sourceLengthMeters" : 0.0469674,
+      "sourceParameters" : [
+        0,
+        0.5,
+        1
+      ],
+      "vertexIDs" : [
+        697,
+        698,
+        699
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 2,
+        "panelID" : "wb_front"
+      },
+      "edgeID" : "wb_front-e2",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 1329,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.06250000000000001
+          ],
+          "vertexIDs" : [
+            699,
+            700
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1317,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.06250000000000001,
+            0.12500000000000003
+          ],
+          "vertexIDs" : [
+            700,
+            701
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1315,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 2,
+          "sourceArcRange" : [
+            0.12500000000000003,
+            0.18750000000000003
+          ],
+          "vertexIDs" : [
+            701,
+            702
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1325,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 3,
+          "sourceArcRange" : [
+            0.18750000000000003,
+            0.25000000000000006
+          ],
+          "vertexIDs" : [
+            702,
+            703
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1299,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 4,
+          "sourceArcRange" : [
+            0.25000000000000006,
+            0.3125
+          ],
+          "vertexIDs" : [
+            703,
+            704
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1313,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 5,
+          "sourceArcRange" : [
+            0.3125,
+            0.375
+          ],
+          "vertexIDs" : [
+            704,
+            705
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1311,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 6,
+          "sourceArcRange" : [
+            0.375,
+            0.4375
+          ],
+          "vertexIDs" : [
+            705,
+            706
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1309,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 7,
+          "sourceArcRange" : [
+            0.4375,
+            0.5
+          ],
+          "vertexIDs" : [
+            706,
+            707
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1307,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 8,
+          "sourceArcRange" : [
+            0.5,
+            0.5625
+          ],
+          "vertexIDs" : [
+            707,
+            708
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1305,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 9,
+          "sourceArcRange" : [
+            0.5625,
+            0.625
+          ],
+          "vertexIDs" : [
+            708,
+            709
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1301,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 10,
+          "sourceArcRange" : [
+            0.625,
+            0.6875
+          ],
+          "vertexIDs" : [
+            709,
+            710
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1303,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 11,
+          "sourceArcRange" : [
+            0.6875,
+            0.75
+          ],
+          "vertexIDs" : [
+            710,
+            711
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1323,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 12,
+          "sourceArcRange" : [
+            0.75,
+            0.8125
+          ],
+          "vertexIDs" : [
+            711,
+            712
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1321,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 13,
+          "sourceArcRange" : [
+            0.8125,
+            0.875
+          ],
+          "vertexIDs" : [
+            712,
+            713
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1319,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 14,
+          "sourceArcRange" : [
+            0.875,
+            0.9375
+          ],
+          "vertexIDs" : [
+            713,
+            714
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1297,
+          "edge" : {
+            "edgeIndex" : 2,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e2",
+          "segmentIndex" : 15,
+          "sourceArcRange" : [
+            0.9375,
+            1
+          ],
+          "vertexIDs" : [
+            714,
+            715
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.06250000000000001,
+        0.12500000000000003,
+        0.18750000000000003,
+        0.25000000000000006,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "sourceLengthMeters" : 0.45197999999999994,
+      "sourceParameters" : [
+        0,
+        0.0625,
+        0.125,
+        0.1875,
+        0.25,
+        0.3125,
+        0.375,
+        0.4375,
+        0.5,
+        0.5625,
+        0.625,
+        0.6875,
+        0.75,
+        0.8125,
+        0.875,
+        0.9375,
+        1
+      ],
+      "vertexIDs" : [
+        699,
+        700,
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710,
+        711,
+        712,
+        713,
+        714,
+        715
+      ]
+    },
+    {
+      "edge" : {
+        "edgeIndex" : 3,
+        "panelID" : "wb_front"
+      },
+      "edgeID" : "wb_front-e3",
+      "segments" : [
+        {
+          "adjacentTriangleID" : 1327,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e3",
+          "segmentIndex" : 0,
+          "sourceArcRange" : [
+            0,
+            0.5
+          ],
+          "vertexIDs" : [
+            715,
+            716
+          ]
+        },
+        {
+          "adjacentTriangleID" : 1326,
+          "edge" : {
+            "edgeIndex" : 3,
+            "panelID" : "wb_front"
+          },
+          "edgeID" : "wb_front-e3",
+          "segmentIndex" : 1,
+          "sourceArcRange" : [
+            0.5,
+            1
+          ],
+          "vertexIDs" : [
+            716,
+            681
+          ]
+        }
+      ],
+      "sourceArcFractions" : [
+        0,
+        0.5,
+        1
+      ],
+      "sourceLengthMeters" : 0.0469674,
+      "sourceParameters" : [
+        0,
+        0.5,
+        1
+      ],
+      "vertexIDs" : [
+        715,
+        716,
+        681
+      ]
+    }
+  ],
+  "anchors" : [
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            48
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 48,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 0,
+            "sourceArcRange" : [
+              0,
+              0.03125
+            ],
+            "vertexIDs" : [
+              48,
+              49
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0,
+          0.03125
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            715
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1297,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 15,
+            "sourceArcRange" : [
+              0.9375,
+              1
+            ],
+            "vertexIDs" : [
+              714,
+              715
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 1,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.9375,
+          1
+        ]
+      },
+      "constraintIndex" : 0,
+      "normalizedSeamFraction" : 0,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            54,
+            55
+          ],
+          "weights" : [
+            0.5999999999999996,
+            0.40000000000000036
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 54,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 6,
+            "sourceArcRange" : [
+              0.1875,
+              0.21875
+            ],
+            "vertexIDs" : [
+              54,
+              55
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.2,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.1875,
+          0.21875
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            711,
+            712
+          ],
+          "weights" : [
+            0.1999999999999993,
+            0.8000000000000007
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1323,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 12,
+            "sourceArcRange" : [
+              0.75,
+              0.8125
+            ],
+            "vertexIDs" : [
+              711,
+              712
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.8,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.75,
+          0.8125
+        ]
+      },
+      "constraintIndex" : 1,
+      "normalizedSeamFraction" : 0.2,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            60,
+            61
+          ],
+          "weights" : [
+            0.20000000000000073,
+            0.7999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 111,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 12,
+            "sourceArcRange" : [
+              0.375,
+              0.40625000000000006
+            ],
+            "vertexIDs" : [
+              60,
+              61
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.4,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.375,
+          0.40625
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            708,
+            709
+          ],
+          "weights" : [
+            0.40000000000000036,
+            0.5999999999999996
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1305,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 9,
+            "sourceArcRange" : [
+              0.5625,
+              0.625
+            ],
+            "vertexIDs" : [
+              708,
+              709
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.6,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.5625,
+          0.625
+        ]
+      },
+      "constraintIndex" : 2,
+      "normalizedSeamFraction" : 0.4,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            67,
+            68
+          ],
+          "weights" : [
+            0.8000000000000007,
+            0.1999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 97,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 19,
+            "sourceArcRange" : [
+              0.59375,
+              0.625
+            ],
+            "vertexIDs" : [
+              67,
+              68
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.6,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.59375,
+          0.625
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            705,
+            706
+          ],
+          "weights" : [
+            0.5999999999999996,
+            0.40000000000000036
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1311,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 6,
+            "sourceArcRange" : [
+              0.375,
+              0.4375
+            ],
+            "vertexIDs" : [
+              705,
+              706
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.4,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.375,
+          0.4375
+        ]
+      },
+      "constraintIndex" : 3,
+      "normalizedSeamFraction" : 0.6,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            73,
+            74
+          ],
+          "weights" : [
+            0.4000000000000007,
+            0.5999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 73,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 25,
+            "sourceArcRange" : [
+              0.78125,
+              0.8125000000000001
+            ],
+            "vertexIDs" : [
+              73,
+              74
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.8,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.78125,
+          0.8125
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            702,
+            703
+          ],
+          "weights" : [
+            0.8000000000000013,
+            0.19999999999999873
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1325,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 3,
+            "sourceArcRange" : [
+              0.18750000000000003,
+              0.25000000000000006
+            ],
+            "vertexIDs" : [
+              702,
+              703
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.19999999999999996,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.1875,
+          0.25
+        ]
+      },
+      "constraintIndex" : 4,
+      "normalizedSeamFraction" : 0.8,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            80
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 79,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 31,
+            "sourceArcRange" : [
+              0.96875,
+              1
+            ],
+            "vertexIDs" : [
+              79,
+              80
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 1,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.96875,
+          1
+        ]
+      },
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            699
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1329,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 0,
+            "sourceArcRange" : [
+              0,
+              0.06250000000000001
+            ],
+            "vertexIDs" : [
+              699,
+              700
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0,
+          0.0625
+        ]
+      },
+      "constraintIndex" : 5,
+      "normalizedSeamFraction" : 1,
+      "seamID" : "waist-gather",
+      "stitchIndex" : 0
+    }
+  ],
+  "constraints" : [
+    {
+      "a" : {
+        "vertexIDs" : [
+          48
+        ],
+        "weights" : [
+          1
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          715
+        ],
+        "weights" : [
+          1
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : 0.8535960419586219,
+        "y" : 0.5207328969136664,
+        "z" : -0.014527464488874969
+      },
+      "initialGapMeters" : 0.6883513642492763,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                48
+              ],
+              "weights" : [
+                1
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 48,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 0,
+                "sourceArcRange" : [
+                  0,
+                  0.03125
+                ],
+                "vertexIDs" : [
+                  48,
+                  49
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 0,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0,
+              0.03125
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                715
+              ],
+              "weights" : [
+                1
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1297,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 15,
+                "sourceArcRange" : [
+                  0.9375,
+                  1
+                ],
+                "vertexIDs" : [
+                  714,
+                  715
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 1,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0.9375,
+              1
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    },
+    {
+      "a" : {
+        "vertexIDs" : [
+          54,
+          55
+        ],
+        "weights" : [
+          0.5999999999999996,
+          0.40000000000000036
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          711,
+          712
+        ],
+        "weights" : [
+          0.1999999999999993,
+          0.8000000000000007
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : 0.7269979891092083,
+        "y" : 0.6863725365055825,
+        "z" : -0.019148497644997157
+      },
+      "initialGapMeters" : 0.5222341817825409,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                54,
+                55
+              ],
+              "weights" : [
+                0.5999999999999996,
+                0.40000000000000036
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 54,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 6,
+                "sourceArcRange" : [
+                  0.1875,
+                  0.21875
+                ],
+                "vertexIDs" : [
+                  54,
+                  55
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 0.2,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0.1875,
+              0.21875
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                711,
+                712
+              ],
+              "weights" : [
+                0.1999999999999993,
+                0.8000000000000007
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1323,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 12,
+                "sourceArcRange" : [
+                  0.75,
+                  0.8125
+                ],
+                "vertexIDs" : [
+                  711,
+                  712
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 0.8,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0.75,
+              0.8125
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    },
+    {
+      "a" : {
+        "vertexIDs" : [
+          60,
+          61
+        ],
+        "weights" : [
+          0.20000000000000073,
+          0.7999999999999993
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          708,
+          709
+        ],
+        "weights" : [
+          0.40000000000000036,
+          0.5999999999999996
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : 0.43197622252896445,
+        "y" : 0.901534228529466,
+        "z" : -0.02515110254814282
+      },
+      "initialGapMeters" : 0.3975968839083123,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                60,
+                61
+              ],
+              "weights" : [
+                0.20000000000000073,
+                0.7999999999999993
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 111,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 12,
+                "sourceArcRange" : [
+                  0.375,
+                  0.40625000000000006
+                ],
+                "vertexIDs" : [
+                  60,
+                  61
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 0.4,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0.375,
+              0.40625
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                708,
+                709
+              ],
+              "weights" : [
+                0.40000000000000036,
+                0.5999999999999996
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1305,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 9,
+                "sourceArcRange" : [
+                  0.5625,
+                  0.625
+                ],
+                "vertexIDs" : [
+                  708,
+                  709
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 0.6,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0.5625,
+              0.625
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    },
+    {
+      "a" : {
+        "vertexIDs" : [
+          67,
+          68
+        ],
+        "weights" : [
+          0.8000000000000007,
+          0.1999999999999993
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          705,
+          706
+        ],
+        "weights" : [
+          0.5999999999999996,
+          0.40000000000000036
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : -0.10032710839800925,
+        "y" : 0.9945675441768143,
+        "z" : -0.0277465563736253
+      },
+      "initialGapMeters" : 0.3604050847010902,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                67,
+                68
+              ],
+              "weights" : [
+                0.8000000000000007,
+                0.1999999999999993
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 97,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 19,
+                "sourceArcRange" : [
+                  0.59375,
+                  0.625
+                ],
+                "vertexIDs" : [
+                  67,
+                  68
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 0.6,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0.59375,
+              0.625
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                705,
+                706
+              ],
+              "weights" : [
+                0.5999999999999996,
+                0.40000000000000036
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1311,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 6,
+                "sourceArcRange" : [
+                  0.375,
+                  0.4375
+                ],
+                "vertexIDs" : [
+                  705,
+                  706
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 0.4,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0.375,
+              0.4375
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    },
+    {
+      "a" : {
+        "vertexIDs" : [
+          73,
+          74
+        ],
+        "weights" : [
+          0.4000000000000007,
+          0.5999999999999993
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          702,
+          703
+        ],
+        "weights" : [
+          0.8000000000000013,
+          0.19999999999999873
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : -0.562672971826394,
+        "y" : 0.8263580626594829,
+        "z" : -0.02305382948058969
+      },
+      "initialGapMeters" : 0.4337674141478126,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                73,
+                74
+              ],
+              "weights" : [
+                0.4000000000000007,
+                0.5999999999999993
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 73,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 25,
+                "sourceArcRange" : [
+                  0.78125,
+                  0.8125000000000001
+                ],
+                "vertexIDs" : [
+                  73,
+                  74
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 0.8,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0.78125,
+              0.8125
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                702,
+                703
+              ],
+              "weights" : [
+                0.8000000000000013,
+                0.19999999999999873
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1325,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 3,
+                "sourceArcRange" : [
+                  0.18750000000000003,
+                  0.25000000000000006
+                ],
+                "vertexIDs" : [
+                  702,
+                  703
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 0.19999999999999996,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0.1875,
+              0.25
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    },
+    {
+      "a" : {
+        "vertexIDs" : [
+          80
+        ],
+        "weights" : [
+          1
+        ]
+      },
+      "b" : {
+        "vertexIDs" : [
+          699
+        ],
+        "weights" : [
+          1
+        ]
+      },
+      "finalGapMeters" : 0,
+      "initialDirection" : {
+        "x" : -0.7833966028720762,
+        "y" : 0.6212804079583338,
+        "z" : -0.017332550176381176
+      },
+      "initialGapMeters" : 0.5769491447154073,
+      "origins" : [
+        {
+          "a" : {
+            "attachment" : {
+              "vertexIDs" : [
+                80
+              ],
+              "weights" : [
+                1
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 79,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "skirt_front"
+                },
+                "edgeID" : "skirt_front-e2",
+                "segmentIndex" : 31,
+                "sourceArcRange" : [
+                  0.96875,
+                  1
+                ],
+                "vertexIDs" : [
+                  79,
+                  80
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "sourceArcFraction" : 1,
+            "sourceLengthMeters" : 0.5875739999999999,
+            "sourceParameterRange" : [
+              0.96875,
+              1
+            ]
+          },
+          "aDirection" : "forward",
+          "b" : {
+            "attachment" : {
+              "vertexIDs" : [
+                699
+              ],
+              "weights" : [
+                1
+              ]
+            },
+            "boundarySegments" : [
+              {
+                "adjacentTriangleID" : 1329,
+                "edge" : {
+                  "edgeIndex" : 2,
+                  "panelID" : "wb_front"
+                },
+                "edgeID" : "wb_front-e2",
+                "segmentIndex" : 0,
+                "sourceArcRange" : [
+                  0,
+                  0.06250000000000001
+                ],
+                "vertexIDs" : [
+                  699,
+                  700
+                ]
+              }
+            ],
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "sourceArcFraction" : 0,
+            "sourceLengthMeters" : 0.45197999999999994,
+            "sourceParameterRange" : [
+              0,
+              0.0625
+            ]
+          },
+          "bDirection" : "reverse",
+          "intent" : {
+            "gathered" : {
+              "longerSide" : "a",
+              "maximumLengthRatio" : 1.31
+            }
+          },
+          "reversedRelativeToConstraint" : false,
+          "rightWrong" : false,
+          "seamID" : "waist-gather",
+          "stitchIndex" : 0
+        }
+      ]
+    }
+  ],
+  "contactNeighborhoods" : [
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            48
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 48,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 0,
+            "sourceArcRange" : [
+              0,
+              0.03125
+            ],
+            "vertexIDs" : [
+              48,
+              49
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0,
+          0.03125
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 48,
+          "b" : 1297
+        }
+      ],
+      "anchorIndex" : 0,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            715
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1297,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 15,
+            "sourceArcRange" : [
+              0.9375,
+              1
+            ],
+            "vertexIDs" : [
+              714,
+              715
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 1,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.9375,
+          1
+        ]
+      },
+      "constraintIndex" : 0,
+      "rightWrong" : false
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            54,
+            55
+          ],
+          "weights" : [
+            0.5999999999999996,
+            0.40000000000000036
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 54,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 6,
+            "sourceArcRange" : [
+              0.1875,
+              0.21875
+            ],
+            "vertexIDs" : [
+              54,
+              55
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.2,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.1875,
+          0.21875
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 54,
+          "b" : 1323
+        }
+      ],
+      "anchorIndex" : 1,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            711,
+            712
+          ],
+          "weights" : [
+            0.1999999999999993,
+            0.8000000000000007
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1323,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 12,
+            "sourceArcRange" : [
+              0.75,
+              0.8125
+            ],
+            "vertexIDs" : [
+              711,
+              712
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.8,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.75,
+          0.8125
+        ]
+      },
+      "constraintIndex" : 1,
+      "rightWrong" : false
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            60,
+            61
+          ],
+          "weights" : [
+            0.20000000000000073,
+            0.7999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 111,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 12,
+            "sourceArcRange" : [
+              0.375,
+              0.40625000000000006
+            ],
+            "vertexIDs" : [
+              60,
+              61
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.4,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.375,
+          0.40625
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 111,
+          "b" : 1305
+        }
+      ],
+      "anchorIndex" : 2,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            708,
+            709
+          ],
+          "weights" : [
+            0.40000000000000036,
+            0.5999999999999996
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1305,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 9,
+            "sourceArcRange" : [
+              0.5625,
+              0.625
+            ],
+            "vertexIDs" : [
+              708,
+              709
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.6,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.5625,
+          0.625
+        ]
+      },
+      "constraintIndex" : 2,
+      "rightWrong" : false
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            67,
+            68
+          ],
+          "weights" : [
+            0.8000000000000007,
+            0.1999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 97,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 19,
+            "sourceArcRange" : [
+              0.59375,
+              0.625
+            ],
+            "vertexIDs" : [
+              67,
+              68
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.6,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.59375,
+          0.625
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 97,
+          "b" : 1311
+        }
+      ],
+      "anchorIndex" : 3,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            705,
+            706
+          ],
+          "weights" : [
+            0.5999999999999996,
+            0.40000000000000036
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1311,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 6,
+            "sourceArcRange" : [
+              0.375,
+              0.4375
+            ],
+            "vertexIDs" : [
+              705,
+              706
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.4,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.375,
+          0.4375
+        ]
+      },
+      "constraintIndex" : 3,
+      "rightWrong" : false
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            73,
+            74
+          ],
+          "weights" : [
+            0.4000000000000007,
+            0.5999999999999993
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 73,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 25,
+            "sourceArcRange" : [
+              0.78125,
+              0.8125000000000001
+            ],
+            "vertexIDs" : [
+              73,
+              74
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 0.8,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.78125,
+          0.8125
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 73,
+          "b" : 1325
+        }
+      ],
+      "anchorIndex" : 4,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            702,
+            703
+          ],
+          "weights" : [
+            0.8000000000000013,
+            0.19999999999999873
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1325,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 3,
+            "sourceArcRange" : [
+              0.18750000000000003,
+              0.25000000000000006
+            ],
+            "vertexIDs" : [
+              702,
+              703
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0.19999999999999996,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0.1875,
+          0.25
+        ]
+      },
+      "constraintIndex" : 4,
+      "rightWrong" : false
+    },
+    {
+      "a" : {
+        "attachment" : {
+          "vertexIDs" : [
+            80
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 79,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "skirt_front"
+            },
+            "edgeID" : "skirt_front-e2",
+            "segmentIndex" : 31,
+            "sourceArcRange" : [
+              0.96875,
+              1
+            ],
+            "vertexIDs" : [
+              79,
+              80
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "skirt_front"
+        },
+        "edgeID" : "skirt_front-e2",
+        "sourceArcFraction" : 1,
+        "sourceLengthMeters" : 0.5875739999999999,
+        "sourceParameterRange" : [
+          0.96875,
+          1
+        ]
+      },
+      "adjacentTrianglePairs" : [
+        {
+          "a" : 79,
+          "b" : 1329
+        }
+      ],
+      "anchorIndex" : 5,
+      "b" : {
+        "attachment" : {
+          "vertexIDs" : [
+            699
+          ],
+          "weights" : [
+            1
+          ]
+        },
+        "boundarySegments" : [
+          {
+            "adjacentTriangleID" : 1329,
+            "edge" : {
+              "edgeIndex" : 2,
+              "panelID" : "wb_front"
+            },
+            "edgeID" : "wb_front-e2",
+            "segmentIndex" : 0,
+            "sourceArcRange" : [
+              0,
+              0.06250000000000001
+            ],
+            "vertexIDs" : [
+              699,
+              700
+            ]
+          }
+        ],
+        "edge" : {
+          "edgeIndex" : 2,
+          "panelID" : "wb_front"
+        },
+        "edgeID" : "wb_front-e2",
+        "sourceArcFraction" : 0,
+        "sourceLengthMeters" : 0.45197999999999994,
+        "sourceParameterRange" : [
+          0,
+          0.0625
+        ]
+      },
+      "constraintIndex" : 5,
+      "rightWrong" : false
+    }
+  ],
+  "deduplicatedCornerConstraints" : 0,
+  "foldIntervals" : [
+    {
+      "intent" : {
+        "gathered" : {
+          "longerSide" : "a",
+          "maximumLengthRatio" : 1.31
+        }
+      },
+      "longerEdge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "minimumFreeBoundaryNodes" : 1,
+      "seamID" : "waist-gather",
+      "sourceArcRange" : [
+        0,
+        0.2
+      ],
+      "sourceIntervalLengthMeters" : 0.11751479999999999,
+      "untackedBoundaryVertexIDs" : [
+        49,
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "intent" : {
+        "gathered" : {
+          "longerSide" : "a",
+          "maximumLengthRatio" : 1.31
+        }
+      },
+      "longerEdge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "minimumFreeBoundaryNodes" : 1,
+      "seamID" : "waist-gather",
+      "sourceArcRange" : [
+        0.2,
+        0.4
+      ],
+      "sourceIntervalLengthMeters" : 0.11751479999999999,
+      "untackedBoundaryVertexIDs" : [
+        56,
+        57,
+        58,
+        59
+      ]
+    },
+    {
+      "intent" : {
+        "gathered" : {
+          "longerSide" : "a",
+          "maximumLengthRatio" : 1.31
+        }
+      },
+      "longerEdge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "minimumFreeBoundaryNodes" : 1,
+      "seamID" : "waist-gather",
+      "sourceArcRange" : [
+        0.4,
+        0.6
+      ],
+      "sourceIntervalLengthMeters" : 0.11751479999999996,
+      "untackedBoundaryVertexIDs" : [
+        62,
+        63,
+        64,
+        65,
+        66
+      ]
+    },
+    {
+      "intent" : {
+        "gathered" : {
+          "longerSide" : "a",
+          "maximumLengthRatio" : 1.31
+        }
+      },
+      "longerEdge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "minimumFreeBoundaryNodes" : 1,
+      "seamID" : "waist-gather",
+      "sourceArcRange" : [
+        0.6,
+        0.8
+      ],
+      "sourceIntervalLengthMeters" : 0.11751480000000003,
+      "untackedBoundaryVertexIDs" : [
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "intent" : {
+        "gathered" : {
+          "longerSide" : "a",
+          "maximumLengthRatio" : 1.31
+        }
+      },
+      "longerEdge" : {
+        "edgeIndex" : 2,
+        "panelID" : "skirt_front"
+      },
+      "minimumFreeBoundaryNodes" : 1,
+      "seamID" : "waist-gather",
+      "sourceArcRange" : [
+        0.8,
+        1
+      ],
+      "sourceIntervalLengthMeters" : 0.11751479999999996,
+      "untackedBoundaryVertexIDs" : [
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
+    }
+  ],
+  "ordinaryBoundaryIntervals" : [
+
+  ],
+  "sharedTopologicalCornerAnchors" : 0,
+  "sourceSHA256" : "9ccf651e0e1242676a148dd8d8024ea0162d605efd8e733dbe2807a85fef3d88",
+  "usesFiniteCoarseTacks" : true
+}

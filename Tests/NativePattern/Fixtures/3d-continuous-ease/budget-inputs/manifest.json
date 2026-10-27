@@ -1,0 +1,541 @@
+{
+  "scope": "All ten original distinct-source preparations rejected by continuous-eased redundant uniform tacks under256 intervals. Original paper/parameter bytes retained; no source regenerated or failure removed. No garment acceptance data.",
+  "originalCatalogManifestSHA256": "cfb052a6018632798595e9d1ff653f25a01c2f2c0093a3dcdc36d85af4293003",
+  "original534Ready14RejectedSealSHA256": "b8e338c590e53e07b368aafea5fbbbc47d423f02634aad94ad35a0009aeed65c",
+  "fallbackIsolatedDeliverySHA256": "ccad2a6f7ae55bff909121508e3043b44e0c1aa718fce2b545d7212c29f60a91",
+  "maximumAnchorIntervalsPerStitchUnchanged": 256,
+  "cases": [
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "AsymmSkirtCircle",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 14959,
+      "caseID": "discrete:default:levels:AsymmSkirtCircle:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "1785883d38327cb73d7cf506eb3274fc9ed6e7a8dff0ca0b83dbdf5c05de5735",
+      "generatedPatternFile": "patterns/1785883d38327cb73d7cf506eb3274fc9ed6e7a8dff0ca0b83dbdf5c05de5735.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39375,
+      "paperJSONBytesSHA256": "3bd38df6fd802069c80669c268f2dd55a8d4539ab6bb4dde9ee46d179a067897",
+      "parameterFile": "parameters/85ddce87f2d3a17f380dc6c091096968c9a37c495a9d31e5d99f71e962518e7c.json",
+      "parameterJSONBytesSHA256": "1b569e42c327f23e73bd706191a284ff6f18fc923fef88d0b6ef7c92e3f75b9b",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/1785883d38327cb73d7cf506eb3274fc9ed6e7a8dff0ca0b83dbdf5c05de5735.json",
+      "profile": "default",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "1785883d38327cb73d7cf506eb3274fc9ed6e7a8dff0ca0b83dbdf5c05de5735",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "1785883d38327cb73d7cf506eb3274fc9ed6e7a8dff0ca0b83dbdf5c05de5735"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "AsymmSkirtCircle",
+        "levels-skirt.level": "SkirtCircle"
+      },
+      "canonicalPaperBytes": 15171,
+      "caseID": "discrete:default:levels:AsymmSkirtCircle:SkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "a812d9e4c54539595db7a7fc8b60e05c6c429a111ed71d383de7adc4faeffedb",
+      "generatedPatternFile": "patterns/a812d9e4c54539595db7a7fc8b60e05c6c429a111ed71d383de7adc4faeffedb.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39587,
+      "paperJSONBytesSHA256": "243454a8d80b67d279bf1ab161cddcc925e0681c400c79970b866c38e59190d2",
+      "parameterFile": "parameters/f16903257825d8c9328c60b906cf0ba30134fbcbc42a5db65e4895b9d40b7068.json",
+      "parameterJSONBytesSHA256": "777c123f4eb5ce8ff01281ccd9f11f02d4c98a5f6fa92d9adb419495615276d4",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/a812d9e4c54539595db7a7fc8b60e05c6c429a111ed71d383de7adc4faeffedb.json",
+      "profile": "default",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "a812d9e4c54539595db7a7fc8b60e05c6c429a111ed71d383de7adc4faeffedb",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "a812d9e4c54539595db7a7fc8b60e05c6c429a111ed71d383de7adc4faeffedb"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "PencilSkirt",
+        "levels-skirt.level": "AsymmSkirtCircle",
+        "pencil-skirt.style_side_cut": null
+      },
+      "canonicalPaperBytes": 16387,
+      "caseID": "discrete:default:levels:PencilSkirt:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "3256bb0e9025f70ec9251d0dd020523b1f5f384d707eacd8f573c56b53ebdc08",
+      "generatedPatternFile": "patterns/3256bb0e9025f70ec9251d0dd020523b1f5f384d707eacd8f573c56b53ebdc08.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 43607,
+      "paperJSONBytesSHA256": "7423a4c4c765eb6261d72a15790837a516717e5588554c2c096f702a6f29052d",
+      "parameterFile": "parameters/35b6ccf1ad23a9cd5fff8d7763171a8519c408d83c8791d203540d65011a7656.json",
+      "parameterJSONBytesSHA256": "8a91b1b302cb0d867e470575700debb0a8b177b25d5589f571ddc62c01083faa",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/3256bb0e9025f70ec9251d0dd020523b1f5f384d707eacd8f573c56b53ebdc08.json",
+      "profile": "default",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 48,
+      "sourceGenerated": true,
+      "sourceSHA256": "3256bb0e9025f70ec9251d0dd020523b1f5f384d707eacd8f573c56b53ebdc08",
+      "sourceStitchCount": 20,
+      "sourceVertexCount": 48,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "3256bb0e9025f70ec9251d0dd020523b1f5f384d707eacd8f573c56b53ebdc08"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "Skirt2",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 14660,
+      "caseID": "discrete:default:levels:Skirt2:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "f9eea7db964a8fabe1c8a23bda565360b46c2a071a76b833758d3609941a3b78",
+      "generatedPatternFile": "patterns/f9eea7db964a8fabe1c8a23bda565360b46c2a071a76b833758d3609941a3b78.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 38564,
+      "paperJSONBytesSHA256": "6c8828803a5c9bb8e6aca6998217c7373776c56fd7260e924bc4c97f65cb3aa9",
+      "parameterFile": "parameters/07a6c5af5e7599a0f809af43663460394f4a2c270d871644ccb5a709196958ad.json",
+      "parameterJSONBytesSHA256": "55010c0264b792c05a590b49170f7d38d3865fe0cd77bdab93fc94585e133db7",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/f9eea7db964a8fabe1c8a23bda565360b46c2a071a76b833758d3609941a3b78.json",
+      "profile": "default",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "f9eea7db964a8fabe1c8a23bda565360b46c2a071a76b833758d3609941a3b78",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "f9eea7db964a8fabe1c8a23bda565360b46c2a071a76b833758d3609941a3b78"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "SkirtCircle",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 15025,
+      "caseID": "discrete:default:levels:SkirtCircle:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "18145116f46223be6e72f7150f4196f17bf47c990d2f50f65d3a0abfa506b3cf",
+      "generatedPatternFile": "patterns/18145116f46223be6e72f7150f4196f17bf47c990d2f50f65d3a0abfa506b3cf.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39441,
+      "paperJSONBytesSHA256": "2896f3d2b873db47dd69d01f5ad48ec5ae4b195b5a83d6d23b7f9e46d5a563d4",
+      "parameterFile": "parameters/35cf41dd6a8d48b6ed96e961999c544ca8dc7f2c6d30a92db92b22a757944bf2.json",
+      "parameterJSONBytesSHA256": "65cd036213801ba3c055b31e3a374b9f7999c346867aed7bd716e82f1ee56583",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/18145116f46223be6e72f7150f4196f17bf47c990d2f50f65d3a0abfa506b3cf.json",
+      "profile": "default",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "18145116f46223be6e72f7150f4196f17bf47c990d2f50f65d3a0abfa506b3cf",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "18145116f46223be6e72f7150f4196f17bf47c990d2f50f65d3a0abfa506b3cf"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "AsymmSkirtCircle",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 14959,
+      "caseID": "discrete:female:levels:AsymmSkirtCircle:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "86b6699ab0849e3071654223249fc6ce56d5683a5aa42a289a680c842cf43342",
+      "generatedPatternFile": "patterns/86b6699ab0849e3071654223249fc6ce56d5683a5aa42a289a680c842cf43342.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39375,
+      "paperJSONBytesSHA256": "841b37efb074b329e301fd429e1910a33c959a59d4c74f7926b1062fcfd288ed",
+      "parameterFile": "parameters/28cbc9917c99005b9fbe4bf5d0f447074189dc284955086bfa8e32281be9808e.json",
+      "parameterJSONBytesSHA256": "22c2a7899c901e6aaacb9e856121811e048bc568200ec5c7cb9325b30047b390",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/86b6699ab0849e3071654223249fc6ce56d5683a5aa42a289a680c842cf43342.json",
+      "profile": "female",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "86b6699ab0849e3071654223249fc6ce56d5683a5aa42a289a680c842cf43342",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "86b6699ab0849e3071654223249fc6ce56d5683a5aa42a289a680c842cf43342"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "AsymmSkirtCircle",
+        "levels-skirt.level": "SkirtCircle"
+      },
+      "canonicalPaperBytes": 15169,
+      "caseID": "discrete:female:levels:AsymmSkirtCircle:SkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "b6b98d23ba8a02fa7607095e83ffd199c544e6f7b7a1b6219584370968923176",
+      "generatedPatternFile": "patterns/b6b98d23ba8a02fa7607095e83ffd199c544e6f7b7a1b6219584370968923176.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39585,
+      "paperJSONBytesSHA256": "d9ceef5be1686eaa652292330cf1a60d3b3f3ddbfa2aae97fa1d7677278e6e3f",
+      "parameterFile": "parameters/2b89256670b66d9d5484fbb62cd6c76ab2d82e597b180189e09ac8ab159f4e47.json",
+      "parameterJSONBytesSHA256": "74f19dfeb56b0e25b3a5e215a58c7726f0199d61c8dc64a3f58573d9c7f7fc87",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/b6b98d23ba8a02fa7607095e83ffd199c544e6f7b7a1b6219584370968923176.json",
+      "profile": "female",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "b6b98d23ba8a02fa7607095e83ffd199c544e6f7b7a1b6219584370968923176",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "b6b98d23ba8a02fa7607095e83ffd199c544e6f7b7a1b6219584370968923176"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "PencilSkirt",
+        "levels-skirt.level": "AsymmSkirtCircle",
+        "pencil-skirt.style_side_cut": null
+      },
+      "canonicalPaperBytes": 16945,
+      "caseID": "discrete:female:levels:PencilSkirt:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "6bf3025226bff049bdd89fb7b91c5953a6f75c2fc39aafaafa0fcaf6c0d01df6",
+      "generatedPatternFile": "patterns/6bf3025226bff049bdd89fb7b91c5953a6f75c2fc39aafaafa0fcaf6c0d01df6.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 45167,
+      "paperJSONBytesSHA256": "ae88d945c502168320f051a527f6aa643b23e0518c3a957a8d21453322c2fc9b",
+      "parameterFile": "parameters/c13d8e4e5d1eebff4f2c36026607cef3c742841168d3a8da1a030c2744abbadc.json",
+      "parameterJSONBytesSHA256": "b94b1ab4174f3dd44eeb2e737cd9de775d5571c35d84cf04093bf2d92567cb32",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/6bf3025226bff049bdd89fb7b91c5953a6f75c2fc39aafaafa0fcaf6c0d01df6.json",
+      "profile": "female",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 54,
+      "sourceGenerated": true,
+      "sourceSHA256": "6bf3025226bff049bdd89fb7b91c5953a6f75c2fc39aafaafa0fcaf6c0d01df6",
+      "sourceStitchCount": 22,
+      "sourceVertexCount": 54,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "6bf3025226bff049bdd89fb7b91c5953a6f75c2fc39aafaafa0fcaf6c0d01df6"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "Skirt2",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 14671,
+      "caseID": "discrete:female:levels:Skirt2:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "6d4fe635ac6065823982d6915d69f6d53a128775c9708d0f5fae809ac9003e84",
+      "generatedPatternFile": "patterns/6d4fe635ac6065823982d6915d69f6d53a128775c9708d0f5fae809ac9003e84.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 38575,
+      "paperJSONBytesSHA256": "7094aaa9ec0632bcae1e75e97209a5a795f6a482f410dbe75704a7cdb84b6b98",
+      "parameterFile": "parameters/7149d839617295baa6576a5956d2d47b43bed30d964ecabca45fee30f1a0ee0c.json",
+      "parameterJSONBytesSHA256": "e1f5f6d3420c044ef05bceeaf4fd56d933aea1cd638d87a3edd1fdca4f9ab098",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/6d4fe635ac6065823982d6915d69f6d53a128775c9708d0f5fae809ac9003e84.json",
+      "profile": "female",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "6d4fe635ac6065823982d6915d69f6d53a128775c9708d0f5fae809ac9003e84",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "6d4fe635ac6065823982d6915d69f6d53a128775c9708d0f5fae809ac9003e84"
+    },
+    {
+      "activeDiscreteSelections": {
+        "levels-skirt.base": "SkirtCircle",
+        "levels-skirt.level": "AsymmSkirtCircle"
+      },
+      "canonicalPaperBytes": 15023,
+      "caseID": "discrete:female:levels:SkirtCircle:AsymmSkirtCircle",
+      "completeGarmentAccepted": false,
+      "fullRegenerationSHA256": "5c84f21ff00963362ffd9a0453e54cd2f7b53a73f3bd93d64b7d9538d99b1110",
+      "generatedPatternFile": "patterns/5c84f21ff00963362ffd9a0453e54cd2f7b53a73f3bd93d64b7d9538d99b1110.json",
+      "historicalFailureResolvedAtSourceGeneration": false,
+      "inputOnly": true,
+      "meshingPerformed": false,
+      "original211Definition": false,
+      "origins": [
+        "catalog:levels-skirt.base×level"
+      ],
+      "panelCount": 8,
+      "panelIDs": [
+        "skirt_back",
+        "skirt_back_0",
+        "skirt_back_1",
+        "skirt_back_2",
+        "skirt_front",
+        "skirt_front_0",
+        "skirt_front_1",
+        "skirt_front_2"
+      ],
+      "paperJSONBytes": 39439,
+      "paperJSONBytesSHA256": "6dc28977bbc48417cc98f51a1c037375f1328bffe5cc1c0b3902f01102d9946e",
+      "parameterFile": "parameters/9c20d7076c599f02b9c61caaf3369a1ca16efb8e9d4d85387d13bcd5d3b8aa27.json",
+      "parameterJSONBytesSHA256": "12b006988e8d4c4b4ea6829cfa7c86e1795b72c331ef2428ba5902e9bf1d45b6",
+      "parameterValidationMessages": [],
+      "patternFile": "patterns/5c84f21ff00963362ffd9a0453e54cd2f7b53a73f3bd93d64b7d9538d99b1110.json",
+      "profile": "female",
+      "rParameterRestorePassed": true,
+      "simulationPerformed": false,
+      "sourceEdgeCount": 32,
+      "sourceGenerated": true,
+      "sourceSHA256": "5c84f21ff00963362ffd9a0453e54cd2f7b53a73f3bd93d64b7d9538d99b1110",
+      "sourceStitchCount": 14,
+      "sourceVertexCount": 32,
+      "standalone": true,
+      "status": "ready-for-independent-R-input-validation",
+      "styles": [
+        "SkirtLevels"
+      ],
+      "tags": [
+        "discrete",
+        "tiers-3"
+      ],
+      "uiDocumentSignatureSHA256": "5c84f21ff00963362ffd9a0453e54cd2f7b53a73f3bd93d64b7d9538d99b1110"
+    }
+  ]
+}

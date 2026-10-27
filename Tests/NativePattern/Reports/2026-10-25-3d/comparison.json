@@ -1,0 +1,39 @@
+{
+  "source_commit": "d449629979028123a5c4dc9e732a2ec19b7fce31",
+  "oracle_sha256": "0b150d9839f18cf093be4a3ab7f91ef817483823546872a48545fb96713ed7b6",
+  "native_pattern_sha256": "2a50e492a46b6b061789ed614af9a90ad177a7b7ce85a39ed5562637c1f1718d",
+  "native_mesh_sha256": "ba034d18100d98f136961418786894d04060ad780a02a1113b6675ec3c8e5e6f",
+  "maximum_source_coordinate_or_radius_delta_cm": 3.552713678800501e-15,
+  "waist_cm": 84.33379999999998,
+  "hem_cm": 275.38092935270663,
+  "radial_length_cm": 40.54146,
+  "official_analytic_area_cm2": 7291.68015573179,
+  "mesh_flat_area_cm2": 7287.464129505067,
+  "flat_area_relative_error": 0.00057819681289906,
+  "side_seams_manifold_and_oriented": true,
+  "our_solver_diagnostics": {
+    "computationSeconds": 1.475572943687439,
+    "converged": true,
+    "hemCircumferenceMeters": 2.753809293527067,
+    "maxBodyPenetrationMeters": 5.960628053235731e-17,
+    "maxEdgeStrain": 0.035469388507290645,
+    "maxSeamGapMeters": 0,
+    "maxSpeedMetersPerSecond": 0.021727381171299263,
+    "meanEdgeStrain": 0.002812787737626681,
+    "radialLengthMeters": 0.4054146,
+    "referenceAreaSquareMeters": 0.7287464129505067,
+    "simulatedSeconds": 4.291666666666667,
+    "triangleCount": 1920,
+    "vertexCount": 1040,
+    "waistCircumferenceMeters": 0.8433379999999997,
+    "warnings": [
+      "实验材质采用固定数值参数，未标定真实面料；不能用于判断个人合体度。",
+      "人台是按腰臀围构造的圆形截面碰撞体，腰口用支撑环固定；不是量体数据重建的真实人体。",
+      "自碰撞仅处理网格顶点间距，不能保证消除所有边或三角面穿插；弯曲使用二阶距离近似。",
+      "人台接触与穿入量仅检查网格顶点，不能证明三角面完全没有穿体。"
+    ]
+  },
+  "official_final_3d_mesh_available": false,
+  "design2garmentcode_final_3d_mesh_available": false,
+  "conclusion": "Official 2D input matches; 3D equality is NOT established."
+}

@@ -1,0 +1,24 @@
+{
+  "dimensions": [
+    128,
+    181,
+    65
+  ],
+  "origin": [
+    -0.6337,
+    -1.1137,
+    -0.3037
+  ],
+  "spacingMeters": 0.01,
+  "sampleMaximumY": 0.6863,
+  "visibleHeadMaximumY": 0.632175,
+  "fieldBytes": 6023680,
+  "fieldSHA256": "829194bfdc26a32c9eabb9aa7643d4f335c9e46631e1daa657bfa08aac31b2fa",
+  "legacyLowerFloatCount": 1106560,
+  "legacyLowerSHA256": "81251419a12a69de9946e8d85237a5ff77fe8c5775c992360e8b8878ca9d9172",
+  "legacyLowerHashMatches": true,
+  "oddRayRows": 0,
+  "allVisibleVerticesInsideGridBounds": true,
+  "bodyResourceSHA256": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+  "provenanceSHA256": "08e7906a34f3870e83ddb47e87d8ef019353b80df89a088a8b1ec094926b4bed"
+}

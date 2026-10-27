@@ -1,0 +1,27 @@
+{
+  "files": {
+    "accepted404-state.json": {
+      "bytes": 292856,
+      "sha256": "cebf8dc25b615af6e80f6956abb9a7da10b618257731c430cded3428dc470820"
+    },
+    "complete-initial-input.json": {
+      "bytes": 3715392,
+      "sha256": "02998e589fcf7a0698e62a75d262d98ac492e538549310eef1c75c70f413ec93"
+    },
+    "complete-paper-source.json": {
+      "bytes": 43726,
+      "sha256": "8807247b025cdda2431a7d1140f251eef6cdf0a006ef288faad668a1ba5565d3"
+    },
+    "complete-sewing-plan.json": {
+      "bytes": 6855997,
+      "sha256": "ba99d06235cae229f5b0be73b2a52f29b73687445906969a9180fb39fd4963f4"
+    },
+    "inner405-positions.json": {
+      "bytes": 176651,
+      "sha256": "34dc9f7906f8210e106b1324ee89cd1c8e82c26db53985dc7a185cdf2c153894"
+    }
+  },
+  "origin": "/private/tmp/TailorAssJointFSC111PGradientFull/requested2400/shirt-sleeved/shirt-sleeved",
+  "schema": 1,
+  "scope": "Full original111 mathematical frame405 fixture. 404 accepted physical/configuration history is not replayed; no complete garment acceptance."
+}

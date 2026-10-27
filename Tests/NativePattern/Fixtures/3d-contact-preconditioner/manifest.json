@@ -1,0 +1,16 @@
+{
+  "scope": "Exact full native positive Shirt input, explicit panel memberships and all source sews. No simulation/coordinate changes; preconditioner tests only",
+  "canonicalPaperSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4",
+  "preparedStateSignature": "4a9d7fb6bdd08ddf725ffaa876bae317d91fe85804af1b488d5c2848393dec4f",
+  "vertices": 1732,
+  "triangles": 2710,
+  "panels": 8,
+  "sourceSewingRows": 444,
+  "referenceOrientation": "Recover original CCW referenceTriangles by undoing only simulation-facing swaps from AssemblyBuilder:91-94, using unchanged flat reference coordinates; original simulation triangles remain unchanged for IPC. No ID/face order/source metric change.",
+  "files": {
+    "shirt-native-input.json": "8127c0a063f00590362376ef009bd89e6edf99b1386460d679b13a33a144ab67",
+    "shirt-native-plan.json": "db4a00cd4bba4e83a7f6de8e8da2b0edf7248d31b628088d476172b7957f4959",
+    "shirt-paper-source.json": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4"
+  },
+  "nativeFixtureSourceManifestSHA256": "3332f0962710991995db2af966738467e520df62c364cc10408a9fbbe1cbf17b"
+}

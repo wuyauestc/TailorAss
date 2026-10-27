@@ -1,0 +1,84 @@
+{
+  "schema": 1,
+  "scope": "Legacy diagnostic seed timing from actual Native129/Nbc full initial0 run: only original922 two-half partition may seed923; no later923 successful partition is input. Original480 endpoint cross-checked with481 first physical leaf. Never qualifies historical state or final garment.",
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "bodyGeometrySHA256": "f01f0e4ed4139eb08d8beb5aef6e39a975294407bf5577c708bf8a99ca332071",
+  "legacyOriginTag": "101c5cb7-6c01-a6a9-6be7-36b5c6b755f4",
+  "legacyOriginTagScheme": "SHA256 of complete original last-accepted-frame bytes, first16bytes RAW UUID representation; NOT a historical new-version frame UUID",
+  "originalFullRunSealSHA256": "e0477ca9c0963e8c223f09dcfd5e23d4c34a1ea4a6e5421cb00392f91c10f7c4",
+  "originalFullRunSealPath": "/private/tmp/TailorAssJointPhysicalSubsteps129Full/delivery-manifest.json",
+  "originalFileSHA256": {
+    "requested2400/circle-straight-band/circle-straight-band/complete-paper-source.json": "a9b477603bd3272ce0217a54958f19076e4e142c773d8688dcedc96fec183657",
+    "requested2400/circle-straight-band/circle-straight-band/complete-initial-input.json": "a54b405d6e703d56e6b5b908633e147ca989c44ba404eb44326245d693bbc4f6",
+    "requested2400/circle-straight-band/circle-straight-band/complete-sewing-plan.json": "351db6f1ad46316187db87e4a4ca6fcfeeb72d5c39c1d12b174da5328734db2a",
+    "requested2400/circle-straight-band/circle-straight-band/numerical-settings.json": "bdce61281276dcf0cb97ff89e9b8f12e4646c27d7e8f045c1ce001412c093d10",
+    "requested2400/circle-straight-band/circle-straight-band/last-accepted-state.json": "89b1f899e0d209e312223246daa0feba3f33b26a16684a3bd3695acdf46cf3d8",
+    "requested2400/circle-straight-band/circle-straight-band/last-accepted-frame.json": "101c5cb76c01a6a96be736b5c6b755f44a0aca5163b645d61518aa123aa12dc3",
+    "requested2400/circle-straight-band/circle-straight-band/trajectory-0480.json": "e92a7160a9840f7558abadd99eb11f32585b5de008be7feb052f2cf7519c8468",
+    "requested2400/circle-straight-band/circle-straight-band/trajectory-0481.json": "2c7aa41e8392f562143ba63da9a16e12cef4cd087b249a4b3337bc804af7f90b",
+    "requested2400/circle-straight-band/circle-straight-band/step-0480.json": "187f60c891c5416d46ed1a758dc7d66a77d025bd79d7051706e679c83a6a033c",
+    "requested2400/circle-straight-band/circle-straight-band/step-0922.json": "f3bf82f8fef1ae94fb5a1bcd12a11eb14239ee2471c9dd3b37937bd9747d3533"
+  },
+  "original922Spans": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      2
+    ]
+  ],
+  "files": {
+    "original-run-summary.json": {
+      "sha256": "2e27b40ce1d757ef10b9d7e8533410279176cd63368dddd23bffcdf179fd5e36",
+      "bytes": 233323
+    },
+    "complete-paper-source.json": {
+      "sha256": "a9b477603bd3272ce0217a54958f19076e4e142c773d8688dcedc96fec183657",
+      "bytes": 31744
+    },
+    "original-run-binding.json": {
+      "sha256": "b00e63256689b1f0bb8ceb6cca43212ea3ce1884bde2931c83616c77faa70dc7",
+      "bytes": 7090
+    },
+    "complete-initial-input.json": {
+      "sha256": "a54b405d6e703d56e6b5b908633e147ca989c44ba404eb44326245d693bbc4f6",
+      "bytes": 2964527
+    },
+    "trajectory-0480.json": {
+      "sha256": "e92a7160a9840f7558abadd99eb11f32585b5de008be7feb052f2cf7519c8468",
+      "bytes": 1606926
+    },
+    "step-0922.json": {
+      "sha256": "f3bf82f8fef1ae94fb5a1bcd12a11eb14239ee2471c9dd3b37937bd9747d3533",
+      "bytes": 10534
+    },
+    "trajectory-0481.json": {
+      "sha256": "2c7aa41e8392f562143ba63da9a16e12cef4cd087b249a4b3337bc804af7f90b",
+      "bytes": 766156
+    },
+    "last-accepted-frame.json": {
+      "sha256": "101c5cb76c01a6a96be736b5c6b755f44a0aca5163b645d61518aa123aa12dc3",
+      "bytes": 3316056
+    },
+    "complete-sewing-plan.json": {
+      "sha256": "351db6f1ad46316187db87e4a4ca6fcfeeb72d5c39c1d12b174da5328734db2a",
+      "bytes": 1155809
+    },
+    "step-0480.json": {
+      "sha256": "187f60c891c5416d46ed1a758dc7d66a77d025bd79d7051706e679c83a6a033c",
+      "bytes": 29365
+    },
+    "numerical-settings.json": {
+      "sha256": "bdce61281276dcf0cb97ff89e9b8f12e4646c27d7e8f045c1ce001412c093d10",
+      "bytes": 992
+    },
+    "last-accepted-state.json": {
+      "sha256": "89b1f899e0d209e312223246daa0feba3f33b26a16684a3bd3695acdf46cf3d8",
+      "bytes": 385172
+    }
+  }
+}

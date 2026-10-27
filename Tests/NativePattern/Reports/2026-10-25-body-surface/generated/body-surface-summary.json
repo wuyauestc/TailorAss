@@ -1,0 +1,99 @@
+{
+  "executed": [
+    "flag-off-reference",
+    "skirt2-default",
+    "skirt2-longer",
+    "skirt2-flare10",
+    "skirt2-soft",
+    "skirt2-firm",
+    "circle-0.5",
+    "circle-0.75",
+    "circle-1.0"
+  ],
+  "passed": true,
+  "failures": [],
+  "scope": "Combined verified branch snapshots: five Skirt2 cases passed before a Circle.prepare-only offset-contour arc-length correction; three circle cases and both exact flag-off references passed afterward. Skirt2 solver/preparation branch was unchanged by that correction.",
+  "sourceRuns": [
+    {
+      "directory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "reusedPassedCases": [
+        "skirt2-default",
+        "skirt2-longer",
+        "skirt2-flare10",
+        "skirt2-soft",
+        "skirt2-firm"
+      ],
+      "excludedFailures": [
+        "circle-0.5",
+        "circle-0.75",
+        "circle-1.0"
+      ]
+    },
+    {
+      "directory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+      "passedSelectors": [
+        "flag-off-reference",
+        "circle-0.5",
+        "circle-0.75",
+        "circle-1.0"
+      ]
+    }
+  ],
+  "caseProvenance": [
+    {
+      "tag": "skirt2-default",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "sourceSummaryPassed": false,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "skirt2-longer",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "sourceSummaryPassed": false,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "skirt2-flare10",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "sourceSummaryPassed": false,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "skirt2-soft",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "sourceSummaryPassed": false,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "skirt2-firm",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonical",
+      "sourceSummaryPassed": false,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "circle-0.5",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+      "sourceSummaryPassed": true,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "circle-0.75",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+      "sourceSummaryPassed": true,
+      "caseChecksPassed": true
+    },
+    {
+      "tag": "circle-1.0",
+      "sourceDirectory": "/private/tmp/TailorAssBodySurfaceCanonicalCircles",
+      "sourceSummaryPassed": true,
+      "caseChecksPassed": true
+    }
+  ],
+  "quality": "Unchanged max source strain <8%, motion <.025m/s, sampled SDF body penetration <3mm, zero cloth self-crossings, zero actual visible-body triangle crossings independently checked by Moller/Trumbore oracle; converged=true.",
+  "numericalMarginsMeters": {
+    "exactMesh": 0.0005,
+    "sampledSDF": 0.0025,
+    "fixedWaistSupport": 0.005
+  },
+  "performancePlatform": "Mac command-line benchmark, not measured on iPhone"
+}

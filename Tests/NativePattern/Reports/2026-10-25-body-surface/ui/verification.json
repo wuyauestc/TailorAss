@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25",
+  "environment": "Device Hub, iPhone 17 Simulator, iOS 27.0, Release arm64",
+  "physicalDeviceTested": false,
+  "observations": [
+    {"style": "Skirt2", "material": "medium", "secondsDisplayed": 3.1, "vertices": 624, "triangles": 1152, "maxEdgeStrainPercentDisplayed": 7.3, "selfIntersections": 0, "bodyIntersections": 0, "converged": true, "screenshot": "app-simulator-skirt2.jpg"},
+    {"style": "Skirt2", "material": "soft", "secondsDisplayed": 3.1, "massGramsDisplayed": 53.3, "maxEdgeStrainPercentDisplayed": 7.2, "selfIntersections": 0, "bodyIntersections": 0, "converged": true},
+    {"style": "SkirtCircle", "sun": 0.75, "material": "medium", "secondsDisplayed": 6.6, "vertices": 1040, "triangles": 1920, "massGramsDisplayed": 131.2, "maxEdgeStrainPercentDisplayed": 3.6, "sourceWaistCmDisplayed": 84.3, "sourceRadialLengthCmDisplayed": 40.5, "selfIntersections": 0, "bodyIntersections": 0, "converged": true, "screenshot": "app-simulator-circle.jpg"}
+  ],
+  "export": {
+    "style": "Skirt2",
+    "material": "soft",
+    "destination": "Simulator Files, local Downloads",
+    "filename": "TailorAss-skirt-drape-9C43E931-999B-48E9-AC05-25697563AB09.obj",
+    "bytes": 1205515,
+    "sha256": "3a78e8c03d51ec63c795b07a0761e27314ec84e7d40da3a428672d858fab69cc",
+    "matchesReportOBJByteForByte": "../generated/skirt2-soft.obj"
+  },
+  "limits": "Displayed metrics were observed through native UI. Timing is Simulator timing, not an iPhone benchmark. Screenshots are discrete poses and do not establish continuous collision safety or physical fit."
+}

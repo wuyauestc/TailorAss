@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "scope": "Actual complete Native129/Nbc frame407 force-coverage regression. True original406 predictor/full source/rest/body/mass/0pin/plan and failed407 inner. No historical or garment acceptance.",
+  "origin": "/private/tmp/TailorAssJointPhysicalSubsteps129Full/requested2400/shirt-sleeved/shirt-sleeved",
+  "sourceSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4",
+  "originalN_SHA256": "bc91f4a181aeb0f0d5291e65a4368d6ca7651e105b531270fd63ba1ee3dbbff0",
+  "originalNativeProof": "/private/tmp/TailorAssFSCCriticalIntegratedSecond",
+  "files": {
+    "complete-paper-source.json": {
+      "sha256": "8807247b025cdda2431a7d1140f251eef6cdf0a006ef288faad668a1ba5565d3",
+      "bytes": 43726
+    },
+    "complete-initial-input.json": {
+      "sha256": "d236fc5bacf2be3db206d3570cafb40ef32585d0c354131f0731983ad496a345",
+      "bytes": 3715597
+    },
+    "complete-sewing-plan.json": {
+      "sha256": "ba99d06235cae229f5b0be73b2a52f29b73687445906969a9180fb39fd4963f4",
+      "bytes": 6855997
+    },
+    "accepted406-state.json": {
+      "sha256": "e5bf3968420c29f07bc5fec489e151acf27aa868e7147fc7e80ee34068216ae7",
+      "bytes": 292731
+    },
+    "inner407-positions.json": {
+      "sha256": "5411eacee4a54e3f6d82c97939ea86b1079af78ca70f3a8fa792fb851d8dd0d6",
+      "bytes": 176637
+    },
+    "numerical-settings.json": {
+      "sha256": "bdce61281276dcf0cb97ff89e9b8f12e4646c27d7e8f045c1ce001412c093d10",
+      "bytes": 992
+    },
+    "original-step407-report.json": {
+      "sha256": "9de3f278cf44e41e1cd2dd609fb43a4e15f366d556ba55ae637512da1d465de2",
+      "bytes": 143653
+    },
+    "original-last-rejected-trial.json": {
+      "sha256": "18783b3e65f17fd7758737bb00259fbce92fa8737278ac6758f97607e85af293",
+      "bytes": 176636
+    }
+  },
+  "originalFailure": {
+    "acceptedSteps": 406,
+    "rejectedStep": 407,
+    "status": "lineSearchFailed",
+    "finalGInfinityNewton": 1.0479183174538775e-06,
+    "allBodySelfPathQueriesClear": 77,
+    "old64AllPhiIncreasing": true
+  },
+  "regressionExpectation": "Same gates; inner and whole407 must converge with fresh force/Pz and complete source/body/self paths. No exact prior bit or count expectation."
+}

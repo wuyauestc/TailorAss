@@ -1,0 +1,10 @@
+// TEST-ONLY synchronized observer; it is never appended to production sources.
+import os
+nonisolated final class DiagnosticSeedCancellation:Sendable {
+    nonisolated struct Payload:Sendable {var triggered=false;var leaf:GarmentCodeJointSimulation.PhysicalSubstep?}
+    static let shared=DiagnosticSeedCancellation()
+    private let payload=OSAllocatedUnfairLock(initialState:Payload())
+    func trigger(_ leaf:GarmentCodeJointSimulation.PhysicalSubstep) {payload.withLock{$0.triggered=true;$0.leaf=leaf}}
+    var isCancelled:Bool {payload.withLock{$0.triggered}}
+    var actualAcceptedLeaf:GarmentCodeJointSimulation.PhysicalSubstep? {payload.withLock{$0.leaf}}
+}

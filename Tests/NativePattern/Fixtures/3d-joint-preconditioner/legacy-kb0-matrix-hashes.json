@@ -1,0 +1,11 @@
+{
+  "format": "joint-P-csc-values-v1",
+  "purpose": "Default kb=0 CSC and Double value bytes must remain identical while adding optional hinge GN. No cloth acceptance claim.",
+  "baselinePreconditionerSourceSHA256": "eaca6430232ab015ab5c4b149997543ab436e15a2873c4a8aebfb2d9611991a3",
+  "baselineInputManifestSHA256": "0a12fb8ed231d19fb8d540cf2ddba3d83d549a0df8afd8b56c4144eb1c3ba98c",
+  "hashes": {
+    "realInitial": "d4792434c2ecdcf82b06abf626a2cff3ba44ccab649ab8a64b2ec6ad9db1c498",
+    "realR16": "41d1237c24c0dc47a668a1c7e3666ecbae9908d4ff7f19c5254b3c8f3cf84b75",
+    "synthetic": "fd76d2633a474608bc6d880290a0af57384b3d5f71adf096f1e2b8032bb8e617"
+  }
+}

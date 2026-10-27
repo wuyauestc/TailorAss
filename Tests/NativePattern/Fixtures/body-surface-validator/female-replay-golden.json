@@ -1,0 +1,52 @@
+{
+  "bodyValues": {
+    "_armscye_depth": 15.1489,
+    "_base_sleeve_balance": 32.7129,
+    "_bust_line": 22.367599999999996,
+    "_hip_inclination": 6.33915,
+    "_leg_length": 82.27539999999999,
+    "_shoulder_incl": 20.905,
+    "_waist_level": 104.90629999999999,
+    "arm_length": 51.594,
+    "arm_pose_angle": 45.487,
+    "armscye_depth": 12.6489,
+    "back_width": 46.1652,
+    "bum_points": 17.6707,
+    "bust": 97.4076,
+    "bust_line": 25.5656,
+    "bust_points": 16.212,
+    "crotch_hip_diff": 7.8731,
+    "head_l": 25.5328,
+    "height": 166.194,
+    "hip_back_width": 55.6788,
+    "hip_inclination": 12.6783,
+    "hips": 104.091,
+    "hips_line": 22.6309,
+    "leg_circ": 60.6592,
+    "neck_w": 17.772,
+    "shoulder_incl": 20.905,
+    "shoulder_w": 34.7129,
+    "underbust": 80.7483,
+    "vert_bust_line": 20.7686,
+    "waist": 80.3442,
+    "waist_back_width": 37.7747,
+    "waist_line": 35.7549,
+    "waist_over_bust_line": 39.9902,
+    "wrist": 15.8636
+  },
+  "controls": [
+    0.020499599394197963,
+    -0.5866738742709107,
+    -0.14368161961297657,
+    0.201566078394885
+  ],
+  "expectedFitGeometrySHA256": "c4e9fea9f2febafb483ca6611f6dcec68d539efa3d44297d3b386504f634dd14",
+  "format": "tailorass-fit-replay-source-golden-v1",
+  "sourceGeometrySHA256": "9f360914f2de867956acce8b8fdf8d7a2c6d56f3e8f1f87b629e834938b5cd65",
+  "sourceOracle": {
+    "path": "/private/tmp/TailorAssBodySurfaceFitterStandaloneFinal-oq32mo96/verification/female-attempt.json",
+    "scope": "Actual previous independent optimizer output; complete visible-bit match separately exercised before introducing this compact SHA golden.",
+    "sha256": "23d2b88cd3279b675f4c50dbb9ad08159d00a4514f70ee0d784b42725067509c"
+  },
+  "sourceParameterSHA256": "a5f6a0d8d751e78afe20d0d9594fd684df328aff4804162994cad20c36dda443"
+}

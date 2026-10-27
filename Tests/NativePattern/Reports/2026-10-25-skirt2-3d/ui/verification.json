@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-25",
+  "environment": "Device Hub, iPhone 17 Simulator, iOS 27.0, Release arm64",
+  "garment": "Skirt2, default sample body, no top, waistband or cuts",
+  "checked": [
+    "2D generation and navigation to skirt 3D",
+    "medium, soft and firm experimental materials",
+    "old result cleared on material changes",
+    "cancel calculation and regenerate without stale output",
+    "rotation and camera reset",
+    "mannequin and seam visibility",
+    "OBJ share sheet and local Save to Files"
+  ],
+  "displayedResults": {
+    "medium": {"seconds": 1.2, "fabricMassGrams": 80.0, "converged": true},
+    "soft": {"seconds": 1.3, "fabricMassGrams": 53.3, "converged": true},
+    "firm": {"seconds": 1.3, "fabricMassGrams": 124.5, "converged": true},
+    "sourceWaistCentimeters": 109.6,
+    "supportWaistCentimeters": 84.3,
+    "gatherRatio": 1.3,
+    "verticalLengthCentimeters": 40.5
+  },
+  "savedOBJ": {
+    "location": "On My iPhone / Downloads",
+    "material": "soft",
+    "byteCount": 1204635,
+    "sha256": "a62960dd408dc52a8be576197b7243a15e4604f3897faf6a679c8833c51a8ad8",
+    "exactlyMatchesCanonical": "../generated/skirt2-soft.obj",
+    "verticesIncludingMannequin": 14004,
+    "triangularFacesIncludingMannequin": 27908,
+    "finiteCoordinatesAndValidFaceIndices": true,
+    "units": "metres, +Y up"
+  },
+  "screenshot": "app-simulator-firm.png",
+  "limitations": [
+    "Simulator runtime does not measure physical iPhone performance",
+    "Small body-face pokes remain; body quality checks cover cloth vertices, not all face intersections",
+    "Experimental materials and gathering support are not physically calibrated"
+  ]
+}

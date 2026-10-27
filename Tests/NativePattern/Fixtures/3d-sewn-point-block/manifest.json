@@ -1,0 +1,18 @@
+{
+  "kind": "source_faithful_final_point_block_numeric_fixture",
+  "scope": "Exact 2000 cloth positions from rejected Integrated3; original69 seam rows, source reference/mapping/pins and complete paper source retained. This is a linear-projection regression, not an accepted full garment or official3D reference. Only unneeded rendered body/diagnostics have been omitted from mesh snapshot.",
+  "upstreamCommit": "d449629979028123a5c4dc9e732a2ec19b7fce31",
+  "canonicalSourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "arealDensityKgPerSquareMeter": 0.18,
+  "timeStepSeconds": 0.004166666666666667,
+  "physicalSewingCompliance": 1e-08,
+  "positionCount": 2000,
+  "constraintCount": 69,
+  "originalFullMeshSHA256": "ddd16357bbc91c617b6e2e13a6740f8c1a89025e3273b57e6c5afd60a3fe13da",
+  "sha256": {
+    "straight-default-mesh.json": "fbee85ccd08e8377e8e848da1cef0d3da8dd1057b07d2e340f6a33fbdef22e78",
+    "straight-default-plan.json": "48c1401053d0d6bfe9e3ac4b16f15a3c195b377c086e0db1cc11be1cc7c39b77",
+    "straight-default-reference.json": "0acff3ea33b1d51442f374fd982e7dfb467cc26bf4c6f99e2adf926f284ad3c0",
+    "straight-default-source.json": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "scope": "Actual complete original117 mathematical frame406 fixture: full source/paper/rest/body/mass/pin/mapping/panels/sewing plan, actual accepted405 predictor and uncommitted inner406. Does not replay405 prior frames or accept a complete garment.",
+  "origin": "/private/tmp/TailorAssJointFSC117CoordinateFull/requested2400/shirt-sleeved/shirt-sleeved",
+  "files": {
+    "complete-paper-source.json": {
+      "bytes": 43726,
+      "sha256": "8807247b025cdda2431a7d1140f251eef6cdf0a006ef288faad668a1ba5565d3",
+      "originalFilename": "complete-paper-source.json"
+    },
+    "complete-initial-input.json": {
+      "bytes": 3715597,
+      "sha256": "7d93426175bed4bab283ed975492fd3b148801af986f1ac9403315530885774d",
+      "originalFilename": "complete-initial-input.json"
+    },
+    "complete-sewing-plan.json": {
+      "bytes": 6855997,
+      "sha256": "ba99d06235cae229f5b0be73b2a52f29b73687445906969a9180fb39fd4963f4",
+      "originalFilename": "complete-sewing-plan.json"
+    },
+    "accepted405-state.json": {
+      "bytes": 292799,
+      "sha256": "71f4d9cf2614c7f611035e18a0c4f0f309181cc20b21ac74017e9da4aa485638",
+      "originalFilename": "last-accepted-state.json"
+    },
+    "inner406-positions.json": {
+      "bytes": 176653,
+      "sha256": "aec611e8c688297acd5ab01f589f56acca193888cf6916a8006413bd1f433230",
+      "originalFilename": "uncommitted-candidate-positions.json"
+    },
+    "numerical-settings.json": {
+      "bytes": 870,
+      "sha256": "2a66c4a89404e392bed9816ea6dfeade5332d64431efc9b6d50177698b7592b8",
+      "originalFilename": "numerical-settings.json"
+    }
+  },
+  "sourceSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4",
+  "bodyGeometrySHA256": "f01f0e4ed4139eb08d8beb5aef6e39a975294407bf5577c708bf8a99ca332071",
+  "originalSourceVersions": {
+    "N": "5f3c325510793781a7baf2801692d53bfbe50e301b9a807b128637e21f74ef23",
+    "S": "62f785c30d3bcd2e208fa2fb8fe620937a674ef03d3e92118d099abf4b4f4e26",
+    "nativeArchive": "1601bea815bd5f04dcaf1afc26a09c3a1002a3a57db2e9e4de02abdfd5d16c5e",
+    "nativeProof": "/private/tmp/TailorAssFSCExpansionIntegratedFinal"
+  },
+  "originEvidence": {
+    "originalCaseSummarySHA256": "cb9f87aea79d1407c383eeb5178a5df03891132fdadfe72d7581804a917f9bf2",
+    "originalStep406SHA256": "11cc1daed39af7bd7d8391a59b1bdb7dc87df58c611b8d297f92e41ea35e736f",
+    "readOnlyDiagnosisManifestSHA256": "c2baa27192bf14f866581f9eebf94073f5d26b72802ca7278a28e9c77abbeece",
+    "readOnlyDiagnosisManifest": "/private/tmp/TailorAssShirt406Representability-kvm4gwze/delivery-manifest.json"
+  },
+  "originalFailure": {
+    "acceptedSteps": 405,
+    "attemptedStep": 406,
+    "status": "newtonBudget",
+    "finalGradientInfinityN": 1.0100143299496267e-06,
+    "resultAccepted": false
+  },
+  "regressionExpectation": "Use current original force/current-P/source/body/self gates. No exact historical N count, selected DOF or final floating-point trajectory is required. No physical state or garment acceptance is claimed."
+}

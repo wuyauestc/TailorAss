@@ -1,0 +1,319 @@
+{
+  "method": "Actual closed-body +X/+Y/+Z parity and independent six-edge/triangle proper-crossing oracle; no production contact or SDF calls.",
+  "epsilonMeters": 1e-07,
+  "before": {
+    "properBodyTrianglePairs": 130,
+    "vertices": {
+      "outside": 624,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 624
+    },
+    "triangleCentroids": {
+      "outside": 1148,
+      "inside": 4,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [
+        {
+          "index": 483,
+          "point": [
+            0.20187916071037867,
+            -0.3486190977986657,
+            0.011781134739549982
+          ],
+          "parityXYZ": [
+            1,
+            1,
+            1
+          ],
+          "nearSurface": false,
+          "tangentRay": false
+        },
+        {
+          "index": 533,
+          "point": [
+            0.19369588541191315,
+            -0.3832630039717922,
+            0.032712040388767634
+          ],
+          "parityXYZ": [
+            1,
+            1,
+            1
+          ],
+          "nearSurface": false,
+          "tangentRay": false
+        },
+        {
+          "index": 566,
+          "point": [
+            -0.19247123963769472,
+            -0.3750497945324937,
+            0.033306554882168375
+          ],
+          "parityXYZ": [
+            1,
+            1,
+            1
+          ],
+          "nearSurface": false,
+          "tangentRay": false
+        },
+        {
+          "index": 946,
+          "point": [
+            -0.09322368908877036,
+            -0.23187895924644517,
+            -0.1775164963788145
+          ],
+          "parityXYZ": [
+            1,
+            1,
+            1
+          ],
+          "nearSurface": false,
+          "tangentRay": false
+        }
+      ],
+      "ambiguousExamples": [],
+      "total": 1152
+    },
+    "waistBoundaryPolylineMeters": 1.0963394000003388,
+    "clothEdgesManifoldAndOriented": true,
+    "boundaryLoops": 2
+  },
+  "current": {
+    "skirt2-default": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 624,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 624
+      },
+      "triangleCentroids": {
+        "outside": 1152,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1152
+      },
+      "waistBoundaryPolylineMeters": 1.0963394000019084,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "skirt2-longer": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 816,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 816
+      },
+      "triangleCentroids": {
+        "outside": 1536,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1536
+      },
+      "waistBoundaryPolylineMeters": 1.0963394000019084,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "skirt2-flare10": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 624,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 624
+      },
+      "triangleCentroids": {
+        "outside": 1152,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1152
+      },
+      "waistBoundaryPolylineMeters": 1.0963394000019084,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "skirt2-soft": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 624,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 624
+      },
+      "triangleCentroids": {
+        "outside": 1152,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1152
+      },
+      "waistBoundaryPolylineMeters": 1.0963394000019084,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "skirt2-firm": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 624,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 624
+      },
+      "triangleCentroids": {
+        "outside": 1152,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1152
+      },
+      "waistBoundaryPolylineMeters": 1.0963394000019084,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "circle-0.5": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 806,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 806
+      },
+      "triangleCentroids": {
+        "outside": 1488,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1488
+      },
+      "waistBoundaryPolylineMeters": 0.8719428943682571,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "circle-0.75": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 1040,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1040
+      },
+      "triangleCentroids": {
+        "outside": 1920,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1920
+      },
+      "waistBoundaryPolylineMeters": 0.872287808245925,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    },
+    "circle-1.0": {
+      "properBodyTrianglePairs": 0,
+      "vertices": {
+        "outside": 1274,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 1274
+      },
+      "triangleCentroids": {
+        "outside": 2352,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "nearSurface": 0,
+        "tangentRayAmbiguity": 0,
+        "insideExamples": [],
+        "ambiguousExamples": [],
+        "total": 2352
+      },
+      "waistBoundaryPolylineMeters": 0.8725123690147203,
+      "clothEdgesManifoldAndOriented": true,
+      "boundaryLoops": 2
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "Local depth-buffer rendering of saved actual numerical output, front/right/back; not App screenshot or browser UI verification",
+  "geometrySource": "/private/tmp/TailorAssGenericDefaultStylesFull/FittedWB/source-pattern/validated-output.json",
+  "geometrySHA256": "87d975e8a588e2fa298d7afe5da5c4378386cd94c62d8d662a9251d4fa17d55f",
+  "renderer": "/Users/wuya/tailorAss/TailorAss/Tests/NativePattern/render-cloth-preview.py",
+  "rendererSHA256": "665069774e5ffae5957bc8d17fa27de73ebf05d2b54e658a7ea685cebf096059",
+  "image": "front-side-back.png",
+  "imageSHA256": "62d9a3885a8f50b08fc0a8a75fe66ca28b37dc283e2fe2da3c34ec8a47913e87",
+  "focusCloth": true,
+  "geometryModified": false,
+  "visuallyInspected": true,
+  "browserUIInspected": false
+}

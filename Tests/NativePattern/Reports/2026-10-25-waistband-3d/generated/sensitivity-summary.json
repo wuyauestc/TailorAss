@@ -1,0 +1,153 @@
+{
+  "kind": "Numerical pass-count sensitivity, fixed source and experimental material; not calibrated physical or fit accuracy",
+  "settings": "Same standard body, sourceStrainLimit .05; only pass count differs20/40/80; existing8%strain/.025m/s/3mmSDF/zerointersectiongates unchanged",
+  "rows": [
+    {
+      "style": "straight-default",
+      "passes": 20,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.05822020055315957,
+      "meanActualEdgeStrain": 0.020172461251794845,
+      "speedMetersPerSecond": 0.0003110284303489107,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.0396093931812,
+      "fabricMassKg": 0.0071296907726159965,
+      "vertexCount": 96,
+      "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+      "wallSecondsConcurrentMacCLI": 2.2959080934524536
+    },
+    {
+      "style": "straight-default",
+      "passes": 40,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.0550405070135509,
+      "meanActualEdgeStrain": 0.020576304462988193,
+      "speedMetersPerSecond": 0.00015693911478495838,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.0396093931812,
+      "fabricMassKg": 0.0071296907726159965,
+      "vertexCount": 96,
+      "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+      "wallSecondsConcurrentMacCLI": 3.1032310724258423
+    },
+    {
+      "style": "straight-default",
+      "passes": 80,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.05307243351707269,
+      "meanActualEdgeStrain": 0.021038758632431487,
+      "speedMetersPerSecond": 7.61305805130072e-05,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.0396093931812,
+      "fabricMassKg": 0.0071296907726159965,
+      "vertexCount": 96,
+      "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+      "wallSecondsConcurrentMacCLI": 4.884196996688843
+    },
+    {
+      "style": "fitted-default",
+      "passes": 20,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.050000000000000044,
+      "meanActualEdgeStrain": 0.009113723991210854,
+      "speedMetersPerSecond": 6.250003833454688e-09,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.04050682927449563,
+      "fabricMassKg": 0.007291229269409223,
+      "vertexCount": 142,
+      "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+      "wallSecondsConcurrentMacCLI": 2.2468730211257935
+    },
+    {
+      "style": "fitted-default",
+      "passes": 40,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.050000000000000044,
+      "meanActualEdgeStrain": 0.009113723991210883,
+      "speedMetersPerSecond": 6.250001849334292e-09,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.04050682927449563,
+      "fabricMassKg": 0.007291229269409223,
+      "vertexCount": 142,
+      "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+      "wallSecondsConcurrentMacCLI": 2.8675159215927124
+    },
+    {
+      "style": "fitted-default",
+      "passes": 80,
+      "targetAbsoluteStrain": 0.05,
+      "maxActualEdgeStrain": 0.050000000000000044,
+      "meanActualEdgeStrain": 0.009113723991210845,
+      "speedMetersPerSecond": 6.250006805185532e-09,
+      "converged": true,
+      "selfIntersections": 0,
+      "actualBodyIntersections": 0,
+      "maxSDFPenetrationMeters": 0,
+      "sourceAreaSquareMeters": 0.04050682927449563,
+      "fabricMassKg": 0.007291229269409223,
+      "vertexCount": 142,
+      "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+      "wallSecondsConcurrentMacCLI": 4.417004942893982
+    }
+  ],
+  "positionComparisons": [
+    {
+      "style": "straight-default",
+      "passesA": 20,
+      "passesB": 40,
+      "maximumPositionDifferenceMeters": 0.00036906596272243917,
+      "rmsPositionDifferenceMeters": 0.00011984821578757522
+    },
+    {
+      "style": "straight-default",
+      "passesA": 40,
+      "passesB": 80,
+      "maximumPositionDifferenceMeters": 0.0003675901306588432,
+      "rmsPositionDifferenceMeters": 0.00013864306889822727
+    },
+    {
+      "style": "fitted-default",
+      "passesA": 20,
+      "passesB": 40,
+      "maximumPositionDifferenceMeters": 2.3724523730670963e-16,
+      "rmsPositionDifferenceMeters": 5.59985651437709e-17
+    },
+    {
+      "style": "fitted-default",
+      "passesA": 40,
+      "passesB": 80,
+      "maximumPositionDifferenceMeters": 6.711743543909991e-16,
+      "rmsPositionDifferenceMeters": 8.348438312374428e-17
+    }
+  ],
+  "independentBodyVolumeParity": {
+    "allSixMeshesAllVerticesAndTriangleCentroidsOutside": true,
+    "inside": 0,
+    "ambiguous": 0,
+    "threeAxisDisagreement": 0,
+    "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+    "detailFile": "/private/tmp/TailorAssWaistbandSensitivity/body-volume-parity.json",
+    "method": "Three-axis ray parity against the closed actual body triangle surface; independent of SDF and production contact code."
+  },
+  "disabledLimiterLegacySnapshotRegression": {
+    "passed": true,
+    "circleMaximumPositionDifferenceMeters": 0,
+    "standardBodySkirt2MaximumPositionDifferenceMeters": 0,
+    "log": "/private/tmp/TailorAssWaistbandSensitivity/legacy-flag-off.log"
+  }
+}

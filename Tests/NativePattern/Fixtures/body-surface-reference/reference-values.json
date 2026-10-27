@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "method": "Independent math.fsum/math.dist on every actual source attachment; complete original-face endpoint support; exact Fraction nonnegative normalized barycentric support; recompute full geometry and all33parameter hashes.",
+  "absoluteToleranceMeters": 2e-12,
+  "maximumScalarDifferenceMeters": 4.440892098500626e-16,
+  "maximumDistanceToExactNormalizedBarycentricPointMeters": 2.6229316345718064e-16,
+  "sourceSegmentsChecked": 1560,
+  "rows": [
+    {
+      "profile": "default",
+      "id": "chestSurfaceReference",
+      "observedCentimeters": 100.33033678543094,
+      "requestedCentimeters": 99.8407,
+      "residualCentimeters": 0.489636785430958
+    },
+    {
+      "profile": "default",
+      "id": "shoulderSurfaceSpan",
+      "observedCentimeters": 42.16327,
+      "requestedCentimeters": 36.4568,
+      "residualCentimeters": 5.706469999999997
+    },
+    {
+      "profile": "default",
+      "id": "shoulderLateralSurfaceWidth",
+      "observedCentimeters": 42.16327,
+      "requestedCentimeters": 36.4568,
+      "residualCentimeters": 5.706469999999997
+    },
+    {
+      "profile": "default",
+      "id": "wristSurfaceLoop.L",
+      "observedCentimeters": 15.761331838002782,
+      "requestedCentimeters": 16.5945,
+      "residualCentimeters": -0.8331681619972192
+    },
+    {
+      "profile": "default",
+      "id": "outerArmSurfaceRoute.L",
+      "observedCentimeters": 61.93969485097758,
+      "requestedCentimeters": 53.969699999999996,
+      "residualCentimeters": 7.96999485097758
+    },
+    {
+      "profile": "default",
+      "id": "wristSurfaceLoop.R",
+      "observedCentimeters": 15.761331838002782,
+      "requestedCentimeters": 16.5945,
+      "residualCentimeters": -0.8331681619972192
+    },
+    {
+      "profile": "default",
+      "id": "outerArmSurfaceRoute.R",
+      "observedCentimeters": 61.939694854556095,
+      "requestedCentimeters": 53.969699999999996,
+      "residualCentimeters": 7.969994854556095
+    },
+    {
+      "profile": "female",
+      "id": "chestSurfaceReference",
+      "observedCentimeters": 95.58398465094687,
+      "requestedCentimeters": 97.4076,
+      "residualCentimeters": -1.8236153490531315
+    },
+    {
+      "profile": "female",
+      "id": "shoulderSurfaceSpan",
+      "observedCentimeters": 40.16864172531061,
+      "requestedCentimeters": 34.7129,
+      "residualCentimeters": 5.455741725310609
+    },
+    {
+      "profile": "female",
+      "id": "shoulderLateralSurfaceWidth",
+      "observedCentimeters": 40.16864172531061,
+      "requestedCentimeters": 34.7129,
+      "residualCentimeters": 5.455741725310609
+    },
+    {
+      "profile": "female",
+      "id": "wristSurfaceLoop.L",
+      "observedCentimeters": 14.98135390700816,
+      "requestedCentimeters": 15.8636,
+      "residualCentimeters": -0.8822460929918396
+    },
+    {
+      "profile": "female",
+      "id": "outerArmSurfaceRoute.L",
+      "observedCentimeters": 59.6639477215827,
+      "requestedCentimeters": 51.59400000000001,
+      "residualCentimeters": 8.069947721582693
+    },
+    {
+      "profile": "female",
+      "id": "wristSurfaceLoop.R",
+      "observedCentimeters": 14.98135390700816,
+      "requestedCentimeters": 15.8636,
+      "residualCentimeters": -0.8822460929918396
+    },
+    {
+      "profile": "female",
+      "id": "outerArmSurfaceRoute.R",
+      "observedCentimeters": 59.66394830604547,
+      "requestedCentimeters": 51.59400000000001,
+      "residualCentimeters": 8.069948306045461
+    }
+  ],
+  "scope": "Actual reference measurements and covariance controls; no body fitting or cloth simulation."
+}

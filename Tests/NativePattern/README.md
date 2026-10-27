@@ -1,5 +1,469 @@
 # GarmentCode native pattern acceptance
 
+## Asymmetric tier interfaces
+
+```sh
+python3 Tests/NativePattern/run-levels-hem.py
+```
+
+24 independent pinned upstream cases cover four bases, two bodies and 2/3/5 asymmetric tiers. Full panels, seam references, metadata and geometry are checked; the legacy observer records actual mismatches without weakening corrected acceptance. This is a pure 2D regression, not garment physics. See [LEVELS-HEM.md](LEVELS-HEM.md) for the 618-input delta and the separate six successful/two budget-rejected fresh preparations.
+
+## Visible-body surface contact (current mode)
+
+```sh
+sh Tests/NativePattern/run-full-body-coverage.sh
+sh Tests/NativePattern/run-body-surface-contact.sh
+GARMENTCODE_BODY_SURFACE_OUTPUT_DIR=/private/tmp/TailorAssBodySurface sh Tests/NativePattern/run-cloth-body-surface.sh
+python3 Tests/NativePattern/render-body-surface-report.py --input-dir /private/tmp/TailorAssBodySurfaceFinal --output-dir Tests/NativePattern/Reports/2026-10-25-body-surface
+```
+
+The App enables `useBodySurfaceCollision` for the standard mannequin. Default
+kernel settings keep it off so the old controlled circle/Skirt2 snapshots remain
+reproducible. This mode adds a closed-body BVH, component winding validation,
+actual cloth/body triangle-crossing inspection and local barycentric contact.
+The old Skirt2 default had 130 proper body/cloth intersections despite only
+0.200 mm SDF vertex penetration; all 130 are detected by an independent oracle.
+Whole-face projection onto an infinite body tangent plane was rejected because
+it destroyed source metrics. The contact instead acts at the clipped crossing,
+with finite-facet vertex and edge handling and bounded weighted corrections.
+
+Numerical targets are **0.5 mm exact-mesh contact**, **2.5 mm SDF vertex
+projection** and **5 mm fixed waist-support clearance**. These are not measured
+fabric thicknesses or certified minimum distances. Proper crossing classification
+uses a 1e-7 m numerical tolerance, not a statement of physical body accuracy.
+The offset circle support is reparameterized by its own arc length; Skirt2 keeps
+each original gathered waist chord through a continuous indexed support curve.
+Only actual triangle edges carry the source metric in the new mode.
+
+Eight configurations pass the unchanged <8% source strain, <3 mm SDF vertex
+estimate, sustained motion <0.025 m/s, zero self intersections and zero visible
+body triangle crossings. They cover five Skirt2 length/flare/material cases and
+three circle angles. An independent three-axis closed-mesh test finds all 6,432
+vertices and 11,904 triangle centroids outside the body, without ambiguous rays.
+The historical mesh had four inside centroids even though every vertex was
+outside. This remains discrete, bounded verification, not continuous collision
+or physical-fit certification.
+
+The full same-mesh SDF now has 128×181×65 samples (6,023,680 bytes), covers every
+visible body vertex, and has zero odd preprocessing ray rows. All 1,106,560
+legacy lower-body samples retain their exact bytes. The body geometry and named
+reference measurements are unchanged; this does not add personal upper-body fit.
+
+[Current report](Reports/2026-10-25-body-surface/index.html) contains eight new
+meshes and the immutable historical mesh, fixed-camera images, source checks,
+independent body-volume checks and raw OBJ/JSON. Its combined snapshot explicitly
+records two run sources: after a Circle-only support fix, the unchanged five
+Skirt2 results are reused and the three Circle cases plus both flag-off controls
+are rechecked. It does not claim one single final nine-selector invocation.
+
+Native Device Hub verification of this body-contact build covered medium and
+soft Skirt2, medium 0.75-circle, both displayed intersection counters and local
+Files export. The exported soft Skirt2 OBJ matches the report OBJ byte for byte.
+See [UI metadata](Reports/2026-10-25-body-surface/ui/verification.json) and the
+actual [Skirt2](Reports/2026-10-25-body-surface/ui/app-simulator-skirt2.jpg) and
+[circle](Reports/2026-10-25-body-surface/ui/app-simulator-circle.jpg) screenshots.
+Displayed 3.1 / 6.6 second times are Simulator observations, not phone benchmarks.
+
+## Generic source-panel triangulation
+
+```sh
+sh Tests/NativePattern/run-panel-mesher.sh
+```
+
+The generic native mesher has passed 15 panels: both waistband families,
+concave Shirt armholes, fitted/darted torsos, Pants, a cut Skirt2, reversed
+U contours and a short-chord cubic S curve. Independent checks cover every
+original edge ID, shared corner, curve parameter, analytic arc fraction, dense
+Green area, containment, CCW manifold disk topology and all source bytes.
+The acceptance spacing is at most 3 cm with a curve deviation bound of 50 µm;
+these are tessellation tolerances, not physical fabric accuracy. Source acute
+corners remain acute and are reported rather than moved to improve angles.
+Cancellation, explicit resource budgets and malformed/self-crossing/open inputs
+are checked. A simple single boundary loop is supported; this does not imply
+that all these garment families can already be assembled and simulated in 3D.
+
+## Separate-panel sewing foundations
+
+```sh
+sh Tests/NativePattern/run-sewing.sh
+sh Tests/NativePattern/run-sewn-contact.sh
+```
+
+Both suites pass. Sewing checks analytic weighted/barycentric XPBD solutions,
+mass-normalized compliance, actual gap versus assembly-ramp residual, fixed and
+partial pins, per-frame motion limits, cancellation and refusal contracts.
+Runtime plans bind source hashes, exact edge identities and explicit directions;
+fabric-side `rightWrong` does not silently reverse a path. Ordinary equal-length
+seams use the union of both meshes' boundary knots. Gathered/eased seams retain
+actual untacked boundary nodes and request local refinement when undersampled.
+Their finite tack gaps do not certify a continuously closed gathered seam.
+
+The contact bridge allows only corresponding boundary locations to touch.
+Independent tests keep coplanar area overlaps, deep crossings of the same
+seam-adjacent face pair and untacked fold intersections active. A shared dart
+corner and all incident faces at a boundary tack are handled without an entire
+face/panel collision exemption; interior-edge/vertex exemption data is rejected.
+These are assembly primitives; general garment placement and composed outfits
+still require integration tests before becoming new App capabilities. The
+standalone waistband integration is verified below.
+
+## Current App: independent-particle waistband sewing
+
+The full product objective and all outstanding garment/parameter branches are
+tracked in [3D coverage](3D-COVERAGE.md). Passing one suite below does not imply
+that all garment families, combinations or iPhone performance are complete.
+
+```sh
+sh Tests/NativePattern/run-sewn-input.sh
+sh Tests/NativePattern/run-sewn-drape.sh
+```
+
+The current App routes standalone WB through `GarmentCodeWaistbandAssembly`,
+the verified `PreparedInput` factory and `GarmentCodeSewnDrape`. Front/back paper
+vertices remain separate; actual barycentric seam gaps are measured rather
+than being zero by a welded-DOF construction. All four default/2-mm-perturbed
+Straight/Fitted cases pass at the App's 32 solver iterations, 40 source-strain
+limiting passes, a 200-mm accumulated internal sewing correction path and a
+separate 20-mm maximum single correction. The internal path is not physical net
+travel. Source strain remains about 5–6.10%, actual gap is below .5 mm, final
+speed is below .025 m/s and all true-body/self crossings and inside samples are
+zero. Source/rest/mass/pins/body bytes, cancellation and invalid budgets pass.
+
+The previous 20-mm and 100-mm path budgets' rejected poses are retained in
+separate temporary runs; iteration counts or quality gates were not reduced to
+obtain a pass. The [current report](Reports/2026-10-25-waistband-sewn/index.html)
+contains actual source, plan, reference, mesh and independently checked gaps.
+This opens standalone waistbands only, not composed outfits or all dimensions.
+
+Final native UI checks cover Straight medium/soft and Fitted medium/firm, actual
+material invalidation and regeneration, camera rotation/reset and body hiding.
+All four generated outputs display convergence and zero final crossings.
+The [UI metadata](Reports/2026-10-25-waistband-sewn/ui/verification.json) links
+actual screenshots and a soft Straight OBJ saved via the native Files sheet.
+That exported mesh is independently checked against the unchanged source paper,
+actual barycentric seam constraints and closed body, rather than asserted to
+match a different material's CLI snapshot. Simulator timing is not a phone
+benchmark.
+
+## Experimental circle assembly (not wired into the App)
+
+```sh
+sh Tests/NativePattern/run-circle-assembly.sh
+GARMENTCODE_CIRCLE_ASSEMBLY_SMOKE=1 sh Tests/NativePattern/run-circle-assembly.sh
+```
+
+The default command only verifies source-faithful preparation for .5/.75/1
+circle skirts with separate particles and real side-seam constraints. It leaves
+the caller's optional strain limiter `nil` and does not simulate that setting.
+The explicit smoke switch runs .75 with the caller enabling the experimental
+5% / 40-pass limiter, 32 solver iterations, 200-mm internal sewing path and
+20-mm single correction, followed by independent source strain, actual seam,
+body crossing and three-axis volume checks. The successful exploratory .75 run
+took about 56.7 seconds on the Mac; this is not iPhone performance. App circle
+skirts continue using the previously verified backend. Composition, other
+circle sizes' 3D results and performance remain work to complete.
+
+## Shared full-source assembly and placement foundations
+
+```sh
+sh Tests/NativePattern/run-assembly-builder.sh
+sh Tests/NativePattern/run-panel-placement.sh
+sh Tests/NativePattern/run-lower-placement.sh
+sh Tests/NativePattern/run-panel-mesher.sh
+sh Tests/NativePattern/run-sewing.sh
+sh Tests/NativePattern/run-sewn-input.sh
+sh Tests/NativePattern/run-sewn-point-block.sh
+```
+
+`AssemblyBuilder` concatenates every actual source panel without welding,
+restores original fabric normals, derives all real triangle-edge distances and
+within-panel opposite-vertex bends, integrates original area/mass, and validates
+the full document, explicit seam hints and exact collision body through the
+single `PreparedInput` factory. Both waistband fixtures preserve identical
+initial/source/rest/mass/body/sewing state and pass the original physical gates.
+Actual OBJ panel groups and output JSON are checked; malformed optional groups
+cannot silently omit cloth faces or index outside topology. Previous Circle and
+Skirt2 output records still decode and export byte-identically.
+
+`SewnPointBlock` is an explicitly enabled final-sewing option. After the
+existing distance ramp reaches one, it solves shared Cartesian attachment
+constraints together in the original inverse-mass metric. It caches small
+Cholesky blocks and uses matrix-free preconditioned CG for larger or singular
+blocks; it never adds artificial compliance to repair rank deficiency. Actual
+residuals, unsolved rows, fixed rows and bounded correction paths remain
+observable. Cancellation publishes no partial positions, multipliers or path
+state. Analytic, rotated, redundant, capped and real 69-row tests pass against
+an independent linear oracle. The existing waistband control passes with the
+option enabled; the default remains the established scalar path with identical
+frozen waistband positions and legacy OBJ bytes. This module test does not
+establish full-garment physical convergence.
+
+The point-block runner defaults to the persisted numerical fixture in
+`Fixtures/3d-sewn-point-block` and verifies its hashes. That fixture retains the
+complete paper source, plan and reference plus exact cloth positions from a
+rejected assembled run. It deliberately omits rendering-only body arrays and
+does not represent an accepted full-garment or official 3D result.
+
+`LowerPlacement` maps all eight native lower families and their real cuffs,
+godets, tiers and optional waistband from current parameters and upstream
+component transforms. The two-body, 374-source-panel matrix verifies initial
+positions, rotations and fabric normals against pinned official fixtures.
+Complete source identity is required; unsupported branches never drop panels.
+These separated initial sheets are not yet an assembled garment or a new App
+3D route.
+
+Additional native placement and source-branch suites:
+
+```sh
+sh Tests/NativePattern/run-upper-placement-complete.sh
+sh Tests/NativePattern/run-inverse-sleeve.sh
+sh Tests/NativePattern/run-composition-placement.sh
+sh Tests/NativePattern/run-composition-rise.sh
+sh Tests/NativePattern/run-native-assembly.sh
+sh Tests/NativePattern/run-rigid-body-clearance.sh
+python3 NativeClothCollision/Scripts/run-checks.py
+python3 Tests/NativePattern/run-continuous-body-contact.py
+```
+
+The complete upper replay covers 108 cases / 868 actual source panels; the older
+`run-upper-placement.sh` retains its historical fixture and is not the latest
+complete replay. The optional inverse-sleeve intersection repair preserves the
+original 107 source hashes and adds 12 direct official branch controls.
+Composition placement checks 160 full meta selections / 1,116 panels against
+original component interfaces. Its isolated transforms do not establish physical
+sewing. The 48-case composition-rise control checks full 2D geometry and placement
+for fitted/loose tops plus circular/asymmetric/many-panel skirts, including
+original design provenance.
+
+`NativeAssembly` combines the real native component maps, complete source
+meshes and actual stitches without hidden pins. Its numerical preparation and
+rigid clearance tests do not establish a settled garment. The rigid clearance
+control retains original source/rest/mass and independently tests actual body
+crossings, body-volume samples and inter-panel proper/coplanar overlap; it
+records the still-open initial seam gap. The continuous body bridge runner
+freezes exact App models and the local package before compiling, then executes
+analytic, cancellation/rejection and real upper-body motion controls. It proves
+motion-path clipping only, not cloth self CCD, accepted garment physics, App
+routing or phone performance. Each runner writes its own result; listing a
+command here does not claim every current command has passed.
+
+`sh Tests/NativePattern/run-membrane.sh` freezes and verifies original source
+triangle metrics, a 3x2 Neo-Hookean energy/gradient/exact Hessian product, a
+principal-stretch interval barrier and whole-path feasible step bound. It checks
+analytic invariants and independent LAPACK SVD/energy differences on the actual
+rejected 60/469-frame capture. This is the joint solver's elasticity/feasibility
+foundation, not an accepted sewn garment; see [MEMBRANE.md](MEMBRANE.md).
+
+`sh Tests/NativePattern/run-hinge-bending.sh` verifies the independent internal
+source-hinge energy, exact derivatives and separately named PSD approximation.
+It retains explicit panel membership, source areas and flat rest angles, and
+adds no hinges across sewing interfaces. See [HINGE-BENDING.md](HINGE-BENDING.md).
+Neither energy suite alone runs or accepts a complete garment.
+
+`sh Tests/NativePattern/run-elastic-energy-delta.sh` checks stable Double
+increments against 25 actual Newton line-search candidates and four complete
+active-barrier/bending controls; domain/precision failures remain explicit.
+`sh Tests/NativePattern/run-joint-objective.sh` verifies combined inertia,
+membrane, principal barrier, internal hinge and real scalar sewing E/g/exact Hv,
+as well as their combined stable increment. Neither runner accepts a physical
+time step or enables a garment App route. See [ELASTIC-ENERGY-DELTA.md](ELASTIC-ENERGY-DELTA.md)
+and [JOINT-OBJECTIVE.md](JOINT-OBJECTIVE.md).
+
+The positive-gap initializer is checked by
+`sh Tests/NativePattern/run-native-positive-clearance.sh`, including independent
+VF/EE distances, all 211 cases and exact preservation of 633 old mode signatures;
+see [POSITIVE-CLEARANCE.md](POSITIVE-CLEARANCE.md). It creates a feasible start,
+not a sewn garment.
+
+`sh Tests/NativePattern/run-membrane-path.sh` verifies bounded whole-path source
+intervals, including the actual formerly rejected r63; see [MEMBRANE-PATH.md](MEMBRANE-PATH.md).
+`sh Tests/NativePattern/run-joint-input.sh` checks real complete-source/SI mass
+bridging. `python3 Tests/NativePattern/run-joint-body-objective.py` checks the
+actual App-to-native joint body force and exact Hv; `python3 Tests/NativePattern/run-joint-newton.py`
+checks an independent analytic target and the first real body-coupled Newton
+subproblem. These do not accept a full garment; see [JOINT-BODY-NEWTON.md](JOINT-BODY-NEWTON.md).
+
+The mesher accepts per-source-edge spacing overrides for real sewing refinement
+requests. Tests rebuild an initially undersampled gathered seam, retain actual
+unattached fold nodes and check source immutability, arc spacing and unchanged
+other-edge/default sampling. Imported panel placement follows the pinned
+meshgen's Rz*Ry*Rx rotation and declared source units, then shifts the waist
+origin. Its tests cover actual torso, leg, sleeve, lapel and hood panels,
+normals, unit conversion, cancellation and invalid/missing/zero placement.
+These are reusable foundations, not proof of complete garment draping or new
+App routes. Earlier reports remain immutable snapshots of their recorded source
+versions; changed model files require new integration evidence.
+
+## Independent waistbands: welded reference and source strain limiting
+
+```sh
+sh Tests/NativePattern/run-strain-limit.sh
+GARMENTCODE_WAISTBAND_OUTPUT_DIR=/private/tmp/TailorAssWaistbandFinal sh Tests/NativePattern/run-cloth-waistband.sh
+GARMENTCODE_WAISTBAND_SENSITIVITY=1 GARMENTCODE_WAISTBAND_OUTPUT_DIR=/private/tmp/TailorAssWaistbandSensitivity sh Tests/NativePattern/run-cloth-waistband.sh
+python3 Tests/NativePattern/render-waistband-report.py --input-dir /private/tmp/TailorAssWaistbandFinal --sensitivity-dir /private/tmp/TailorAssWaistbandSensitivity --output-dir Tests/NativePattern/Reports/2026-10-25-waistband-3d
+```
+
+The nine-case matrix preserves the real rectangular/annular paper, both side
+seam metrics, triangle-edge rest lengths, area and material mass. Front centers
+align to the actual body's front midplane rather than anchoring an arbitrary
+side-seam phase. The optional 5% strain-limit target projects real positions
+jointly with the unchanged SDF, body-mesh and cloth-surface contact. It never
+rewrites rest lengths or clamps a reported diagnostic. The original 8% final
+edge gate, motion/penetration gates and zero intersections remain in force.
+
+The frozen report contains seven quality passes and two explicit rejections:
+wide StraightWB at width ratio .35 and source waist multipliers 1.0 /1.05.
+Their actual maximum strains remain 15.8880% /10.1799%; a regression-process pass
+does not mean all nine meshes passed quality. The second is explicitly another
+paper, not a silently enlarged replacement. Independent closed-body volume and
+proper-crossing checks put all 1,228 vertices and 1,752 face centers outside the
+body without ambiguity. Default Straight/Fitted maximum strains are about
+5.504% /5.000%, with original source top/bottom lengths and radial paper depth.
+
+The primitive suite covers analytic inverse-mass tension/compression, pins,
+unresolved/collapsed constraints, source immutability, single-correction caps,
+budget/finite validation and transactional periodic cancellation. Reproduction
+mode compiles once and runs the two defaults at 20/40/80 limiting passes.
+All six pass unchanged quality and independent volume checks. Straight 40→80
+changes maximum/RMS positions by .368 /.139 mm; the measured final strain still
+exceeds the 5% target slightly after contact. This is a bounded numerical budget,
+not physical fabric calibration or a guarantee of exact 5% strain. Limiter-off
+Circle and standard-body Skirt2 controls retain exactly every old vertex.
+
+This earlier reference uses admissible equal-length welded side seams.
+The current separate-panel assembly path additionally requires a `PreparedInput` factory
+that verifies canonical source SHA, complete panel/edge/triangle bindings and
+directions, area/mass/weights, free fold nodes, and identical collision/rendered
+bodies. `run-sewn-input.sh` passes real separate WB and sparse gather inputs plus
+38 invalid/cancellation/budget cases, including reversed-face and forged seam
+intent flag rejection.
+The independent-particle WB integration is checked separately above; composed
+garments still need acceptance before being advertised as App features.
+
+## Offline skirt 3D experiment
+
+This is a separate, bounded experiment, not part of the 356-pattern 2D parity
+claim. It uses real circle-skirt rest geometry and seam identities, a licensed
+anatomical mesh with a same-surface signed-distance field, numerical material
+presets, discrete surface self-contact and waist supports. The original circular
+proxy/equal-mass configuration is retained as an exact numerical control. It
+does not run the GarmentCode Warp simulator.
+
+```sh
+GARMENTCODE_CLOTH_OUTPUT_DIR=/private/tmp/TailorAssClothResults sh Tests/NativePattern/run-cloth.sh
+sh Tests/NativePattern/run-standard-body.sh
+sh Tests/NativePattern/run-cloth-contact.sh
+sh Tests/NativePattern/run-cloth-material.sh
+GARMENTCODE_CLOTH_OUTPUT_DIR=/private/tmp/TailorAssClothRefined sh Tests/NativePattern/run-cloth-refined.sh
+python3 Tests/NativePattern/compare-cloth-reference.py --input /private/tmp/TailorAssClothRefined --output Tests/NativePattern/Reports/2026-10-25-3d-refined/comparison.json
+python3 Tests/NativePattern/render-cloth-report.py --input-dir /private/tmp/TailorAssClothRefined --output-dir Tests/NativePattern/Reports/2026-10-25-3d-refined
+```
+
+The optimized refined test exports seven configurations, source patterns and raw
+diagnostics: the unchanged legacy control, three skirt angles, one longer skirt,
+and two additional material presets. Standard-body cases use 32 constraint
+iterations, with the legacy control kept at 24. Gates remain sustained motion
+below 0.025 m/s, maximum edge strain below 8%, body vertex penetration estimate
+below 3 mm, zero final surface crossings, cancellation and source immutability.
+The independent Python check compares the .75-sun source against
+the pinned `skirt-circle.json`, analytically measures its annular sectors and
+checks manifold, consistently oriented welded side seams. The report builder
+uses Python's standard library and shows the exact exported mesh with public
+GarmentCode and Design2GarmentCode images. Images are reference-only and are
+not bundled into the App. Open `Reports/2026-10-25-3d-refined/index.html` locally;
+the original `2026-10-25-3d/` report is preserved.
+
+Body tests check two-leg separation, negative interior distance even with a
+zero gradient, mesh/SDF alignment, fitting, and projection. Contact tests include
+face-interior crossing with distant vertices, edge contact, coplanar overlap,
+adjacency exclusions, and an actual cross-seam failure extracted from the old
+full-circle skirt. Material tests check SI area masses, refinement and seam mass
+conservation, invalid input, damping, and mass-normalized XPBD equivalence.
+
+`converged` is a sustained numerical-motion/strain/contact and final discrete
+surface check, not a continuous-collision or physical-fit certificate. Zero welded
+seam gap follows shared degrees of freedom by construction. The current report
+cannot establish 3D parity: a matched official final mesh/material/body is not
+available. Runtime on the Mac or Simulator does not measure iPhone performance.
+
+### Two-panel skirt extension
+
+```sh
+GARMENTCODE_CLOTH_OUTPUT_DIR=/private/tmp/TailorAssClothSkirt2 sh Tests/NativePattern/run-cloth-skirt2.sh
+python3 Tests/NativePattern/render-skirt2-report.py --input-dir /private/tmp/TailorAssClothSkirt2 --output-dir Tests/NativePattern/Reports/2026-10-25-skirt2-3d
+```
+
+`GarmentCodeSkirtDrape` dispatches circular geometry to the existing circle
+adapter and builds Skirt2 from its original straight quadrilateral panels and
+two actual side seams. Front and back widths remain different. Skirt2 length
+is vertical; its flare is a centimetre increment per lower corner, rather than
+a circle-skirt angle. Original flat triangles supply rest lengths and area
+masses before seam welding. The supported preparation range is natural waist,
+1–1.5 gathering, 0–20 cm flare and 5–150 cm vertical length, without cuts or
+additional components. Preparation eligibility does not establish that a narrow
+straight tube can fit a wider hip circumference.
+
+Stretch constraints cover exactly the actual welded triangle edges, with no
+unmeshed diagonal cross-braces that would lock each quad into a rigid plane.
+The skirt's minimum grid has 24 columns per panel and six support corrugations;
+the standard-body solver retains 32 constraint iterations. Flared trapezoids
+use source-indexed peaks at both side-waist seams: their sewn top corner angles
+exceed 180 degrees, so fixing them at a body-touching valley would force the
+next seam vertex inward. Exact chord marching and a feasible radial-offset
+bound preserve each source edge. Rectangular skirts keep their original support
+construction.
+
+The default source waist is 109.63394 cm for an 84.3338 cm body waist (1.3
+gathering). A corrugated outward support is marched by each source chord length;
+the source waist is not compressed to body circumference. Lower rows initialize
+around convex hulls of actual horizontal torso/two-leg mesh sections, excluding
+disconnected arm/hand loops, while retaining the flat reference metric. This
+lets the front outline shrink below the waist instead of keeping an artificial
+waist-radius pouch. A row with insufficient source circumference is rejected
+clearly rather than projected through a leg.
+The support is an experimental gathering fixture, not a simulated sewn waistband.
+Diagnostics and the App distinguish source waist, supported waist, gathering
+ratio and vertical length. A quiet pose only ends the solver early when the
+same final strain, body-penetration and surface gates also pass.
+
+The test driver checks the pinned official `skirt-two-panel.json`, independent
+flat area and spring metrics, unequal panel widths, oriented manifold seams,
+pin chord lengths, a startup strain bound, source immutability, mass conservation, unsupported inputs,
+cancellation and exact circle adapter preservation. Its numerical configurations
+cover the default skirt, changed length, flare and two additional materials.
+All five configurations pass the unchanged quality gates; the tested maximum
+strains are 7.64%, 7.86%, 8.00% (strictly below 8%), 7.59% and 7.66%, respectively.
+All final surface crossing counts are zero and body vertex penetration estimates
+are at most 0.201 mm. Soft/firm actual position RMS changes are 1.387/2.335 mm.
+The lower gather preparation boundary uses flare 20 cm; gather 1 with no flare
+is explicitly rejected for insufficient body clearance. These are bounded
+numerical checks, not all-size fit coverage. The new report is separate from
+both circle reports. Official final 3D mesh parity remains unverified.
+
+Device Hub UI validation on 2026-10-25 used the iPhone 17 / iOS 27 Simulator
+Release build. Default Skirt2 completed with medium, soft and firm presets;
+observed runtimes were 1.2/1.3/1.3 seconds and displayed fabric masses were
+80.0/53.3/124.5 g. Material changes cleared old output; cancellation and subsequent
+regeneration, rotation/reset, mannequin/seam visibility and local Files export
+were exercised. The saved soft OBJ exactly matches the canonical exported OBJ
+(14,004 vertices including the mannequin, 27,908 faces). These are Simulator
+observations, not physical-device performance. See
+[verification metadata](Reports/2026-10-25-skirt2-3d/ui/verification.json) and the
+[actual Device Hub screenshot](Reports/2026-10-25-skirt2-3d/ui/app-simulator-firm.png).
+Small body-face pokes remain; UI completion does not extend the vertex-only
+body-contact guarantee.
+
+## 2D pattern acceptance
+
+`sh Tests/NativePattern/run-basic.sh` tests the basic-mode centimetre adapter
+against actual generated geometry for two body profiles, including rear-centre
+shirt length, skirt/pants component lengths and separate waistband height. It
+checks hidden professional parameters remain intact, explicit centimetre targets
+can be reapplied after body edits, unsupported combinations have no fake control,
+active custom-parameter detection and atomic rejection of invalid lengths. This
+gate is included in `run-acceptance.sh`. UI mode switching and text-entry drafts
+also require Simulator interaction; software checks do not certify physical fit.
+
 `sh Tests/NativePattern/run-localization.sh` checks Chinese display coverage for
 all 122 design fields, 26 body measurements, selectable string values and 58
 official panel names in the current fixture corpus. It also checks contextual

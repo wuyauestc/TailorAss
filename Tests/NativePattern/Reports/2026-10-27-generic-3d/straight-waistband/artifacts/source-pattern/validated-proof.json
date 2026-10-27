@@ -1,0 +1,3650 @@
+{
+  "bodyGeometrySHA256" : "f01f0e4ed4139eb08d8beb5aef6e39a975294407bf5577c708bf8a99ca332071",
+  "frames" : [
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.00618135132938746,
+      "gradientInfinityNewton" : 4.7197465846693376e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0014052970242004338,
+      "maximumSourceEdgeRelativeChange" : 0.020364772763722838,
+      "meanSourceEdgeRelativeChange" : 0.006717481213854191,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.00618135132938746,
+          "gradientInfinityNewton" : 4.7197465846693376e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020364772763722838,
+          "maximumSpeedMetersPerSecond" : 0.0014052970242004338,
+          "meanSourceEdgeRelativeChange" : 0.006717481213854191,
+          "preconditionedGradientInfinityMeters" : 6.206585699221674e-09,
+          "pzRelativeResidual" : 1.517510452519871e-10,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 76,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 514
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110256601024
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701637546474336e-07,
+            "maximumTargetResidualMeters" : 4.6701637546474336e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294071859127e-07,
+            "rmsTargetResidualMeters" : 3.583294071859127e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203824167715945,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935672842718046,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 6.206585699221674e-09,
+      "pzRelativeResidual" : 1.517510452519871e-10,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 76,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 514
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701637546474336e-07,
+        "maximumTargetResidualMeters" : 4.6701637546474336e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294071859127e-07,
+        "rmsTargetResidualMeters" : 3.583294071859127e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203824167715945,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935672842718046,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 720
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006181699260687152,
+      "gradientInfinityNewton" : 3.8978340199946615e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.001256469663972973,
+      "maximumSourceEdgeRelativeChange" : 0.020364103865358807,
+      "meanSourceEdgeRelativeChange" : 0.006717840032915167,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006181699260687152,
+          "gradientInfinityNewton" : 3.8978340199946615e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020364103865358807,
+          "maximumSpeedMetersPerSecond" : 0.001256469663972973,
+          "meanSourceEdgeRelativeChange" : 0.006717840032915167,
+          "preconditionedGradientInfinityMeters" : 5.135129397662975e-09,
+          "pzRelativeResidual" : 8.53335927617499e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 76,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 514
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110254704787
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701634136348473e-07,
+            "maximumTargetResidualMeters" : 4.6701634136348473e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.58329419838317e-07,
+            "rmsTargetResidualMeters" : 3.58329419838317e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203809551512735,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935683480162424,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 5.135129397662975e-09,
+      "pzRelativeResidual" : 8.53335927617499e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 76,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 514
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701634136348473e-07,
+        "maximumTargetResidualMeters" : 4.6701634136348473e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.58329419838317e-07,
+        "rmsTargetResidualMeters" : 3.58329419838317e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203809551512735,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935683480162424,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 721
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006181978592708737,
+      "gradientInfinityNewton" : 1.0532517080719117e-09,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0010313099093448293,
+      "maximumSourceEdgeRelativeChange" : 0.020363589222721634,
+      "meanSourceEdgeRelativeChange" : 0.006718126167741103,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006181978592708737,
+          "gradientInfinityNewton" : 1.0532517080719117e-09,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363589222721634,
+          "maximumSpeedMetersPerSecond" : 0.0010313099093448293,
+          "meanSourceEdgeRelativeChange" : 0.006718126167741103,
+          "preconditionedGradientInfinityMeters" : 2.790714186076323e-14,
+          "pzRelativeResidual" : 3.4738737639447813e-13,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 76,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 514
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110253198664
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701632407690907e-07,
+            "maximumTargetResidualMeters" : 4.6701632407690907e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832942955873263e-07,
+            "rmsTargetResidualMeters" : 3.5832942955873263e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203791417018764,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935700240756532,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 2.790714186076323e-14,
+      "pzRelativeResidual" : 3.4738737639447813e-13,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 76,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 514
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701632407690907e-07,
+        "maximumTargetResidualMeters" : 4.6701632407690907e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832942955873263e-07,
+        "rmsTargetResidualMeters" : 3.5832942955873263e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203791417018764,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935700240756532,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 722
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182181149380246,
+      "gradientInfinityNewton" : 2.876426944686816e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0007917319652666615,
+      "maximumSourceEdgeRelativeChange" : 0.020363266482407383,
+      "meanSourceEdgeRelativeChange" : 0.0067183333604073255,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182181149380246,
+          "gradientInfinityNewton" : 2.876426944686816e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363266482407383,
+          "maximumSpeedMetersPerSecond" : 0.0007917319652666615,
+          "meanSourceEdgeRelativeChange" : 0.0067183333604073255,
+          "preconditionedGradientInfinityMeters" : 1.7532551231197127e-09,
+          "pzRelativeResidual" : 9.156230243242416e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 76,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 514
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110252102384
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701632517620246e-07,
+            "maximumTargetResidualMeters" : 4.6701632517620246e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832943791221836e-07,
+            "rmsTargetResidualMeters" : 3.5832943791221836e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203776777286504,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935717363012464,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.7532551231197127e-09,
+      "pzRelativeResidual" : 9.156230243242416e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 76,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 514
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701632517620246e-07,
+        "maximumTargetResidualMeters" : 4.6701632517620246e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832943791221836e-07,
+        "rmsTargetResidualMeters" : 3.5832943791221836e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203776777286504,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935717363012464,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 723
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182311268652088,
+      "gradientInfinityNewton" : 2.5838323261528906e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.000585504171157324,
+      "maximumSourceEdgeRelativeChange" : 0.020363132536441064,
+      "meanSourceEdgeRelativeChange" : 0.006718466176083047,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182311268652088,
+          "gradientInfinityNewton" : 2.5838323261528906e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363132536441064,
+          "maximumSpeedMetersPerSecond" : 0.000585504171157324,
+          "meanSourceEdgeRelativeChange" : 0.006718466176083047,
+          "preconditionedGradientInfinityMeters" : 7.473061159863961e-10,
+          "pzRelativeResidual" : 3.7256123167995975e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 71,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251389724
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701634095075935e-07,
+            "maximumTargetResidualMeters" : 4.6701634095075935e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944321616863e-07,
+            "rmsTargetResidualMeters" : 3.5832944321616863e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203768558847806,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935731210177,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 7.473061159863961e-10,
+      "pzRelativeResidual" : 3.7256123167995975e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 71,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701634095075935e-07,
+        "maximumTargetResidualMeters" : 4.6701634095075935e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944321616863e-07,
+        "rmsTargetResidualMeters" : 3.5832944321616863e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203768558847806,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935731210177,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 724
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182380399190137,
+      "gradientInfinityNewton" : 2.312143190796867e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00044296378635469576,
+      "maximumSourceEdgeRelativeChange" : 0.02036316295452556,
+      "meanSourceEdgeRelativeChange" : 0.006718536429318505,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182380399190137,
+          "gradientInfinityNewton" : 2.312143190796867e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036316295452556,
+          "maximumSpeedMetersPerSecond" : 0.00044296378635469576,
+          "meanSourceEdgeRelativeChange" : 0.006718536429318505,
+          "preconditionedGradientInfinityMeters" : 2.2889758079165993e-10,
+          "pzRelativeResidual" : 2.3728025909589798e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.000499711025100325
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670163691886847e-07,
+            "maximumTargetResidualMeters" : 4.670163691886847e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944631763535e-07,
+            "rmsTargetResidualMeters" : 3.5832944631763535e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203767228546896,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935740408312764,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 2.2889758079165993e-10,
+      "pzRelativeResidual" : 2.3728025909589798e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670163691886847e-07,
+        "maximumTargetResidualMeters" : 4.670163691886847e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944631763535e-07,
+        "rmsTargetResidualMeters" : 3.5832944631763535e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203767228546896,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935740408312764,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 725
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182403097033488,
+      "gradientInfinityNewton" : 2.0907484932219944e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00037800683677615587,
+      "maximumSourceEdgeRelativeChange" : 0.020363318882332004,
+      "meanSourceEdgeRelativeChange" : 0.0067185590309885475,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182403097033488,
+          "gradientInfinityNewton" : 2.0907484932219944e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363318882332004,
+          "maximumSpeedMetersPerSecond" : 0.00037800683677615587,
+          "meanSourceEdgeRelativeChange" : 0.0067185590309885475,
+          "preconditionedGradientInfinityMeters" : 1.2024877657161886e-10,
+          "pzRelativeResidual" : 9.320380643728405e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110250867907
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701640670335376e-07,
+            "maximumTargetResidualMeters" : 4.6701640670335376e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944765747535e-07,
+            "rmsTargetResidualMeters" : 3.5832944765747535e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203770307579583,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935745450443927,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2024877657161886e-10,
+      "pzRelativeResidual" : 9.320380643728405e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701640670335376e-07,
+        "maximumTargetResidualMeters" : 4.6701640670335376e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944765747535e-07,
+        "rmsTargetResidualMeters" : 3.5832944765747535e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203770307579583,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935745450443927,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 726
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182394070787979,
+      "gradientInfinityNewton" : 1.9837440873304857e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00037675136515060413,
+      "maximumSourceEdgeRelativeChange" : 0.020363557166830137,
+      "meanSourceEdgeRelativeChange" : 0.006718549069175801,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182394070787979,
+          "gradientInfinityNewton" : 1.9837440873304857e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363557166830137,
+          "maximumSpeedMetersPerSecond" : 0.00037675136515060413,
+          "meanSourceEdgeRelativeChange" : 0.006718549069175801,
+          "preconditionedGradientInfinityMeters" : 1.2043791953220573e-10,
+          "pzRelativeResidual" : 7.1273740246105846e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110250904918
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701645046713025e-07,
+            "maximumTargetResidualMeters" : 4.6701645046713025e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944774748737e-07,
+            "rmsTargetResidualMeters" : 3.5832944774748737e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203775218922866,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935747578722344,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2043791953220573e-10,
+      "pzRelativeResidual" : 7.1273740246105846e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701645046713025e-07,
+        "maximumTargetResidualMeters" : 4.6701645046713025e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944774748737e-07,
+        "rmsTargetResidualMeters" : 3.5832944774748737e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203775218922866,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935747578722344,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 727
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182366314498325,
+      "gradientInfinityNewton" : 2.0968608382965215e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.000387512349553915,
+      "maximumSourceEdgeRelativeChange" : 0.020363839916174076,
+      "meanSourceEdgeRelativeChange" : 0.006718519866195644,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182366314498325,
+          "gradientInfinityNewton" : 2.0968608382965215e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020363839916174076,
+          "maximumSpeedMetersPerSecond" : 0.000387512349553915,
+          "meanSourceEdgeRelativeChange" : 0.006718519866195644,
+          "preconditionedGradientInfinityMeters" : 1.2115390830069716e-10,
+          "pzRelativeResidual" : 9.436067617318469e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251043336
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670164978743098e-07,
+            "maximumTargetResidualMeters" : 4.670164978743098e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294470643575e-07,
+            "rmsTargetResidualMeters" : 3.583294470643575e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203780299641632,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935748030946766,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2115390830069716e-10,
+      "pzRelativeResidual" : 9.436067617318469e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670164978743098e-07,
+        "maximumTargetResidualMeters" : 4.670164978743098e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294470643575e-07,
+        "rmsTargetResidualMeters" : 3.583294470643575e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203780299641632,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935748030946766,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 728
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182330165903638,
+      "gradientInfinityNewton" : 2.1592119225921635e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039567827217113486,
+      "maximumSourceEdgeRelativeChange" : 0.020364138810102128,
+      "meanSourceEdgeRelativeChange" : 0.006718482015417648,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182330165903638,
+          "gradientInfinityNewton" : 2.1592119225921635e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020364138810102128,
+          "maximumSpeedMetersPerSecond" : 0.00039567827217113486,
+          "meanSourceEdgeRelativeChange" : 0.006718482015417648,
+          "preconditionedGradientInfinityMeters" : 1.2215737497896623e-10,
+          "pzRelativeResidual" : 1.1443320931068313e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251226393
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701654691713014e-07,
+            "maximumTargetResidualMeters" : 4.6701654691713014e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944600499353e-07,
+            "rmsTargetResidualMeters" : 3.5832944600499353e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203784790249628,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935747634799685,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2215737497896623e-10,
+      "pzRelativeResidual" : 1.1443320931068313e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701654691713014e-07,
+        "maximumTargetResidualMeters" : 4.6701654691713014e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944600499353e-07,
+        "rmsTargetResidualMeters" : 3.5832944600499353e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203784790249628,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935747634799685,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 729
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182293055376594,
+      "gradientInfinityNewton" : 2.1856790780039326e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039758650038871203,
+      "maximumSourceEdgeRelativeChange" : 0.02036443538763666,
+      "meanSourceEdgeRelativeChange" : 0.0067184431341039234,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182293055376594,
+          "gradientInfinityNewton" : 2.1856790780039326e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036443538763666,
+          "maximumSpeedMetersPerSecond" : 0.00039758650038871203,
+          "meanSourceEdgeRelativeChange" : 0.0067184431341039234,
+          "preconditionedGradientInfinityMeters" : 1.233144175777821e-10,
+          "pzRelativeResidual" : 1.1135168195543996e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251413874
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701659619726624e-07,
+            "maximumTargetResidualMeters" : 4.6701659619726624e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.58329444871739e-07,
+            "rmsTargetResidualMeters" : 3.58329444871739e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203788512493135,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935746809989745,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.233144175777821e-10,
+      "pzRelativeResidual" : 1.1135168195543996e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701659619726624e-07,
+        "maximumTargetResidualMeters" : 4.6701659619726624e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.58329444871739e-07,
+        "rmsTargetResidualMeters" : 3.58329444871739e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203788512493135,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935746809989745,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 730
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.0061822597097129315,
+      "gradientInfinityNewton" : 2.188862074925524e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039550754489701484,
+      "maximumSourceEdgeRelativeChange" : 0.02036471941046014,
+      "meanSourceEdgeRelativeChange" : 0.006718408074906548,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.0061822597097129315,
+          "gradientInfinityNewton" : 2.188862074925524e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036471941046014,
+          "maximumSpeedMetersPerSecond" : 0.00039550754489701484,
+          "meanSourceEdgeRelativeChange" : 0.006718408074906548,
+          "preconditionedGradientInfinityMeters" : 1.245644998779024e-10,
+          "pzRelativeResidual" : 1.3349483953244649e-11,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251580142
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701664484007866e-07,
+            "maximumTargetResidualMeters" : 4.6701664484007866e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294438608323e-07,
+            "rmsTargetResidualMeters" : 3.583294438608323e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203791576537922,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935745736005533,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.245644998779024e-10,
+      "pzRelativeResidual" : 1.3349483953244649e-11,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701664484007866e-07,
+        "maximumTargetResidualMeters" : 4.6701664484007866e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294438608323e-07,
+        "rmsTargetResidualMeters" : 3.583294438608323e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203791576537922,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935745736005533,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 731
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.0061822326085486665,
+      "gradientInfinityNewton" : 2.1790608170646486e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039229184147041745,
+      "maximumSourceEdgeRelativeChange" : 0.020364986673071073,
+      "meanSourceEdgeRelativeChange" : 0.006718379390507703,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.0061822326085486665,
+          "gradientInfinityNewton" : 2.1790608170646486e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020364986673071073,
+          "maximumSpeedMetersPerSecond" : 0.00039229184147041745,
+          "meanSourceEdgeRelativeChange" : 0.006718379390507703,
+          "preconditionedGradientInfinityMeters" : 9.804240851208553e-10,
+          "pzRelativeResidual" : 3.024315728863681e-10,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251712251
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670166924230542e-07,
+            "maximumTargetResidualMeters" : 4.670166924230542e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944308291764e-07,
+            "rmsTargetResidualMeters" : 3.5832944308291764e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.020379418780261,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935744500027499,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 9.804240851208553e-10,
+      "pzRelativeResidual" : 3.024315728863681e-10,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670166924230542e-07,
+        "maximumTargetResidualMeters" : 4.670166924230542e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944308291764e-07,
+        "rmsTargetResidualMeters" : 3.5832944308291764e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.020379418780261,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935744500027499,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 732
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182212539553737,
+      "gradientInfinityNewton" : 2.1689971671512431e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039044496452079124,
+      "maximumSourceEdgeRelativeChange" : 0.02036522500116833,
+      "meanSourceEdgeRelativeChange" : 0.006718357878452739,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182212539553737,
+          "gradientInfinityNewton" : 2.1689971671512431e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036522500116833,
+          "maximumSpeedMetersPerSecond" : 0.00039044496452079124,
+          "meanSourceEdgeRelativeChange" : 0.006718357878452739,
+          "preconditionedGradientInfinityMeters" : 1.2738552121996555e-10,
+          "pzRelativeResidual" : 5.639237468236278e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251809689
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701673884568615e-07,
+            "maximumTargetResidualMeters" : 4.6701673884568615e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294427349834e-07,
+            "rmsTargetResidualMeters" : 3.583294427349834e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203796449598077,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935743129091741,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2738552121996555e-10,
+      "pzRelativeResidual" : 5.639237468236278e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701673884568615e-07,
+        "maximumTargetResidualMeters" : 4.6701673884568615e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294427349834e-07,
+        "rmsTargetResidualMeters" : 3.583294427349834e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203796449598077,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935743129091741,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 733
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182199097310387,
+      "gradientInfinityNewton" : 2.158935513418836e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0003901256006255141,
+      "maximumSourceEdgeRelativeChange" : 0.020365455859686188,
+      "meanSourceEdgeRelativeChange" : 0.006718343145766455,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182199097310387,
+          "gradientInfinityNewton" : 2.158935513418836e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020365455859686188,
+          "maximumSpeedMetersPerSecond" : 0.0003901256006255141,
+          "meanSourceEdgeRelativeChange" : 0.006718343145766455,
+          "preconditionedGradientInfinityMeters" : 1.2900981219925672e-10,
+          "pzRelativeResidual" : 8.02226738098575e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251871313
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670167842352287e-07,
+            "maximumTargetResidualMeters" : 4.670167842352287e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944258665935e-07,
+            "rmsTargetResidualMeters" : 3.5832944258665935e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203798733030298,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935741706987243,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.2900981219925672e-10,
+      "pzRelativeResidual" : 8.02226738098575e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670167842352287e-07,
+        "maximumTargetResidualMeters" : 4.670167842352287e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944258665935e-07,
+        "rmsTargetResidualMeters" : 3.5832944258665935e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203798733030298,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935741706987243,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 734
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182191281057689,
+      "gradientInfinityNewton" : 2.1536026678647957e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0003910596343208304,
+      "maximumSourceEdgeRelativeChange" : 0.020365675742100242,
+      "meanSourceEdgeRelativeChange" : 0.0067183341764589025,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182191281057689,
+          "gradientInfinityNewton" : 2.1536026678647957e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020365675742100242,
+          "maximumSpeedMetersPerSecond" : 0.0003910596343208304,
+          "meanSourceEdgeRelativeChange" : 0.0067183341764589025,
+          "preconditionedGradientInfinityMeters" : 1.306703028129711e-10,
+          "pzRelativeResidual" : 8.148363135179878e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251902375
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701682881079194e-07,
+            "maximumTargetResidualMeters" : 4.6701682881079194e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294426692558e-07,
+            "rmsTargetResidualMeters" : 3.583294426692558e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203801022037489,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935740314760259,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.306703028129711e-10,
+      "pzRelativeResidual" : 8.148363135179878e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701682881079194e-07,
+        "maximumTargetResidualMeters" : 4.6701682881079194e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294426692558e-07,
+        "rmsTargetResidualMeters" : 3.583294426692558e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203801022037489,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935740314760259,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 735
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182187781104086,
+      "gradientInfinityNewton" : 2.1579850778552512e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0003928175571755071,
+      "maximumSourceEdgeRelativeChange" : 0.02036588758165414,
+      "meanSourceEdgeRelativeChange" : 0.006718329623951708,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182187781104086,
+          "gradientInfinityNewton" : 2.1579850778552512e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036588758165414,
+          "maximumSpeedMetersPerSecond" : 0.0003928175571755071,
+          "meanSourceEdgeRelativeChange" : 0.006718329623951708,
+          "preconditionedGradientInfinityMeters" : 1.3233844663825383e-10,
+          "pzRelativeResidual" : 5.938282727991229e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251910219
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701687284395673e-07,
+            "maximumTargetResidualMeters" : 4.6701687284395673e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944293864517e-07,
+            "rmsTargetResidualMeters" : 3.5832944293864517e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203803351928122,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935739001223228,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.3233844663825383e-10,
+      "pzRelativeResidual" : 5.938282727991229e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701687284395673e-07,
+        "maximumTargetResidualMeters" : 4.6701687284395673e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944293864517e-07,
+        "rmsTargetResidualMeters" : 3.5832944293864517e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203803351928122,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935739001223228,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 736
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182187264479556,
+      "gradientInfinityNewton" : 2.2019195231037791e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0003950063741241597,
+      "maximumSourceEdgeRelativeChange" : 0.020366094369619114,
+      "meanSourceEdgeRelativeChange" : 0.006718328119310197,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182187264479556,
+          "gradientInfinityNewton" : 2.2019195231037791e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020366094369619114,
+          "maximumSpeedMetersPerSecond" : 0.0003950063741241597,
+          "meanSourceEdgeRelativeChange" : 0.006718328119310197,
+          "preconditionedGradientInfinityMeters" : 1.3400362399519478e-10,
+          "pzRelativeResidual" : 7.599153099738634e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251901888
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670169165747185e-07,
+            "maximumTargetResidualMeters" : 4.670169165747185e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944333671566e-07,
+            "rmsTargetResidualMeters" : 3.5832944333671566e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203805756081252,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935737786985078,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.3400362399519478e-10,
+      "pzRelativeResidual" : 7.599153099738634e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670169165747185e-07,
+        "maximumTargetResidualMeters" : 4.670169165747185e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944333671566e-07,
+        "rmsTargetResidualMeters" : 3.5832944333671566e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203805756081252,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935737786985078,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 737
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182188544045233,
+      "gradientInfinityNewton" : 2.239391490022058e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00039736987740223524,
+      "maximumSourceEdgeRelativeChange" : 0.02036629871706941,
+      "meanSourceEdgeRelativeChange" : 0.006718328443301583,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182188544045233,
+          "gradientInfinityNewton" : 2.239391490022058e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036629871706941,
+          "maximumSpeedMetersPerSecond" : 0.00039736987740223524,
+          "meanSourceEdgeRelativeChange" : 0.006718328443301583,
+          "preconditionedGradientInfinityMeters" : 1.356637987491529e-10,
+          "pzRelativeResidual" : 7.662385051534148e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251883691
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701696024661263e-07,
+            "maximumTargetResidualMeters" : 4.6701696024661263e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944381835966e-07,
+            "rmsTargetResidualMeters" : 3.5832944381835966e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203808244124017,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.993573667078216,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.356637987491529e-10,
+      "pzRelativeResidual" : 7.662385051534148e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701696024661263e-07,
+        "maximumTargetResidualMeters" : 4.6701696024661263e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944381835966e-07,
+        "rmsTargetResidualMeters" : 3.5832944381835966e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203808244124017,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.993573667078216,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 738
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182190665549335,
+      "gradientInfinityNewton" : 2.2717162265206703e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0003997836668940484,
+      "maximumSourceEdgeRelativeChange" : 0.020366502664419306,
+      "meanSourceEdgeRelativeChange" : 0.006718329614986895,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182190665549335,
+          "gradientInfinityNewton" : 2.2717162265206703e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020366502664419306,
+          "maximumSpeedMetersPerSecond" : 0.0003997836668940484,
+          "meanSourceEdgeRelativeChange" : 0.006718329614986895,
+          "preconditionedGradientInfinityMeters" : 1.3732257437708982e-10,
+          "pzRelativeResidual" : 7.112555583512312e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251860906
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670170040264e-07,
+            "maximumTargetResidualMeters" : 4.670170040264e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294443382001e-07,
+            "rmsTargetResidualMeters" : 3.583294443382001e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203810814739485,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935735636289057,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.3732257437708982e-10,
+      "pzRelativeResidual" : 7.112555583512312e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670170040264e-07,
+        "maximumTargetResidualMeters" : 4.670170040264e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294443382001e-07,
+        "rmsTargetResidualMeters" : 3.583294443382001e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203810814739485,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935735636289057,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 739
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182192933867919,
+      "gradientInfinityNewton" : 2.3003722482428657e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.0004022096190489861,
+      "maximumSourceEdgeRelativeChange" : 0.02036670764635251,
+      "meanSourceEdgeRelativeChange" : 0.006718330919307308,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182192933867919,
+          "gradientInfinityNewton" : 2.3003722482428657e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036670764635251,
+          "maximumSpeedMetersPerSecond" : 0.0004022096190489861,
+          "meanSourceEdgeRelativeChange" : 0.006718330919307308,
+          "preconditionedGradientInfinityMeters" : 1.389863308103476e-10,
+          "pzRelativeResidual" : 7.690771269446279e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251837062
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.67017048044892e-07,
+            "maximumTargetResidualMeters" : 4.67017048044892e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944487082563e-07,
+            "rmsTargetResidualMeters" : 3.5832944487082563e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203813460529634,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935734660011167,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.389863308103476e-10,
+      "pzRelativeResidual" : 7.690771269446279e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.67017048044892e-07,
+        "maximumTargetResidualMeters" : 4.67017048044892e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944487082563e-07,
+        "rmsTargetResidualMeters" : 3.5832944487082563e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203813460529634,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935734660011167,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 740
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182194898390739,
+      "gradientInfinityNewton" : 2.3267802840010177e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00040465006792552084,
+      "maximumSourceEdgeRelativeChange" : 0.020366914566935845,
+      "meanSourceEdgeRelativeChange" : 0.006718331892532444,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182194898390739,
+          "gradientInfinityNewton" : 2.3267802840010177e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020366914566935845,
+          "maximumSpeedMetersPerSecond" : 0.00040465006792552084,
+          "meanSourceEdgeRelativeChange" : 0.006718331892532444,
+          "preconditionedGradientInfinityMeters" : 1.406629600827065e-10,
+          "pzRelativeResidual" : 7.628436443643892e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.000499711025181458
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.670170923883781e-07,
+            "maximumTargetResidualMeters" : 4.670170923883781e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294453964346e-07,
+            "rmsTargetResidualMeters" : 3.583294453964346e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203816170821087,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935733717902578,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.406629600827065e-10,
+      "pzRelativeResidual" : 7.628436443643892e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.670170923883781e-07,
+        "maximumTargetResidualMeters" : 4.670170923883781e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294453964346e-07,
+        "rmsTargetResidualMeters" : 3.583294453964346e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203816170821087,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935733717902578,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 741
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182196314677329,
+      "gradientInfinityNewton" : 2.3521650258095939e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00040711755976459077,
+      "maximumSourceEdgeRelativeChange" : 0.02036712391294815,
+      "meanSourceEdgeRelativeChange" : 0.0067183322829414876,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182196314677329,
+          "gradientInfinityNewton" : 2.3521650258095939e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.02036712391294815,
+          "maximumSpeedMetersPerSecond" : 0.00040711755976459077,
+          "meanSourceEdgeRelativeChange" : 0.0067183322829414876,
+          "preconditionedGradientInfinityMeters" : 1.4236000736953174e-10,
+          "pzRelativeResidual" : 5.4745529393777355e-12,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251794709
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701713710964127e-07,
+            "maximumTargetResidualMeters" : 4.6701713710964127e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.583294459036042e-07,
+            "rmsTargetResidualMeters" : 3.583294459036042e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.020381893386589,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935732789352537,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 1.4236000736953174e-10,
+      "pzRelativeResidual" : 5.4745529393777355e-12,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701713710964127e-07,
+        "maximumTargetResidualMeters" : 4.6701713710964127e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.583294459036042e-07,
+        "rmsTargetResidualMeters" : 3.583294459036042e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.020381893386589,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935732789352537,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 742
+    },
+    {
+      "actualTrajectoryMode" : "physicalLinearStep",
+      "bodyMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "euclideanCertificateAttempts" : 12,
+          "euclideanCertificateNodes" : 12,
+          "euclideanCertifiedAfterPrecisionLimit" : 0,
+          "euclideanCertifiedFeatures" : 12,
+          "minimumSeparationMeters" : 0.0005,
+          "nativeQueries" : 7954,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 1167
+        }
+      ],
+      "energyJoules" : 0.006182197095974206,
+      "gradientInfinityNewton" : 3.8873479683149137e-07,
+      "gravityFraction" : 1,
+      "maximumPhysicalSpeedMetersPerSecond" : 0.00040962098946228985,
+      "maximumSourceEdgeRelativeChange" : 0.020367335864616365,
+      "meanSourceEdgeRelativeChange" : 0.006718332000864611,
+      "physicalSeedForest" : {
+        "acceptedAttemptIndices" : [
+          0
+        ],
+        "actualMaximumDepth" : 0,
+        "attemptCount" : 1,
+        "leafCount" : 1,
+        "leafSeedIndices" : [
+          0
+        ],
+        "seedCount" : 1
+      },
+      "physicalSubsteps" : [
+        {
+          "bodyMotion" : {
+            "completedAllFeatures" : true,
+            "euclideanCertificateAttempts" : 12,
+            "euclideanCertificateNodes" : 12,
+            "euclideanCertifiedAfterPrecisionLimit" : 0,
+            "euclideanCertifiedFeatures" : 12,
+            "minimumSeparationMeters" : 0.0005,
+            "nativeQueries" : 7954,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 1167
+          },
+          "bodySurface" : {
+            "candidateTrianglePairs" : 1167,
+            "degenerateClothTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumPlaneOverlapMeters" : 0
+          },
+          "endTick" : 8,
+          "energyJoules" : 0.006182197095974206,
+          "gradientInfinityNewton" : 3.8873479683149137e-07,
+          "gravityFraction" : 1,
+          "maximumSourceEdgeRelativeChange" : 0.020367335864616365,
+          "maximumSpeedMetersPerSecond" : 0.00040962098946228985,
+          "meanSourceEdgeRelativeChange" : 0.006718332000864611,
+          "preconditionedGradientInfinityMeters" : 3.391342099027182e-09,
+          "pzRelativeResidual" : 4.905098144181755e-10,
+          "selfMotion" : {
+            "completedAllFeatures" : true,
+            "completedDomainCertificates" : true,
+            "euclideanCertificateAttempts" : 4,
+            "euclideanCertificateNodes" : 4,
+            "euclideanCertifiedAfterPrecisionLimit" : 4,
+            "euclideanCertifiedFeatures" : 4,
+            "minimumSeparationMeters" : 0,
+            "nativeQueries" : 74,
+            "safeTime" : 1,
+            "status" : "clear",
+            "trianglePairs" : 512
+          },
+          "selfSurface" : {
+            "candidateTrianglePairs" : 28,
+            "closeSurfacePairs" : 20,
+            "degenerateTriangles" : 0,
+            "intersectingTrianglePairs" : 0,
+            "maximumSurfaceOverlapMeters" : 0.0004997110251778046
+          },
+          "sewing" : {
+            "anchorConstraintCount" : 6,
+            "maximumGapMeters" : 4.6701718221656955e-07,
+            "maximumTargetResidualMeters" : 4.6701718221656955e-07,
+            "measuresOnlyAnchorGaps" : true,
+            "rampFraction" : 1,
+            "rmsGapMeters" : 3.5832944638818245e-07,
+            "rmsTargetResidualMeters" : 3.5832944638818245e-07
+          },
+          "sewingRamp" : 1,
+          "sourceMotion" : {
+            "completedAllTriangles" : true,
+            "intervalNodes" : 128,
+            "maximumCertifiedPrincipalStretch" : 1.0203821738514123,
+            "maximumDepthReached" : 0,
+            "minimumCertifiedPrincipalStretch" : 0.9935731858822525,
+            "status" : "clear",
+            "subdividedNodes" : 0,
+            "trianglesExamined" : 128
+          },
+          "startTick" : 0,
+          "ticksPerMacroStep" : 8,
+          "timeStepSeconds" : 0.004166666666666667
+        }
+      ],
+      "preconditionedGradientInfinityMeters" : 3.391342099027182e-09,
+      "pzRelativeResidual" : 4.905098144181755e-10,
+      "segmentCount" : 1,
+      "selfMotions" : [
+        {
+          "completedAllFeatures" : true,
+          "completedDomainCertificates" : true,
+          "euclideanCertificateAttempts" : 4,
+          "euclideanCertificateNodes" : 4,
+          "euclideanCertifiedAfterPrecisionLimit" : 4,
+          "euclideanCertifiedFeatures" : 4,
+          "minimumSeparationMeters" : 0,
+          "nativeQueries" : 74,
+          "safeTime" : 1,
+          "status" : "clear",
+          "trianglePairs" : 512
+        }
+      ],
+      "sewing" : {
+        "anchorConstraintCount" : 6,
+        "maximumGapMeters" : 4.6701718221656955e-07,
+        "maximumTargetResidualMeters" : 4.6701718221656955e-07,
+        "measuresOnlyAnchorGaps" : true,
+        "rampFraction" : 1,
+        "rmsGapMeters" : 3.5832944638818245e-07,
+        "rmsTargetResidualMeters" : 3.5832944638818245e-07
+      },
+      "sewingRamp" : 1,
+      "sourceMotions" : [
+        {
+          "completedAllTriangles" : true,
+          "intervalNodes" : 128,
+          "maximumCertifiedPrincipalStretch" : 1.0203821738514123,
+          "maximumDepthReached" : 0,
+          "minimumCertifiedPrincipalStretch" : 0.9935731858822525,
+          "status" : "clear",
+          "subdividedNodes" : 0,
+          "trianglesExamined" : 128
+        }
+      ],
+      "step" : 743
+    }
+  ],
+  "linearizationSourceIdentity" : "62BDB2B7-519D-49ED-A43A-2006817E7328",
+  "selfSurface" : {
+    "candidateTrianglePairs" : 28,
+    "closeSurfacePairs" : 20,
+    "degenerateTriangles" : 0,
+    "intersectingTrianglePairs" : 0,
+    "maximumSurfaceOverlapMeters" : 0.0004997110251778046
+  },
+  "sourceSHA256" : "990109f48a0d6444284c7bdf5d1bae5667cf6eca1ca88ca970e51b8860bb6d92",
+  "visibleBody" : {
+    "bodyGeometrySHA256" : "f01f0e4ed4139eb08d8beb5aef6e39a975294407bf5577c708bf8a99ca332071",
+    "clothStateSHA256" : "abca65dea9d72e26bf36ce8e7e94c6771428794f4f5b9a2df324861bbb9ee3c1",
+    "completedAllSamples" : true,
+    "computationSeconds" : 0.0043839216232299805,
+    "edgeMidpointSamples" : 228,
+    "examinedSamples" : 458,
+    "expectedSamples" : 458,
+    "insideSamples" : 0,
+    "maximumKnownPenetrationMeters" : 0,
+    "maximumPenetrationMeters" : 0,
+    "minimumKnownUnsignedDistanceMeters" : 0.0007301005201827088,
+    "onSurfaceSamples" : 0,
+    "outsideSamples" : 458,
+    "sourceSHA256" : "990109f48a0d6444284c7bdf5d1bae5667cf6eca1ca88ca970e51b8860bb6d92",
+    "surface" : {
+      "candidateTrianglePairs" : 1167,
+      "degenerateClothTriangles" : 0,
+      "intersectingTrianglePairs" : 0,
+      "maximumPlaneOverlapMeters" : 0
+    },
+    "surfaceSeparation" : {
+      "candidateTrianglePairs" : 1067,
+      "nodeVisits" : 5550,
+      "status" : "clear",
+      "triangleTests" : 1067
+    },
+    "totalNodeVisits" : 116536,
+    "totalTriangleTests" : 18729,
+    "triangleCentroidSamples" : 128,
+    "uncertainSamples" : 0,
+    "vertexSamples" : 102,
+    "witnesses" : [
+
+    ]
+  }
+}

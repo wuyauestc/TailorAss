@@ -1,0 +1,1118 @@
+{
+  "format": "tailorass-cc0-rig-garment-sleeve-axis-oracle-v1",
+  "source": {
+    "repository": "https://github.com/maria-korosteleva/GarmentCode",
+    "commit": "d449629979028123a5c4dc9e732a2ec19b7fce31",
+    "treeProofSHA256": "225833eec7e4716333f063ef2a4a54406766a1b0b0d0250c374b8f9524a3ed78",
+    "fileSHA256": {
+      "assets/bodies/mean_all.yaml": "aed8c58d445a732a45f8bc9e042d36f7d8c57d8df7a6ef24061f1caa08e794c6",
+      "assets/design_params/default.yaml": "703f5cf470d5bc6e4c92e61dab415c7f27a71f0f6c853b0a55fa57815e1c37e1",
+      "assets/garment_programs/bands.py": "d4f1b8e8e4c42db164b0121a883ca21aa22aa3c006a3fe9dec791dde03c2c3fd",
+      "assets/garment_programs/base_classes.py": "7d1ea14e836ebf6249a6975c5d8c19afbaed4972d85d8321f486551bf0b5c305",
+      "assets/garment_programs/bodice.py": "0063bbb8257992dcf67393ab1d27ad06d0ded8a08c557e47ca8ee4a25783d137",
+      "assets/garment_programs/circle_skirt.py": "c77e1dd99eb9619baa6f2d52ba1697fde984d806728ac12f2e521f1b3ac5b9fa",
+      "assets/garment_programs/collars.py": "b7421418b3105a76dee6a729014ab58c6cd4ce8012722ece9502e2b3fa2b39da",
+      "assets/garment_programs/godet.py": "9a952cdb9ce6f250666357a4f6231a7f20f33fb88e07f54037a6c8f91079be01",
+      "assets/garment_programs/meta_garment.py": "aaa08457ba8473962041c9784a1d536a8435b610682876d560c03e9ea0a5b7f7",
+      "assets/garment_programs/pants.py": "346716a9c670970d77c7a3b02864296c34d3407f36b1f8168142186cc6983aa7",
+      "assets/garment_programs/shapes.py": "bf788101953e6e32bc8593cd6eeb039d68bc5ee38d5305f3c5d997f9d7a6e100",
+      "assets/garment_programs/skirt_levels.py": "f879f69fa1b078f9aee1d38613a9d1ec2b5c14cdcb535eb6d0b551011789f419",
+      "assets/garment_programs/skirt_paneled.py": "6839e3cb448f114dcb726addf553097fe2c88b26d47ef0c2ce892f0e7a62147c",
+      "assets/garment_programs/sleeves.py": "ca57e8d1783c21b75d88ae8cffa5afb5a34259dafef1e994a61f13a222c233d0",
+      "assets/garment_programs/stats_utils.py": "c3f12b52e5d8d6ef71cb8ebbe85a1911d2fbd550316cc6cabb1f3a101b4ba911",
+      "assets/garment_programs/tee.py": "52eca81ae62ffbe1788a6f8460f74e1e21f4ad5c2892ce34029803787dbb5fdc",
+      "pygarment/__init__.py": "7fa4cfffd424b518f5d816d24264b9948c0c510317297abddca808141f97c933",
+      "pygarment/data_config.py": "b5278b2cfdd93cafa727a9cbe1bc6dd1bedf4282cc652e778b225a0fd13d1853",
+      "pygarment/garmentcode/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pygarment/garmentcode/base.py": "4857f91d2fc6d0459d3f6c5954379a07fc8da54dfbda3ae547b3da430b2961c6",
+      "pygarment/garmentcode/component.py": "a31a25986314d136db8d2cc4fe6d59fc8668dd4af5e84d0d126328fa2f9acbcb",
+      "pygarment/garmentcode/connector.py": "12669763eaeb6294e5b89b00596ae6224cd2b2965c6bf21f580fef0721d3fb42",
+      "pygarment/garmentcode/edge.py": "04703abe7ee65e4652715a44703a7fe4cd476418b4e2e767eeb5c13033eb3b0b",
+      "pygarment/garmentcode/edge_factory.py": "c607ee29f5f5036feef9bd50bbc2915b37ce0bbd45a7cc164fb3e5b66de7e71f",
+      "pygarment/garmentcode/interface.py": "c203515d19d9eb4a601d3a1cf2ab4e13c8099eb127113cdd5fe4b94df783e4d3",
+      "pygarment/garmentcode/operators.py": "4eac9e3069d7925a5a424d4d6157cfd94edce999b4caf45ce056c1f04bdea6b4",
+      "pygarment/garmentcode/panel.py": "9174f2aaf09fa7b2ef239b600db9cdad616a11886e0bb78bdbc7e1e0cf77645e",
+      "pygarment/garmentcode/params.py": "1ed916b4429d339de722a2262499576d28853c8664caec9465a7b2d11b22c15d",
+      "pygarment/garmentcode/utils.py": "276a53726c6297a871ed36f83b39e4293da12f3b410a8a56350b955ed0e806cc",
+      "pygarment/mayaqltools/__init__.py": "23ba06774825827bd960140d5be9950c997109b1929ce4fa50bd633c821bb53e",
+      "pygarment/mayaqltools/garmentUI.py": "0c9df1f3b7987785690a370691b048f860941a924053185d5fa1328dbc674f5e",
+      "pygarment/mayaqltools/mayascene.py": "c86b6d0ce31a49cf6a62cb90e18a5f9e8fe79c207fc25ec395fdbe666ce5953a",
+      "pygarment/mayaqltools/qualothwrapper.py": "c80308d2feb75de36244d1dd96833051a78bf250f23d2cf648fbef4ba7a401eb",
+      "pygarment/mayaqltools/scan_imitation.py": "a4ce5b5a81e78712cca2e316aee3f7e0d50d2fcb27d70d45d9132f34141f1b10",
+      "pygarment/mayaqltools/simulation.py": "2c35b704ccce81608e8dc0358cab8c4961322421743d7b51edaceab66d39ee59",
+      "pygarment/mayaqltools/utils.py": "8e5506a890a9d6969386669335650fc851c89d27f87a386cd90ba1ee7fdfa6c6",
+      "pygarment/meshgen/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pygarment/meshgen/boxmeshgen.py": "c9e90175d3644bc2f98c04a6c4af0cd14d29e565a35ab479185f0f07d0473ca9",
+      "pygarment/meshgen/datasim_utils.py": "4ba598dbf4618aac79a12f85203c1883956191aa9d3560f2d43bead450737a51",
+      "pygarment/meshgen/garment.py": "d52054439484a156cec8e359c30df1de2533f7085d6a2646bfaaa36c4387db6f",
+      "pygarment/meshgen/render/pythonrender.py": "660f863bb47254ba4629c6cd4f8d8a593988d684e6aefe23c26583e3317d2e3c",
+      "pygarment/meshgen/render/texture_utils.py": "b9970f7d1380c9240ccb4d31fa5bcb59cead4b4aa55e0c3d66b1b3b623ac028d",
+      "pygarment/meshgen/sim_config.py": "b0536e28e4bff0028672ed56ff44ecd7596a9f9e1c0b24ab79f77c869ec5632d",
+      "pygarment/meshgen/simulation.py": "81267d9e742c4bb0a377cd394301ce95cb1f525c68c01b643d268742f3aea0cc",
+      "pygarment/meshgen/triangulation_utils.py": "fc270805775c395c7941573f5d7f18d190c070eb97aac65ebf87564dd1dd68e4",
+      "pygarment/pattern/__init__.py": "a851efb8079d5e69ee888209bea7b3a3d67db0a39af04f8268aefe405b53769f",
+      "pygarment/pattern/core.py": "9c98356dd5b9f36079426fc95874ff24ff79ca71c4e6e70e71e9e286e178acc4",
+      "pygarment/pattern/rotation.py": "5d603c6890c5ab406298366aab4a8538d537fa5bdba855de3ac7fb0af6dc9315",
+      "pygarment/pattern/utils.py": "616734746193e15aee3c0a0816d5609bdd3a47437ad7e9cbfdbfbed6472a8eea",
+      "pygarment/pattern/wrappers.py": "a4462b1ca604520129cc288b3cd1b026c88b679df098987465ce1b5a844b401b"
+    },
+    "numpyVersion": "1.26.4",
+    "scipyVersion": "1.13.1",
+    "generatorSHA256": "ae2f7ac0a1b6ed500137c759bfc4267bdb927b7d100ce4eb68df46a581649475",
+    "scope": "Unmodified official full MetaGarment; only unused Cairo rendering stubbed"
+  },
+  "semantic": "In this constructor arm_pose_angle is Rz(+alpha) on the unmirrored sleeve coordinate frame. Its outward longitudinal coordinate basis is (-cos alpha,-sin alpha,0) on right and (cos alpha,-sin alpha,0) on mirrored left. The angle to down Y is 90-alpha. This basis is NOT a measured body-bone axis or tapered sleeve centerline.",
+  "measurementCodeOrAGPLPathsUsed": false,
+  "cases": [
+    {
+      "upper": "Shirt",
+      "armPoseAngleInputDegrees": 30.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 30.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            -39.28157783522562,
+            129.14024011973066,
+            17.5
+          ],
+          "worldPoint1": [
+            -40.14760323901006,
+            128.64024011973066,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            -39.28157783522562,
+            129.14024011973066,
+            -12.5
+          ],
+          "worldPoint1": [
+            -40.14760323901006,
+            128.64024011973066,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            39.28157783522562,
+            129.14024011973066,
+            17.5
+          ],
+          "worldPoint1": [
+            40.14760323901006,
+            128.64024011973066,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            39.28157783522562,
+            129.14024011973066,
+            -12.5
+          ],
+          "worldPoint1": [
+            40.14760323901006,
+            128.64024011973066,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "ef2bb2da792c701490dd1caa1dce0a7a6537e83a20a1957fc4cc0b6c545dfbd1"
+    },
+    {
+      "upper": "Shirt",
+      "armPoseAngleInputDegrees": 45.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 45.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            -37.71713233629596,
+            126.1246163142872,
+            17.5
+          ],
+          "worldPoint1": [
+            -38.42423911748251,
+            125.41750953310064,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            45.00000000000001
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            -37.71713233629596,
+            126.1246163142872,
+            -12.5
+          ],
+          "worldPoint1": [
+            -38.42423911748251,
+            125.41750953310064,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            45.00000000000001
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            37.71713233629596,
+            126.1246163142872,
+            17.5
+          ],
+          "worldPoint1": [
+            38.42423911748251,
+            125.41750953310064,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -45.000000000000014
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            37.71713233629596,
+            126.1246163142872,
+            -12.5
+          ],
+          "worldPoint1": [
+            38.42423911748251,
+            125.41750953310064,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -45.000000000000014
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "a4b4697c8b179abdd72643bb6e16fae14d4e226420130ce94d2701ca56665479"
+    },
+    {
+      "upper": "Shirt",
+      "armPoseAngleInputDegrees": 60.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 60.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            -35.596865243325155,
+            124.84554509381859,
+            17.5
+          ],
+          "worldPoint1": [
+            -36.096865243325155,
+            123.97951969003415,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            -35.596865243325155,
+            124.84554509381859,
+            -12.5
+          ],
+          "worldPoint1": [
+            -36.096865243325155,
+            123.97951969003415,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            35.596865243325155,
+            124.84554509381859,
+            17.5
+          ],
+          "worldPoint1": [
+            36.096865243325155,
+            123.97951969003415,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            35.596865243325155,
+            124.84554509381859,
+            -12.5
+          ],
+          "worldPoint1": [
+            36.096865243325155,
+            123.97951969003415,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "727c76685536a9a343210725490131821c5ae7040c3155d8c1939676e8631fa0"
+    },
+    {
+      "upper": "FittedShirt",
+      "armPoseAngleInputDegrees": 30.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 30.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            -37.471230130869984,
+            129.3456788358527,
+            17.5
+          ],
+          "worldPoint1": [
+            -38.337255534654425,
+            128.8456788358527,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            -37.471230130869984,
+            129.3456788358527,
+            -12.5
+          ],
+          "worldPoint1": [
+            -38.337255534654425,
+            128.8456788358527,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            37.471230130869984,
+            129.3456788358527,
+            17.5
+          ],
+          "worldPoint1": [
+            38.337255534654425,
+            128.8456788358527,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.8660254037844393,
+            -0.499999999999999,
+            0.0
+          ],
+          "worldPoint0": [
+            37.471230130869984,
+            129.3456788358527,
+            -12.5
+          ],
+          "worldPoint1": [
+            38.337255534654425,
+            128.8456788358527,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -29.999999999999996
+          ],
+          "belowHorizontalDegrees": 29.999999999999932,
+          "angleToDownYDegrees": 60.00000000000007,
+          "formulaError": 9.43689570931383e-16
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "839cf17f323817235c71e101050fffcf407d10f0ea65bbd4e4b268449fe1fdcd"
+    },
+    {
+      "upper": "FittedShirt",
+      "armPoseAngleInputDegrees": 45.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 45.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            -35.85629152272888,
+            126.39612156773953,
+            17.5
+          ],
+          "worldPoint1": [
+            -36.56339830391543,
+            125.68901478655297,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            45.00000000000001
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            -35.85629152272888,
+            126.39612156773953,
+            -12.5
+          ],
+          "worldPoint1": [
+            -36.56339830391543,
+            125.68901478655297,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            45.00000000000001
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            35.85629152272888,
+            126.39612156773953,
+            17.5
+          ],
+          "worldPoint1": [
+            36.56339830391543,
+            125.68901478655297,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -45.000000000000014
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.7071067811865441,
+            -0.7071067811865512,
+            0.0
+          ],
+          "worldPoint0": [
+            35.85629152272888,
+            126.39612156773953,
+            -12.5
+          ],
+          "worldPoint1": [
+            36.56339830391543,
+            125.68901478655297,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -45.000000000000014
+          ],
+          "belowHorizontalDegrees": 45.000000000000284,
+          "angleToDownYDegrees": 44.9999999999997,
+          "formulaError": 3.774758283725532e-15
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "209f23a654be67042628fbfefb8530895183dd71b40ef450de20a67b809d8117"
+    },
+    {
+      "upper": "FittedShirt",
+      "armPoseAngleInputDegrees": 60.0,
+      "body": {
+        "_armscye_depth": 15.3679,
+        "_base_sleeve_balance": 34.4568,
+        "_bust_line": 22.65743333333333,
+        "_hip_inclination": 4.932445,
+        "_leg_length": 85.28880000000001,
+        "_shoulder_incl": 21.6777,
+        "_waist_level": 108.77250000000001,
+        "arm_length": 53.9697,
+        "arm_pose_angle": 60.0,
+        "armscye_depth": 12.8679,
+        "back_width": 47.6761,
+        "bum_points": 18.2342,
+        "bust": 99.8407,
+        "bust_line": 25.6947,
+        "bust_points": 16.9463,
+        "crotch_hip_diff": 8.81363,
+        "head_l": 26.3262,
+        "height": 171.99,
+        "hip_back_width": 54.8237,
+        "hip_inclination": 9.86489,
+        "hips": 103.478,
+        "hips_line": 23.4837,
+        "leg_circ": 60.2039,
+        "neck_w": 18.9328,
+        "shoulder_incl": 21.6777,
+        "shoulder_w": 36.4568,
+        "underbust": 86.2455,
+        "vert_bust_line": 21.1388,
+        "waist": 84.3338,
+        "waist_back_width": 39.1358,
+        "waist_line": 36.8913,
+        "waist_over_bust_line": 40.5603,
+        "wrist": 16.5945
+      },
+      "panels": [
+        {
+          "panelID": "right_sleeve_f",
+          "side": "right",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            -33.71374196901301,
+            125.16005057749669,
+            17.5
+          ],
+          "worldPoint1": [
+            -34.21374196901301,
+            124.29402517371226,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "right_sleeve_b",
+          "side": "right",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            -1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            -0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            -33.71374196901301,
+            125.16005057749669,
+            -12.5
+          ],
+          "worldPoint1": [
+            -34.21374196901301,
+            124.29402517371226,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "left_sleeve_f",
+          "side": "left",
+          "half": "f",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            33.71374196901301,
+            125.16005057749669,
+            17.5
+          ],
+          "worldPoint1": [
+            34.21374196901301,
+            124.29402517371226,
+            17.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        },
+        {
+          "panelID": "left_sleeve_b",
+          "side": "left",
+          "half": "b",
+          "longitudinalLocalCoordinateAxis": [
+            1.0,
+            0,
+            0
+          ],
+          "worldAxisFromOfficialPointTo3D": [
+            0.5000000000000021,
+            -0.8660254037844375,
+            0.0
+          ],
+          "worldPoint0": [
+            33.71374196901301,
+            125.16005057749669,
+            -12.5
+          ],
+          "worldPoint1": [
+            34.21374196901301,
+            124.29402517371226,
+            -12.5
+          ],
+          "officialEulerXYZDegrees": [
+            -0.0,
+            0.0,
+            -59.99999999999999
+          ],
+          "belowHorizontalDegrees": 59.999999999999865,
+          "angleToDownYDegrees": 30.00000000000013,
+          "formulaError": 1.9984014443252818e-15
+        }
+      ],
+      "completePatternPanelCount": 8,
+      "completeOfficialPatternSHA256": "2bd3f59bdda37ec2c35a35df0029fa6c21a180ce0f7c7502b1e7bb9d7109b779"
+    }
+  ]
+}

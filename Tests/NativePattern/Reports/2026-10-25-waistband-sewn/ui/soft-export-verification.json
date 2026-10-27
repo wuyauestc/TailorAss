@@ -1,0 +1,42 @@
+{
+  "filename": "TailorAss-waistband-drape-840B3990-EA05-4F98-80A8-4CB56616F8E2.obj",
+  "bytes": 1151932,
+  "sha256": "ff0b8e433c6753cc89d717850f6f87c6d99d43851075994da82dfcd679952e9f",
+  "clothVertices": 102,
+  "clothTriangles": 128,
+  "bodyVertices": 13380,
+  "maximumIndependentSourceEdgeStrain": 0.06091679201377587,
+  "maximumIndependentActualSeamGapMeters": 1.836712479221194e-10,
+  "independentBodyQuality": {
+    "properBodyTrianglePairs": 0,
+    "vertices": {
+      "outside": 102,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 102
+    },
+    "triangleCentroids": {
+      "outside": 128,
+      "inside": 0,
+      "ambiguous": 0,
+      "threeAxisDisagreement": 0,
+      "nearSurface": 0,
+      "tangentRayAmbiguity": 0,
+      "insideExamples": [],
+      "ambiguousExamples": [],
+      "total": 128
+    },
+    "clothEdgesManifoldAndOriented": true,
+    "boundaryLoops": 2,
+    "boundaryLoopsNote": "Two separate source panel boundary loops; this does not measure the assembled waistband circumference."
+  },
+  "materialFromNativeUI": "soft,120g/m²",
+  "referenceSource": "../generated/straightwb-default-reference.json",
+  "planSource": "../generated/straightwb-default-plan.json",
+  "note": "Actual Simulator Files export parsed independently. Reference source paper and boundary numbering are the unchanged default; material differs from the medium CLI snapshot."
+}

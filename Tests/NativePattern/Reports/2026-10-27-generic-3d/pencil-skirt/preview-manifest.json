@@ -1,0 +1,22 @@
+{
+  "scope": "Depth-buffer orthographic render of the saved actual numerical cloth and body; not App screenshot/browser UI validation",
+  "geometrySource": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/source-pattern/validated-output.json",
+  "geometrySHA256": "92b35f6e8c886ffd5b5f51064f94de433922d037446e3e084a1d1b6bb2b28816",
+  "renderer": "/Users/wuya/tailorAss/TailorAss/Tests/NativePattern/render-cloth-preview.py",
+  "rendererSHA256": "665069774e5ffae5957bc8d17fa27de73ebf05d2b54e658a7ea685cebf096059",
+  "image": "front-side-back.png",
+  "imageSHA256": "88f53557812b818c24e5a0c9ce298da96d7184f95647dd3a4d18ef28ccb29484",
+  "focusCloth": true,
+  "geometryModified": false,
+  "visuallyInspected": true,
+  "browserUIInspected": false,
+  "observedPlacement": "Complete narrow skirt visible in front/right/back, opening above hips, rear and hem folds. Natural-waist/personal-fit status is not established. Thin upper side line remains.",
+  "visualSeamReviewPending": true,
+  "presetSlitsAllZero": true,
+  "maximumUnpinnedEasedBoundaryNodeDistanceMeters": 0.008772489753423695,
+  "seamReview": {
+    "path": "/private/tmp/TailorAssGenericDefaultStylesFull/PencilSkirt/source-pattern/continuous-seam-review.json",
+    "sha256": "f9e949c0d574c16d0bd99f64c4c7c3ebd4c5aec8e7fb7e73b93be087229326e0"
+  },
+  "personalFitVerified": false
+}

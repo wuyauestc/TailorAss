@@ -1,0 +1,130 @@
+{
+  "binarySHA256": "fa47565349e80755c4d33d8856f5276114fa614b9a91b1e45a0aaf06dc12e0b9",
+  "sourceManifestSHA256": "84a8a4ea8fb1944718742a2d6df939d02abb3920be5c4b8bfe0cfe60980177b8",
+  "nativeCompileDependencies": [
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/libNativeClothCollision.a",
+      "sha256": "30bef11807b60209543a12ddf934c8d3643ee6ad4b4113985793e984ca19a88c"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/summary.json",
+      "sha256": "ec4ecd22e7c4f4c26161cc777e129e210ec6d588944f79dd643a9606f16fb039"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollision.swiftdoc",
+      "sha256": "9fb592f526759426c30042d043df7ae186c4867b5d21eb8ac79420ef5d4b344b"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionPackageTests.swiftdoc",
+      "sha256": "b762be22573047991295ebb29267dfff937c730510f21c463cee0717a10b29de"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionTests.swiftmodule",
+      "sha256": "34c94b34218453a2096918de1f7e1588afaeb79089a4ed8cb264277ad8b3d6c2"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollision.swiftmodule",
+      "sha256": "006f160e758376315553914cade3045fb45e360cfa424cba50e8b3c83c07a42a"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionTests.swiftdoc",
+      "sha256": "676a02171c8e005d593560a3f721ba4925cc3a5ffa3f8357db35adafba2c3528"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionPackageTests.swiftmodule",
+      "sha256": "2813a6515d27ef6532fbce96349863d0f0a41ba76487920d75904ddc9e8cf4e4"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/CSelfMotionCertificates.h",
+      "sha256": "f9c73b17bc6e35bdf1c0c34709372d2c5f3237b158920ce2e860cf99009f29d0"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/NativeFloatingPointEnvironment.h",
+      "sha256": "aea0bcb43bbf31f4f4bbbb9da4ebbc22afc135e224594267d0d1d846298dc22d"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/CNativeClothCollision.h",
+      "sha256": "9b223fdda7535e66ae0ea78b09d942db12a3f0fe17c9d5be627883da9bafe125"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/module.modulemap",
+      "sha256": "2a48d88c5e3f29c0de7c6cd3c4c03f5d15cd179e76159dfcc42e0139f2e367f1"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/CIPCBodyContact.build/module.modulemap",
+      "sha256": "41dea24203cf08e2f4535bfde4046582a9f3bee640fdaa3691aaff48a6508c18"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/CNativeClothSparse.build/module.modulemap",
+      "sha256": "8669960d14344ae73e016515c11c63d728a4bf3a5637043491f85b3fff2eb470"
+    }
+  ],
+  "nativeCompiledAssets": [
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/libNativeClothCollision.a",
+      "sha256": "30bef11807b60209543a12ddf934c8d3643ee6ad4b4113985793e984ca19a88c"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/summary.json",
+      "sha256": "ec4ecd22e7c4f4c26161cc777e129e210ec6d588944f79dd643a9606f16fb039"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollision.swiftdoc",
+      "sha256": "9fb592f526759426c30042d043df7ae186c4867b5d21eb8ac79420ef5d4b344b"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionPackageTests.swiftdoc",
+      "sha256": "b762be22573047991295ebb29267dfff937c730510f21c463cee0717a10b29de"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionTests.swiftmodule",
+      "sha256": "34c94b34218453a2096918de1f7e1588afaeb79089a4ed8cb264277ad8b3d6c2"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollision.swiftmodule",
+      "sha256": "006f160e758376315553914cade3045fb45e360cfa424cba50e8b3c83c07a42a"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionTests.swiftdoc",
+      "sha256": "676a02171c8e005d593560a3f721ba4925cc3a5ffa3f8357db35adafba2c3528"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/Modules/NativeClothCollisionPackageTests.swiftmodule",
+      "sha256": "2813a6515d27ef6532fbce96349863d0f0a41ba76487920d75904ddc9e8cf4e4"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/CSelfMotionCertificates.h",
+      "sha256": "f9c73b17bc6e35bdf1c0c34709372d2c5f3237b158920ce2e860cf99009f29d0"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/NativeFloatingPointEnvironment.h",
+      "sha256": "aea0bcb43bbf31f4f4bbbb9da4ebbc22afc135e224594267d0d1d846298dc22d"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/CNativeClothCollision.h",
+      "sha256": "9b223fdda7535e66ae0ea78b09d942db12a3f0fe17c9d5be627883da9bafe125"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/snapshot/Sources/CNativeClothCollision/include/module.modulemap",
+      "sha256": "2a48d88c5e3f29c0de7c6cd3c4c03f5d15cd179e76159dfcc42e0139f2e367f1"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/CIPCBodyContact.build/module.modulemap",
+      "sha256": "41dea24203cf08e2f4535bfde4046582a9f3bee640fdaa3691aaff48a6508c18"
+    },
+    {
+      "path": "/private/tmp/TailorAssFSCCriticalIntegratedSecond/swiftpm/arm64-apple-macosx/release/CNativeClothSparse.build/module.modulemap",
+      "sha256": "8669960d14344ae73e016515c11c63d728a4bf3a5637043491f85b3fff2eb470"
+    }
+  ],
+  "testSummaryMetadataMayBeFinalizedSeparately": false,
+  "bodyPose": "legacyTemplate",
+  "fromInitialSource": true,
+  "checkpointLoaded": false,
+  "requestedSteps": 2400,
+  "physicalSubsteps": {
+    "maximumDepth": 1,
+    "maximumAttemptsPerMacroStep": 3
+  },
+  "quietMacroSteps": 24
+}

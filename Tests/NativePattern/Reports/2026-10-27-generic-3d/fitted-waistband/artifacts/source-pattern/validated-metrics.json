@@ -1,0 +1,42 @@
+{
+  "acceptedStepComputationSeconds" : 48.30173000300001,
+  "assemblyIterations" : 480,
+  "completedSteps" : 743,
+  "dynamicSimulatedSeconds" : 1.0958333333333332,
+  "maximumActualSeamGapMeters" : 4.040775489285559e-07,
+  "maximumFreshGradientInfinityNewton" : 6.759704310379394e-07,
+  "maximumFreshPCorrectionInfinityMeters" : 8.223148840062941e-09,
+  "maximumFreshPzRelativeResidual" : 3.8594997254298075e-10,
+  "maximumSourceEdgeRelativeChange" : 0.009498605233041912,
+  "maximumSpeedMetersPerSecond" : 0.00026291899139057305,
+  "meanSourceEdgeRelativeChange" : 0.0020059809889879923,
+  "panels" : [
+    {
+      "massKg" : 0.003432487991562998,
+      "panelID" : "wb_back",
+      "sourceAreaSquareMeters" : 0.019069377730905553,
+      "triangles" : 122,
+      "vertices" : 96
+    },
+    {
+      "massKg" : 0.00385874127784622,
+      "panelID" : "wb_front",
+      "sourceAreaSquareMeters" : 0.021437451543590114,
+      "triangles" : 66,
+      "vertices" : 52
+    }
+  ],
+  "personalFitVerified" : false,
+  "rmsActualSeamGapMeters" : 3.165648203925865e-07,
+  "sewingConstraints" : 6,
+  "simulatedSeconds" : 1.0958333333333332,
+  "sourceAreaSquareMeters" : 0.04050682927449567,
+  "sourceEdges" : 334,
+  "sourceStitches" : 2,
+  "totalComputationSeconds" : 49.15143371100001,
+  "totalFabricMassKg" : 0.007291229269409219,
+  "triangles" : 188,
+  "validationSeconds" : 0.849703708,
+  "verifiedQuietFrames" : 24,
+  "vertices" : 148
+}

@@ -1,0 +1,27 @@
+{
+  "format": "tailorass-joint-preconditioner-v1",
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "scope": "Preconditioner matrix/linear regression only, no garment acceptance. Real native source/plan topology comes from sibling3d-hinge fixture.",
+  "sourceTopologyFixture": "../3d-hinge/native-source-topology.json",
+  "sewingPlanFixture": "../3d-hinge/native-full-plan.json",
+  "physicalMassesOriginal": true,
+  "pinsCount": 0,
+  "r16": {
+    "sewingRamp": 0.03333333333333333,
+    "dt": 0.004166666666666667,
+    "compliance": 1e-08,
+    "mu": 310,
+    "lambda": 170,
+    "barrier": 11,
+    "bending": 0
+  },
+  "files": {
+    "initial-matrix-oracle.json": "828e3c9681d4f67ecef90f0273dba7380a0c2e1ad180ee2ea839d1a19e2dd4e1",
+    "initial-vector-oracle.json": "595f01585ff998da925cd802804ed015a7751d39e2603a50e52ef66480d451ea",
+    "physical-masses.json": "37464aa81cdc2e1342f7a87131c2e696f016d9ea724464eaaa7ed0cd7fb8e3b3",
+    "r16-current.json": "38ef4db198e66a3d573418afd6225e09e9761c4e4c71bd76f109b388177c0146",
+    "r16-predictor.json": "e03bb03af5937b7c5e819d7afe41b8335e8b2adedc0ebbdb5478072322c697e7",
+    "rigid-frame0.json": "5cfcf177fea0c79dacfe2d631b24c652485cb1a2054f7cdc889a1a0c521f71f7",
+    "legacy-kb0-matrix-hashes.json": "544e5d267000a22e29353ca7835fecedaf252f793831897cd4f55abeedb08f0b"
+  }
+}

@@ -1,0 +1,1009 @@
+{
+  "version": "body-mesh-queries-visible-v1",
+  "resourceSHA256": {
+    "GarmentCodeParameterCatalog.json": "db026c2f8128afeed7ec0b4347737cd5c7fd87942a030417a3d4ff3a2b0987f9",
+    "GarmentCodeStandardBody.json": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+    "GarmentCodeStandardBodySDF.bin": "829194bfdc26a32c9eabb9aa7643d4f335c9e46631e1daa657bfa08aac31b2fa"
+  },
+  "profiles": {
+    "default": {
+      "witnesses": [
+        {
+          "visibleVertex": 6815,
+          "rawOBJVertex0Based": 6815,
+          "rawOBJVertex1Based": 6816,
+          "positionMeters": [
+            0.054214899999999996,
+            0.49597980000000014,
+            0.08512149999999999
+          ],
+          "swiftSignedDistanceMeters": 0.029007381784935428,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            15378,
+            15379,
+            15381,
+            22488,
+            22489,
+            22548
+          ],
+          "nearestDeclaredRigJoint": "eye.L____head",
+          "jointDistanceMeters": 0.021203724859620757,
+          "independentGridCalculation": {
+            "distanceMeters": 0.029007381784935414,
+            "interpolatedCanonicalGridValueMeters": 0.0020188325393855518,
+            "transformedGradientMagnitude": 0.06959719958021185,
+            "canonicalPointMeters": [
+              0.0542149,
+              0.49597980000000014,
+              0.0851215
+            ]
+          }
+        },
+        {
+          "visibleVertex": 12034,
+          "rawOBJVertex0Based": 12034,
+          "rawOBJVertex1Based": 12035,
+          "positionMeters": [
+            0.10584029999999998,
+            0.5042271000000002,
+            -0.024766299999999998
+          ],
+          "swiftSignedDistanceMeters": 0.018833172873711303,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            23552,
+            23553,
+            23563,
+            24212,
+            24213,
+            24215
+          ],
+          "nearestDeclaredRigJoint": "temporalis02.L____head",
+          "jointDistanceMeters": 0.07727228808531558,
+          "independentGridCalculation": {
+            "distanceMeters": 0.018833172873713888,
+            "interpolatedCanonicalGridValueMeters": 0.0023970401862437127,
+            "transformedGradientMagnitude": 0.12727755446823008,
+            "canonicalPointMeters": [
+              0.1058403,
+              0.5042271000000002,
+              -0.0247663
+            ]
+          }
+        },
+        {
+          "visibleVertex": 516,
+          "rawOBJVertex0Based": 516,
+          "rawOBJVertex1Based": 517,
+          "positionMeters": [
+            -0.018063199999999998,
+            0.4259388000000001,
+            0.10098499999999999
+          ],
+          "swiftSignedDistanceMeters": 0.016863993586719358,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            9854,
+            9870,
+            9871,
+            9928,
+            9930,
+            9931
+          ],
+          "nearestDeclaredRigJoint": "oris07.R____tail",
+          "jointDistanceMeters": 0.009982378226154408,
+          "independentGridCalculation": {
+            "distanceMeters": 0.016863993586717724,
+            "interpolatedCanonicalGridValueMeters": 0.001429996286000859,
+            "transformedGradientMagnitude": 0.0847958271952345,
+            "canonicalPointMeters": [
+              -0.0180632,
+              0.4259388000000001,
+              0.100985
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11692,
+          "rawOBJVertex0Based": 11692,
+          "rawOBJVertex1Based": 11693,
+          "positionMeters": [
+            0.05538389999999999,
+            0.49691580000000013,
+            0.08415359999999998
+          ],
+          "swiftSignedDistanceMeters": 0.01496528936727003,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13292,
+            13293,
+            13294,
+            22489,
+            22548,
+            22549
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.02044304473115484,
+          "independentGridCalculation": {
+            "distanceMeters": 0.014965289367269808,
+            "interpolatedCanonicalGridValueMeters": 0.0019583406571654876,
+            "transformedGradientMagnitude": 0.13085885672538503,
+            "canonicalPointMeters": [
+              0.0553839,
+              0.49691580000000013,
+              0.0841536
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11474,
+          "rawOBJVertex0Based": 11474,
+          "rawOBJVertex1Based": 11475,
+          "positionMeters": [
+            0.055157599999999994,
+            0.4982811000000001,
+            0.08481989999999999
+          ],
+          "swiftSignedDistanceMeters": 0.014658762429447086,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13290,
+            13291,
+            13295,
+            22282,
+            22284,
+            22285
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.020371494804996483,
+          "independentGridCalculation": {
+            "distanceMeters": 0.014658762429447083,
+            "interpolatedCanonicalGridValueMeters": 0.0018237760702755387,
+            "transformedGradientMagnitude": 0.12441541904055062,
+            "canonicalPointMeters": [
+              0.0551576,
+              0.4982811000000001,
+              0.0848199
+            ]
+          }
+        },
+        {
+          "visibleVertex": 13375,
+          "rawOBJVertex0Based": 13375,
+          "rawOBJVertex1Based": 13376,
+          "positionMeters": [
+            0.05457939999999999,
+            0.49824810000000014,
+            0.08432959999999999
+          ],
+          "swiftSignedDistanceMeters": 0.014652584047497343,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            22590,
+            22591,
+            26698,
+            26699,
+            26711
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.02050343519852217,
+          "independentGridCalculation": {
+            "distanceMeters": 0.01465258404749734,
+            "interpolatedCanonicalGridValueMeters": 0.0018204817385070156,
+            "transformedGradientMagnitude": 0.12424305041389296,
+            "canonicalPointMeters": [
+              0.0545794,
+              0.49824810000000014,
+              0.0843296
+            ]
+          }
+        },
+        {
+          "visibleVertex": 6808,
+          "rawOBJVertex0Based": 6808,
+          "rawOBJVertex1Based": 6809,
+          "positionMeters": [
+            0.054893599999999994,
+            0.4990519000000001,
+            0.08484499999999999
+          ],
+          "swiftSignedDistanceMeters": 0.013813587668279967,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14853,
+            14856,
+            14857,
+            22280,
+            22281,
+            22283
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.020263832285626494,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013813587668279625,
+            "interpolatedCanonicalGridValueMeters": 0.0017248525886648625,
+            "transformedGradientMagnitude": 0.12486637288484227,
+            "canonicalPointMeters": [
+              0.0548936,
+              0.4990519000000001,
+              0.084845
+            ]
+          }
+        },
+        {
+          "visibleVertex": 6811,
+          "rawOBJVertex0Based": 6811,
+          "rawOBJVertex1Based": 6812,
+          "positionMeters": [
+            0.05450399999999999,
+            0.4983032000000001,
+            0.08499579999999998
+          ],
+          "swiftSignedDistanceMeters": 0.01378173718895831,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            14853,
+            22282,
+            22283,
+            22285,
+            22591
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.020920020592963055,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013781737188958308,
+            "interpolatedCanonicalGridValueMeters": 0.001800610084787561,
+            "transformedGradientMagnitude": 0.13065189533799695,
+            "canonicalPointMeters": [
+              0.054504,
+              0.4983032000000001,
+              0.0849958
+            ]
+          }
+        },
+        {
+          "visibleVertex": 13376,
+          "rawOBJVertex0Based": 13376,
+          "rawOBJVertex1Based": 13377,
+          "positionMeters": [
+            0.05501929999999999,
+            0.4990629000000001,
+            0.08411589999999998
+          ],
+          "swiftSignedDistanceMeters": 0.013777625035751343,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            14853,
+            14856,
+            26699,
+            26702,
+            26703
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.01973971330136278,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013777625035751341,
+            "interpolatedCanonicalGridValueMeters": 0.0017127656648873247,
+            "transformedGradientMagnitude": 0.12431501513816033,
+            "canonicalPointMeters": [
+              0.0550193,
+              0.4990629000000001,
+              0.0841159
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11742,
+          "rawOBJVertex0Based": 11742,
+          "rawOBJVertex1Based": 11743,
+          "positionMeters": [
+            0.05444109999999999,
+            0.4975324000000001,
+            0.08525979999999998
+          ],
+          "swiftSignedDistanceMeters": 0.013770621865655875,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13294,
+            13295,
+            22284,
+            22549,
+            22644,
+            22645
+          ],
+          "nearestDeclaredRigJoint": "eye.L____head",
+          "jointDistanceMeters": 0.021279606340402532,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013770621865655872,
+            "interpolatedCanonicalGridValueMeters": 0.001886092541942209,
+            "transformedGradientMagnitude": 0.13696495048245794,
+            "canonicalPointMeters": [
+              0.0544411,
+              0.4975324000000001,
+              0.0852598
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5813,
+          "rawOBJVertex0Based": 5813,
+          "rawOBJVertex1Based": 5814,
+          "positionMeters": [
+            -0.2207841,
+            -1.0695506,
+            0.0957847
+          ],
+          "swiftSignedDistanceMeters": -0.01354903397305774,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10848,
+            10849,
+            10864,
+            12026,
+            12028,
+            12029
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.00891130132335482,
+          "independentGridCalculation": {
+            "distanceMeters": -0.01354903397305774,
+            "interpolatedCanonicalGridValueMeters": -0.001870385656308843,
+            "transformedGradientMagnitude": 0.13804568355412686,
+            "canonicalPointMeters": [
+              -0.2207841,
+              -1.0695506,
+              0.0957847
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5804,
+          "rawOBJVertex0Based": 5804,
+          "rawOBJVertex1Based": 5805,
+          "positionMeters": [
+            -0.2376151,
+            -1.0727584,
+            0.0982881
+          ],
+          "swiftSignedDistanceMeters": -0.013298423575004974,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10858,
+            10879,
+            11997,
+            11998,
+            11999
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.008641584533268439,
+          "independentGridCalculation": {
+            "distanceMeters": -0.013298423575004974,
+            "interpolatedCanonicalGridValueMeters": -0.0031214614806869,
+            "transformedGradientMagnitude": 0.23472417336396448,
+            "canonicalPointMeters": [
+              -0.2376151,
+              -1.0727584,
+              0.0982881
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5814,
+          "rawOBJVertex0Based": 5814,
+          "rawOBJVertex1Based": 5815,
+          "positionMeters": [
+            -0.2372636,
+            -1.0722271,
+            0.0955717
+          ],
+          "swiftSignedDistanceMeters": -0.013153805583150746,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10854,
+            10858,
+            10859,
+            11995,
+            11996,
+            11997
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.008710628315490486,
+          "independentGridCalculation": {
+            "distanceMeters": -0.013153805583150746,
+            "interpolatedCanonicalGridValueMeters": -0.002870471549613837,
+            "transformedGradientMagnitude": 0.2182236563759725,
+            "canonicalPointMeters": [
+              -0.2372636,
+              -1.0722271,
+              0.0955717
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5946,
+          "rawOBJVertex0Based": 5946,
+          "rawOBJVertex1Based": 5947,
+          "positionMeters": [
+            -0.2393941,
+            -1.0734571,
+            0.0933666
+          ],
+          "swiftSignedDistanceMeters": -0.012263203022411627,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10972,
+            10973,
+            10988,
+            11968,
+            11970,
+            11971
+          ],
+          "nearestDeclaredRigJoint": "toe3-1.R____tail",
+          "jointDistanceMeters": 0.007483587197828284,
+          "independentGridCalculation": {
+            "distanceMeters": -0.012263203022411627,
+            "interpolatedCanonicalGridValueMeters": -0.0033227474202357837,
+            "transformedGradientMagnitude": 0.27095265520462264,
+            "canonicalPointMeters": [
+              -0.2393941,
+              -1.0734571,
+              0.0933666
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5803,
+          "rawOBJVertex0Based": 5803,
+          "rawOBJVertex1Based": 5804,
+          "positionMeters": [
+            -0.220635,
+            -1.0706724,
+            0.0980324
+          ],
+          "swiftSignedDistanceMeters": -0.01191595020902224,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10840,
+            10841,
+            10864,
+            10865,
+            12024,
+            12026,
+            12027
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.008479415254640221,
+          "independentGridCalculation": {
+            "distanceMeters": -0.01191595020902224,
+            "interpolatedCanonicalGridValueMeters": -0.001947346348444904,
+            "transformedGradientMagnitude": 0.16342350499001396,
+            "canonicalPointMeters": [
+              -0.220635,
+              -1.0706724,
+              0.0980324
+            ]
+          }
+        }
+      ]
+    },
+    "female": {
+      "witnesses": [
+        {
+          "visibleVertex": 6815,
+          "rawOBJVertex0Based": 6815,
+          "rawOBJVertex1Based": 6816,
+          "positionMeters": [
+            0.051650142274864884,
+            0.4808393433536601,
+            0.08109463608066991
+          ],
+          "swiftSignedDistanceMeters": 0.02785509713414784,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            15378,
+            15379,
+            15381,
+            22488,
+            22489,
+            22548
+          ],
+          "nearestDeclaredRigJoint": "eye.L____head",
+          "jointDistanceMeters": 0.020209200505609422,
+          "independentGridCalculation": {
+            "distanceMeters": 0.02785509713414784,
+            "interpolatedCanonicalGridValueMeters": 0.002018832539385538,
+            "transformedGradientMagnitude": 0.07247623405019941,
+            "canonicalPointMeters": [
+              0.0542149,
+              0.4959797999999999,
+              0.0851215
+            ]
+          }
+        },
+        {
+          "visibleVertex": 12034,
+          "rawOBJVertex0Based": 12034,
+          "rawOBJVertex1Based": 12035,
+          "positionMeters": [
+            0.10083328666869036,
+            0.48883488332613606,
+            -0.023594674501326872
+          ],
+          "swiftSignedDistanceMeters": 0.017996943439958852,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            23552,
+            23553,
+            23563,
+            24212,
+            24213,
+            24215
+          ],
+          "nearestDeclaredRigJoint": "temporalis02.L____head",
+          "jointDistanceMeters": 0.07371017005139943,
+          "independentGridCalculation": {
+            "distanceMeters": 0.017996943439956364,
+            "interpolatedCanonicalGridValueMeters": 0.002397040186243743,
+            "transformedGradientMagnitude": 0.13319151633948542,
+            "canonicalPointMeters": [
+              0.1058403,
+              0.5042270999999999,
+              -0.0247663
+            ]
+          }
+        },
+        {
+          "visibleVertex": 516,
+          "rawOBJVertex0Based": 516,
+          "rawOBJVertex1Based": 517,
+          "positionMeters": [
+            -0.017208679716080623,
+            0.41293643995349394,
+            0.09620767755040091
+          ],
+          "swiftSignedDistanceMeters": 0.016154396880012144,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            9854,
+            9870,
+            9871,
+            9928,
+            9930,
+            9931
+          ],
+          "nearestDeclaredRigJoint": "oris07.R____tail",
+          "jointDistanceMeters": 0.009626322011772818,
+          "independentGridCalculation": {
+            "distanceMeters": 0.016154396880012144,
+            "interpolatedCanonicalGridValueMeters": 0.0014299962860008454,
+            "transformedGradientMagnitude": 0.0885205617159364,
+            "canonicalPointMeters": [
+              -0.0180632,
+              0.4259387999999999,
+              0.100985
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11692,
+          "rawOBJVertex0Based": 11692,
+          "rawOBJVertex1Based": 11693,
+          "positionMeters": [
+            0.05276384010183342,
+            0.4817467706831179,
+            0.080172524766108
+          ],
+          "swiftSignedDistanceMeters": 0.014459565565586753,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13292,
+            13293,
+            13294,
+            22489,
+            22548,
+            22549
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.019555661367312804,
+          "independentGridCalculation": {
+            "distanceMeters": 0.014459565565586972,
+            "interpolatedCanonicalGridValueMeters": 0.0019583406571655544,
+            "transformedGradientMagnitude": 0.13543564972839192,
+            "canonicalPointMeters": [
+              0.05538389999999999,
+              0.4969157999999999,
+              0.0841536
+            ]
+          }
+        },
+        {
+          "visibleVertex": 13375,
+          "rawOBJVertex0Based": 13375,
+          "rawOBJVertex1Based": 13376,
+          "positionMeters": [
+            0.051997398782931636,
+            0.4830384004171314,
+            0.08034019869044202
+          ],
+          "swiftSignedDistanceMeters": 0.014198678916392753,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            22590,
+            22591,
+            26698,
+            26699,
+            26711
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.01959288973513238,
+          "independentGridCalculation": {
+            "distanceMeters": 0.014198678916393006,
+            "interpolatedCanonicalGridValueMeters": 0.0018204817385070503,
+            "transformedGradientMagnitude": 0.12821486768076876,
+            "canonicalPointMeters": [
+              0.0545794,
+              0.4982480999999999,
+              0.0843296
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11474,
+          "rawOBJVertex0Based": 11474,
+          "rawOBJVertex1Based": 11475,
+          "positionMeters": [
+            0.05254824573207895,
+            0.4830703930473366,
+            0.08080730394669752
+          ],
+          "swiftSignedDistanceMeters": 0.014185781082239992,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13290,
+            13291,
+            13295,
+            22282,
+            22284,
+            22285
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.019467111431095387,
+          "independentGridCalculation": {
+            "distanceMeters": 0.014185781082240322,
+            "interpolatedCanonicalGridValueMeters": 0.0018237760702755723,
+            "transformedGradientMagnitude": 0.12856366947314743,
+            "canonicalPointMeters": [
+              0.0551576,
+              0.49828109999999987,
+              0.0848199
+            ]
+          }
+        },
+        {
+          "visibleVertex": 6808,
+          "rawOBJVertex0Based": 6808,
+          "rawOBJVertex1Based": 6809,
+          "positionMeters": [
+            0.05229673484557793,
+            0.4838176633310397,
+            0.08083121653477017
+          ],
+          "swiftSignedDistanceMeters": 0.013373312317235556,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14853,
+            14856,
+            14857,
+            22280,
+            22281,
+            22283
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.01935449110285248,
+          "independentGridCalculation": {
+            "distanceMeters": 0.01337331231723589,
+            "interpolatedCanonicalGridValueMeters": 0.0017248525886649308,
+            "transformedGradientMagnitude": 0.12897721579730803,
+            "canonicalPointMeters": [
+              0.0548936,
+              0.4990518999999999,
+              0.084845
+            ]
+          }
+        },
+        {
+          "visibleVertex": 13376,
+          "rawOBJVertex0Based": 13376,
+          "rawOBJVertex1Based": 13377,
+          "positionMeters": [
+            0.052416488324491486,
+            0.4838283275411081,
+            0.08013660824936146
+          ],
+          "swiftSignedDistanceMeters": 0.013341082397334718,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            14853,
+            14856,
+            26699,
+            26702,
+            26703
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.018856327354471722,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013341082397334721,
+            "interpolatedCanonicalGridValueMeters": 0.0017127656648873247,
+            "transformedGradientMagnitude": 0.1283828113699006,
+            "canonicalPointMeters": [
+              0.0550193,
+              0.49906289999999986,
+              0.0841159
+            ]
+          }
+        },
+        {
+          "visibleVertex": 6811,
+          "rawOBJVertex0Based": 6811,
+          "rawOBJVertex1Based": 6812,
+          "positionMeters": [
+            0.05192556574943854,
+            0.4830918184148377,
+            0.08097488260175635
+          ],
+          "swiftSignedDistanceMeters": 0.01333310391010347,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            14852,
+            14853,
+            22282,
+            22283,
+            22285,
+            22591
+          ],
+          "nearestDeclaredRigJoint": "oculi02.L____head",
+          "jointDistanceMeters": 0.019987835535890668,
+          "independentGridCalculation": {
+            "distanceMeters": 0.013333103910103799,
+            "interpolatedCanonicalGridValueMeters": 0.001800610084787596,
+            "transformedGradientMagnitude": 0.13504808009657057,
+            "canonicalPointMeters": [
+              0.054504,
+              0.4983031999999999,
+              0.0849958
+            ]
+          }
+        },
+        {
+          "visibleVertex": 11742,
+          "rawOBJVertex0Based": 11742,
+          "rawOBJVertex1Based": 11743,
+          "positionMeters": [
+            0.05186564137534416,
+            0.48234454813113464,
+            0.08122639348825737
+          ],
+          "swiftSignedDistanceMeters": 0.013304776539196221,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            13294,
+            13295,
+            22284,
+            22549,
+            22644,
+            22645
+          ],
+          "nearestDeclaredRigJoint": "eye.L____head",
+          "jointDistanceMeters": 0.020275288863629018,
+          "independentGridCalculation": {
+            "distanceMeters": 0.01330477653919656,
+            "interpolatedCanonicalGridValueMeters": 0.001886092541942244,
+            "transformedGradientMagnitude": 0.14176055767533696,
+            "canonicalPointMeters": [
+              0.0544411,
+              0.4975323999999999,
+              0.0852598
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5813,
+          "rawOBJVertex0Based": 5813,
+          "rawOBJVertex1Based": 5814,
+          "positionMeters": [
+            -0.22209201717369875,
+            -1.0315307328118108,
+            0.09635212516380293
+          ],
+          "swiftSignedDistanceMeters": -0.013247237130564296,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10848,
+            10849,
+            10864,
+            12026,
+            12028,
+            12029
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.008946158316707769,
+          "independentGridCalculation": {
+            "distanceMeters": -0.013247237130564296,
+            "interpolatedCanonicalGridValueMeters": -0.001870385656308843,
+            "transformedGradientMagnitude": 0.14119062245767844,
+            "canonicalPointMeters": [
+              -0.2207841,
+              -1.0695506,
+              0.0957847
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5814,
+          "rawOBJVertex0Based": 5814,
+          "rawOBJVertex1Based": 5815,
+          "positionMeters": [
+            -0.23866914114691043,
+            -1.0341126674632541,
+            0.0961378633593614
+          ],
+          "swiftSignedDistanceMeters": -0.01305512270603312,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10854,
+            10858,
+            10859,
+            11995,
+            11996,
+            11997
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.008760028161397756,
+          "independentGridCalculation": {
+            "distanceMeters": -0.01305512270603312,
+            "interpolatedCanonicalGridValueMeters": -0.002870471549613837,
+            "transformedGradientMagnitude": 0.2198731956986751,
+            "canonicalPointMeters": [
+              -0.2372636,
+              -1.0722271,
+              0.0955717
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5804,
+          "rawOBJVertex0Based": 5804,
+          "rawOBJVertex1Based": 5805,
+          "positionMeters": [
+            -0.23902272342043718,
+            -1.0346251957204227,
+            0.09887035521656777
+          ],
+          "swiftSignedDistanceMeters": -0.013053514766439615,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10858,
+            10879,
+            11997,
+            11998,
+            11999
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.00868581243250105,
+          "independentGridCalculation": {
+            "distanceMeters": -0.013053514766439615,
+            "interpolatedCanonicalGridValueMeters": -0.003121461480686939,
+            "transformedGradientMagnitude": 0.23912804608856522,
+            "canonicalPointMeters": [
+              -0.2376151,
+              -1.0727584000000001,
+              0.0982881
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5946,
+          "rawOBJVertex0Based": 5946,
+          "rawOBJVertex1Based": 5947,
+          "positionMeters": [
+            -0.24081226215330792,
+            -1.0352992094476647,
+            0.09391970042521114
+          ],
+          "swiftSignedDistanceMeters": -0.012144561036921648,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10972,
+            10973,
+            10988,
+            11968,
+            11970,
+            11971
+          ],
+          "nearestDeclaredRigJoint": "toe3-1.R____tail",
+          "jointDistanceMeters": 0.0075067666576424524,
+          "independentGridCalculation": {
+            "distanceMeters": -0.012144561036921648,
+            "interpolatedCanonicalGridValueMeters": -0.0033227474202358197,
+            "transformedGradientMagnitude": 0.2735996311545613,
+            "canonicalPointMeters": [
+              -0.2393941,
+              -1.0734571000000002,
+              0.0933666
+            ]
+          }
+        },
+        {
+          "visibleVertex": 5803,
+          "rawOBJVertex0Based": 5803,
+          "rawOBJVertex1Based": 5804,
+          "positionMeters": [
+            -0.22194203391058967,
+            -1.0326128976883249,
+            0.0986131404588415
+          ],
+          "swiftSignedDistanceMeters": -0.011627378081236633,
+          "exactVisibleMeshDistanceMeters": 0,
+          "exactDistanceReason": "query equals an actual retained visible-mesh vertex",
+          "incidentTriangleIDs": [
+            10840,
+            10841,
+            10864,
+            10865,
+            12024,
+            12026,
+            12027
+          ],
+          "nearestDeclaredRigJoint": "toe2-1.R____tail",
+          "jointDistanceMeters": 0.00852607349298893,
+          "independentGridCalculation": {
+            "distanceMeters": -0.011627378081236633,
+            "interpolatedCanonicalGridValueMeters": -0.001947346348444935,
+            "transformedGradientMagnitude": 0.16747940376923087,
+            "canonicalPointMeters": [
+              -0.220635,
+              -1.0706724000000003,
+              0.0980324
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "purpose": "Exact source vertex distance is zero; old grid errors are diagnostics, not the new oracle."
+}

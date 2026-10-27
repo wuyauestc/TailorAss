@@ -1,0 +1,14 @@
+{
+  "scope": "Depth-buffer raster of actual validated mesh, front/right/back; no App or browser UI rendering",
+  "mesh": "/private/tmp/TailorAssContinuousEasePencilFull/source-pattern/validated-output.json",
+  "meshSHA256": "00cc4aa5ef068cb88bafaf87d42e0a3993bbdafa50e85ae41de94c32e1684f70",
+  "renderer": "/Users/wuya/tailorAss/TailorAss/Tests/NativePattern/render-cloth-preview.py",
+  "rendererSHA256": "665069774e5ffae5957bc8d17fa27de73ebf05d2b54e658a7ea685cebf096059",
+  "image": "front-side-back.png",
+  "imageSHA256": "cbab4692b20a5bc99abcbd82130176b3a24fda6e97df174db8a7148bfd51a8a8",
+  "visuallyInspected": true,
+  "geometryModified": false,
+  "browserOrAppVerified": false,
+  "personalFitVerified": false,
+  "notes": "Complete pencil-skirt outline; former obvious upper side slit is absent at this scale in comparison with the prior actual-output raster. Faceted diagnostic shading and hem folds remain; exact seam closure is independently measured, not inferred from pixels."
+}

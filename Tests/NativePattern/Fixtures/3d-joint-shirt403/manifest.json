@@ -1,0 +1,67 @@
+{
+  "allPinsZero": true,
+  "completeGarmentAccepted": false,
+  "files": {
+    "accepted402-state.json": {
+      "bytes": 292828,
+      "originalPath": "/private/tmp/TailorAssJointSelfEU105ProductionFull/requested2400/shirt-sleeved/shirt-sleeved/last-accepted-state.json",
+      "sha256": "81bdb0282a101222c46a5b60fddd9e2d06a8fe31dc66be051e5216d0ea1c012a"
+    },
+    "complete-initial-input.json": {
+      "bytes": 3715392,
+      "originalPath": "/private/tmp/TailorAssJointSelfEU105ProductionFull/requested2400/shirt-sleeved/shirt-sleeved/complete-initial-input.json",
+      "sha256": "aaec646f0b29e852432ca7e54699c8d62cd2e82309fd83a24e370d2c8d45583c"
+    },
+    "complete-paper-source.json": {
+      "bytes": 43726,
+      "originalPath": "/private/tmp/TailorAssJointSelfEU105ProductionFull/requested2400/shirt-sleeved/shirt-sleeved/complete-paper-source.json",
+      "sha256": "8807247b025cdda2431a7d1140f251eef6cdf0a006ef288faad668a1ba5565d3"
+    },
+    "complete-sewing-plan.json": {
+      "bytes": 6855997,
+      "originalPath": "/private/tmp/TailorAssJointSelfEU105ProductionFull/requested2400/shirt-sleeved/shirt-sleeved/complete-sewing-plan.json",
+      "sha256": "ba99d06235cae229f5b0be73b2a52f29b73687445906969a9180fb39fd4963f4"
+    },
+    "inner403-positions.json": {
+      "bytes": 176715,
+      "originalPath": "/private/tmp/TailorAssJointSelfEU105ProductionFull/requested2400/shirt-sleeved/shirt-sleeved/uncommitted-candidate-positions.json",
+      "sha256": "ce6c44d15835fbf38353fabcbb43f50a88715d6bc28ea64658c51d9185159021"
+    }
+  },
+  "format": "JointShirt403ActualFrame/v1",
+  "independentParticles": 1732,
+  "materials": {
+    "bendingNewtonMeter": 0.0002,
+    "bodyActivationGapMeters": 0.002,
+    "bodyFloorMeters": 0.0005,
+    "bodyKappaPa": 35,
+    "lambdaNPerM": 170,
+    "muNPerM": 310,
+    "principalBarrierNPerM": 11,
+    "selfActivationGapMeters": 0.0005,
+    "selfFloorMeters": 0,
+    "selfKappaPa": 35,
+    "sewingComplianceMPerN": 1e-08,
+    "sourceDomain": [
+      0.93,
+      0.97,
+      1.03,
+      1.07
+    ]
+  },
+  "originalAcceptedSteps": 402,
+  "originalNativeProof": "/private/tmp/TailorAssSelfEuclideanSupplementIntegratedFinal/delivery-manifest.json",
+  "originalRequestedSteps": 2400,
+  "purpose": "One complete frame from genuine accepted outer402 and separate saved inner403 math control. Never a validated garment or resumed fullrun.",
+  "schedule": {
+    "assemblySteps": 480,
+    "dt": 0.004166666666666667,
+    "gravity": 0,
+    "gravityRampSteps": 240,
+    "sewingRamp": 0.8395833333333333,
+    "step": 403
+  },
+  "sourceSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4",
+  "sourceTriangles": 2710,
+  "stoppedAtUncommittedStep": 403
+}

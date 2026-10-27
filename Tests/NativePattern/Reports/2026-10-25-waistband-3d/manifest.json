@@ -1,0 +1,1539 @@
+{
+  "generatedAt": "2026-10-25T20:33:07+08:00",
+  "inputSummarySHA256": "d03278870acb5fe83b4bde1e613addd30ada87972b84d4d0d4635eba1920b99f",
+  "sourceRunSummary": {
+    "caseQuality": [
+      {
+        "allowsQualityRejection": false,
+        "case": "straight-default",
+        "maxEdgeStrain": 0.0550405070135509,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "fitted-default",
+        "maxEdgeStrain": 0.050000000000000044,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "straight-narrow",
+        "maxEdgeStrain": 0.050000000000000044,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.1
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "fitted-narrow",
+        "maxEdgeStrain": 0.03624516685452406,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.1
+      },
+      {
+        "allowsQualityRejection": true,
+        "case": "straight-wide",
+        "maxEdgeStrain": 0.1588801500067114,
+        "qualityPassed": false,
+        "waistMultiplier": 1,
+        "widthRatio": 0.35
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "fitted-wide",
+        "maxEdgeStrain": 0.06241622105082345,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.35
+      },
+      {
+        "allowsQualityRejection": true,
+        "case": "straight-wide-ease",
+        "maxEdgeStrain": 0.10179870346554765,
+        "qualityPassed": false,
+        "waistMultiplier": 1.05,
+        "widthRatio": 0.35
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "straight-soft",
+        "maxEdgeStrain": 0.05506872424271947,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      {
+        "allowsQualityRejection": false,
+        "case": "fitted-firm",
+        "maxEdgeStrain": 0.04999999999999605,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      }
+    ],
+    "executed": [
+      "straight-default",
+      "fitted-default",
+      "straight-narrow",
+      "fitted-narrow",
+      "straight-wide",
+      "fitted-wide",
+      "straight-wide-ease",
+      "straight-soft",
+      "fitted-firm"
+    ],
+    "failures": [],
+    "passed": true,
+    "settings": "Standard visible body, actual paper metrics, source mass, welded admissible equal-length side seams; unchanged 8% strain, .025m/s speed, 3mm vertex and zero cloth/body-face crossing gates. A regression pass includes truthful rejection of the unchanged wide Straight source; consult each caseQuality/diagnostic, not only passed. The separate wide-ease case explicitly changes its source waist multiplier to 1.05. Mac CLI timings only."
+  },
+  "camera": {
+    "centerYMeters": -0.025,
+    "pixelsPerMeter": 900,
+    "views": "front/right/back",
+    "meshCoordinatesModified": false
+  },
+  "sourceLimiterSensitivity": {
+    "summary": {
+      "kind": "Numerical pass-count sensitivity, fixed source and experimental material; not calibrated physical or fit accuracy",
+      "settings": "Same standard body, sourceStrainLimit .05; only pass count differs20/40/80; existing8%strain/.025m/s/3mmSDF/zerointersectiongates unchanged",
+      "rows": [
+        {
+          "style": "straight-default",
+          "passes": 20,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.05822020055315957,
+          "meanActualEdgeStrain": 0.020172461251794845,
+          "speedMetersPerSecond": 0.0003110284303489107,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.0396093931812,
+          "fabricMassKg": 0.0071296907726159965,
+          "vertexCount": 96,
+          "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+          "wallSecondsConcurrentMacCLI": 2.2959080934524536
+        },
+        {
+          "style": "straight-default",
+          "passes": 40,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.0550405070135509,
+          "meanActualEdgeStrain": 0.020576304462988193,
+          "speedMetersPerSecond": 0.00015693911478495838,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.0396093931812,
+          "fabricMassKg": 0.0071296907726159965,
+          "vertexCount": 96,
+          "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+          "wallSecondsConcurrentMacCLI": 3.1032310724258423
+        },
+        {
+          "style": "straight-default",
+          "passes": 80,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.05307243351707269,
+          "meanActualEdgeStrain": 0.021038758632431487,
+          "speedMetersPerSecond": 7.61305805130072e-05,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.0396093931812,
+          "fabricMassKg": 0.0071296907726159965,
+          "vertexCount": 96,
+          "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+          "wallSecondsConcurrentMacCLI": 4.884196996688843
+        },
+        {
+          "style": "fitted-default",
+          "passes": 20,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.050000000000000044,
+          "meanActualEdgeStrain": 0.009113723991210854,
+          "speedMetersPerSecond": 6.250003833454688e-09,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.04050682927449563,
+          "fabricMassKg": 0.007291229269409223,
+          "vertexCount": 142,
+          "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+          "wallSecondsConcurrentMacCLI": 2.2468730211257935
+        },
+        {
+          "style": "fitted-default",
+          "passes": 40,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.050000000000000044,
+          "meanActualEdgeStrain": 0.009113723991210883,
+          "speedMetersPerSecond": 6.250001849334292e-09,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.04050682927449563,
+          "fabricMassKg": 0.007291229269409223,
+          "vertexCount": 142,
+          "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+          "wallSecondsConcurrentMacCLI": 2.8675159215927124
+        },
+        {
+          "style": "fitted-default",
+          "passes": 80,
+          "targetAbsoluteStrain": 0.05,
+          "maxActualEdgeStrain": 0.050000000000000044,
+          "meanActualEdgeStrain": 0.009113723991210845,
+          "speedMetersPerSecond": 6.250006805185532e-09,
+          "converged": true,
+          "selfIntersections": 0,
+          "actualBodyIntersections": 0,
+          "maxSDFPenetrationMeters": 0,
+          "sourceAreaSquareMeters": 0.04050682927449563,
+          "fabricMassKg": 0.007291229269409223,
+          "vertexCount": 142,
+          "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+          "wallSecondsConcurrentMacCLI": 4.417004942893982
+        }
+      ],
+      "positionComparisons": [
+        {
+          "style": "straight-default",
+          "passesA": 20,
+          "passesB": 40,
+          "maximumPositionDifferenceMeters": 0.00036906596272243917,
+          "rmsPositionDifferenceMeters": 0.00011984821578757522
+        },
+        {
+          "style": "straight-default",
+          "passesA": 40,
+          "passesB": 80,
+          "maximumPositionDifferenceMeters": 0.0003675901306588432,
+          "rmsPositionDifferenceMeters": 0.00013864306889822727
+        },
+        {
+          "style": "fitted-default",
+          "passesA": 20,
+          "passesB": 40,
+          "maximumPositionDifferenceMeters": 2.3724523730670963e-16,
+          "rmsPositionDifferenceMeters": 5.59985651437709e-17
+        },
+        {
+          "style": "fitted-default",
+          "passesA": 40,
+          "passesB": 80,
+          "maximumPositionDifferenceMeters": 6.711743543909991e-16,
+          "rmsPositionDifferenceMeters": 8.348438312374428e-17
+        }
+      ],
+      "independentBodyVolumeParity": {
+        "allSixMeshesAllVerticesAndTriangleCentroidsOutside": true,
+        "inside": 0,
+        "ambiguous": 0,
+        "threeAxisDisagreement": 0,
+        "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+        "detailFile": "/private/tmp/TailorAssWaistbandSensitivity/body-volume-parity.json",
+        "method": "Three-axis ray parity against the closed actual body triangle surface; independent of SDF and production contact code."
+      },
+      "disabledLimiterLegacySnapshotRegression": {
+        "passed": true,
+        "circleMaximumPositionDifferenceMeters": 0,
+        "standardBodySkirt2MaximumPositionDifferenceMeters": 0,
+        "log": "/private/tmp/TailorAssWaistbandSensitivity/legacy-flag-off.log"
+      }
+    },
+    "originalFileSHA256": {
+      "sensitivity-summary.json": "57c1e61b6f490199865aff59bbb3f53c092e9c4112cd63f41ba3da5627530bad",
+      "sensitivity-body-volume-parity.json": "a820b729bf54efd11712e433b145ffcce2f9e8a5c3cdd3ba75163d8c98a0c003",
+      "sensitivity-legacy-flag-off.log": "7b630b7e1d10f06ac062e17ae134c2eb9de8869cf4bfeeaeefc81e3e7203c1ef"
+    },
+    "snapshots": [
+      {
+        "style": "straight-default",
+        "passes": 20,
+        "meshFile": "sensitivity-p20-straight-default-mesh.json",
+        "meshSHA256": "d7f0b68eaae8bba6b98a0ec2741f038ce13869591f9e4b86f1e47410ca4d341b",
+        "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+        "independentProperBodyCrossings": 0
+      },
+      {
+        "style": "straight-default",
+        "passes": 40,
+        "meshFile": "sensitivity-p40-straight-default-mesh.json",
+        "meshSHA256": "95c9dfd1db8c98e95eda7acfad1d69d832bedea044c32537247db9956aba2651",
+        "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+        "independentProperBodyCrossings": 0
+      },
+      {
+        "style": "straight-default",
+        "passes": 80,
+        "meshFile": "sensitivity-p80-straight-default-mesh.json",
+        "meshSHA256": "62c286c71a669e7eae2ed60308026122fd3377d4a400d9cde38573e4cc7df298",
+        "sourcePatternSHA256": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+        "independentProperBodyCrossings": 0
+      },
+      {
+        "style": "fitted-default",
+        "passes": 20,
+        "meshFile": "sensitivity-p20-fitted-default-mesh.json",
+        "meshSHA256": "b35fbad9d732e25fc93f3a38edff1f7a787aca1dd91082d4159bbb82246bc938",
+        "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+        "independentProperBodyCrossings": 0
+      },
+      {
+        "style": "fitted-default",
+        "passes": 40,
+        "meshFile": "sensitivity-p40-fitted-default-mesh.json",
+        "meshSHA256": "572e704f38e82e1417261b00cfd0bcbff6771252473914a8424dc844632c63fb",
+        "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+        "independentProperBodyCrossings": 0
+      },
+      {
+        "style": "fitted-default",
+        "passes": 80,
+        "meshFile": "sensitivity-p80-fitted-default-mesh.json",
+        "meshSHA256": "38c5ef65121d2d2b07faa00d8553bc5e37bd8ad37e467ed7d0bf2ada4ada8f79",
+        "sourcePatternSHA256": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+        "independentProperBodyCrossings": 0
+      }
+    ]
+  },
+  "sourceFlatnessAreaBoundMeters": 5e-05,
+  "properCrossClassificationEpsilonMeters": 1e-07,
+  "cases": [
+    {
+      "tag": "straight-default",
+      "title": "直腰头 · 默认",
+      "style": "StraightWB",
+      "declaredWidthRatio": 0.2,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "straight-default-mesh.json",
+        "原纸样 JSON": "straight-default-pattern.json",
+        "原诊断 JSON": "straight-default-diagnostics.json",
+        "OBJ": "straight-default.obj"
+      },
+      "inputSHA256": {
+        "straight-default-mesh.json": "cb4fd849937573e6cb6e1b9ec160578298decd14965a4a9260bd6cee2c749404",
+        "straight-default-pattern.json": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+        "straight-default-diagnostics.json": "4601feb8ba7bef649326c09ccf1f075f3c0d478a83e8923b27b037492cb456c7",
+        "straight-default.obj": "243ece88ec212481f144e6533a6ef606dcee423555a6a39c73cb635561f7ffb5"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "straight-default",
+        "maxEdgeStrain": 0.0550405070135509,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      "source": {
+        "style": "StraightWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8433379999999999,
+        "paperDepthMeters": 0.0469674,
+        "paperDepthKind": "矩形宽度",
+        "analyticAreaSquareMeters": 0.03960939318119999,
+        "sourcePerimeterMeters": 1.8745455999999998,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.45197999999999994,
+            "paperDepthMeters": 0.0469674,
+            "analyticAreaSquareMeters": 0.021228325451999996
+          },
+          "wb_back": {
+            "topMeters": 0.39135800000000004,
+            "bottomMeters": 0.39135800000000004,
+            "paperDepthMeters": 0.0469674,
+            "analyticAreaSquareMeters": 0.0183810677292
+          }
+        }
+      },
+      "officialFixtureMaximumDeltaCM": 0.0,
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 1161,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 1.2911460399627686,
+        "converged": true,
+        "garmentStyle": "StraightWB",
+        "hemCircumferenceMeters": 0.8433379999999999,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.0550405070135509,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 0.00015693911478495838,
+        "meanEdgeStrain": 0.020576304462988193,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.0469674,
+        "radialLengthMeters": 0.0469674,
+        "referenceAreaSquareMeters": 0.0396093931812,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.0071296907726159965,
+        "triangleCount": 128,
+        "vertexCount": 96,
+        "waistCircumferenceMeters": 0.8433379999999999,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 96,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 96
+        },
+        "triangleCentroids": {
+          "outside": 128,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 128
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.047365734465746,
+      "image": "straight-default-waist-views.png"
+    },
+    {
+      "tag": "fitted-default",
+      "title": "弧形腰头 · 默认",
+      "style": "FittedWB",
+      "declaredWidthRatio": 0.2,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "fitted-default-mesh.json",
+        "原纸样 JSON": "fitted-default-pattern.json",
+        "原诊断 JSON": "fitted-default-diagnostics.json",
+        "OBJ": "fitted-default.obj"
+      },
+      "inputSHA256": {
+        "fitted-default-mesh.json": "ce1bdddec332a810bf0392698671ebb579ab7795627fac585f72f402946debc0",
+        "fitted-default-pattern.json": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+        "fitted-default-diagnostics.json": "66fcb3b5cbf6ceef48526217d129bb8c917a35d3fe2e71833fa150a96a8e71f3",
+        "fitted-default.obj": "7efa4d6086878b8ecd2b10c5ceb4c8aaa441921b00d9b41d9ca246d128f8e7d8"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "fitted-default",
+        "maxEdgeStrain": 0.050000000000000044,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      "source": {
+        "style": "FittedWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8816264,
+        "paperDepthMeters": 0.04696739999999977,
+        "paperDepthKind": "径向宽度",
+        "analyticAreaSquareMeters": 0.04050854648027989,
+        "sourcePerimeterMeters": 1.912834,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.4519799999999999,
+            "bottomMeters": 0.4609066280245388,
+            "paperDepthMeters": 0.04696739999999977,
+            "analyticAreaSquareMeters": 0.021437955706539755
+          },
+          "wb_back": {
+            "topMeters": 0.3913580000000001,
+            "bottomMeters": 0.4207197719754612,
+            "paperDepthMeters": 0.04696739999999999,
+            "analyticAreaSquareMeters": 0.019070590773740136
+          }
+        }
+      },
+      "officialFixtureMaximumDeltaCM": 1.7053025658242404e-13,
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 1298,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 1.3405510187149048,
+        "converged": true,
+        "garmentStyle": "FittedWB",
+        "hemCircumferenceMeters": 0.8816264000000003,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.050000000000000044,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 6.250001849334292e-09,
+        "meanEdgeStrain": 0.009113723991210883,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.04696739999999977,
+        "radialLengthMeters": 0.04696739999999977,
+        "referenceAreaSquareMeters": 0.04050682927449563,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.007291229269409223,
+        "triangleCount": 188,
+        "vertexCount": 142,
+        "waistCircumferenceMeters": 0.8433379999999997,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 142,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 142
+        },
+        "triangleCentroids": {
+          "outside": 188,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 188
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.04842635163071789,
+      "image": "fitted-default-waist-views.png"
+    },
+    {
+      "tag": "straight-narrow",
+      "title": "直腰头 · 窄版",
+      "style": "StraightWB",
+      "declaredWidthRatio": 0.1,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "straight-narrow-mesh.json",
+        "原纸样 JSON": "straight-narrow-pattern.json",
+        "原诊断 JSON": "straight-narrow-diagnostics.json",
+        "OBJ": "straight-narrow.obj"
+      },
+      "inputSHA256": {
+        "straight-narrow-mesh.json": "46858d616c2476774c5d8d085583eaceb9e2426f4be1806002ac181e444c2294",
+        "straight-narrow-pattern.json": "0b2ad837e9479d52db782ab0aad642b69e7ce25435efd51b90bab553b34355fa",
+        "straight-narrow-diagnostics.json": "c710c556ff6480654898d4a64c09513fb8ab4e6bf0a79a5e844728d18737daca",
+        "straight-narrow.obj": "94690abc4fc37608e19fe87acdcebd90665e2b26b314b48061b27f4814f4581f"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "straight-narrow",
+        "maxEdgeStrain": 0.050000000000000044,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.1
+      },
+      "source": {
+        "style": "StraightWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8433379999999999,
+        "paperDepthMeters": 0.0234837,
+        "paperDepthKind": "矩形宽度",
+        "analyticAreaSquareMeters": 0.019804696590599996,
+        "sourcePerimeterMeters": 1.7806107999999998,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.45197999999999994,
+            "paperDepthMeters": 0.0234837,
+            "analyticAreaSquareMeters": 0.010614162725999998
+          },
+          "wb_back": {
+            "topMeters": 0.39135800000000004,
+            "bottomMeters": 0.39135800000000004,
+            "paperDepthMeters": 0.0234837,
+            "analyticAreaSquareMeters": 0.0091905338646
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 644,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 0.8892910480499268,
+        "converged": true,
+        "garmentStyle": "StraightWB",
+        "hemCircumferenceMeters": 0.8433379999999999,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.050000000000000044,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 1.301334007893322e-14,
+        "meanEdgeStrain": 0.013991422835218007,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.0234837,
+        "radialLengthMeters": 0.0234837,
+        "referenceAreaSquareMeters": 0.019804696590600013,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.003564845386308003,
+        "triangleCount": 96,
+        "vertexCount": 80,
+        "waistCircumferenceMeters": 0.8433379999999999,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 80,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 80
+        },
+        "triangleCentroids": {
+          "outside": 96,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 96
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.02471964333746729,
+      "image": "straight-narrow-waist-views.png"
+    },
+    {
+      "tag": "fitted-narrow",
+      "title": "弧形腰头 · 窄版",
+      "style": "FittedWB",
+      "declaredWidthRatio": 0.1,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "fitted-narrow-mesh.json",
+        "原纸样 JSON": "fitted-narrow-pattern.json",
+        "原诊断 JSON": "fitted-narrow-diagnostics.json",
+        "OBJ": "fitted-narrow.obj"
+      },
+      "inputSHA256": {
+        "fitted-narrow-mesh.json": "9888bbba1b55166270c0367f121b679eaef20ca0be15b700579c538d0a2788ea",
+        "fitted-narrow-pattern.json": "bd84d56f371e61247d50bca665c870971f283121d006b60250e1e2d70509d062",
+        "fitted-narrow-diagnostics.json": "72297ccaa976daa7c5a60d78b7766eae78df7de1f137addc566d981fd6f851da",
+        "fitted-narrow.obj": "78a4c18f528226b4af95d21b58129df8f73e7abc6ef2c40b4b93f24a8a6b2ad9"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "fitted-narrow",
+        "maxEdgeStrain": 0.03624516685452406,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.1
+      },
+      "source": {
+        "style": "FittedWB",
+        "topMeters": 0.843338,
+        "bottomMeters": 0.8624822000000001,
+        "paperDepthMeters": 0.023483699999999885,
+        "paperDepthKind": "径向宽度",
+        "analyticAreaSquareMeters": 0.020029484915369947,
+        "sourcePerimeterMeters": 1.7997550000000002,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.45656919076380303,
+            "paperDepthMeters": 0.023483699999999885,
+            "analyticAreaSquareMeters": 0.010668048315569908
+          },
+          "wb_back": {
+            "topMeters": 0.3913580000000001,
+            "bottomMeters": 0.405913009236197,
+            "paperDepthMeters": 0.023483699999999996,
+            "analyticAreaSquareMeters": 0.009361436599800039
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 702,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 0.8532860279083252,
+        "converged": true,
+        "garmentStyle": "FittedWB",
+        "hemCircumferenceMeters": 0.8624822000000003,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.03624516685452406,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 1.4316362671403152e-08,
+        "meanEdgeStrain": 0.009861015474187306,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.023483699999999885,
+        "radialLengthMeters": 0.023483699999999885,
+        "referenceAreaSquareMeters": 0.020028634385719897,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.003605154189429581,
+        "triangleCount": 128,
+        "vertexCount": 112,
+        "waistCircumferenceMeters": 0.8433380000000001,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 112,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 112
+        },
+        "triangleCentroids": {
+          "outside": 128,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 128
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.02511682563910824,
+      "image": "fitted-narrow-waist-views.png"
+    },
+    {
+      "tag": "straight-wide",
+      "title": "直腰头 · 宽版",
+      "style": "StraightWB",
+      "declaredWidthRatio": 0.35,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": false,
+      "issues": [
+        "数值求解未达到持续收敛门槛。",
+        "源边最大应变未低于 8%。"
+      ],
+      "files": {
+        "网格 JSON": "straight-wide-mesh.json",
+        "原纸样 JSON": "straight-wide-pattern.json",
+        "原诊断 JSON": "straight-wide-diagnostics.json",
+        "OBJ": "straight-wide.obj"
+      },
+      "inputSHA256": {
+        "straight-wide-mesh.json": "9dd8febaf2bead241b339b4976af53bf5c992bce9df2fd3631e436017db1a7a8",
+        "straight-wide-pattern.json": "1859972e50dacf3edaef4d637c45462b34c4fea83ef5ef82313baa6a816a0abf",
+        "straight-wide-diagnostics.json": "5e0d4b223f89d73af40168f66ede4d899f87f1db61e403a3a6464f45cb0bc40f",
+        "straight-wide.obj": "f621f8c855589094f14274fae357c9edd830d504133f8c8f954de351405366f3"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": true,
+        "case": "straight-wide",
+        "maxEdgeStrain": 0.1588801500067114,
+        "qualityPassed": false,
+        "waistMultiplier": 1,
+        "widthRatio": 0.35
+      },
+      "source": {
+        "style": "StraightWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8433379999999999,
+        "paperDepthMeters": 0.08219294999999999,
+        "paperDepthKind": "矩形宽度",
+        "analyticAreaSquareMeters": 0.06931643806709999,
+        "sourcePerimeterMeters": 2.0154477999999996,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.45197999999999994,
+            "paperDepthMeters": 0.08219294999999999,
+            "analyticAreaSquareMeters": 0.03714956954099999
+          },
+          "wb_back": {
+            "topMeters": 0.39135800000000004,
+            "bottomMeters": 0.39135800000000004,
+            "paperDepthMeters": 0.08219294999999999,
+            "analyticAreaSquareMeters": 0.0321668685261
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 2226,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 38.83984088897705,
+        "converged": false,
+        "garmentStyle": "StraightWB",
+        "hemCircumferenceMeters": 0.8433379999999999,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.1588801500067114,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 1.4325749365178208e-14,
+        "meanEdgeStrain": 0.03609290743148055,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.08219294999999999,
+        "radialLengthMeters": 0.08219294999999999,
+        "referenceAreaSquareMeters": 0.06931643806709996,
+        "simulatedSeconds": 20,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.012476958852077995,
+        "triangleCount": 260,
+        "vertexCount": 162,
+        "waistCircumferenceMeters": 0.8433379999999999,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "本次未达到收敛门槛，结果仅供检查装配；请勿作为最终垂坠效果。",
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 162,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 162
+        },
+        "triangleCentroids": {
+          "outside": 260,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 260
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.08185815212527349,
+      "image": "straight-wide-waist-views.png"
+    },
+    {
+      "tag": "fitted-wide",
+      "title": "弧形腰头 · 宽版",
+      "style": "FittedWB",
+      "declaredWidthRatio": 0.35,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "fitted-wide-mesh.json",
+        "原纸样 JSON": "fitted-wide-pattern.json",
+        "原诊断 JSON": "fitted-wide-diagnostics.json",
+        "OBJ": "fitted-wide.obj"
+      },
+      "inputSHA256": {
+        "fitted-wide-mesh.json": "c3e9856fb10196f4d9230887c0f3438cd17f9a70ff5fcbc6f13d6e74fda68607",
+        "fitted-wide-pattern.json": "1cf88cbaedce274554c47ffd69ced4694d9f994a501fd93d46d3b99039d96b16",
+        "fitted-wide-diagnostics.json": "56bb60f86553eea95a9a9862ad789922675a6480335a9a677afaa8ab8d758e11",
+        "fitted-wide.obj": "6221d809c825fe35493911d5bac59ee5027907b8447ad2663df5ba3451bab609"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "fitted-wide",
+        "maxEdgeStrain": 0.06241622105082345,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.35
+      },
+      "source": {
+        "style": "FittedWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.9103427,
+        "paperDepthMeters": 0.08219295000000004,
+        "paperDepthKind": "径向宽度",
+        "analyticAreaSquareMeters": 0.07207009504553254,
+        "sourcePerimeterMeters": 2.0824524999999996,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.4669407460973911,
+            "paperDepthMeters": 0.08219295000000004,
+            "analyticAreaSquareMeters": 0.0377644034689728
+          },
+          "wb_back": {
+            "topMeters": 0.39135800000000004,
+            "bottomMeters": 0.44340195390260884,
+            "paperDepthMeters": 0.08219295000000004,
+            "analyticAreaSquareMeters": 0.03430569157655974
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 2350,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 4.91119909286499,
+        "converged": true,
+        "garmentStyle": "FittedWB",
+        "hemCircumferenceMeters": 0.9103427000000002,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.06241622105082345,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 0.0007457218520294535,
+        "meanEdgeStrain": 0.012837946148730026,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.08219295000000004,
+        "radialLengthMeters": 0.08219295000000004,
+        "referenceAreaSquareMeters": 0.07206704187288553,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.012972067537119401,
+        "triangleCount": 372,
+        "vertexCount": 234,
+        "waistCircumferenceMeters": 0.8433380000000001,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 234,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 234
+        },
+        "triangleCentroids": {
+          "outside": 372,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 372
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.08310347206525394,
+      "image": "fitted-wide-waist-views.png"
+    },
+    {
+      "tag": "straight-wide-ease",
+      "title": "直腰头 · 宽版＋明确放量",
+      "style": "StraightWB",
+      "declaredWidthRatio": 0.35,
+      "declaredWaistMultiplier": 1.05,
+      "declaredArealDensityKgPerM2": 0.18,
+      "executed": true,
+      "accepted": false,
+      "issues": [
+        "数值求解未达到持续收敛门槛。",
+        "源边最大应变未低于 8%。"
+      ],
+      "files": {
+        "网格 JSON": "straight-wide-ease-mesh.json",
+        "原纸样 JSON": "straight-wide-ease-pattern.json",
+        "原诊断 JSON": "straight-wide-ease-diagnostics.json",
+        "OBJ": "straight-wide-ease.obj"
+      },
+      "inputSHA256": {
+        "straight-wide-ease-mesh.json": "b6ad3fb14eaef9d454d4499864480b7aa15debee7a6e5da9b9aa0c63c0ff9992",
+        "straight-wide-ease-pattern.json": "a308d290aac4ca2a0217c25658dadd289f34a204dbde637398301995d3953c8a",
+        "straight-wide-ease-diagnostics.json": "c021a5829acf869ee9cee087b01ff5589316a2eeb4500d09282e63f38e26437a",
+        "straight-wide-ease.obj": "0b78650ae12353dbecc4374fb55562bce538a59a5a5171f469b9010a6b54ec6d"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": true,
+        "case": "straight-wide-ease",
+        "maxEdgeStrain": 0.10179870346554765,
+        "qualityPassed": false,
+        "waistMultiplier": 1.05,
+        "widthRatio": 0.35
+      },
+      "source": {
+        "style": "StraightWB",
+        "topMeters": 0.8855048999999999,
+        "bottomMeters": 0.8855048999999999,
+        "paperDepthMeters": 0.08219294999999999,
+        "paperDepthKind": "矩形宽度",
+        "analyticAreaSquareMeters": 0.07278225997045498,
+        "sourcePerimeterMeters": 2.0997816,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.474579,
+            "bottomMeters": 0.474579,
+            "paperDepthMeters": 0.08219294999999999,
+            "analyticAreaSquareMeters": 0.039007048018049995
+          },
+          "wb_back": {
+            "topMeters": 0.4109259,
+            "bottomMeters": 0.4109259,
+            "paperDepthMeters": 0.08219294999999999,
+            "analyticAreaSquareMeters": 0.033775211952404995
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 1916,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 27.281832933425903,
+        "converged": false,
+        "garmentStyle": "StraightWB",
+        "hemCircumferenceMeters": 0.8855048999999999,
+        "materialName": "中等（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.10179870346554765,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 2.1326687873800038e-14,
+        "meanEdgeStrain": 0.020041649177027727,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.08219294999999999,
+        "radialLengthMeters": 0.08219294999999999,
+        "referenceAreaSquareMeters": 0.07278225997045504,
+        "simulatedSeconds": 20,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.013100806794681898,
+        "triangleCount": 264,
+        "vertexCount": 164,
+        "waistCircumferenceMeters": 0.8855048999999999,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "本次未达到收敛门槛，结果仅供检查装配；请勿作为最终垂坠效果。",
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 164,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 164
+        },
+        "triangleCentroids": {
+          "outside": 264,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 264
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.08376676888066643,
+      "image": "straight-wide-ease-waist-views.png"
+    },
+    {
+      "tag": "straight-soft",
+      "title": "直腰头 · 柔软",
+      "style": "StraightWB",
+      "declaredWidthRatio": 0.2,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.12,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "straight-soft-mesh.json",
+        "原纸样 JSON": "straight-soft-pattern.json",
+        "原诊断 JSON": "straight-soft-diagnostics.json",
+        "OBJ": "straight-soft.obj"
+      },
+      "inputSHA256": {
+        "straight-soft-mesh.json": "b73c8cb3ad26658e02120da732da8e403e53f205152b74d670315c5f7f704d84",
+        "straight-soft-pattern.json": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+        "straight-soft-diagnostics.json": "53ccb76a8f27fe77014ed081ba26d1289b2137e46d9552c2c00f21cc17b52886",
+        "straight-soft.obj": "1e702f5d0f32d89c8eec94326fd37d245b55b4c0b954c66f36cfb98412e926bc"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "straight-soft",
+        "maxEdgeStrain": 0.05506872424271947,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      "source": {
+        "style": "StraightWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8433379999999999,
+        "paperDepthMeters": 0.0469674,
+        "paperDepthKind": "矩形宽度",
+        "analyticAreaSquareMeters": 0.03960939318119999,
+        "sourcePerimeterMeters": 1.8745455999999998,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.45197999999999994,
+            "bottomMeters": 0.45197999999999994,
+            "paperDepthMeters": 0.0469674,
+            "analyticAreaSquareMeters": 0.021228325451999996
+          },
+          "wb_back": {
+            "topMeters": 0.39135800000000004,
+            "bottomMeters": 0.39135800000000004,
+            "paperDepthMeters": 0.0469674,
+            "analyticAreaSquareMeters": 0.0183810677292
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 1170,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 1.47508704662323,
+        "converged": true,
+        "garmentStyle": "StraightWB",
+        "hemCircumferenceMeters": 0.8433379999999999,
+        "materialName": "柔软（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.05506872424271947,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 2.2472529382055866e-06,
+        "meanEdgeStrain": 0.02052932478549952,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.0469674,
+        "radialLengthMeters": 0.0469674,
+        "referenceAreaSquareMeters": 0.0396093931812,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.004753127181743998,
+        "triangleCount": 128,
+        "vertexCount": 96,
+        "waistCircumferenceMeters": 0.8433379999999999,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 96,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 96
+        },
+        "triangleCentroids": {
+          "outside": 128,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 128
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.04743244861690123,
+      "image": "straight-soft-waist-views.png"
+    },
+    {
+      "tag": "fitted-firm",
+      "title": "弧形腰头 · 挺括",
+      "style": "FittedWB",
+      "declaredWidthRatio": 0.2,
+      "declaredWaistMultiplier": 1.0,
+      "declaredArealDensityKgPerM2": 0.28,
+      "executed": true,
+      "accepted": true,
+      "issues": [],
+      "files": {
+        "网格 JSON": "fitted-firm-mesh.json",
+        "原纸样 JSON": "fitted-firm-pattern.json",
+        "原诊断 JSON": "fitted-firm-diagnostics.json",
+        "OBJ": "fitted-firm.obj"
+      },
+      "inputSHA256": {
+        "fitted-firm-mesh.json": "4b5c63c6e3664927449aa19b88cbbc9ae22831dd82a697e5e100b602cd8732ec",
+        "fitted-firm-pattern.json": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+        "fitted-firm-diagnostics.json": "a6a47e5f627a96a20b0d49920c7d1b77fec781f9b36d9ec531db71ef53178a35",
+        "fitted-firm.obj": "45414a55667377471209af3d53a0959c5dc7199d3617b845a465410565897ef9"
+      },
+      "harnessCasePassed": true,
+      "sourceCaseQuality": {
+        "allowsQualityRejection": false,
+        "case": "fitted-firm",
+        "maxEdgeStrain": 0.04999999999999605,
+        "qualityPassed": true,
+        "waistMultiplier": 1,
+        "widthRatio": 0.2
+      },
+      "source": {
+        "style": "FittedWB",
+        "topMeters": 0.8433379999999999,
+        "bottomMeters": 0.8816264,
+        "paperDepthMeters": 0.04696739999999977,
+        "paperDepthKind": "径向宽度",
+        "analyticAreaSquareMeters": 0.04050854648027989,
+        "sourcePerimeterMeters": 1.912834,
+        "panels": {
+          "wb_front": {
+            "topMeters": 0.4519799999999999,
+            "bottomMeters": 0.4609066280245388,
+            "paperDepthMeters": 0.04696739999999977,
+            "analyticAreaSquareMeters": 0.021437955706539755
+          },
+          "wb_back": {
+            "topMeters": 0.3913580000000001,
+            "bottomMeters": 0.4207197719754612,
+            "paperDepthMeters": 0.04696739999999999,
+            "analyticAreaSquareMeters": 0.019070590773740136
+          }
+        }
+      },
+      "diagnostics": {
+        "bodyModel": "MakeHuman CC0 标准人台（有限尺寸拟合）",
+        "bodySurfaceCandidatePairCount": 1282,
+        "bodySurfaceClearanceMeters": 0.0005,
+        "bodySurfaceIntersectionCount": 0,
+        "closeSurfacePairCount": 0,
+        "computationSeconds": 1.4001989364624023,
+        "converged": true,
+        "garmentStyle": "FittedWB",
+        "hemCircumferenceMeters": 0.8816264000000003,
+        "materialName": "挺括（实验预设）",
+        "maxBodyPenetrationMeters": 0,
+        "maxBodySurfacePlaneOverlapMeters": 0,
+        "maxEdgeStrain": 0.04999999999999605,
+        "maxSeamGapMeters": 0,
+        "maxSpeedMetersPerSecond": 4.4981302105406335e-06,
+        "meanEdgeStrain": 0.009198443979848949,
+        "patternLengthLabel": "腰头纸样宽度",
+        "patternLengthMeters": 0.04696739999999977,
+        "radialLengthMeters": 0.04696739999999977,
+        "referenceAreaSquareMeters": 0.04050682927449563,
+        "simulatedSeconds": 2.0083333333333333,
+        "sourceStrainLimitFraction": 0.05,
+        "sourceStrainLimitPassCount": 40,
+        "supportWaistCircumferenceMeters": 0.8433379999999999,
+        "surfaceIntersectionCount": 0,
+        "totalFabricMassKg": 0.011341912196858785,
+        "triangleCount": 188,
+        "vertexCount": 142,
+        "waistCircumferenceMeters": 0.8433379999999997,
+        "waistGatherRatio": 1,
+        "waistSupportClearanceMeters": 0.005,
+        "warnings": [
+          "面料是数值实验预设，尚无样布拉伸、弯曲或摩擦实测标定；不能用于判断个人合体度。",
+          "人台来自标准人体网格并按围度近似缩放，保留腰腹臀腿轮廓；不是个人体型还原。",
+          "表面碰撞检查顶点与三角面、边与边及末态三角面交叉；尚不是连续碰撞保证。",
+          "弯曲仍用二阶距离近似；人体接触另检查布片与可见人体的三角面交叉，仍非连续碰撞或实物合体验证。",
+          "腰头顶口采用数值固定支撑，支撑间距不代表纸样新增松量；尚未与裙身、裤身或扣合部件缝合。",
+          "当前为独立腰头预览，上缘使用距标准人体约 5 mm 的辅助固定支撑；侧缝按等长原始边合并，未包含裙身或完整成衣缝合过程。",
+          "使用 5% 的实验性应变限制目标；接触修正后仍按实际边长独立检查，目标不是实测面料拉伸上限。"
+        ]
+      },
+      "sameVisibleBodyAsBaseline": true,
+      "independent": {
+        "properBodyTrianglePairs": 0,
+        "vertices": {
+          "outside": 142,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 142
+        },
+        "triangleCentroids": {
+          "outside": 188,
+          "inside": 0,
+          "ambiguous": 0,
+          "threeAxisDisagreement": 0,
+          "nearSurface": 0,
+          "tangentRayAmbiguity": 0,
+          "insideExamples": [],
+          "ambiguousExamples": [],
+          "total": 188
+        },
+        "clothEdgesManifoldAndOriented": true,
+        "boundaryLoops": 2
+      },
+      "bodyGeometrySHA256": "6da810b8e3cd2c4cfe8886f7ce39bf0305973c380f4f804bef2fc31625927eb8",
+      "verticalProjectionRangeMeters": 0.048426241570354994,
+      "image": "fitted-firm-waist-views.png"
+    }
+  ],
+  "generatedFileSHA256": {
+    "fitted-default-diagnostics.json": "66fcb3b5cbf6ceef48526217d129bb8c917a35d3fe2e71833fa150a96a8e71f3",
+    "fitted-default-mesh.json": "ce1bdddec332a810bf0392698671ebb579ab7795627fac585f72f402946debc0",
+    "fitted-default-pattern.json": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+    "fitted-default-waist-views.png": "d714639da99e790c213be4e58c7571e1c7daefb7be605178ab6bb64bd0310669",
+    "fitted-default.obj": "7efa4d6086878b8ecd2b10c5ceb4c8aaa441921b00d9b41d9ca246d128f8e7d8",
+    "fitted-firm-diagnostics.json": "a6a47e5f627a96a20b0d49920c7d1b77fec781f9b36d9ec531db71ef53178a35",
+    "fitted-firm-mesh.json": "4b5c63c6e3664927449aa19b88cbbc9ae22831dd82a697e5e100b602cd8732ec",
+    "fitted-firm-pattern.json": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+    "fitted-firm-waist-views.png": "a6b3cc77f64282ddfd31ed55865d2a910ea318afce810d8b1ce62b4a373f2715",
+    "fitted-firm.obj": "45414a55667377471209af3d53a0959c5dc7199d3617b845a465410565897ef9",
+    "fitted-narrow-diagnostics.json": "72297ccaa976daa7c5a60d78b7766eae78df7de1f137addc566d981fd6f851da",
+    "fitted-narrow-mesh.json": "9888bbba1b55166270c0367f121b679eaef20ca0be15b700579c538d0a2788ea",
+    "fitted-narrow-pattern.json": "bd84d56f371e61247d50bca665c870971f283121d006b60250e1e2d70509d062",
+    "fitted-narrow-waist-views.png": "05a314bcdcd8edab761c181af9ced935f8673d597ad3fcf1d1026202fbcb1a3e",
+    "fitted-narrow.obj": "78a4c18f528226b4af95d21b58129df8f73e7abc6ef2c40b4b93f24a8a6b2ad9",
+    "fitted-wide-diagnostics.json": "56bb60f86553eea95a9a9862ad789922675a6480335a9a677afaa8ab8d758e11",
+    "fitted-wide-mesh.json": "c3e9856fb10196f4d9230887c0f3438cd17f9a70ff5fcbc6f13d6e74fda68607",
+    "fitted-wide-pattern.json": "1cf88cbaedce274554c47ffd69ced4694d9f994a501fd93d46d3b99039d96b16",
+    "fitted-wide-waist-views.png": "e87834f4dddbe6cca99036c938bae257f578fa811b439b4a0604dd2d440960eb",
+    "fitted-wide.obj": "6221d809c825fe35493911d5bac59ee5027907b8447ad2663df5ba3451bab609",
+    "sensitivity-body-volume-parity.json": "a820b729bf54efd11712e433b145ffcce2f9e8a5c3cdd3ba75163d8c98a0c003",
+    "sensitivity-fitted-default-pattern.json": "a03a7c78ecc3da698923aea0ae3b0fb282d3aabf72efb56229efa58e38320526",
+    "sensitivity-legacy-flag-off.log": "7b630b7e1d10f06ac062e17ae134c2eb9de8869cf4bfeeaeefc81e3e7203c1ef",
+    "sensitivity-p20-fitted-default-mesh.json": "b35fbad9d732e25fc93f3a38edff1f7a787aca1dd91082d4159bbb82246bc938",
+    "sensitivity-p20-straight-default-mesh.json": "d7f0b68eaae8bba6b98a0ec2741f038ce13869591f9e4b86f1e47410ca4d341b",
+    "sensitivity-p40-fitted-default-mesh.json": "572e704f38e82e1417261b00cfd0bcbff6771252473914a8424dc844632c63fb",
+    "sensitivity-p40-straight-default-mesh.json": "95c9dfd1db8c98e95eda7acfad1d69d832bedea044c32537247db9956aba2651",
+    "sensitivity-p80-fitted-default-mesh.json": "38c5ef65121d2d2b07faa00d8553bc5e37bd8ad37e467ed7d0bf2ada4ada8f79",
+    "sensitivity-p80-straight-default-mesh.json": "62c286c71a669e7eae2ed60308026122fd3377d4a400d9cde38573e4cc7df298",
+    "sensitivity-straight-default-pattern.json": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+    "sensitivity-summary.json": "57c1e61b6f490199865aff59bbb3f53c092e9c4112cd63f41ba3da5627530bad",
+    "straight-default-diagnostics.json": "4601feb8ba7bef649326c09ccf1f075f3c0d478a83e8923b27b037492cb456c7",
+    "straight-default-mesh.json": "cb4fd849937573e6cb6e1b9ec160578298decd14965a4a9260bd6cee2c749404",
+    "straight-default-pattern.json": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+    "straight-default-waist-views.png": "57e55e9cdcd61ac24856a34331bc0d7058f78117275f21ce8787aa0ad3700512",
+    "straight-default.obj": "243ece88ec212481f144e6533a6ef606dcee423555a6a39c73cb635561f7ffb5",
+    "straight-narrow-diagnostics.json": "c710c556ff6480654898d4a64c09513fb8ab4e6bf0a79a5e844728d18737daca",
+    "straight-narrow-mesh.json": "46858d616c2476774c5d8d085583eaceb9e2426f4be1806002ac181e444c2294",
+    "straight-narrow-pattern.json": "0b2ad837e9479d52db782ab0aad642b69e7ce25435efd51b90bab553b34355fa",
+    "straight-narrow-waist-views.png": "b18c59b340f212b27797070a2f4f21db8a6e3b0c84cca8b06096953fde2323d0",
+    "straight-narrow.obj": "94690abc4fc37608e19fe87acdcebd90665e2b26b314b48061b27f4814f4581f",
+    "straight-soft-diagnostics.json": "53ccb76a8f27fe77014ed081ba26d1289b2137e46d9552c2c00f21cc17b52886",
+    "straight-soft-mesh.json": "b73c8cb3ad26658e02120da732da8e403e53f205152b74d670315c5f7f704d84",
+    "straight-soft-pattern.json": "ac7328de963750f16b42f0164965bba121007efaddf68fe2b9ccd464309789be",
+    "straight-soft-waist-views.png": "9f6c233f15a07d24606c97e307005f8c6776033bd1ac8cf5127e64b6fc6d4f9e",
+    "straight-soft.obj": "1e702f5d0f32d89c8eec94326fd37d245b55b4c0b954c66f36cfb98412e926bc",
+    "straight-wide-diagnostics.json": "5e0d4b223f89d73af40168f66ede4d899f87f1db61e403a3a6464f45cb0bc40f",
+    "straight-wide-ease-diagnostics.json": "c021a5829acf869ee9cee087b01ff5589316a2eeb4500d09282e63f38e26437a",
+    "straight-wide-ease-mesh.json": "b6ad3fb14eaef9d454d4499864480b7aa15debee7a6e5da9b9aa0c63c0ff9992",
+    "straight-wide-ease-pattern.json": "a308d290aac4ca2a0217c25658dadd289f34a204dbde637398301995d3953c8a",
+    "straight-wide-ease-waist-views.png": "a5c13cf0790a93dd04e9085f1a6888c174e8370536ee1a75dc4137fe0fcb266c",
+    "straight-wide-ease.obj": "0b78650ae12353dbecc4374fb55562bce538a59a5a5171f469b9010a6b54ec6d",
+    "straight-wide-mesh.json": "9dd8febaf2bead241b339b4976af53bf5c992bce9df2fd3631e436017db1a7a8",
+    "straight-wide-pattern.json": "1859972e50dacf3edaef4d637c45462b34c4fea83ef5ef82313baa6a816a0abf",
+    "straight-wide-waist-views.png": "d441790403dda7d3422068d766f394a30c87d3e52b5f0fb65908bb3143661527",
+    "straight-wide.obj": "f621f8c855589094f14274fae357c9edd830d504133f8c8f954de351405366f3",
+    "waistband-summary.json": "d03278870acb5fe83b4bde1e613addd30ada87972b84d4d0d4635eba1920b99f"
+  },
+  "reportBuilderSHA256": "03e96b47090fe1bafc85dea141027fd927fa0a1f4009c06c73e674657f9fed52",
+  "regressionHarnessSHA256": "10cca8f3665a73111813c7efa898c235044f6374b78e230494666e81d339ec6c",
+  "officialFinal3DMeshAvailable": false,
+  "browserAutomationUsed": false
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "Tests/NativeClothCollisionTests/Fixtures/upper-pd-motion.json",
+      "sha256": "a6e4cce0416f7f8ebde74e5b6815f8daf3ed35d804b274c89743692c011cbc6b",
+      "purpose": "Actual Upper rejected-to-PD vertex1339 / exact visible body triangle15926 sweep; regression fixture, not garment acceptance."
+    },
+    {
+      "path": "Tests/NativeClothCollisionTests/Fixtures/upper-body-motion.json",
+      "sha256": "f52c8281a93c7ed2451ebf8f3c8af484d72d6ee065a05e1f7c3e45f98f0b0776",
+      "purpose": "Exact original Upper rejected pose -> first PD candidate, body surface unchanged. No accepted cloth output claimed."
+    },
+    {
+      "path": "LICENSES/MakeHuman-CC0-LICENSE.txt",
+      "sha256": "b013de2613ddf67dd3d1780fe66c803374f6387fab8bf5e56b90add741764640",
+      "purpose": "CC0 license for the MakeHuman-derived body geometry contained in the Upper fixture"
+    },
+    {
+      "path": "Tests/NativeClothCollisionTests/Fixtures/body-source-attribution.json",
+      "sha256": "08e7906a34f3870e83ddb47e87d8ef019353b80df89a088a8b1ec094926b4bed",
+      "purpose": "Pinned source metadata and asset provenance for the exact visible MakeHuman surface in the Upper fixture"
+    },
+    {
+      "path": "Tests/NativeClothCollisionTests/Fixtures/cloth-triangle-rotation.json",
+      "sha256": "b14ae2e6da2d5944ae0cea20ff150b8e8316d54749a64157356f28b03a698d1f",
+      "purpose": "Exact cloth candidate470 triangle rotation witness for the private nondegeneracy certificate only; no physical garment acceptance or authorization of the full rejected path."
+    }
+  ]
+}

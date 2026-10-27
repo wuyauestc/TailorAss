@@ -1,0 +1,25 @@
+{
+  "scope": "Exact stored-Float64 motions from rejected Circle1131 physical attempts: two safely separated EE paths and one actual double crossing. Common normalization is only a direction proposal; all true projection and full-query/domain checks remain required.",
+  "files": {
+    "circle1131-attempt13-safe-ee.json": "67c32a23431f4ab80d82e6c03f443f434e442b0706d68226ff0948cfd9f2eff0",
+    "circle1131-true-crossing-ee.json": "87eb52b17d6682d16b611e2f55e65f46ef47fecb06ab4bcc270b385b46e9cbb1",
+    "circle1131-e642-safe-common-ee.json": "ed341bf1b8876c17f5afb8055dd4bd47ddbebe1dc8fbc49a1c2cd9e74aead4ca"
+  },
+  "provenance": {
+    "circle1131-attempt13-safe-ee.json": {
+      "source": "/private/tmp/TailorAssCircle1131Attempt13Path-dry4kdar/physical-outer/witness-motion.json",
+      "sha256": "67c32a23431f4ab80d82e6c03f443f434e442b0706d68226ff0948cfd9f2eff0"
+    },
+    "circle1131-true-crossing-ee.json": {
+      "source": "/private/tmp/TailorAssCircle1131PathDiagnosis/attempt-0-physical-outer/witness-motion.json",
+      "sha256": "87eb52b17d6682d16b611e2f55e65f46ef47fecb06ab4bcc270b385b46e9cbb1"
+    },
+    "circle1131-e642-safe-common-ee.json": {
+      "source": "/private/tmp/TailorAssCircleAffineActualPaths-78e71e6e/physical-outer/witness-motion.json",
+      "sha256": "ed341bf1b8876c17f5afb8055dd4bd47ddbebe1dc8fbc49a1c2cd9e74aead4ca",
+      "closedSegmentExclusionProof": "/private/tmp/TailorAssCircleAffineActualPaths-78e71e6e/exact-root-domain-audit.json",
+      "closedSegmentExclusionProofSHA256": "ecece6b9167b79b9fcb8371f98507b410510e62ca8d07ba1e80a5b9753b822f9"
+    }
+  },
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35"
+}

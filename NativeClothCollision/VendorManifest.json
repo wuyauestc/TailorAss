@@ -1,0 +1,1774 @@
+{
+  "schema": 1,
+  "algorithm": "Tight-Inclusion 1.0.4 (6f84001a790a9d3362b7c13d410037140d83fa2c)",
+  "eigen": "3.4.0; exact pinned PBD vendored Eigen copy",
+  "spdlog": "1.15.3, 6fa36017cfd5731d617e1a934f0e5ea9c4445b13; modern AppleClang/libc++ logging compatibility, upstream CCD unchanged.",
+  "sourceClosure": "Union of actual arm64 and x86_64 iOS Simulator clang -MM closures; C++ wrapper adds only standard library headers.",
+  "upstreamFilesUnmodified": true,
+  "files": [
+    {
+      "path": "LICENSES/Eigen-COPYING.APACHE",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.APACHE",
+      "gitBlobSHA1": "61e948d2aaa3f7cd1db246b874d3b8ad1e8204fb",
+      "sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7",
+      "bytes": 11362
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.BSD",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.BSD",
+      "gitBlobSHA1": "8964ddfdd0effc65e8dd90ea1d8c411efb30e5fd",
+      "sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb",
+      "bytes": 1517
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.GPL",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.GPL",
+      "gitBlobSHA1": "94a9ed024d3859793618152ea559a168bbcbb5e2",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.LGPL",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.LGPL",
+      "gitBlobSHA1": "4362b49151d7b34ef83b3067a8f9c9f877d72a0e",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.MINPACK",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.MINPACK",
+      "gitBlobSHA1": "132cc3f33fa7fd4169a92b05241db59c8428a7ab",
+      "sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0",
+      "bytes": 2193
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.MPL2",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.MPL2",
+      "gitBlobSHA1": "14e2f777f6c395e7e04ab4aa306bbcc4b0c1120e",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "bytes": 16726
+    },
+    {
+      "path": "LICENSES/Eigen-COPYING.README",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/COPYING.README",
+      "gitBlobSHA1": "de5b6321582327d85c88749388edf2576cd242c8",
+      "sha256": "c83230b770f17ef1386ea1fd3681271dd98aa93646bdbfb5bff3a1b7050fff9d",
+      "bytes": 779
+    },
+    {
+      "path": "LICENSES/Tight-Inclusion-MIT.txt",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "LICENSE",
+      "gitBlobSHA1": "da9ee15a668eaf439683a2c10d4e504423fb1db1",
+      "sha256": "f37ed264b627f3349f00adaec2256a138c5454bcdef2ed52008d20c9c4cc61c6",
+      "bytes": 1148
+    },
+    {
+      "path": "LICENSES/fmt-MIT.rst",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/fmt.license.rst",
+      "gitBlobSHA1": "1cd1ef92696b65b2ecb0e560e622f0a0e869dcf3",
+      "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+      "bytes": 1431
+    },
+    {
+      "path": "LICENSES/spdlog-MIT.txt",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "LICENSE",
+      "gitBlobSHA1": "3e696a7c81cd70221cfdc929dba0b38b99bb8498",
+      "sha256": "4ccecab18d1ff0b61174fe3d6c430541625d3ddb865b0d5887db296f883c76e7",
+      "bytes": 1354
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/avx.cpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/avx.cpp",
+      "gitBlobSHA1": "75002549fdc2e5d74912ca8b586d6ebf5317ee53",
+      "sha256": "c1d3e90c75dc70bc66efb7a880c0608782342e23fd47a363fde3ea0b86d6bf80",
+      "bytes": 9460
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/avx.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/avx.hpp",
+      "gitBlobSHA1": "65fb3125177413cad8262badf00c9dc237016c7e",
+      "sha256": "1cb9c6bb1882c601622548acd5b3c6823d0faeab53ea089eea8b23bf5e88ab90",
+      "bytes": 1464
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/ccd.cpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/ccd.cpp",
+      "gitBlobSHA1": "9f1cf0429690c400cee23c61dcdfc98882aa61fc",
+      "sha256": "21691bfbac55cf3ea4cc9ac4413efecd473163db0a52e313c9d5da2008eb0924",
+      "bytes": 13984
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/ccd.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/ccd.hpp",
+      "gitBlobSHA1": "e71378c361351328ed9673f23edd9fbc2823c9dd",
+      "sha256": "51b5d906765e6c2e4883ca783c68ba5eadb7d6298ab56a9c7cdcb0cf3274008e",
+      "bytes": 8216
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/interval.cpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/interval.cpp",
+      "gitBlobSHA1": "61d241886c3b0febb347c87b9542bf100ddcafa0",
+      "sha256": "368b9f65d07cf0211e13cfd37722ec74676ed959503f98c0dca233bd4b32f19e",
+      "bytes": 3848
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/interval.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/interval.hpp",
+      "gitBlobSHA1": "145ac3e89fad5382897ac99f6013936ea35882e2",
+      "sha256": "7522157508cc00f6d8d17a3c57ce51e9ae11b73e61019145a2b8832b2a202a31",
+      "bytes": 2533
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/interval_root_finder.cpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/interval_root_finder.cpp",
+      "gitBlobSHA1": "7d3d0c04862e391f8424670829f3c8f9fdcfbc63",
+      "sha256": "73fcfc0245d7f5ddcb898adea6981e23ceb7e0cd0cf0961125bbc3a00fb26322",
+      "bytes": 33792
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/interval_root_finder.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/interval_root_finder.hpp",
+      "gitBlobSHA1": "644f9e581fa0c027131a233f7f16662ae432c2a9",
+      "sha256": "18bcfb7e923c399efc30c81aa1991fae524f6afe466d554248739d69c227428f",
+      "bytes": 16533
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/logger.cpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/logger.cpp",
+      "gitBlobSHA1": "1245bc26450888035d9ab8951d7683f1b4a164c8",
+      "sha256": "16a770112c0ecc6998991593cab4ab26b503631dec770f30a17525d458dc7529",
+      "bytes": 1134
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/logger.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/logger.hpp",
+      "gitBlobSHA1": "ccf3593c3359053aaf800c3d3c5c264e87eaef54",
+      "sha256": "a596ce6791a1246f751221794cad61f67da49649d72144d0aea4696bc4e420e4",
+      "bytes": 529
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/timer.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/timer.hpp",
+      "gitBlobSHA1": "39bf1cf0c4dac3e7557f2d8c8ae752cf40ff5440",
+      "sha256": "00f9176db581d2f3f5bfd3f8e4bc72c05339455f84685b0f23a99043a09d3a68",
+      "bytes": 5629
+    },
+    {
+      "path": "Sources/CNativeClothCollision/tight_inclusion/types.hpp",
+      "sourceRepository": "Continuous-Collision-Detection/Tight-Inclusion",
+      "sourceCommit": "6f84001a790a9d3362b7c13d410037140d83fa2c",
+      "sourcePath": "src/tight_inclusion/types.hpp",
+      "gitBlobSHA1": "c66427298415277f5c3b261317a1dca233563f79",
+      "sha256": "95777f48cc5ea47c02a7e1c2189c9ebcdca4e8c9d1973f3424100b9972257159",
+      "bytes": 337
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/Core",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/Core",
+      "gitBlobSHA1": "5921e15f9df46319ceb5436296b3271ca4dc9e65",
+      "sha256": "b8ae5f77a30d48bcaf622a56f7047baa8b2fb790f5db7361aa1d57f424fa3c1e",
+      "bytes": 12799
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ArithmeticSequence.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ArithmeticSequence.h",
+      "gitBlobSHA1": "b6200fac1b0bef2c60a098f69646fec378e5b646",
+      "sha256": "f2f81c23a86e2fbac5847d8348f7dd10f0fe39812834d34b54446e1bca44fbaf",
+      "bytes": 19214
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Array.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Array.h",
+      "gitBlobSHA1": "20c789b10c760d814516c65f539cfefc9e352f0e",
+      "sha256": "dfd7ca3f27664e4e391a251de4da52b457507fc942516a21ab3e8b9fa4fe8da4",
+      "bytes": 16782
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ArrayBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ArrayBase.h",
+      "gitBlobSHA1": "ea3dd1c3b38c989ee1e1a5fe3a43b10aa8ee9b70",
+      "sha256": "87a5c07a596b5225d49b0da2585d81d146f7f23b7a0da7a20c51eb5b746afc5e",
+      "bytes": 8217
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ArrayWrapper.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ArrayWrapper.h",
+      "gitBlobSHA1": "2e9555b5374dc723aa181d30194056c05bc96e18",
+      "sha256": "8bd0a78e64c08c3cbde4af3536ffe6e062a12ce9c7321c43a1469704a937cce4",
+      "bytes": 7018
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Assign.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Assign.h",
+      "gitBlobSHA1": "655412efd7f26d616b002b3d584ec7fc8a5d9ea4",
+      "sha256": "74a400998f745e1897a3f29de0c1f10e6ad2e97269f72945abb259e6617f3b62",
+      "bytes": 2738
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/AssignEvaluator.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/AssignEvaluator.h",
+      "gitBlobSHA1": "7d76f0c256fd6207819921680217b30697e81ca3",
+      "sha256": "1395011c35047d223939e6acf3d096e83aec761286e9a109674a5b75e06d65a3",
+      "bytes": 41673
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/BandMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/BandMatrix.h",
+      "gitBlobSHA1": "878c0240ac1699abd0b05e2d34cea9fa4929fe72",
+      "sha256": "66eb0ca50b93f4dcdc083aa21f431dd9052c319911356d9025576f0cd9c6c893",
+      "bytes": 14075
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Block.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Block.h",
+      "gitBlobSHA1": "3206d6633e62c29f4466155f47725511a34ba640",
+      "sha256": "1092867fec68004388b0ba38d37ad603cc7cb5d034dc28b6fe3a82e92ad888ad",
+      "bytes": 18648
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/BooleanRedux.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/BooleanRedux.h",
+      "gitBlobSHA1": "852de8b90a565b534a70ff61493ca2684a9d1638",
+      "sha256": "51dbe1e82d3639ba7d30b794e0a9982cf8b3bf989955688970d4bcd723c70aa5",
+      "bytes": 4429
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CommaInitializer.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CommaInitializer.h",
+      "gitBlobSHA1": "c0e29c75c223666d37e6bb25f03af09b8ba65e01",
+      "sha256": "a8027642762277db0114a8f4ef40903035484121d5b4edf9a50d5c10e11a1b20",
+      "bytes": 5981
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ConditionEstimator.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ConditionEstimator.h",
+      "gitBlobSHA1": "51a2e5f1b6f9587ad54fbc889e03c1d11e02d4f4",
+      "sha256": "b9276dfb980b45f22ede4e08eee447f5e00847400e66f267967692233e424c27",
+      "bytes": 6990
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CoreEvaluators.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CoreEvaluators.h",
+      "gitBlobSHA1": "0ff8c8deb820deb7bbaa2f762afc5e4366f29616",
+      "sha256": "e89d28c6eb156cb659f58a86197fde240ac4c8611a3dd2911e41a2a70d027a33",
+      "bytes": 63841
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CoreIterators.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CoreIterators.h",
+      "gitBlobSHA1": "b967196813b21194a0119ecf2eb721fa32ce07e8",
+      "sha256": "30bc5387d90ca841e6ec85686d2125318a19d4fdaa05a87fae6ffab0848f749a",
+      "bytes": 4745
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CwiseBinaryOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CwiseBinaryOp.h",
+      "gitBlobSHA1": "2202b1cc6b78c19de49e23ab81fd6e0982372996",
+      "sha256": "0316cc07e8eb45487ae4f2432791168e1c13407120014ebb3f41613ffc6e302c",
+      "bytes": 7909
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CwiseNullaryOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CwiseNullaryOp.h",
+      "gitBlobSHA1": "289ec510a8ac733646e6f5915fd35fb8812ef559",
+      "sha256": "70f5b90290fd0ddc75d0b361df6e2eff4fbbbd997f5b8932140ac581802024df",
+      "bytes": 36282
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CwiseTernaryOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CwiseTernaryOp.h",
+      "gitBlobSHA1": "9f3576fecefb90fc91cd37e9eb3328fcdcf8cf17",
+      "sha256": "97d9e03c73e1a101352d8b00ee191013b6b6acf00e90c887dd54bea4551de7be",
+      "bytes": 8256
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CwiseUnaryOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CwiseUnaryOp.h",
+      "gitBlobSHA1": "e68c4f7480824e51d0ab360a393b520af6665199",
+      "sha256": "a6d4fe54959a3aad044a15f126688b445ba317c8cd8f60c3a4e18632e3015c90",
+      "bytes": 3937
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/CwiseUnaryView.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/CwiseUnaryView.h",
+      "gitBlobSHA1": "a06d7621ec143a3c3354bf4079ae7bd25c6f03b4",
+      "sha256": "e59aa61f61a67532d4a6ba173844703c7e98e28d7b8c7e9cee0aa9d30d6b9675",
+      "bytes": 5551
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/DenseBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/DenseBase.h",
+      "gitBlobSHA1": "9b16db68d48d2bfbf7e5c076ef2ba1504074f3f3",
+      "sha256": "868ea8559aa11e574ce734a14ea56f5ce5032746b2d73f4c8c7930f89c598227",
+      "bytes": 31529
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/DenseCoeffsBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/DenseCoeffsBase.h",
+      "gitBlobSHA1": "37fcdb59119ff83758ce004d7526b69a73dbb275",
+      "sha256": "b212b3f08925bc43f7803709976f08cf4a83dadd545d558ba91599e92a009659",
+      "bytes": 24484
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/DenseStorage.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/DenseStorage.h",
+      "gitBlobSHA1": "08ef6c530617401094344790e64a7ac21addb2ad",
+      "sha256": "235e92f381291ff75dde3f5bd838dcf7e4c6c80ba83940550e26f7ee4b7c0c88",
+      "bytes": 25360
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Diagonal.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Diagonal.h",
+      "gitBlobSHA1": "3112d2c16a9b715d3f96f1bc658ccc12f8d62dd7",
+      "sha256": "0e8854fc839b941abf3b09652b5fec4fa5a7cd3a44acfcb5274a7773b69b2fff",
+      "bytes": 9870
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/DiagonalMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/DiagonalMatrix.h",
+      "gitBlobSHA1": "542685c65948acef3858ae1857ac87f443440179",
+      "sha256": "2a0d43560b3cceafa37ad26cc7b44a951545e56a87d17e78b896c6d063c64718",
+      "bytes": 14670
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/DiagonalProduct.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/DiagonalProduct.h",
+      "gitBlobSHA1": "7911d1cd174a3b59195b81169ed7ec9546342464",
+      "sha256": "ffa71f347a5914c9e9341ea82bb42bf7b6f7b8d0454bc17bc5629addb82138cb",
+      "bytes": 988
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Dot.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Dot.h",
+      "gitBlobSHA1": "5c3441b9266a4e1929a29f373e5c509f77c5e0ef",
+      "sha256": "4959d72a6f76f94171e56245e7332d555a7751d29dcbe04b3aaea2c8418e0ef5",
+      "bytes": 11654
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/EigenBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/EigenBase.h",
+      "gitBlobSHA1": "6b3c7d3745e2ae96233789208c8dd2d586a3baa3",
+      "sha256": "f6743198aace0229364aef3842d7a4caec4c648268112d5dc88750d139f0261a",
+      "bytes": 5841
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Fuzzy.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Fuzzy.h",
+      "gitBlobSHA1": "43aa49b2bc2f4636b08ecac59d3d2bf3217815b5",
+      "sha256": "4da4a3ce3d7a85b30d35977658415e48a4c1051ed6ba1dd4c61cbc8d350027d3",
+      "bytes": 5759
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/GeneralProduct.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/GeneralProduct.h",
+      "gitBlobSHA1": "6906aa75d106c4b2ccb12e0848d4d42b5ecc9e9f",
+      "sha256": "bb7a50eea61bf87cebb8c5ff2553e3641e1e77d62f561838e1265bf42ac883a0",
+      "bytes": 21679
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/GenericPacketMath.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/GenericPacketMath.h",
+      "gitBlobSHA1": "cf677a1905f1e80697eb6c0daccb48f745c605e3",
+      "sha256": "15ab400433df502dc3961993455b563c55d5fa47c5a93204d12ad2a79730afdd",
+      "bytes": 38812
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/GlobalFunctions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/GlobalFunctions.h",
+      "gitBlobSHA1": "629af94b9940f3b474b399dd6646cb2b1f1ad29a",
+      "sha256": "3531619ec23b938dff23039a3f0dd892be533f63d681c7d6596659dbb0ae31a2",
+      "bytes": 11543
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/IO.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/IO.h",
+      "gitBlobSHA1": "e81c3152168ba3a3e806ca262a0d2046d729f9d4",
+      "sha256": "89a4eb492f4a4a0a9e21eff6666383152d0f45ef82d4a1879e61277dafb4ad4f",
+      "bytes": 8238
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/IndexedView.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/IndexedView.h",
+      "gitBlobSHA1": "08476251d32234dfdd2e9b0cba788c58484bc458",
+      "sha256": "5fa91088fba62f34cf0ab4e6cbbaba88a36b7c4b195de6d2f67c96e293f32fec",
+      "bytes": 9620
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Inverse.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Inverse.h",
+      "gitBlobSHA1": "c514438c45e64863e1eb93071c4374d0d29ef969",
+      "sha256": "5eef2f26e105349881eb1408cc2eb674b264c924d45ba3f6bfcebbcadfe6b10c",
+      "bytes": 3503
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Map.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Map.h",
+      "gitBlobSHA1": "218cc157f386924cae44ca6741d6aaba9fc96f74",
+      "sha256": "37d3c3611a846089cb30a0d78dddc45d322985bb63fa4df5680f6f33c016a07b",
+      "bytes": 7256
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/MapBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/MapBase.h",
+      "gitBlobSHA1": "d856447f03e57a749ec250456c0e00e539d7e700",
+      "sha256": "eeecf78d69227844bb2914dc936d54db6acd9fa8ef8d0e29a9272b84938de1a0",
+      "bytes": 11281
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/MathFunctions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/MathFunctions.h",
+      "gitBlobSHA1": "61b78f4f20a6a3820b168796db9aeb79d712bb11",
+      "sha256": "b3c6cd173d4ac879e568ac5708042dd0bb160805c6ba9c55da05c8134656f758",
+      "bytes": 60784
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/MathFunctionsImpl.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/MathFunctionsImpl.h",
+      "gitBlobSHA1": "4eaaaa78449031830cea7446210226afcd2467d0",
+      "sha256": "96f735785742399ffc6109a6d8a41bf2392789b5a713c9cbfb2f089767491247",
+      "bytes": 7156
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Matrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Matrix.h",
+      "gitBlobSHA1": "f0e59a911d27602d3194daa1e3fe23c929f9670e",
+      "sha256": "fd84dfc1c70b042952d299f39f05694f82ca1f17ca013eb336757a3cf71e6d11",
+      "bytes": 24343
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/MatrixBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/MatrixBase.h",
+      "gitBlobSHA1": "45c3a596ecb09d5e55f4eaf3c742d0badb624373",
+      "sha256": "3fca778dd610923f7c089fe6f63e600005f14fedc156851591fca999a28e592b",
+      "bytes": 23856
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/NestByValue.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/NestByValue.h",
+      "gitBlobSHA1": "b4275768a01df3b8e2a06424010bd8d33cffea30",
+      "sha256": "5e93bda8542a8ebfb321dc9199b110a53ae2fb8f2c20e10b6f24e4379b0a27cb",
+      "bytes": 2520
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/NoAlias.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/NoAlias.h",
+      "gitBlobSHA1": "570283d90f1c5fba2b3cae629421b624128283c2",
+      "sha256": "229d6ce4cb8a1921cacd634f6fe64e698c54077302487c62202b845a7446618d",
+      "bytes": 3620
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/NumTraits.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/NumTraits.h",
+      "gitBlobSHA1": "72eac5a93c09ab5f8bc4ccc50fc8a22ae3f2e0c1",
+      "sha256": "6039578b4c17f244eb6e0b18f29b8089cb4affbd4431365e4fe8b248259199f1",
+      "bytes": 12884
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/PartialReduxEvaluator.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/PartialReduxEvaluator.h",
+      "gitBlobSHA1": "29abf35b99b06032c35b5366f003d415026e35aa",
+      "sha256": "863ec1c5b7dedcb8cebda4cb9c38b6fc77dc75d2290dbff2c39a7db98ce33a38",
+      "bytes": 9207
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/PermutationMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/PermutationMatrix.h",
+      "gitBlobSHA1": "69401bf41e5296d421fb2e024aec558e8a684e3f",
+      "sha256": "c4ea371dc8fd72bc610d97b9e8e241d9765c08d8d6a93e66d851fc095cd9ce60",
+      "bytes": 20748
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/PlainObjectBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/PlainObjectBase.h",
+      "gitBlobSHA1": "e2ddbd1d522a283a5992a504f023eebc48a05670",
+      "sha256": "faa54cb79fd74db5fd5fb3c6f60fc252398ebc3529e9607cfde2232244162335",
+      "bytes": 49193
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Product.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Product.h",
+      "gitBlobSHA1": "70a6c10639695fd5c50c833707ed6aacfe1f1b1e",
+      "sha256": "47958609570712d8c066c8e7529fce3346f0cc794accd390f753d9703d4842cf",
+      "bytes": 7336
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ProductEvaluators.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ProductEvaluators.h",
+      "gitBlobSHA1": "8cf294b287bc9a458cd9b5f0bb4c03e4a5b51126",
+      "sha256": "d8863af78cf309c898d34f0e8b38bb4c1b370b5622a48064211f5b3b0ad91eb0",
+      "bytes": 53832
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Random.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Random.h",
+      "gitBlobSHA1": "dab2ac8e9e84e564aa90465089d15188be8cda1c",
+      "sha256": "fc95b14bef2692647c0891b25906cac988e9519e5f719db0fd9e64e0faf0a6c2",
+      "bytes": 7756
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Redux.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Redux.h",
+      "gitBlobSHA1": "b6790d11050bb340c83acaa72197eba395c80222",
+      "sha256": "dcdb68827c7f9063af745c9a0e1e85cf53c0a69b67d3d4880134a2ef8ed1f3f6",
+      "bytes": 19195
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Ref.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Ref.h",
+      "gitBlobSHA1": "c2a37eadbb6321211a4ddfd52363760eee44ea18",
+      "sha256": "f4a08654c367bde51b9589279956c23a1b747a78a5b94eb4c7e43f16ae262ebc",
+      "bytes": 17821
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Replicate.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Replicate.h",
+      "gitBlobSHA1": "ab5be7e64bc2b464760d1f6b9e2998b18fa416cb",
+      "sha256": "6f77a1da5cd4bcebe1cbb90d52fd7fc23d19a46e8b1b8f2a808ed0ecbf9bdbee",
+      "bytes": 5656
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Reshaped.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Reshaped.h",
+      "gitBlobSHA1": "52de73b6fc371b8cbd45e13599d7c49b790903f7",
+      "sha256": "5101b12821837460013e70adb2d542f5e623cdd6541d3604af628d2a78de7e14",
+      "bytes": 17033
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/ReturnByValue.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/ReturnByValue.h",
+      "gitBlobSHA1": "4dad13ea11872682099c8d41438a87a5ef9726ec",
+      "sha256": "8a385498f0ba0c67466fe151af42e5537bd3c5d75b89d40b73bc103c77309665",
+      "bytes": 4284
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Reverse.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Reverse.h",
+      "gitBlobSHA1": "28cdd76acaa83e93e2d9775e3e3fc1c851c2279a",
+      "sha256": "9660864ae4cfc85dec40d82e79a598b71e5c58f53034bdd30c74093c5ab9a154",
+      "bytes": 7522
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Select.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Select.h",
+      "gitBlobSHA1": "7c86bf87c170163f04b4fda8a4210526b16e3bbd",
+      "sha256": "0b9bee78d59350121108778bbad203a463d81c71bfb5cd732b859c02605a1eb5",
+      "bytes": 6143
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/SelfAdjointView.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/SelfAdjointView.h",
+      "gitBlobSHA1": "8ce3b372a0ff792b98b8b1b00f1dd55742779bd0",
+      "sha256": "6b05fc31cae6f946db7fcf4439efa13eb21cd9b1903ae7910cc74a611b95f68f",
+      "bytes": 14999
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h",
+      "gitBlobSHA1": "7c89c2e23c6f333297cc8b1ef8c2403337b13e36",
+      "sha256": "4d0f02140378c8fd28bb05d2f13dc50dd867bdbc2dddce223fe37b82dbf17ab5",
+      "bytes": 1697
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Solve.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Solve.h",
+      "gitBlobSHA1": "23d5cb70728f0f2e52d3f01d94bdc86e37fd9292",
+      "sha256": "d1411e4c37b3443d3422dffba6225a70ae186b0ed90a3f09bbec14727edf86f2",
+      "bytes": 6837
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/SolveTriangular.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/SolveTriangular.h",
+      "gitBlobSHA1": "dfbf99523a9c9cb5328a20e7d0f80574a4ad2cbf",
+      "sha256": "f29b27b474efe5692bbbf1f1863f0ddb4ccf039e3eda02796f54c33889dc86a1",
+      "bytes": 9368
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/SolverBase.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/SolverBase.h",
+      "gitBlobSHA1": "5014610420f3e8cea48f0b3fef0a345f1a920f8d",
+      "sha256": "339ee50a16430116e2be23b29441ec7fb90b73ff2bf6be8a39e1c74fb3e171ae",
+      "bytes": 6170
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/StableNorm.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/StableNorm.h",
+      "gitBlobSHA1": "4a3f0cca8c4e0d325e4584c41abf90ecc0133fb6",
+      "sha256": "488e4d101a3d0013b191b80c18fc1c42e988733b6109b704bfa40ccf77d3d187",
+      "bytes": 8700
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/StlIterators.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/StlIterators.h",
+      "gitBlobSHA1": "09041db1d550df161c6da292d39e94827868cdb4",
+      "sha256": "cae751132eb5be81f1974936f9a9041935aa8a91d7d0065b48301e4cf57b10c4",
+      "bytes": 21641
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Stride.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Stride.h",
+      "gitBlobSHA1": "6494d51420a9b3eb195218434ace8b9f9c83d8eb",
+      "sha256": "5ef8631f1222d499e9c273266ecbb8077891268b20dd11c7bf57e83b3fb7c37d",
+      "bytes": 4212
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Swap.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Swap.h",
+      "gitBlobSHA1": "180a4e5adff9132036aa81e25beb39d7799aff45",
+      "sha256": "72add24f5533477f1aa3de05213be772eeea9a13d67db82d02f74fcce501ea40",
+      "bytes": 2765
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Transpose.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Transpose.h",
+      "gitBlobSHA1": "2bc658f40b88bd588d39457dc9b8f19deb0c14cf",
+      "sha256": "aa104b2fdf7371831d4fcee2383deca5300c49805b99a3c883e13f40b1225750",
+      "bytes": 17606
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Transpositions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Transpositions.h",
+      "gitBlobSHA1": "38a7b01cb51dc0a789c9b02732657ad3c4ae0a6e",
+      "sha256": "390f37b9c86bed1f1708c5f7786b4609665820370a437a222da320a30c7b9867",
+      "bytes": 13567
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/TriangularMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/TriangularMatrix.h",
+      "gitBlobSHA1": "fdb8bc15a5b2c9ea0c133b26856a0cd091e3127a",
+      "sha256": "cc4c2090bbf9ed02b0a36129809fb2c39a32d2bd2efea05d0debb1eafe848111",
+      "bytes": 38277
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/VectorBlock.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/VectorBlock.h",
+      "gitBlobSHA1": "71c5b95eec1114baa295c53122099e2a150dd69f",
+      "sha256": "d7f545fba1479e339e3040799ec1a0008b242cbafb456100cb95e7cd64586b49",
+      "bytes": 3488
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/VectorwiseOp.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/VectorwiseOp.h",
+      "gitBlobSHA1": "870f4f1e40bfc870a03cc1feb8a5ac9f2b7cb486",
+      "sha256": "b5a10c9e4ef1a0048e8bd17e514354b1e1647b1d700d59076c1fa34ecf04bc3d",
+      "bytes": 35168
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/Visitor.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/Visitor.h",
+      "gitBlobSHA1": "00bcca87768eba2f48d31759a14a3c42beb3f6b1",
+      "sha256": "d32f1b4fb0065a312bf13a2861cf3c3d2ff08d2bef4ad8b014b50061ae8802a4",
+      "bytes": 11997
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/BFloat16.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/BFloat16.h",
+      "gitBlobSHA1": "1c28f4f95e42f86265803b922a81bd89a8e8659b",
+      "sha256": "1c3faf2e812a463d0be1c7dab3368ede6afe84d34f042c007bc5dad375e96bd9",
+      "bytes": 26903
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/ConjHelper.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/ConjHelper.h",
+      "gitBlobSHA1": "53830b5a274c72546315eaea5d1fb4fb737e3a8b",
+      "sha256": "fad5548a5fd3f3e4bcb16fe28549ee73c1ede5f9e29f6c9022bd4d8ad3eaa520",
+      "bytes": 5251
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h",
+      "gitBlobSHA1": "c9fbaf68b49f6fccddd2e9014e736e450b2b2291",
+      "sha256": "e3ef23672902a6a0fef39c9b6c5952ba9ed69e6a0eb32f0ecc13004fc660052d",
+      "bytes": 67696
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h",
+      "gitBlobSHA1": "177a04e93e646cf735e1816857ea16de1cd8a4da",
+      "sha256": "6bd2e4d5286176d0b823708e1a699cf4694cb74ebf54f2ddb678270db5c46717",
+      "bytes": 3770
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/Half.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/Half.h",
+      "gitBlobSHA1": "9f8e8cc1e7a614cf86b4d4e7065df97fb06404c3",
+      "sha256": "bcdf4205c17eddcacbc175c1a5d188db2b36c9e5029b3829076d05dfda406f4d",
+      "bytes": 35534
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/Settings.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/Settings.h",
+      "gitBlobSHA1": "a5c3ada4c7fc54fd250a020c7d4fe3487cd1b1c5",
+      "sha256": "41b87a95edc400e7545f7273c59742abc95defae6ca7cd85f962d51a7a8fb790",
+      "bytes": 1746
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/Default/TypeCasting.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/Default/TypeCasting.h",
+      "gitBlobSHA1": "fb8183b78ec47248a96851174672c948fca1ff3e",
+      "sha256": "4efe3b7a0099da41b42040000a9c4b92bd48efb35b9505c453b5f3d304fb4f75",
+      "bytes": 3746
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/NEON/Complex.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/NEON/Complex.h",
+      "gitBlobSHA1": "f40af7f87f2f77217775309568030c5ddf7facfc",
+      "sha256": "cb2278d5839544bac8ab0b38f4375b8badffb1c746a8d6af99766fe764afedf6",
+      "bytes": 22503
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h",
+      "gitBlobSHA1": "3481f337e374c1fc3eb0b9e780ddb02da963a9e5",
+      "sha256": "54d3101e149f291848d1170a2616a5388f2c91b878a74f2d3163da82207ea7a7",
+      "bytes": 6815
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/NEON/MathFunctions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/NEON/MathFunctions.h",
+      "gitBlobSHA1": "fa6615a85194f72887a41867f5e586fb8c2a62de",
+      "sha256": "8cd8f6d69e1b8c60eaa88c0f951eab619b8ece903393d7f90d726aa487da816e",
+      "bytes": 3083
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/NEON/PacketMath.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/NEON/PacketMath.h",
+      "gitBlobSHA1": "d2aeef4308b60def3670274e81c1380ccb52b91c",
+      "sha256": "3e13180a0dd01b9a69bd17f17aa869c38c4515df1cc83043b88f43d9a131b75f",
+      "bytes": 189525
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/NEON/TypeCasting.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/NEON/TypeCasting.h",
+      "gitBlobSHA1": "54f97336e03414097ebc4e5eaaa0e5545fed7276",
+      "sha256": "736c98b778932aba5914b418fd810a13557a2eb786b5d11e736828a9f3ee7081",
+      "bytes": 51286
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/SSE/Complex.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/SSE/Complex.h",
+      "gitBlobSHA1": "8fe22da46c78b423bb5daf76b64ae24069bd04e7",
+      "sha256": "87a6f05e1122f886550a985ccb79150be09999352d7cbce86bbeed648a2157a9",
+      "bytes": 14251
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/SSE/MathFunctions.h",
+      "gitBlobSHA1": "8736d0d6b50a1b7711ccbfb31e38987fd7bb312d",
+      "sha256": "7007304a115b9f42b483e4e2ca836a0ec578d68a89a3f90c048ddebf074673e5",
+      "bytes": 6765
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/SSE/PacketMath.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/SSE/PacketMath.h",
+      "gitBlobSHA1": "db102c73a2376887332d2b25f6894bfa86284653",
+      "sha256": "a5e086e96bf7876bd9da0c43117f482435d04cdcbc4cf9c104c1724429804130",
+      "bytes": 64465
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/arch/SSE/TypeCasting.h",
+      "gitBlobSHA1": "d2a0037e0147cb3d8cdd5b934f79728a62108c32",
+      "sha256": "52ad99dd125e1b5b7b6480a8a5219344e7b30def71c08fe74d14304856842e60",
+      "bytes": 3650
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/AssignmentFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/AssignmentFunctors.h",
+      "gitBlobSHA1": "bf64ef4ede6d605ad95412ccb71654ce00f6cc21",
+      "sha256": "d8f1b1224441face5efe4271d7354683ec16b5cbe8ec89e7c728c13ff85bf160",
+      "bytes": 6686
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/BinaryFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/BinaryFunctors.h",
+      "gitBlobSHA1": "63f09ab9317e31d26525916d8ca0a031fa7c1247",
+      "sha256": "0b07cd6d40cbf96561824eb80aae5af719dcfe1c4d349b011100acdb57821997",
+      "bytes": 20921
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/NullaryFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/NullaryFunctors.h",
+      "gitBlobSHA1": "192f225ddafda2e867cf80adb396fac940eeeec0",
+      "sha256": "190a630e8482bc0b94383c67b9b5d7a41f3c26cb10894d54597cfde3d73ba70b",
+      "bytes": 8334
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/StlFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/StlFunctors.h",
+      "gitBlobSHA1": "4570c9b634bd920753aa4d9ab063c4ab49ab4ecd",
+      "sha256": "71823e6fcbe89847bb7caef19e837b1eed1c32442cdf8d104103888c4ffe4bb0",
+      "bytes": 4998
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/TernaryFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/TernaryFunctors.h",
+      "gitBlobSHA1": "b254e96c6adf427d19b7c766d9535841f96c183c",
+      "sha256": "0fc3c1aa2a5ad2f1ca9cdbcf37a633712cc0452b107ed63f6a4cf10d67111168",
+      "bytes": 607
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/functors/UnaryFunctors.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/functors/UnaryFunctors.h",
+      "gitBlobSHA1": "16136d185aa3c16cd7b7cff1fa97ca07c405ddf0",
+      "sha256": "905b211c94fccc6047ae262673c644ab829c8275e98b6f4b8978c73cb349462a",
+      "bytes": 40146
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/GeneralBlockPanelKernel.h",
+      "gitBlobSHA1": "f35b760c1df804cd66bfe43c6493df33a90f84f6",
+      "sha256": "b1824739dc829bdd5c87d4e2035794230f5ea8e3007977e378399e19562b98f3",
+      "bytes": 108448
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/GeneralMatrixMatrix.h",
+      "gitBlobSHA1": "caa65fcccf56cfbc0de60ae65c98e6975fbb89ea",
+      "sha256": "df7aa1bd01e45c47e71ea38ce579d81f5b79aa55ded40f21685802946564ec20",
+      "bytes": 20104
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h",
+      "gitBlobSHA1": "6ba0d9bdb8d1752af714b5c7e326af6bb5e9a8d8",
+      "sha256": "b415ab39c5c03ea6f2f3f749ba623424b9f1e0f7ea1e7df71e160f2ee391796e",
+      "bytes": 15948
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/GeneralMatrixVector.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/GeneralMatrixVector.h",
+      "gitBlobSHA1": "dfb6aebced46a246820c6f68efd15a400bfd30e2",
+      "sha256": "ea08550845627bf3d7c0ad30ed7061d5eb9590b1fb548fd3d8fde906707b11f3",
+      "bytes": 21724
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/Parallelizer.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/Parallelizer.h",
+      "gitBlobSHA1": "8f91879e45f87796bf9113a574d5f89747413edc",
+      "sha256": "2c54b4e297c0cb187ee47aec319eead343a6fcfdb3f414d42758bfd68ff4938d",
+      "bytes": 5582
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/SelfadjointMatrixMatrix.h",
+      "gitBlobSHA1": "33ecf10f610d4515edee6402360a34927d8abf2e",
+      "sha256": "e204012c3add3c045207b5e4e7eeea5f83bf3da9d0c6f7e287acea1c58a4b22d",
+      "bytes": 21354
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/SelfadjointMatrixVector.h",
+      "gitBlobSHA1": "d38fd72b22710e84f049273ac2e024bfa9b77930",
+      "sha256": "5fd54cb6290c9437875265e5b673797f4cdb6e45c791fe0247b41e098e331055",
+      "bytes": 9958
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/SelfadjointProduct.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/SelfadjointProduct.h",
+      "gitBlobSHA1": "a21be80504f4f9412d003e3ead615feac56c0099",
+      "sha256": "0e47b0162e6cfd1d8dc314d7cbc105529936b03a802f546c1226d11b6a38dbe6",
+      "bytes": 6164
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/SelfadjointRank2Update.h",
+      "gitBlobSHA1": "f752a0bf093598a602abee2645a9dc34c4883470",
+      "sha256": "1a3064b1b2d3521f1d4b022ba0103314065dde9366686ce0c2af72fc07b38406",
+      "bytes": 4126
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/TriangularMatrixMatrix.h",
+      "gitBlobSHA1": "f0c60507ab10100e02933e253d25a03ff99256d7",
+      "sha256": "8a726cee8a7523991eaf9d5a4cef2b691c318394d64f4b2f55e13588a599ed16",
+      "bytes": 20987
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/TriangularMatrixVector.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/TriangularMatrixVector.h",
+      "gitBlobSHA1": "76bfa159cedc5db03aafe8c798024a762b483c47",
+      "sha256": "a45c7b2e4fa32c52372f9d635c6599a1844f9053edd9108774e64972b0bdc8fe",
+      "bytes": 14722
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/TriangularSolverMatrix.h",
+      "gitBlobSHA1": "6d879ba00fd72eed240e4f2cb50b6023f8c0e0af",
+      "sha256": "7bbe79b4abbec7879feb1c84c2bf92b8e5039baa7a7bcfeee9decb3abf544550",
+      "bytes": 14678
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/products/TriangularSolverVector.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/products/TriangularSolverVector.h",
+      "gitBlobSHA1": "6473170169372e912f192b46c8962e9718ab3cc6",
+      "sha256": "5febd767c379a570c5f918b07890f75c87bf9ae4d6b0f565456f275b308d10be",
+      "bytes": 5882
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/BlasUtil.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/BlasUtil.h",
+      "gitBlobSHA1": "e16a564980726ca200dcaf51e15adc72f89876d5",
+      "sha256": "478865886bd886a3b0f6e221ff9b811be3742274d1fa260c7fbd525a2bc55716",
+      "bytes": 23156
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/ConfigureVectorization.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/ConfigureVectorization.h",
+      "gitBlobSHA1": "af4e69623830aece11ec266155ce0a878cdb204e",
+      "sha256": "3eec3fdfce850c87aca7bac45ce2bf1898804a845e29a9548c3e98e4c82ad35a",
+      "bytes": 19876
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/Constants.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/Constants.h",
+      "gitBlobSHA1": "35dcaa7b38630b856703f86cc91a58054b1a3d8a",
+      "sha256": "b6d536a1e9b8cc1c685f7c6cf794ebe70a672099370fe57e475f6ca1739236a0",
+      "bytes": 21931
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/DisableStupidWarnings.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/DisableStupidWarnings.h",
+      "gitBlobSHA1": "fe0cfec0bc2461ac44abca8f3d05b468d3c60fd9",
+      "sha256": "62dab2d7be4090aaa05e3d2c6581b249b7365726bb7506cdc910552fc8386c55",
+      "bytes": 4892
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/ForwardDeclarations.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/ForwardDeclarations.h",
+      "gitBlobSHA1": "2f9cc449176fb2ea3cbe83d9c8dc2441153fdfc4",
+      "sha256": "661744e9dc5ad6fbd6325a068f188d56a7d4c53a2e577bdf02d2032e83f93541",
+      "bytes": 15555
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/IndexedViewHelper.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/IndexedViewHelper.h",
+      "gitBlobSHA1": "f85de305f21f44ad139fcca264a5b0ed9fe4a60d",
+      "sha256": "e88f96baa8297511a439002d23b0ae30045e9c5438a4b9b3680e4182d6e2b6d5",
+      "bytes": 6696
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/IntegralConstant.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/IntegralConstant.h",
+      "gitBlobSHA1": "945d426ea804c4788ff19a5c0507799f87edf381",
+      "sha256": "32c1a018fdf7bd1f36e310773032566f351aff3b5a00d5f239e24d0c2809ee69",
+      "bytes": 10949
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/MKL_support.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/MKL_support.h",
+      "gitBlobSHA1": "17963fad4d42c979c928b053b45fcb3b099b30f0",
+      "sha256": "487f0c220d40b8418876b5c7d9032d3597374cdff790d4022e8f4eea932cf620",
+      "bytes": 4268
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/Macros.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/Macros.h",
+      "gitBlobSHA1": "986c3d44db94c8ba339792b6738c47cdd2c5acbc",
+      "sha256": "8d73259b4ba482e6dbd11b31d8887fd350dfb0836700d32793446bba6ab1ae7a",
+      "bytes": 52909
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/Memory.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/Memory.h",
+      "gitBlobSHA1": "875318cdb1ce2e9716a5a744ecd2485848ce5065",
+      "sha256": "e25565aa6ae3e612c26b92cfe731a5df90d7edfa667be5b987c2801c70b2c95c",
+      "bytes": 46661
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/Meta.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/Meta.h",
+      "gitBlobSHA1": "81ae2a32d1d290e3173fb27ed9088a41fcf685de",
+      "sha256": "4ee6855c8f37669b8c86483342c56f9ad06f2dfc69abfe4691298a8d2a944202",
+      "bytes": 29336
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/ReenableStupidWarnings.h",
+      "gitBlobSHA1": "1ce6fd1b00979ad42bbee67372981a23a05ab8d2",
+      "sha256": "e0200d2f76f2944831e0c12973faa72fabb0445bbafd65c7ae516ab8cd67ade5",
+      "bytes": 1024
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/ReshapedHelper.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/ReshapedHelper.h",
+      "gitBlobSHA1": "412432132ca92f684a8cea561a5a0b24390903ee",
+      "sha256": "22248d610522a08d515c72596f8e69a5bd0f6930545a9846c575da55119b3512",
+      "bytes": 1432
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/StaticAssert.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/StaticAssert.h",
+      "gitBlobSHA1": "c45de59016e1aa0ea37424595b8c7286b2e7d18c",
+      "sha256": "16ecc74d0318e07c847799e6757a8b4ddd7769d6f07077a180a7def3eeb6d1bd",
+      "bytes": 10676
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/SymbolicIndex.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/SymbolicIndex.h",
+      "gitBlobSHA1": "354dd9add3b5e05e71381d885181c846a2547cf3",
+      "sha256": "db1f06b723a94199dc28c614e4d91d25ab51612d3c1bd705627376ff1d0c9efe",
+      "bytes": 12003
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/Core/util/XprHelper.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/Core/util/XprHelper.h",
+      "gitBlobSHA1": "71c32b8a116ba86bf04a00e8c260ef912154a01a",
+      "sha256": "f75169c4a2ca3e51a8e6ac423ff34ad827bf73264ccbbdfa3b11ad19f8ef10de",
+      "bytes": 35762
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/ArrayCwiseBinaryOps.h",
+      "gitBlobSHA1": "0e5d5445b18fcda01a43e33e958a9a964b8d1354",
+      "sha256": "dc9ebce46c9243ec3d013746ff25392b6fde9e87eb3c1063858cc16875c19d49",
+      "bytes": 14060
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/ArrayCwiseUnaryOps.h",
+      "gitBlobSHA1": "13c55f4b115880c0becb6246bdc1fb86c9f404fa",
+      "sha256": "2f0f0334476bad09adaf5ba3eb8c2528c2b6ab3ae47210832cbd276388513f4c",
+      "bytes": 21431
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/BlockMethods.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/BlockMethods.h",
+      "gitBlobSHA1": "63a52a6ffaa9bcadef7961d05fabe353f52aadc2",
+      "sha256": "54fe460d2f69168b0db431756e96b4a5467dbaaa426acdc21b87a507a7c26b0f",
+      "bytes": 59020
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/CommonCwiseBinaryOps.h",
+      "gitBlobSHA1": "8b6730ede025dd4c9600baf29a7fe6fafc4f79bc",
+      "sha256": "1f8a9bec47fcd5f7f529d5956e15da2d0d32511879bdf613d39fb22fbc9b4498",
+      "bytes": 4828
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h",
+      "gitBlobSHA1": "5418dc4154f2b078e964383d6bb5acebe0bf3210",
+      "sha256": "2a8ba7687292c6b301ccfeec51c51275210b3744218c2497b1865b5370d83256",
+      "bytes": 6089
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/IndexedViewMethods.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/IndexedViewMethods.h",
+      "gitBlobSHA1": "5bfb19ac6cdfd5a66fdf15f001d72f7efc2a8300",
+      "sha256": "5e9583f2c6105e3bf013ddc1afe2a0685b4aba060ef6110446e9379754046548",
+      "bytes": 12283
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h",
+      "gitBlobSHA1": "a0feef8716a4911e2da8011177a38c7dd051b6ae",
+      "sha256": "90ea8491924c90080397fb1e3f33d0e1a842f5a3b80b99fc52a20651958c6982",
+      "bytes": 6387
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h",
+      "gitBlobSHA1": "0514d8f78b5ff44ed659113f85e5aa0e512cc6c5",
+      "sha256": "8410b62cad9a1ed8be0ea7a5b1f1821b0e7330cc6a6858c8c9dfc327e49dd7b3",
+      "bytes": 3350
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/eigen/Eigen/src/plugins/ReshapedMethods.h",
+      "sourceRepository": "InteractiveComputerGraphics/PositionBasedDynamics",
+      "sourceCommit": "10a70bc146a97873dc3c8fef372f5217e010542e",
+      "sourcePath": "extern/eigen/Eigen/src/plugins/ReshapedMethods.h",
+      "gitBlobSHA1": "482a6b045ef5a530517f55785b2ce27b448595d8",
+      "sha256": "398c8eff2a19dd32fb5fc185ac85be20aceab3fd4b6ccd0cf7a1c9c990153a2f",
+      "bytes": 6915
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/common-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/common-inl.h",
+      "gitBlobSHA1": "a8a0453c14d72550d29f23122d01fd638e7828ac",
+      "sha256": "c8c7db736c3fb61ccd84b1f5d5f9c748a1e3dbfe77a986bb820fcfe20da32751",
+      "bytes": 2050
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/common.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/common.h",
+      "gitBlobSHA1": "ba9a2e75f1deaa71a36f02dae5d4f2d8ba19269f",
+      "sha256": "62bdfbe7c9d66836590f89fb116baaf87513c20e028e0f62dbaa714791d29e26",
+      "bytes": 13053
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/backtracer-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/backtracer-inl.h",
+      "gitBlobSHA1": "43d1002478c8407e3d1ba2bf18fadf76a9241b5e",
+      "sha256": "30891d3c75154cf278ac30dbce584bfa28dae17c0f93418c363483c7e9dc9431",
+      "bytes": 2004
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/backtracer.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/backtracer.h",
+      "gitBlobSHA1": "541339cdc32caba890fc0a2a4e8728085099de76",
+      "sha256": "e0d6f5f72d5936f0fddf681b590e87ee880a2ea40ed44551b8fdf59e0868a1e5",
+      "bytes": 1165
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/circular_q.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/circular_q.h",
+      "gitBlobSHA1": "29e9d255f4f4c5ffba08f3ccb234688698035be7",
+      "sha256": "0bc4025c81425023f4d58711d6aa6231a55ee606bb1fc88f4fb3e655e807e265",
+      "bytes": 3377
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/console_globals.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/console_globals.h",
+      "gitBlobSHA1": "9c552106a4e3c3cdfab1cddb857969c126f5a024",
+      "sha256": "3dced73dc2bc5eacc678eec34af6458f910740c8949fd1bc8449808d1345467a",
+      "bytes": 603
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/fmt_helper.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/fmt_helper.h",
+      "gitBlobSHA1": "61306003b2107e9e61e7aaaf212afc64e7ede39f",
+      "sha256": "d66b3ec0617a439ca7a4fd661046d5be54beed89c6fae2849d4d46c3f28ef8a9",
+      "bytes": 4471
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/log_msg-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/log_msg-inl.h",
+      "gitBlobSHA1": "aa3a957682e5dfecd132a3e2e7667b239bfb06ed",
+      "sha256": "83e6c837a4f3094671d6745a835c718c5c0b922288be371a19429093ab856272",
+      "bytes": 1396
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/log_msg.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/log_msg.h",
+      "gitBlobSHA1": "87df1e833277a74eac4729fd4c4d2ce9ebf75ab9",
+      "sha256": "13a78b8cc0a8b71fd6a49633792f98453aeb8844d525d10bc55b22089a120281",
+      "bytes": 1204
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/log_msg_buffer-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/log_msg_buffer-inl.h",
+      "gitBlobSHA1": "2eb242859ea2ca76ba8239b6c410bce42726e7f2",
+      "sha256": "c4ca45a0401b17de9f57ea65462b44ea159d152d83bdd086ff675ef9e035456f",
+      "bytes": 1668
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/log_msg_buffer.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/log_msg_buffer.h",
+      "gitBlobSHA1": "1143b3ba45062f38721923323a8d321360d7fbad",
+      "sha256": "0d4b89aa2d47490f3d89d04fbba49cab751e696657f2857899f432a5919b9d26",
+      "bytes": 935
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/null_mutex.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/null_mutex.h",
+      "gitBlobSHA1": "e3b32204158df4b4a6c5d40953cb22cd497f6212",
+      "sha256": "1377fde4b54417dca1b3d162d0f18c35f9418e1db91a333949952f1c877127b1",
+      "bytes": 930
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/os-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/os-inl.h",
+      "gitBlobSHA1": "3aaa6b54513773f8436da8dfdef782c3b801b63e",
+      "sha256": "1b9afac4f0fd1996448b8831af058bb812f33c4969894f87c9f31b8a9b0ff27f",
+      "bytes": 18760
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/os.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/os.h",
+      "gitBlobSHA1": "5fd12bac1ea06c16dfe5df209424e4e1d637c7d9",
+      "sha256": "e563c3726d234e89d6944c55f84e521205a8460f795820778c2a9b9be17f755c",
+      "bytes": 4110
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/periodic_worker-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/periodic_worker-inl.h",
+      "gitBlobSHA1": "18f11fbec8cce92f47f145f1fa74cc22fca29464",
+      "sha256": "298c84f55ac417e43974d044f5055364b4aa59fec9d2c8d24a001b73f79ae113",
+      "bytes": 620
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/periodic_worker.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/periodic_worker.h",
+      "gitBlobSHA1": "d647b66ee174ab7b706ae3c984b7cf37ff5221c5",
+      "sha256": "5e514551070364a20f35b076b83820a7e577b3b23f66aa254d8bd9ea0b8c7b17",
+      "bytes": 1813
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/registry-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/registry-inl.h",
+      "gitBlobSHA1": "4cbdeb753b314dbc00cd3befec763895d7eb51c0",
+      "sha256": "006ff6ed2150e3c1e575bbc935016d4d623fd730bdf347a94d9d144aac29c867",
+      "bytes": 8897
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/registry.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/registry.h",
+      "gitBlobSHA1": "72c70b82bf7c79713dd5c0cb157e60a6dc486b59",
+      "sha256": "dd323eb0c7bf08c15899db8db4210255051462246351e1c1214e5b126f66c95b",
+      "bytes": 4464
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/details/synchronous_factory.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/details/synchronous_factory.h",
+      "gitBlobSHA1": "4bd5a51c86831e1808407c8cd5a34db36e95038c",
+      "sha256": "3fcfcc28aa4edc2998e9e00d218362600605b89e0c58ebf2c7267950412e1cdc",
+      "bytes": 751
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/base.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/base.h",
+      "gitBlobSHA1": "87b3fd7cb489c88436d136f7cd5db9c9a8e6cec8",
+      "sha256": "13c8d953fb2d98dc955289dd166999bd22dbabfeba7f486b3693c2c6d9d627db",
+      "bytes": 103990
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/chrono.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/chrono.h",
+      "gitBlobSHA1": "e0c81589ea115626f51e4b1d29b09e578fb3af78",
+      "sha256": "aa4f1189f00ca287a9e5585cc3b6b57dfa8f1a000efafa881432f46eafbddaed",
+      "bytes": 79718
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/format-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/format-inl.h",
+      "gitBlobSHA1": "a1e01661178a46e8cf0767e8b9d94a9ee5a9db36",
+      "sha256": "7ac4d4907568ac99c28461881595053d2e4045ee81c89d0bddb779c718ee736c",
+      "bytes": 80985
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/format.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/format.h",
+      "gitBlobSHA1": "50e571442e53933a24177187a6e92968c8f6e2d9",
+      "sha256": "9ac34739eb99d5fe220c96d59519bf8da9fb0108d1cf5badbed157187e4c3cfb",
+      "bytes": 157793
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/ostream.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/ostream.h",
+      "gitBlobSHA1": "7bec4efe2b318cb3e6429ea2e3cc11f4bf8b4fb0",
+      "sha256": "c49f07be57b7fb2abc89e34284574740c24c2de6d6df0b08aff1a0b8f537c090",
+      "bytes": 5024
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/bundled/ranges.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/bundled/ranges.h",
+      "gitBlobSHA1": "23ff7de09131e7922a6a04fbc5428a3fe928688f",
+      "sha256": "0960928778290c8125be3bcf92542ef68b31545b6b79a3c1930cd09eb5b34473",
+      "bytes": 28211
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/fmt.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/fmt.h",
+      "gitBlobSHA1": "81159e3c1742a4594b813e828b2c46ce98da5c5f",
+      "sha256": "5c287cb28728ae2ee9429484a9dd0273a870f96a610c171182d27dd9471e8f97",
+      "bytes": 825
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/fmt/ostr.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/fmt/ostr.h",
+      "gitBlobSHA1": "2b901055f3c0f7b3e8b538c5425f41ad71220de1",
+      "sha256": "64bcc67495d2d66a6feec40d1c14aebd86d99b8b064c32f034abe1b674aab5a4",
+      "bytes": 554
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/formatter.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/formatter.h",
+      "gitBlobSHA1": "4d482f827e671c7acec2b4aaa9fa2dd0bc8f2dbb",
+      "sha256": "213631628274dc6c26fcc9a3bed36a3a9a83edea5e6b9f027baea58ca9c5eff3",
+      "bytes": 463
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/logger-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/logger-inl.h",
+      "gitBlobSHA1": "5218fe4c440d48ed0191aa691f094d3afd8ce3bf",
+      "sha256": "2b6d6c11dce4bd4cceb4e724c6ffe6a508f3ae9cff8b44438ae92438c3c35470",
+      "bytes": 6725
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/logger.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/logger.h",
+      "gitBlobSHA1": "f49bdc009a3e1dc8ccd021d98925406332f08ea5",
+      "sha256": "b298ef3f9daea67f946781a6b73eec267b889191d06392b38bc602298f86e8a0",
+      "bytes": 13412
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/mdc.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/mdc.h",
+      "gitBlobSHA1": "bc131746e8687fbfb4b138f2132c48796f8132bc",
+      "sha256": "86776b3367bd72e26a630e58d820b6f065e3b337668822139fcc173646ad43c0",
+      "bytes": 1497
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/pattern_formatter-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/pattern_formatter-inl.h",
+      "gitBlobSHA1": "fd408ed527a980a040caa350c6056547a1fad1e2",
+      "sha256": "1752698ce34d6d8dfc6b57d8c6181e3eb285d967ec495d341f7c8a09fa8dc2b6",
+      "bytes": 46719
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/pattern_formatter.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/pattern_formatter.h",
+      "gitBlobSHA1": "ececd67322fe0a0046745ece8c463bcb9fae53a8",
+      "sha256": "33c08b3918f7182df15d6f1bab3f9f93fc271c178c2cb2baba69a30e0ad6ea23",
+      "bytes": 3758
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/ansicolor_sink-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/ansicolor_sink-inl.h",
+      "gitBlobSHA1": "6a23f6c70f5d325a79904f6cae94908820952e1c",
+      "sha256": "a39143102c10fa8ca2c6dfdc9ee881df8306c805045d702b806041569e5b94b1",
+      "bytes": 5099
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/ansicolor_sink.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/ansicolor_sink.h",
+      "gitBlobSHA1": "19aa421e6c64aa7ef46b6eec646ae05f0e30e9f0",
+      "sha256": "2062424fed0f02d2b74b3f1ccb54eb807f7212cc5acc0b2b3d2a7fa19f718a47",
+      "bytes": 4029
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/sink-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/sink-inl.h",
+      "gitBlobSHA1": "e4b271404fd1e46c33af63eb791a5ac4da2032dd",
+      "sha256": "e3efbe6fc7b15fccc046b740b061f0ab5867f8bd7d6cf30ed2180a3cdb04aefb",
+      "bytes": 725
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/sink.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/sink.h",
+      "gitBlobSHA1": "58506853640561a68a7eb68c69518a44bdd1e42c",
+      "sha256": "7fa4a5c69c42f9eee9d6cd5cc4d525be4beb77299cc88b09b4a01f155f3cc215",
+      "bytes": 893
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/stdout_color_sinks-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/stdout_color_sinks-inl.h",
+      "gitBlobSHA1": "166e386145f9d83ee393bf65d6124cb98057e4f9",
+      "sha256": "187e6472676773eb592cc4dfa9441c3aea64333be395dfc6f2741549e1da9141",
+      "bytes": 1435
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/sinks/stdout_color_sinks.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/sinks/stdout_color_sinks.h",
+      "gitBlobSHA1": "72991fe0ed49174b1d687250668398722f39f085",
+      "sha256": "ba7831fa21239e6b52cda2b8d18c457ff1ee5e2afd730988e0b95b874939e21c",
+      "bytes": 1792
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/spdlog-inl.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/spdlog-inl.h",
+      "gitBlobSHA1": "e02081fe393eab1f3c8c71e33aaa07c50211af74",
+      "sha256": "036ab0ed3ec1226973bc9cf52801ec269fc95f63dcf8a074093dbf582a74ae94",
+      "bytes": 3268
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/spdlog.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/spdlog.h",
+      "gitBlobSHA1": "1a927ffc924474d627ba3e924b67078d10b43f2f",
+      "sha256": "ced45d7625328739a33563d372bc897f7ec0b040a315e3bba8403aac97edf90d",
+      "bytes": 12024
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/tweakme.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/tweakme.h",
+      "gitBlobSHA1": "d60929878a519a5e0d15498ce13568a57fb552d4",
+      "sha256": "8e641df000560090a11adb04eff3f1a18e814f6eb8f2a9a9a1f22c0dcc572f82",
+      "bytes": 6610
+    },
+    {
+      "path": "Sources/CNativeClothCollision/vendor/spdlog/spdlog/version.h",
+      "sourceRepository": "gabime/spdlog",
+      "sourceCommit": "6fa36017cfd5731d617e1a934f0e5ea9c4445b13",
+      "sourcePath": "include/spdlog/version.h",
+      "gitBlobSHA1": "d89947b59caa5c3d494e6bdd33d63e87b440711f",
+      "sha256": "91bcafad8231d69cecbd05e9d2a8f0d3cc39a4ad463703fcf001b686a2fc52ac",
+      "bytes": 417
+    }
+  ]
+}

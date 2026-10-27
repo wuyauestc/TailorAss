@@ -1,0 +1,28 @@
+{
+  "scope": "Bounded exact stored-binary zero-shell cubic critical-value separation proof only. All previous domain/full feature/threshold checks preserved.",
+  "historical123SourceSHA256": "eb3acd49032c34476308b7e800a3b37268b220c75061191b86c7aab5b1a17410",
+  "currentSourceSHA256": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+  "maximumExpansionWords": 64,
+  "maximumEFTOperations": 1048576,
+  "lazyScratchBytes": 131072,
+  "timeDepth": 12,
+  "timeNodes": 8191,
+  "positiveShellSignOnlyAllowed": false,
+  "cppVendorAndGuardPolicyUnchanged": true,
+  "files": {
+    "Sources/NativeClothCollision/FeatureSeparationCertificate.swift": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+    "Tests/NativeClothCollisionTests/CriticalFeatureCertificateTests.swift": "7592365aa5c7b1a2717c479e6464e2f16181ca667a2ec02ca77263d48c956e21",
+    "Tests/Oracles/correlated_feature_fraction.py": "f0ca4b3ca422a5dfa55fa1f50295f197ea494dbc6fd66f82c3c1822f696219bb",
+    "Tests/Oracles/audit_correlated_feature.py": "b80ecf33d8b1fa5d4ce70db983d046eaedbcb173a3c84290e64ac9a88c29edba",
+    "Scripts/CriticalFeatureLinkSmoke.swift": "cc1ae9cf8fbffd11d7e9fb20815caa525153430cf16d491a9838deb586a3bd34",
+    "Scripts/run-checks.py": "6dc5a13c8de2fa927cadc753f64010a3cf792a9310f197ac080ef9e458f63b59",
+    "FEATURE-SEPARATION-CERTIFICATE.md": "f2fcba457ac8bf2c80086f2101adf5a13758c8fe3972c75ea23e73419f1283e5",
+    "CorrelatedFeatureCertificateManifest.json": "c8537d52ce7df5dc823604b82c01819245f04217ceb41a846167e0f23c11e8d2",
+    "ExpansionFeatureCertificateManifest.json": "0b98a56ed29f2b869282c8a2014e16e6e1f5374ad2b05aeed0440a2f18e866fe",
+    "ElevatedFeatureCertificateManifest.json": "da776ba0b9dabc183e666763ee776408ad661cbc620193b76c0b5924e19affe9",
+    "Tests/NativeClothCollisionTests/Fixtures/CriticalFeatureCertificate/circle690-new123-complete-self.json": "c12a530b0aa12ab0480f0aeb1d0a3dd9c008feff051b4bdf61700bb13d02f4e2",
+    "Tests/NativeClothCollisionTests/Fixtures/CriticalFeatureCertificate/circle690-new123-ee.json": "c0077583f0f6c3b9914d427b5579ac35cc70a4b0144a2e762febce6ff924637d",
+    "Tests/NativeClothCollisionTests/Fixtures/CriticalFeatureCertificate/manifest.json": "b5ef02d77413084b723a82991c244651f210014cb7e3e769465417724121f96b"
+  },
+  "currentOwnedMetadataNote": "Current source includes bounded arbitrary affine-normal certificates; historical package proofs remain unchanged."
+}

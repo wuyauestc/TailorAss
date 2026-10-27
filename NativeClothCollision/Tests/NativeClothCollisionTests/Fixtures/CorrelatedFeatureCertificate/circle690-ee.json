@@ -1,0 +1,254 @@
+{
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "vertexIDs": [
+    60,
+    61,
+    1597,
+    1598
+  ],
+  "start": [
+    [
+      0.15404705965732926,
+      -0.04913659056929769,
+      -0.04075161106863337
+    ],
+    [
+      0.1563663580117603,
+      -0.04914126598246938,
+      -0.034752523221918484
+    ],
+    [
+      0.1601036548438053,
+      -0.050165074776064036,
+      -0.01635516004879627
+    ],
+    [
+      0.1545306856449235,
+      -0.04888331151744834,
+      -0.04158076966971142
+    ]
+  ],
+  "end": [
+    [
+      0.15429612561284878,
+      -0.04913407349810791,
+      -0.0408929141955449
+    ],
+    [
+      0.15661308478665736,
+      -0.049031306491670486,
+      -0.03489142088407756
+    ],
+    [
+      0.16021971481459335,
+      -0.05021604754081713,
+      -0.016407327545337958
+    ],
+    [
+      0.1544628660626427,
+      -0.04895312220388582,
+      -0.0415590258330132
+    ]
+  ],
+  "startBits": [
+    [
+      "3fc3b7d065a2f7e5",
+      "bfa9286e63106c37",
+      "bfa4dd6529992294"
+    ],
+    [
+      "3fc403d014ed752a",
+      "bfa9290b448eb771",
+      "bfa1cb152d621c13"
+    ],
+    [
+      "3fc47e46ccc31980",
+      "bfa9af3c972111e2",
+      "bf90bf68361f27ed"
+    ],
+    [
+      "3fc3c7a958896546",
+      "bfa9073bc0934307",
+      "bfa54a131bbf7259"
+    ]
+  ],
+  "endBits": [
+    [
+      "3fc3bff9b6b40e88",
+      "bfa92819ed96572b",
+      "bfa4efea82374bb6"
+    ],
+    [
+      "3fc40be5c6a46630",
+      "bfa91aa1a3b947f9",
+      "bfa1dd49cf3756db"
+    ],
+    [
+      "3fc4821461a6ccce",
+      "bfa9b5eaf3d82964",
+      "bf90cd151ce3506d"
+    ],
+    [
+      "3fc3c5706f17bdc4",
+      "bfa9106235ce3951",
+      "bfa54739819ce1e2"
+    ]
+  ],
+  "oldNative105FullGuardStatus": "uncertain",
+  "oldNativeStatus": {
+    "achievedDistanceTolerance": 1.04429609155271e-06,
+    "configuredIterationBudget": 10000,
+    "conservativeTimeOfImpact": 0.45703125,
+    "detail": 4,
+    "detailName": "precisionOrBudget",
+    "permitsWholeInterval": false,
+    "status": 3,
+    "statusName": "uncertain"
+  },
+  "oldFixedCertificateStatus": "notCertified",
+  "oldFixedCertificateReason": "depthLimit",
+  "independentExactWholeInterval": {
+    "passed": true,
+    "scope": "This single exact saved physical-outer EE feature only. Does not certify remaining full Self features or accept the outer step.",
+    "vertexIDs": [
+      60,
+      61,
+      1597,
+      1598
+    ],
+    "nativeCCDStillUncertain": true,
+    "productionHelperStillNotCertified": true,
+    "noSourceOrThresholdChanges": true,
+    "minimumSeparationMeters": 0,
+    "wholeClosedTimeInterval": [
+      0,
+      1
+    ],
+    "method": "Exact rational cubic coplanarity determinant Bernstein positivity + exact quadratic-normal hull norm upper bound. For every same-time point pair on the two edges, n(t) dot(q-p)=g(t), hence distance\u00b2 >= min(g)\u00b2/max||n||\u00b2 >0. No dense-sampling inference.",
+    "expandedCoplanarityPowerCoefficients": [
+      {
+        "numerator": "183623003384460008786947125430949728571391",
+        "denominator": "748288838313422294120286634350736906063837462003712",
+        "approx": 2.4539054170356223e-10
+      },
+      {
+        "numerator": "-740587249780119015413578049640898674504033",
+        "denominator": "748288838313422294120286634350736906063837462003712",
+        "approx": -9.89707732978268e-10
+      },
+      {
+        "numerator": "186848414849327360657706526914160073087431",
+        "denominator": "187072209578355573530071658587684226515959365500928",
+        "approx": 9.988036986918975e-10
+      },
+      {
+        "numerator": "268294582734552647709951169529623485953",
+        "denominator": "374144419156711147060143317175368453031918731001856",
+        "approx": 7.170882926418232e-13
+      }
+    ],
+    "wholeIntervalStrictPositiveCoplanarityLowerMetersCubed": {
+      "numerator": "9089528000919478002417100896043440566959",
+      "denominator": "71835728478088540235547516897670742982128396352356352",
+      "approx": 1.2653213370964814e-13
+    },
+    "wholeIntervalNormalNormSquaredUpperMetersFourth": {
+      "numerator": "80269481589201940546504582012131022177178776724810060343961",
+      "denominator": "107839786668602559178668060348078522694548577690162289924414440996864",
+      "approx": 7.443401370578964e-10
+    },
+    "wholeIntervalSquaredDistanceLowerMetersSquared": {
+      "numerator": "82619519279499242097554052343752826700646248736906658086640580873385719362507681",
+      "denominator": "3841071916878327574507104033833290760690937830594050324128434297719292123424198907643597785399296",
+      "approx": 2.1509495543797273e-17
+    },
+    "processedNodes": 9,
+    "acceptedLeaves": 5,
+    "maximumDepthReached": 4,
+    "configuredDiagnosticLimits": {
+      "maximumNodes": 8191,
+      "maximumDepth": 16
+    },
+    "exactInputBitsVerified": true,
+    "coefficientIdentityCrossChecks": 7,
+    "leafCertificates": [
+      {
+        "t0": "0",
+        "t1": "1/4",
+        "strictPositiveLower": {
+          "numerator": "1446293723439121595783045783146012126437649",
+          "denominator": "23945242826029513411849172299223580994042798784118784",
+          "approx": 6.040004413181134e-11
+        },
+        "upper": {
+          "numerator": "183623003384460008786947125430949728571391",
+          "denominator": "748288838313422294120286634350736906063837462003712",
+          "approx": 2.4539054170356223e-10
+        },
+        "depth": 2
+      },
+      {
+        "t0": "1/4",
+        "t1": "3/8",
+        "strictPositiveLower": {
+          "numerator": "2824528579567309625952879902013208120599723",
+          "denominator": "191561942608236107294793378393788647952342390272950272",
+          "approx": 1.4744727168192072e-11
+        },
+        "upper": {
+          "numerator": "1446293723439121595783045783146012126437649",
+          "denominator": "23945242826029513411849172299223580994042798784118784",
+          "approx": 6.040004413181134e-11
+        },
+        "depth": 3
+      },
+      {
+        "t0": "3/8",
+        "t1": "7/16",
+        "strictPositiveLower": {
+          "numerator": "5564074654010713254550127856891487215368887",
+          "denominator": "1532495540865888858358347027150309183618739122183602176",
+          "approx": 3.630728120009345e-12
+        },
+        "upper": {
+          "numerator": "2824528579567309625952879902013208120599723",
+          "denominator": "191561942608236107294793378393788647952342390272950272",
+          "approx": 1.4744727168192072e-11
+        },
+        "depth": 4
+      },
+      {
+        "t0": "7/16",
+        "t1": "1/2",
+        "strictPositiveLower": {
+          "numerator": "9089528000919478002417100896043440566959",
+          "denominator": "71835728478088540235547516897670742982128396352356352",
+          "approx": 1.2653213370964814e-13
+        },
+        "upper": {
+          "numerator": "5564074654010713254550127856891487215368887",
+          "denominator": "1532495540865888858358347027150309183618739122183602176",
+          "approx": 3.630728120009345e-12
+        },
+        "depth": 4
+      },
+      {
+        "t0": "1/2",
+        "t1": "1",
+        "strictPositiveLower": {
+          "numerator": "979467957645999599168461268171481113175",
+          "denominator": "2993155353253689176481146537402947624255349848014848",
+          "approx": 3.272359239827881e-13
+        },
+        "upper": {
+          "numerator": "47741500541779885324903771446437648347247",
+          "denominator": "187072209578355573530071658587684226515959365500928",
+          "approx": 2.5520359570983346e-10
+        },
+        "depth": 1
+      }
+    ],
+    "displayOnlyCertifiedDistanceLowerMeters100Digit": "0.000000004637833065537964626642438326302876921518043819715209904500493079916882678934484796719974358835695777"
+  },
+  "scope": "Actual saved physical outer689\u2192lasttrial of rejected Circle690. No Newton or accepted-state promotion."
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "Immutable original IPC Toolkit full-builder canonical outputs, restricted to cloth DOFs AFTER original whole-local PSD; no reference rebuilt by the portable production code",
+  "ipcTag": "v1.6.1",
+  "ipcCommit": "19bcab7e1f5a0d2addfcd28513422ff248ea504e",
+  "canonicalCandidateOrderingRequired": true,
+  "originalReferenceSourceFiles": {
+    "cases.json": "3651316ea8adece7fb209386f9973a0d482b8952a4737880f5b8671108a694bf",
+    "official-canonical-goldens.json": "ec6b181db2cbef5b142eb1ddb0c9612aa299c75654886a2db77c1a798891b629",
+    "actual-case.json": "639d978a9a6768cc40e0776a189d81bf35785a6893d8326131a27b18cf8b9930",
+    "official-actual-golden.json": "1db241469af9b60a35128a5bca367418badebb9dd818a5defb9d113a74d34417",
+    "generic-cases.json": "d6bf9018aebd75ad2466c49a3f20b0a7c678f16824318b503d583c58795cbc7d",
+    "official-generic-fd.json": "48192b0e3866c5c84bc7007eca2c9a340c36391765666e661c31da5b1f335a3a",
+    "cpp-builder-official-comparison.json": "6251f7cbf4182fa21d86bae73a52b47daf19dcb39d5eb9e13a3bf1d8e98aec11",
+    "actual-cpp-official-comparison.json": "5bf7d3848a3e74b0f6a724c6743e7ae1dbd4b69b6afd610fd319387c881d8361",
+    "official-source-manifest.json": "c876b7e5f2a6da67210d12ad4e64dce2ff1db5840a77fcc445832d1b93bf6dc9",
+    "HANDOFF.txt": "2cffdd577b66478586537005744b6f593a42fa8f427a7485ae8cdcfdcbfbbd1c"
+  },
+  "files": {
+    "body-cases.json": "792852796bd546d4e6d6909e7b4590722bdacfc7e0dc2978ca4eefc00eefea75",
+    "canonical-goldens.json": "13ded839cb67ab4db3bece0321d9a4688c68baefdd3699e5f06867965f8689f2",
+    "actual-case.json": "0f856a2bef54e54d0ff003f7bf03f4f36dfca968d9b1bae3eef64c1e0b1e3e51",
+    "actual-golden.json": "8848b4fa558cc220f06a0b3b7601c8fe6bf36d875748759052058c58dcd270c3",
+    "generic-fd-cases.json": "8de3aed175c150510d783bcd410b773438f19b7c3394d2050df009c92c6794cb"
+  },
+  "generatorSHA256": "e5a825cc32f6d11b4ddad3acbf4102db1cad8a4f2196a850bbc5b86da5a5bddd",
+  "noTBBOrLibiglTestRuntimeDependency": true,
+  "actual469RemainsRejectedCloth": true,
+  "rawAndWholeLocalProjectedHessian": true,
+  "officialFullBuilderCaseCount": 18,
+  "actualFullSourceStencilCount": 863
+}

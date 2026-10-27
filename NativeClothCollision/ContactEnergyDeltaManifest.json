@@ -1,0 +1,15 @@
+{
+  "scope": "Owned stable fixed-leaf IPC increment; E/g/rawH and upstream vendor unchanged. Explicit original rounded fallback for identity/weight/type transitions; not a sign/garment certificate.",
+  "upstreamIPCToolkitCommit": "19bcab7e1f5a0d2addfcd28513422ff248ea504e",
+  "originalPhysicalKernelSHA256": "476988683f2dacf5824592e04f9e1bdc39bb8d0e9aff29438dcdb40be0a6f407",
+  "files": {
+    "Sources/CIPCBodyContact/include/IPCContactEnergyDelta.h": "f9f485c9b6e9c484244c47688fedb2240696cf0de04a5bf8d6439afdea26f4b3",
+    "Sources/CIPCBodyContact/src/IPCContactEnergyDelta.cpp": "89ec2ff3850cd2e16f3f1c8e02a936c98db0758ef63fcf7fb2d37304b360d881",
+    "Sources/NativeClothCollision/ContactEnergyDelta.swift": "6aba82eea6e938c396e83bb6665cf6e16a8f713beae1827c5180d66b6931e7e1",
+    "Tests/NativeClothCollisionTests/ContactEnergyDeltaTests.swift": "f5492fcb63d1fd500e22b0dc4bd173d82d066ab0decf56a2c9df904f08b6c082",
+    "Tests/NativeClothCollisionTests/Fixtures/ContactEnergyDelta/manifest.json": "adb64b7303988d75ad7eec422640df8f25b671b397dd9e22758c297e25dea5cd",
+    "Scripts/verify-contact-energy-delta.py": "150062106101220d43edb26beba51b6a1af6b3b93147b626deab55d0f17e9eb9",
+    "Scripts/ContactEnergyDeltaLinkSmoke.swift": "45b0c7c964d36344fcfe1470e12bd912e4a991bde27b059689df570f6b8d4285",
+    "CONTACT-ENERGY-DELTA.md": "49e967af0d64d0371a6381745ff88767b5f21442c3f408e27c5605b0aa9e7742"
+  }
+}

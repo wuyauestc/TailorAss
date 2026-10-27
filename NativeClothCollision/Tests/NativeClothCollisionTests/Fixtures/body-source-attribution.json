@@ -1,0 +1,73 @@
+{
+  "source": "MakeHuman hm08 base body group",
+  "sourceURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/3dobjs/base.obj",
+  "licenseURL": "https://github.com/makehumancommunity/makehuman/blob/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/LICENSE.ASSETS.md",
+  "sourceSHA256": "8e761e6624b8f54536409135d1636da63b32486a90d4897f84e121d144f6fb4c",
+  "derivedMeshSHA256": "218c5d582f6bac211449a1505988a04bb2ee65a912c985e0f82016f40a95ce60",
+  "collisionFieldSHA256": "829194bfdc26a32c9eabb9aa7643d4f335c9e46631e1daa657bfa08aac31b2fa",
+  "license": "CC0-1.0",
+  "bodyFacesOnly": true,
+  "excludedGroups": "all helper-* and joint-* groups, including genital helpers",
+  "coordinateSystem": "metres, +Y up, +Z anterior; waist contour at Y=0",
+  "normalization": "Standard mannequin: source waist Y=2.75 and hip Y=0.5, cross-section dimensional fitting to named catalogue reference. This is a generic template, not a measured individual body reconstruction.",
+  "baseline": {
+    "height": 1.7199,
+    "waist": 0.843338,
+    "hips": 1.03478,
+    "hipLine": 0.234837,
+    "waistLevel": 1.087725
+  },
+  "collisionGrid": {
+    "origin": [
+      -0.6337,
+      -1.1137,
+      -0.3037
+    ],
+    "spacing": 0.01,
+    "dimensions": [
+      128,
+      181,
+      65
+    ],
+    "encoding": "float32-little-endian",
+    "filename": "GarmentCodeStandardBodySDF.bin"
+  },
+  "preprocessing": [
+    "Tests/NativePattern/build-standard-body.py",
+    "Tests/NativePattern/BuildStandardBodySDF.cpp"
+  ],
+  "sourceGitBlob": "d26635e9326e3cca30778fd7b9c00062b03cce09",
+  "copyrightHoldersAtRelease": [
+    "Data Collection AB (2020)",
+    "Joel Palmius (2020)",
+    "Jonas Hauquier (2020)"
+  ],
+  "collisionCoverage": {
+    "scope": "Full unchanged visible standard body, including torso, shoulders, arms, neck and head. This does not add individualized upper-body fitting.",
+    "sampleBoundsMeters": {
+      "minimum": [
+        -0.6337,
+        -1.1137,
+        -0.3037
+      ],
+      "maximum": [
+        0.6363,
+        0.6863,
+        0.3363
+      ]
+    },
+    "legacyLowerGrid": {
+      "dimensions": [
+        128,
+        133,
+        65
+      ],
+      "fieldSHA256": "81251419a12a69de9946e8d85237a5ff77fe8c5775c992360e8b8878ca9d9172",
+      "floatCount": 1106560,
+      "allSamplesBitwisePreserved": true
+    },
+    "oddRayRows": 0,
+    "visiblePositionsTrianglesAndWaistPathUnchanged": true,
+    "previousDerivedResourceSHA256": "0670b5dbc94647f3ffbae6ce1c6e6b5eb0079252734f2f12a72a15681f00c6c3"
+  }
+}

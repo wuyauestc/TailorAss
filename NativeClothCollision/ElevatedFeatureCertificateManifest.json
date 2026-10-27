@@ -1,0 +1,40 @@
+{
+  "scope": "Mathematically identical cubic projection, bounded integer Bernstein degree3...8 representation. Never changes the actual linear motion, domains, topology or floors.",
+  "historical117SourceSHA256": "95ee7926ef1ca9271d71d88a03597b6021ff0a3d1bbdd5ed62cd4753fcfc73be",
+  "currentSourceSHA256": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+  "files": {
+    "Sources/NativeClothCollision/FeatureSeparationCertificate.swift": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+    "Tests/NativeClothCollisionTests/ElevatedFeatureCertificateTests.swift": "79dcf119ca4ad3b564a4d066f58cab95f3ddcc894ca175acedd54312b136d5fa",
+    "Tests/NativeClothCollisionTests/ExpansionFeatureCertificateTests.swift": "017b834f392d5737608dc863712499cd2a10302cbebd00781d3daf14fd47ab46",
+    "Tests/Oracles/correlated_feature_fraction.py": "f0ca4b3ca422a5dfa55fa1f50295f197ea494dbc6fd66f82c3c1822f696219bb",
+    "Tests/Oracles/audit_elevation_arithmetic.py": "ee715503b7dc1e3d066f78ef708053b5b50c52c87b14c2981a87d0b228054c7d",
+    "Scripts/ExpansionFeatureLinkSmoke.swift": "5812566fb36f7de49281db65e082999ca9801a97d6a8b19b98ccaf9bca11aafa",
+    "Scripts/ElevatedFeatureLinkSmoke.swift": "ebc0a98f6055b19680c59f10e36255fb1f52ee9decc001fdf74c7d93f1e29e68",
+    "Scripts/run-checks.py": "6dc5a13c8de2fa927cadc753f64010a3cf792a9310f197ac080ef9e458f63b59",
+    "FEATURE-SEPARATION-CERTIFICATE.md": "f2fcba457ac8bf2c80086f2101adf5a13758c8fe3972c75ea23e73419f1283e5",
+    "CorrelatedFeatureCertificateManifest.json": "c8537d52ce7df5dc823604b82c01819245f04217ceb41a846167e0f23c11e8d2",
+    "ExpansionFeatureCertificateManifest.json": "0b98a56ed29f2b869282c8a2014e16e6e1f5374ad2b05aeed0440a2f18e866fe",
+    "Tests/NativeClothCollisionTests/Fixtures/ElevatedFeatureCertificate/circle690-actual117-complete-self.json": "29084a030da58d1b43932b34894ae08e8203a1f05579b55b342225278cae74bc",
+    "Tests/NativeClothCollisionTests/Fixtures/ElevatedFeatureCertificate/circle690-actual117-ee.json": "4847507d2b6cb00a5e932dc214fca550032d6c602ac95f306576a9922a3c83eb",
+    "Tests/NativeClothCollisionTests/Fixtures/ElevatedFeatureCertificate/legacy-degree3-certificate.json": "ca0900224ca614116907d62d4927d2ffeaf49981dbaa1babbda65058c8019bd5",
+    "Tests/NativeClothCollisionTests/Fixtures/ElevatedFeatureCertificate/manifest.json": "436720fc14155a17de399ea1a2942d2be2e6118c0e093d6c14bedc369e35192f"
+  },
+  "maximumProjectionDegree": 8,
+  "commonPositiveScales": [
+    3,
+    12,
+    60,
+    360,
+    2520,
+    20160
+  ],
+  "maximumExpansionWords": 64,
+  "maximumEFTSteps": 1048576,
+  "lazyScratchBytes": 131072,
+  "defaultTimeDepthUnchanged": 12,
+  "defaultTimeNodesUnchanged": 8191,
+  "cppVendorAndGuardPolicyUnchanged": true,
+  "historical123SourceSHA256": "eb3acd49032c34476308b7e800a3b37268b220c75061191b86c7aab5b1a17410",
+  "subsequentCriticalFilter": "Zero-shell exact cubic critical-value sufficient proof; distinct trace, no physical/time/word/budget changes.",
+  "currentOwnedMetadataNote": "Current source includes bounded arbitrary affine-normal certificates; historical package proofs remain unchanged."
+}

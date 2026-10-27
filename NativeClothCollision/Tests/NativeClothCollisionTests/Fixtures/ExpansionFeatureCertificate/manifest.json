@@ -1,0 +1,10 @@
+{
+  "files": {
+    "circle690-fsc111-complete-self.json": "e6ad01ab1788c46505767d334111e269b53a593afbd15e50c7fef679b60e0b35",
+    "circle690-fsc111-ee.json": "2db6003bac8eaba7797b0f235b62c6de6ec56f9514ce2a0e72437ab9a09a1234"
+  },
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "originalFloor": 0,
+  "cppUnchanged": true,
+  "scope": "Saved actual111 feature and full self motions. Distance/domain queries only, no Newton solve or garment accepted."
+}

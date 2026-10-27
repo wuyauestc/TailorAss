@@ -1,0 +1,11 @@
+{
+  "files": {
+    "actual-circle247-vf.json": "013e4467f4f38c566a5f16c1c29aebdf46849cc7983710f4c2293bdb97e2fa34",
+    "circle118-vf-shirt85-ee.json": "c3b7e126aa82af23cf48708a81142ebc9f5a26e2a455d0931dd9f1c041c3497c"
+  },
+  "sourceProofFiles": {
+    "exact-vf-path-proof.json": "43e889c36d057dd6745b3e40adc4e3791eb83eb40de2543fb1ef1966bb6fef3c",
+    "minimum-separation-cube-exact.json": "cc0b8f91723f637e3b32beb698f0c4bf64dfc21c370d19df5380cc8da385d255"
+  },
+  "licensing": "Project generated numeric regression data; contains no vendor or AGPL measurement source."
+}

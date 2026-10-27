@@ -1,0 +1,19 @@
+{
+  "format": "SelfContactGuardIndependentBootstrapFixtures/v1",
+  "scope": "Known positive source bootstrap controls and exact accepted236 to BODY-blocked237 trial; no accepted237/physics claim",
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "requiresIntersectionFreeInitialState": true,
+  "independentInitialProperPairs": 0,
+  "independentInitialCoplanarPairs": 0,
+  "overall237TrialAccepted": false,
+  "independentOracleSHA256": "1cdecb9619798a035742f8baaafc48c38e785443018ed5e10489cbf941b8fae5",
+  "nativePositive211ConclusionSHA256": "18d0a351d9519e228d3aa0600cd88b001e48bde21ec8967f8ece5c2465487eb6",
+  "realMotionSourceManifestSHA256": "83beefe3e0aff799a0ac5154d6971292c5c26787ac11d45d63395fa3e4801dc7",
+  "files": {
+    "SelfContactGuard/body-blocked-r237-trial": "3e4c44f00028f96edb97c6aec383987dc3e8d22173f762ca21d2580fdf89c345",
+    "SelfContactGuard/accepted-r236": "0981f1ef29d489e83224cbdd7d77a8f0c184c28b6c0c6d0550457cbef51db46d",
+    "IPCClothContact/clear-case": "bfe520476120ec50492bb649d9215e7ce3d832fb2687c11f8ca7b40a89a3b31e",
+    "IPCClothContact/shirt-case": "86f8493a9400dc0325e229a08ce0076a712ddb473aa4aabf1357d482302c183b",
+    "IPCClothContact/r237-case": "bb70c324e8bca9967f962031256b0e1ee69ee85b7ea1118b4a57e44e5c6cbd31"
+  }
+}

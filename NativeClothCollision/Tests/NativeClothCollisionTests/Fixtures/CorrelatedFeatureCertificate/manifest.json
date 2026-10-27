@@ -1,0 +1,10 @@
+{
+  "files": {
+    "circle690-ee.json": "cf1eab0b50ae18fda8b554eef6ca44ed1e732d1df27163ed6c4baf84b5c2b637",
+    "circle690-complete-self.json": "8a2261c8febf7a6bd4460cade4c3d759fe3f221ff98d1d2dbd3120f3265b47d8"
+  },
+  "oldProofPreserved": "/private/tmp/TailorAssCircle690ActualSelfPaths",
+  "originalCPPUnchanged": true,
+  "originalFloor": 0,
+  "originalTol": 1e-08
+}

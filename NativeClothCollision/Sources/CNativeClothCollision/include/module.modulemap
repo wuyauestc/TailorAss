@@ -1,0 +1,6 @@
+module CNativeClothCollision {
+    header "CNativeClothCollision.h"
+    header "NativeFloatingPointEnvironment.h"
+    header "CSelfMotionCertificates.h"
+    export *
+}

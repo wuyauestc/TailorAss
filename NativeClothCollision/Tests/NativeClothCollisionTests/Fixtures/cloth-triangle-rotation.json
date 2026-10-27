@@ -1,0 +1,45 @@
+{
+  "format": "NativeClothTriangleRotationWitness/v1",
+  "scope": "Same rejected cloth candidate470 source witness only. No garment acceptance or dynamics rerun is implied.",
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "lastAcceptedFrame": 469,
+  "rejectedCandidateFrame": 470,
+  "clothVertexIDs": [
+    1427,
+    1169,
+    1170
+  ],
+  "bodyVertexIDs": [
+    4138
+  ],
+  "queryStartXYZ": [
+    -0.15578489999999998,
+    -0.08427,
+    0.03431159999999999,
+    -0.15243577863571997,
+    -0.11040820895484063,
+    0.051929918941094916,
+    -0.1511290686057528,
+    -0.09875768796714489,
+    0.04504556535392448,
+    -0.1514787389742947,
+    -0.09877918038767741,
+    0.043635121712610754
+  ],
+  "queryEndXYZ": [
+    -0.15578489999999998,
+    -0.08427,
+    0.03431159999999999,
+    -0.1525705251792113,
+    -0.10983398204273129,
+    0.05130525529192371,
+    -0.15114188439999202,
+    -0.09880233424578372,
+    0.043355171324465105,
+    -0.15490561257260985,
+    -0.09633336487017286,
+    0.046512809572141996
+  ],
+  "originalRejection": "fixed-initial-normal certificate uncertainGeometry",
+  "physicalAcceptance": false
+}

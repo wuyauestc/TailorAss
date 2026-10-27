@@ -1,0 +1,11 @@
+{
+  "files": {
+    "circle690-actual117-ee.json": "4847507d2b6cb00a5e932dc214fca550032d6c602ac95f306576a9922a3c83eb",
+    "legacy-degree3-certificate.json": "ca0900224ca614116907d62d4927d2ffeaf49981dbaa1babbda65058c8019bd5",
+    "circle690-actual117-complete-self.json": "29084a030da58d1b43932b34894ae08e8203a1f05579b55b342225278cae74bc"
+  },
+  "oldNative117RawRefusalPreserved": true,
+  "physicalFloorsUnchanged": true,
+  "scope": "The newly saved actual117 motions, not the earlier actual111 regression. Exact endpoint bits and complete original topology, no solver restart.",
+  "legacyCubicTraceOrigin": "Sealed Native117 expansion-feature first row/certificate; old projectionScale3/fourcontrols/no degree field."
+}

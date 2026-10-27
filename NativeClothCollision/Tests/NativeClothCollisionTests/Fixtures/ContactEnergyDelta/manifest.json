@@ -1,0 +1,9 @@
+{
+  "files": {
+    "actual-fresh005.json": "baaaecfa6170f7176c3e056b327cb568747f1177c80021815744e7d7879d9bca",
+    "synthetic.json": "68c58deb365eee2207bed16531a5646005d43001e78a8eec5b2ca223a9366393",
+    "actual-native-constants.json": "c8def530ce2a9fa845302138c0a077700651dae33bbe0ad9fb5197ce4b1ad895"
+  },
+  "notFinalGarmentProof": true,
+  "nativePhysicsChanged": false
+}

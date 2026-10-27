@@ -1,0 +1,161 @@
+{
+  "scope": "Corrected independent official full-builder oracles; unordered EE identity canonicalizes BOTH edge IDs and directional known dtype in all three NormalCollision constructors. Historical unmodified goldens are retained separately.",
+  "commit": "19bcab7e1f5a0d2addfcd28513422ff248ea504e",
+  "upstreamVendorBytesUnchanged": true,
+  "onlyMathematicalChange": "EE identity preserves oriented fixed-distance function; area/candidates/signed corrections/mollifier/physical barrier unchanged",
+  "clothReferenceSHA256": "a74f19c403d1c3c1d1894ae62c4072a478149bc63456a9e06e6a91ff1ea5d791",
+  "bodyReferenceSHA256": "ec562f741ea8c836c8a6128aa6f692a8c5fea0eeeaee10b7e6cb3bef0aec10c0",
+  "canonicalConstructorProof": {
+    "status": "CORRECTED_REFERENCE_NOT_PRODUCTION",
+    "upstreamOriginalCommit": "19bcab7e1f5a0d2addfcd28513422ff248ea504e",
+    "originalSourceFileSHA256": "523ea8eca88f86871f79dc86d13ae9e12543a2461a25f6a69680b0c1b8d4a58c",
+    "correctedSourceFileSHA256": "45b6dda3a4e130fda2e2edfdb658c437724c71aa5125aeb0589ca3bb3de627ad",
+    "onlyPhysicalChange": "Normal EE constructors canonically order edge IDs and transform known distance type to preserve physical leaf; no changes to full builder area/candidates/mollifier or physical parameters.",
+    "linkedOriginalLibrariesSHA256": {
+      "reference-ipc/libipc_toolkit.a": "96e04703698031564dbd399212019de9069c39b48e5a6d044df123a6b52c6337",
+      "appleclang_21.0_cxx17_64_release/libtbb.a": "c9455c738907e402fb4ccd9f04cab394ea7d278005f1e23d7e0803c95cb3e2d4",
+      "lib/libpredicates.a": "c9778c97213d0b547368258856e852fd229f4ea36c1713bd87d635321b7abc1a",
+      "_deps/tight-inclusion-build/libtight_inclusion.a": "d57d9fc1e8b4519ef73e7923bd8985af361620d072c84d379168aaeda4da4297",
+      "_deps/scalable-ccd-build/libscalable_ccd.a": "438acee9c706c91622d7970acf704d2684fe6b3975522f70f30786070307c22a",
+      "_deps/spdlog-build/libspdlog.a": "7104df43cc1e01d976118ab936454949536b7532e4d3f7dd58a1658e066b8ece",
+      "_deps/tinyad-build/libTinyAD.a": "48f71fdb84388de02c0dd39b1545de9a9c79c38b6155dfb0a71ff60c38f247e1"
+    },
+    "binarySHA256": "a74f19c403d1c3c1d1894ae62c4072a478149bc63456a9e06e6a91ff1ea5d791",
+    "metadataOnlyDriverTextChange": true
+  },
+  "files": {
+    "cloth-canonical-goldens.json": "d986a4902b386f7ed2e9c1a8716509e549578a3f50ba70f98f66cfcdaff2757e",
+    "shirt-golden.json": "48fb05870b71c225294a7696204e68bd80b37c7b75f2bac4911ca955a846c677",
+    "body-canonical-goldens.json": "dc54bc9477c5c08633e7fef00c6a08fd69f1bb31aa299ea60d5b151f59f5e6be",
+    "actual-body-golden.json": "6fc3ce89c51a174cffaf2407af968641f1ccf3034bff5eeea80fa25a6d0d6d5f",
+    "circle218-cases.json": "d49940bc5b7fe0356e887993895dd3c199c9eb0992d383aa1dd350d8b9476321",
+    "circle218-goldens.json": "ca0067484e5ecd652887b5897cc1004891b07983f3bb73b3148ed4277d259197",
+    "fixed-body-canonical.json": "d87d5e7dd656a595f81d3a9233f0e97472f465ec5b470c5bd6af19924aab8ff5",
+    "self-contact-canonical-toy.json": "6b6f4f687056b535edc102a40c62ceb644be6cf696c7b8cb11553de2ea2b71e0"
+  },
+  "sourceInputs": {
+    "IPCClothContact/cloth-cases.json": "51d8349df932db0faafcad297ab258b58b1c6b402ad4774f9d485dddd3171f7e",
+    "IPCClothContact/shirt-case.json": "86f8493a9400dc0325e229a08ce0076a712ddb473aa4aabf1357d482302c183b",
+    "IPCBodyContact/body-cases.json": "792852796bd546d4e6d6909e7b4590722bdacfc7e0dc2978ca4eefc00eefea75",
+    "IPCBodyContact/actual-case.json": "0f856a2bef54e54d0ff003f7bf03f4f36dfca968d9b1bae3eef64c1e0b1e3e51"
+  },
+  "independentOrientedNoMergeComparison": {
+    "status": "PASS",
+    "algorithm": "full original builder with corrected EE constructor identity; independent no-EE-merge oriented full builder comparison",
+    "directionalFD": [
+      {
+        "stepAlongDirection": 0.01,
+        "directionalEnergyFD": 3.372390062247443e-08,
+        "analyticSlope": 3.3723968980769035e-08,
+        "absoluteGradientDirectionalError": 6.835829460764044e-14,
+        "rawHessianProductFDMaxError": 5.113755088495152e-07,
+        "rawHessianProductScale": 0.0033390775931224194
+      },
+      {
+        "stepAlongDirection": 0.001,
+        "directionalEnergyFD": 3.372395955157301e-08,
+        "analyticSlope": 3.3723968980769035e-08,
+        "absoluteGradientDirectionalError": 9.429196027622056e-15,
+        "rawHessianProductFDMaxError": 5.1156122367139976e-08,
+        "rawHessianProductScale": 0.0033390775931224194
+      },
+      {
+        "stepAlongDirection": 0.0001,
+        "directionalEnergyFD": 3.372403091918101e-08,
+        "analyticSlope": 3.3723968980769035e-08,
+        "absoluteGradientDirectionalError": 6.193841197623627e-14,
+        "rawHessianProductFDMaxError": 5.122509085203446e-09,
+        "rawHessianProductScale": 0.0033390775931224194
+      }
+    ],
+    "independentRawSumComparison": [
+      {
+        "name": "circle218_current",
+        "energyAbsError": 1.0842021724855044e-19,
+        "gradientMaxError": 5.551115123125783e-17,
+        "rawHessianMaxError": 3.637978807091713e-12
+      },
+      {
+        "name": "circle218_tiny_trial",
+        "energyAbsError": 1.8973538018496328e-19,
+        "gradientMaxError": 5.551115123125783e-17,
+        "rawHessianMaxError": 1.8189894035458565e-12
+      }
+    ],
+    "correctedActualEnergyDelta": 1.5151725360484924e-17,
+    "sourceCasesSHA256": "5bae06bc64d0edebae1a4f7fce0f9a8851f097d3b382c8cf5d4cccfd48872ef3"
+  },
+  "fixedBodyComparison": {
+    "bodyCanonicalMergedMinusOrientedRaw": [
+      {
+        "name": "body_nearparallel",
+        "energyDelta": -1.0587911840678754e-22,
+        "maxAbsGradientDelta": 1.0842021724855044e-19,
+        "maxAbsRawHessianDelta": 1.1102230246251565e-15,
+        "maxAbsProjectedHessianDelta": 1.4295048870476665
+      },
+      {
+        "name": "body_nearparallel_vertex_edge_rows_permuted",
+        "energyDelta": 0.0,
+        "maxAbsGradientDelta": 1.0842021724855044e-19,
+        "maxAbsRawHessianDelta": 8.881784197001252e-16,
+        "maxAbsProjectedHessianDelta": 1.4295048870476688
+      }
+    ],
+    "clothToyCanonicalMergedMinusOrientedRaw": [
+      {
+        "name": "toy_two_triangles",
+        "energyDelta": 0.0,
+        "maxAbsGradientDelta": 1.4210854715202004e-14,
+        "maxAbsRawHessianDelta": 3.637978807091713e-12,
+        "maxAbsProjectedHessianDelta": 6626.389413785202
+      },
+      {
+        "name": "toy_two_triangles_edge_ids_reversed",
+        "energyDelta": 0.0,
+        "maxAbsGradientDelta": 2.842170943040401e-14,
+        "maxAbsRawHessianDelta": 2.7284841053187847e-12,
+        "maxAbsProjectedHessianDelta": 6626.389413785215
+      }
+    ],
+    "clothActualReversedCanonicalMergedMinusOrientedRaw": [
+      {
+        "name": "circle218_current_edge_ids_reversed",
+        "energyDelta": 5.421010862427522e-20,
+        "maxAbsGradientDelta": 5.551115123125783e-17,
+        "maxAbsRawHessianDelta": 3.637978807091713e-12,
+        "maxAbsProjectedHessianDelta": 42.57180070903905
+      },
+      {
+        "name": "circle218_tiny_trial_edge_ids_reversed",
+        "energyDelta": 1.0842021724855044e-19,
+        "maxAbsGradientDelta": 5.551115123125783e-17,
+        "maxAbsRawHessianDelta": 1.8189894035458565e-12,
+        "maxAbsProjectedHessianDelta": 42.57180071024959
+      }
+    ],
+    "note": "Physical E/G/raw-H are linear in signed leaf weights; per-stencil PSD projection is nonlinear and legitimately changes when equal leaf weights are merged.",
+    "bodyCanonicalMergedRelabelInvariance": {
+      "energyDelta": 1.0587911840678754e-22,
+      "maxAbsGradientDelta": 1.0842021724855044e-19,
+      "maxAbsRawHessianDelta": 4.440892098500626e-16,
+      "maxAbsProjectedHessianDelta": 6.217248937900877e-15
+    },
+    "clothToyCanonicalMergedEdgeIDInvariance": {
+      "energyDelta": 0.0,
+      "maxAbsGradientDelta": 1.0658141036401503e-14,
+      "maxAbsRawHessianDelta": 1.8189894035458565e-12,
+      "maxAbsProjectedHessianDelta": 2.091837814077735e-11
+    },
+    "fixtureSHA256": {
+      "self-contact-canonical-toy.json": "6b6f4f687056b535edc102a40c62ceb644be6cf696c7b8cb11553de2ea2b71e0",
+      "fixed-body-canonical.json": "d87d5e7dd656a595f81d3a9233f0e97472f465ec5b470c5bd6af19924aab8ff5"
+    }
+  },
+  "referenceSourcesSHA256": {
+    "Tests/Oracles/OrientationIdentityCorrection.patch": "5967a90786e968257b28a67fad208f99add3763dc03aa82e58dcb09ba8eb9e95",
+    "Tests/Oracles/IPCBodyFullReference.cpp": "a2a2abb65846e81f258c6e30c843a693facb86e3d5131424305aee7a43648d6d",
+    "Tests/Oracles/IPCClothFullReference.cpp": "3216e3063d70266851d5e374a5b6ff986c328a5b2ae4a6265fb209e36c418b8b",
+    "Scripts/build-ipc-orientation-reference.py": "4bd83366aa70d82053aed750d3131736fa9c781e8098cf2e6cbe180c7fa44216"
+  }
+}

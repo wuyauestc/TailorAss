@@ -1,0 +1,176 @@
+{
+  "purpose": "Exact primitive motions from last accepted to last rejected trials; no garment acceptance. Circle gap is strictly positive by 2.55pm; Shirt native precisionOrBudget is post-domain.",
+  "sourceDiagnosticDirectory": "/private/tmp/TailorAssCurrentBodyWitness.0gTl6l",
+  "originalInputManifestSHA256": "d9c4340cf2c69cdface47f52e487eb0a136ad21336db0e2f2368332f40ea5e00",
+  "rows": [
+    {
+      "originalFilename": "circle118-near-floor-vf.json",
+      "originalReportSHA256": "a1491bb63ce375bc20fa0a0a7147e4648489620f4cdd78e1013fc3c1a0ef5fba",
+      "originalCase": "circle-straight-band",
+      "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+      "clothVertexIDs": [
+        1597
+      ],
+      "bodyVertexIDs": [
+        10791,
+        10705,
+        10718
+      ],
+      "kind": "vertexFace",
+      "start12": [
+        0.11357339026312643,
+        -0.05929306937832228,
+        -0.09039439583384638,
+        0.09637029999999999,
+        -0.0483242,
+        -0.09367899999999998,
+        0.11262239999999998,
+        -0.0496811,
+        -0.08514909999999999,
+        0.11512979999999999,
+        -0.0630511,
+        -0.09083259999999999
+      ],
+      "end12": [
+        0.11523042323000832,
+        -0.059009379585964875,
+        -0.08923814850325512,
+        0.09637029999999999,
+        -0.0483242,
+        -0.09367899999999998,
+        0.11262239999999998,
+        -0.0496811,
+        -0.08514909999999999,
+        0.11512979999999999,
+        -0.0630511,
+        -0.09083259999999999
+      ],
+      "startBits": [
+        "3fbd13254ce03fc2",
+        "bfae5ba943b7fd26",
+        "bfb724164dd919bb",
+        "3fb8abb956ce42ee",
+        "bfa8bdf31535f22a",
+        "bfb7fb58d1526d8a",
+        "3fbcd4d254cc0a2e",
+        "bfa96fcd1775678b",
+        "bfb5cc54d7c8a951",
+        "3fbd792585cb867b",
+        "bfb0241dec7a113e",
+        "bfb740ce26692054"
+      ],
+      "endBits": [
+        "3fbd7fbdb346f1a0",
+        "bfae367a36f53b72",
+        "bfb6d84fb16087cc",
+        "3fb8abb956ce42ee",
+        "bfa8bdf31535f22a",
+        "bfb7fb58d1526d8a",
+        "3fbcd4d254cc0a2e",
+        "bfa96fcd1775678b",
+        "bfb5cc54d7c8a951",
+        "3fbd792585cb867b",
+        "bfb0241dec7a113e",
+        "bfb740ce26692054"
+      ],
+      "minimumSeparation": 0.0005,
+      "distanceTolerance": 1e-08,
+      "maximumIterations": 10000,
+      "maximumTime": 1,
+      "nativeReplayStatus": 2,
+      "nativeReplayDetail": "none",
+      "nativeReplayTOI": 0,
+      "nativeReplayTolerance": 1e-08,
+      "previousCertificateStatus": "notCertified",
+      "previousCertificateNodes": 29,
+      "previousCertificateHelperSHA256": "427edf79c8bb990760c71874a5d55598b9b9a32158f7c999523864a19ca0fef5",
+      "exactConvexQP": {
+        "exactPathDistanceSquaredNumerator": "4850639262089558668467231608280016176614505532030975145057466526280841792813571804521",
+        "exactPathDistanceSquaredDenominator": "19402556850473734872890348672905250294794560483838408005283449352298796319492026288847192064",
+        "pathMinimumMeters90Digit": "0.0005000000025497219364106200291673830794903927491074481807671756562307642291415616235365174682862421705"
+      }
+    },
+    {
+      "originalFilename": "shirt85-precision-ee.json",
+      "originalReportSHA256": "a1491bb63ce375bc20fa0a0a7147e4648489620f4cdd78e1013fc3c1a0ef5fba",
+      "originalCase": "shirt-sleeved",
+      "sourceSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4",
+      "clothVertexIDs": [
+        1507,
+        1508
+      ],
+      "bodyVertexIDs": [
+        1605,
+        1609
+      ],
+      "kind": "edgeEdge",
+      "start12": [
+        -0.22753122399966857,
+        0.2719886685338568,
+        -0.13598371444320773,
+        -0.20280575102141088,
+        0.2835485317400529,
+        -0.13933241265503793,
+        -0.22984429999999997,
+        0.28217910000000007,
+        -0.13234129999999997,
+        -0.20394989999999996,
+        0.27566060000000003,
+        -0.14012219999999997
+      ],
+      "end12": [
+        -0.2271174682584467,
+        0.2718300627761983,
+        -0.1361012575467606,
+        -0.2023335681902232,
+        0.28324570750586,
+        -0.1395198231058845,
+        -0.22984429999999997,
+        0.28217910000000007,
+        -0.13234129999999997,
+        -0.20394989999999996,
+        0.27566060000000003,
+        -0.14012219999999997
+      ],
+      "startBits": [
+        "bfcd1fbe3ef2dee2",
+        "3fd16843290f126b",
+        "bfc167ea13293d32",
+        "bfc9f589f209f15d",
+        "3fd225a8bda9c006",
+        "bfc1d5a4fdd02628",
+        "bfcd6b89bbd60483",
+        "3fd20f38ed875779",
+        "bfc0f08f49b47ef7",
+        "bfca1b07c342e04e",
+        "3fd1a46c5b72ed5e",
+        "bfc1ef863538c6f0"
+      ],
+      "endBits": [
+        "bfcd122f69429ab8",
+        "3fd165a9eb6c60a5",
+        "bfc16bc4190dccb8",
+        "bfc9e610fd214780",
+        "3fd220b29a9e154e",
+        "bfc1dbc91ab115d8",
+        "bfcd6b89bbd60483",
+        "3fd20f38ed875779",
+        "bfc0f08f49b47ef7",
+        "bfca1b07c342e04e",
+        "3fd1a46c5b72ed5e",
+        "bfc1ef863538c6f0"
+      ],
+      "minimumSeparation": 0.0005,
+      "distanceTolerance": 1e-08,
+      "maximumIterations": 10000,
+      "maximumTime": 1,
+      "nativeReplayStatus": 3,
+      "nativeReplayDetail": "precisionOrBudget",
+      "nativeReplayTOI": 0.9998779296875,
+      "nativeReplayTolerance": 1.984947109734403e-07,
+      "previousCertificateStatus": "separated",
+      "previousCertificateNodes": 1,
+      "previousCertificateHelperSHA256": "427edf79c8bb990760c71874a5d55598b9b9a32158f7c999523864a19ca0fef5"
+    }
+  ]
+}

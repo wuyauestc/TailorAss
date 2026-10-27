@@ -1,0 +1,38 @@
+{
+  "scope": "Two actual complete-self-guard motions; original hundred-test native kernel still reports precisionOrBudget. New Swift supplement must inspect every remaining feature. Not garment acceptance.",
+  "files": {
+    "circle387.json": "9d8d889e318e892804a7447fdfefca2ec4285edcf2ab9293619fb29498737677",
+    "shirt343.json": "5d01e8ae152b6623feadacca7eae287d7133a0bb5063163c5c68ee98fd5edb4c"
+  },
+  "cases": [
+    {
+      "case": "circle387",
+      "file": "circle387.json",
+      "sha256": "9d8d889e318e892804a7447fdfefca2ec4285edcf2ab9293619fb29498737677",
+      "vertices": 1679,
+      "triangles": 2830,
+      "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35"
+    },
+    {
+      "case": "shirt343",
+      "file": "shirt343.json",
+      "sha256": "5d01e8ae152b6623feadacca7eae287d7133a0bb5063163c5c68ee98fd5edb4c",
+      "vertices": 1732,
+      "triangles": 2710,
+      "sourceSHA256": "e923c793ce690109690eaf2ac63d726cc73d6138d554e1b8599c73e6048af5b4"
+    }
+  ],
+  "primitiveAdjacencyUnchanged": true,
+  "sewingMaskAbsent": true,
+  "wholeIntervalMinimumSeparationMeters": 0,
+  "distanceTolerance": 1e-08,
+  "safetyFactor": 0.9,
+  "maximumNativeIterations": 10000,
+  "oldReportsUnmodified": true,
+  "cppVendorUnchanged": true,
+  "independentFractionVerifierSHA256": "9f739211ac43917b1ef796b46e5e2c6c3e23b368b4f60046a60d44805a3231fd",
+  "historical105IndependentFractionVerifierSHA256": "4881275dddd53bc41720fb9860e56da94220ae32abe51f63d2f8c1b61da243b9",
+  "verifierExtension": "Fixed and ordinary moving checks remain; exact scaled3 expansion leaves are independently audited and included in the same full-time partition. Historical105 and111 evidence unchanged.",
+  "historical111IndependentFractionVerifierSHA256": "02d852d30962bfee307f97a3087853d33fc94f8d01643904c29a6d76177532e3",
+  "historicalIndependentFractionVerifierSHA256": "eae90a4a977db6be3ba27b8fb3e8dfcb4c6ab67c673c2a8749a84da6897f0c39"
+}

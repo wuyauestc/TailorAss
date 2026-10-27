@@ -1,0 +1,14 @@
+{
+  "scope": "All-moving serial self builder with corrected orientation-preserving EE identity; upstream leaf/Eigen bytes remain identified by immutable IPCBodyContactVendorManifest",
+  "ipcCommit": "19bcab7e1f5a0d2addfcd28513422ff248ea504e",
+  "sharedBodyVendorManifestSHA256": "3158ae3447c5c4ce8c1fdc3040b9d701c6d007b8431b10dde217a358f6265704",
+  "files": {
+    "include/IPCClothContactBuilder.h": "57b9ff688e1610b8cf0b6720ae0e66f070b2aba0c3c485e227b2caafa36c5ed0",
+    "src/IPCClothContactBuilder.cpp": "f6196eb423011fde8c9c671a17d102771b1b2263eccf1d8c20ee95f4ee31634b",
+    "src/IPCOrientedEdgeKey.hpp": "9aecc72204ff2b5edd44c809be124a76b0d1fc226f46786f4ceeb67930e15956"
+  },
+  "validatedResearchBytesExact": false,
+  "noNewThirdPartyCodeOrLicense": true,
+  "correctedFullBuilderOracle": "Tests/NativeClothCollisionTests/Fixtures/IPCOrientationIdentity/manifest.json",
+  "historicalResearchNote": "The old full-builder golden shares an unordered-EE/directional-dtype identity defect. It is retained unchanged as historical evidence, not a current mathematical oracle."
+}

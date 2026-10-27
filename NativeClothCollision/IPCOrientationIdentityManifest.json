@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "scope": "Owned serial-builder EE orientation identity correction only. All third-party IPC/Eigen/CCD sources stay unchanged. Immutable original body manifest retains its historical locally authored wrapper hash.",
+  "historicalBodyManifestSHA256": "3158ae3447c5c4ce8c1fdc3040b9d701c6d007b8431b10dde217a358f6265704",
+  "historicalBodyWrapperPath": "src/IPCContactBuilder.cpp",
+  "historicalBodyWrapperSHA256": "e25ee2eafa1523f694eb7ac224bea076f231d782978e41e9bbaf22133e87349f",
+  "files": {
+    "src/IPCContactBuilder.cpp": "e8f47d92b863f807deea7575704d071f1c569f5f5de4491c888518e4454c76b1",
+    "src/IPCClothContactBuilder.cpp": "f6196eb423011fde8c9c671a17d102771b1b2263eccf1d8c20ee95f4ee31634b",
+    "src/IPCOrientedEdgeKey.hpp": "9aecc72204ff2b5edd44c809be124a76b0d1fc226f46786f4ceeb67930e15956"
+  },
+  "correctedReferenceManifest": "Tests/NativeClothCollisionTests/Fixtures/IPCOrientationIdentity/manifest.json",
+  "correction": "Canonicalize both edge IDs AND known distance type before constructing unordered key and stored stencil. Signed areas/leaf equations/material/candidate sets/DOFs unchanged.",
+  "historicalGoldenStatus": "Old original full-builder oracles retain the same orientation identity defect; preserved byte-for-byte as historical proof and never silently rewritten."
+}

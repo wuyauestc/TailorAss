@@ -1,0 +1,25 @@
+{
+  "scope": "Bounded arbitrary affine-normal proposal certified only by all actual moving vertex-pair quadratic projection strict lower bounds; independent Fraction/Sturm leaf audit. No tolerance, primitive domain, C++, vendor, force or garment-acceptance changes.",
+  "historical129FSCSourceSHA256": "3caac3b58afb4467beaf74a9ed95e0dfd414f60d9b054d212db2a11609cb71e5",
+  "currentFSCSourceSHA256": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+  "limitsUnchanged": {
+    "maximumDepth": 12,
+    "maximumNodes": 8191,
+    "maximumExpansionWords": 64,
+    "maximumExpansionOperations": 1048576,
+    "maximumEstimatedWorkingBytes": 1048576,
+    "exactScratchBytes": 131072
+  },
+  "files": {
+    "Sources/NativeClothCollision/FeatureSeparationCertificate.swift": "8cbd2b9ff32eb08bec7f55221966dfaf6a8fc8dad65ff7c07b98ab87624aa253",
+    "Tests/NativeClothCollisionTests/AffineFeatureCertificateTests.swift": "89a854fd70d9c21842f601411624dcf6a263bef84af852881c911ab0880001bb",
+    "Tests/NativeClothCollisionTests/Fixtures/AffineFeatureCertificate/manifest.json": "db15489623d81224698c10a6d2d7ef429452ba0acd40d81beb5b7876de8438e0",
+    "Tests/Oracles/affine_feature_fraction.py": "e98e98511fe258a6266f937a95a76c75de6d8831e11fe6a956f91369245d3b4f",
+    "Tests/Oracles/audit_correlated_feature.py": "b80ecf33d8b1fa5d4ce70db983d046eaedbcb173a3c84290e64ac9a88c29edba",
+    "Scripts/AffineFeatureLinkSmoke.swift": "d27b59cd0301f084921f4ef35e709ef88a3fd1e5510a49a91db96ceab2bc1588",
+    "Scripts/run-checks.py": "6dc5a13c8de2fa927cadc753f64010a3cf792a9310f197ac080ef9e458f63b59",
+    "Scripts/CommonAffineFeatureLinkSmoke.swift": "ca476a9929d7b4a94506cdac3afd162307af19d4339f746c90b0c84fc02ed5da",
+    "FEATURE-SEPARATION-CERTIFICATE.md": "f2fcba457ac8bf2c80086f2101adf5a13758c8fe3972c75ea23e73419f1283e5"
+  },
+  "commonAmplitudeFallback": "Original separate normalization retained first; one common-scale raw proposal only after original proof fails; both use the same strict all-pair proof and shared original EFT/word/node/depth/memory caps."
+}

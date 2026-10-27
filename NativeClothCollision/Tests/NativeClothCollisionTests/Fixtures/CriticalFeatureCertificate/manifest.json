@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "files": {
+    "circle690-new123-ee.json": "c0077583f0f6c3b9914d427b5579ac35cc70a4b0144a2e762febce6ff924637d",
+    "circle690-new123-complete-self.json": "c12a530b0aa12ab0480f0aeb1d0a3dd9c008feff051b4bdf61700bb13d02f4e2"
+  },
+  "originFilesSHA256": {
+    "/private/tmp/TailorAssCircle690ProductionReplaySecond/diagnostic-self/physical-outer/witness-motion.json": "2d8b17d139192293310f11a66fbd98606a82538e2fa580e58b4ec5941e706da3",
+    "/private/tmp/TailorAssCircle690ProductionReplaySecond/diagnostic-self/fraction-unique-critical-minimum-proof.json": "396f68207006bc94dc18ef0e365a9797dd57d50c2acfbe41997187022c75d6e3",
+    "/private/tmp/TailorAssCircle690ProductionReplaySecond/diagnostic-self/actual-cubic-coefficients.json": "fc3fc875c66d426ab7567449a3961fbf8d3bacb11ac5a5bc08bef2735b1edf9b",
+    "/private/tmp/TailorAssCircle690ProductionReplaySecond/delivery-manifest.json": "01441c7aa4c2823a24e818e3cc85d6b42eb113497f28345c69a0c582ee05a6d4"
+  },
+  "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+  "scope": "Exact binary endpoints of real Native123 replay690, immutable diagnostic source only. No accepted690/historical trajectory/whole garment claim."
+}

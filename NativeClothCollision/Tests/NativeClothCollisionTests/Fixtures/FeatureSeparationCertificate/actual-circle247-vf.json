@@ -1,0 +1,182 @@
+{
+  "purpose": "Minimal exact native VF motions from rejected/limited real source candidates; no garment success claim. Full input states remain in the original trace, not uploaded.",
+  "sourceTraceDirectory": "/private/tmp/TailorAssJointSimulationCircle247Trace",
+  "rows": [
+    {
+      "originalFilename": "first-001-limited.json",
+      "originalFileSHA256": "dcaa3674a12e5858f775aed34334dec479dd9bb165bc017c07900250add4d695",
+      "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+      "clothVertexIDs": [
+        64
+      ],
+      "bodyVertexIDs": [
+        10834,
+        10815,
+        10835
+      ],
+      "kind": "vertexFace",
+      "start12": [
+        0.13118351594076577,
+        -0.0935980970882334,
+        -0.10726168532825801,
+        0.11877559999999998,
+        -0.0778093,
+        -0.09969539999999999,
+        0.14088669999999998,
+        -0.096304,
+        -0.10330649999999998,
+        0.12187939999999998,
+        -0.096565,
+        -0.11272339999999999
+      ],
+      "end12": [
+        0.13113284716532334,
+        -0.09367060274768545,
+        -0.10699681519260612,
+        0.11877559999999998,
+        -0.0778093,
+        -0.09969539999999999,
+        0.14088669999999998,
+        -0.096304,
+        -0.10330649999999998,
+        0.12187939999999998,
+        -0.096565,
+        -0.11272339999999999
+      ],
+      "startBits": [
+        "3fc0ca9f175eb482",
+        "bfb7f60b7df63837",
+        "bfbb758076994523",
+        "3fbe6813e5901230",
+        "bfb3eb4f6ed31c72",
+        "bfb985a3428fc788",
+        "3fc208934c787e96",
+        "bfb8a76102795704",
+        "bfba724b76f6d761",
+        "3fbf337d050e5cb9",
+        "bfb8b87bdcf0307f",
+        "bfbcdb70d47e71f5"
+      ],
+      "endBits": [
+        "3fc0c8f60d00d2b3",
+        "bfb7facbef65dddf",
+        "bfbb6424ae07452c",
+        "3fbe6813e5901230",
+        "bfb3eb4f6ed31c72",
+        "bfb985a3428fc788",
+        "3fc208934c787e96",
+        "bfb8a76102795704",
+        "bfba724b76f6d761",
+        "3fbf337d050e5cb9",
+        "bfb8b87bdcf0307f",
+        "bfbcdb70d47e71f5"
+      ],
+      "minimumSeparation": 0.0005,
+      "distanceTolerance": 1e-08,
+      "maximumIterations": 10000,
+      "maximumTime": 1,
+      "nativeReplayStatus": 2,
+      "nativeReplayTOI": 0.630584716796875,
+      "exactConvexQP": {
+        "file": "first-001-limited.json",
+        "binary64InputsInterpretedAsExactRationals": true,
+        "exactPathDistanceSquaredNumerator": "17948370756524512160699877379078124946139960487652609168342122555456589392996282404434289",
+        "exactPathDistanceSquaredDenominator": "32801227128729896674091421794038892610790658424259939508157798054007616035398300964683914412032",
+        "squaredDistanceStrictlyAboveActualDoubleFloorSquared": true,
+        "pathMinimumMeters90Digit": "0.000739720186239691024973362919178907909746410022343098920118619429980920654665893726683919901",
+        "pathMinimumMinusFloorMeters90Digit": "0.000239720186239691014565022063318065343274863133991658490431119429980920654665893726683919901",
+        "exactPathIsClearAtRequestedEuclideanFloor": true,
+        "nativeStatus": 2,
+        "nativeTOI": 0.630584716796875
+      }
+    },
+    {
+      "originalFilename": "first-060-blockedInitialContact.json",
+      "originalFileSHA256": "447dd0aff8fbb624ab0d382791d1590d5aabbfe4d50163752ae79997a1237097",
+      "sourceSHA256": "28eb56b2ec46feddde570c300896cd6422045e6d119d0a2af11f667ae7604a35",
+      "clothVertexIDs": [
+        64
+      ],
+      "bodyVertexIDs": [
+        10834,
+        10815,
+        10835
+      ],
+      "kind": "vertexFace",
+      "start12": [
+        0.1311524257183281,
+        -0.09364224058577134,
+        -0.10709302447917064,
+        0.11877559999999998,
+        -0.0778093,
+        -0.09969539999999999,
+        0.14088669999999998,
+        -0.096304,
+        -0.10330649999999998,
+        0.12187939999999998,
+        -0.096565,
+        -0.11272339999999999
+      ],
+      "end12": [
+        0.13109896443407978,
+        -0.09371459892461491,
+        -0.10673889222934564,
+        0.11877559999999998,
+        -0.0778093,
+        -0.09969539999999999,
+        0.14088669999999998,
+        -0.096304,
+        -0.10330649999999998,
+        0.12187939999999998,
+        -0.096565,
+        -0.11272339999999999
+      ],
+      "startBits": [
+        "3fc0c99a49a02a39",
+        "bfb7f8f018d70da2",
+        "bfbb6a72cdc48c45",
+        "3fbe6813e5901230",
+        "bfb3eb4f6ed31c72",
+        "bfb985a3428fc788",
+        "3fc208934c787e96",
+        "bfb8a76102795704",
+        "bfba724b76f6d761",
+        "3fbf337d050e5cb9",
+        "bfb8b87bdcf0307f",
+        "bfbcdb70d47e71f5"
+      ],
+      "endBits": [
+        "3fc0c7d9d26454dd",
+        "bfb7fdae1189fa73",
+        "bfbb533d73561849",
+        "3fbe6813e5901230",
+        "bfb3eb4f6ed31c72",
+        "bfb985a3428fc788",
+        "3fc208934c787e96",
+        "bfb8a76102795704",
+        "bfba724b76f6d761",
+        "3fbf337d050e5cb9",
+        "bfb8b87bdcf0307f",
+        "bfbcdb70d47e71f5"
+      ],
+      "minimumSeparation": 0.0005,
+      "distanceTolerance": 1e-08,
+      "maximumIterations": 10000,
+      "maximumTime": 1,
+      "nativeReplayStatus": 2,
+      "nativeReplayTOI": 0,
+      "exactConvexQP": {
+        "file": "first-060-blockedInitialContact.json",
+        "binary64InputsInterpretedAsExactRationals": true,
+        "exactPathDistanceSquaredNumerator": "8600373438013177313976752298921461887145330929458252461586952432208114417096502889187041",
+        "exactPathDistanceSquaredDenominator": "32801227128729896674091421794038892610790658424259939508157798054007616035398300964683914412032",
+        "squaredDistanceStrictlyAboveActualDoubleFloorSquared": true,
+        "pathMinimumMeters90Digit": "0.000512051460141160613869260187416600940318310291013762488678925964469519672027061252126993305",
+        "pathMinimumMinusFloorMeters90Digit": "0.000012051460141160603460919331555758373846763402662322058991425964469519672027061252126993305",
+        "exactPathIsClearAtRequestedEuclideanFloor": true,
+        "nativeStatus": 2,
+        "nativeTOI": 0
+      }
+    }
+  ]
+}

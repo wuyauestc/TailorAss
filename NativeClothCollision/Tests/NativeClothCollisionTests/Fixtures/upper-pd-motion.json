@@ -1,0 +1,100 @@
+{
+  "sourceFiles": [
+    {
+      "path": "/private/tmp/TailorAssUpperBasePD.l9ouw_u2/upper-first-step.json",
+      "sha256": "0b4173f57d09856e36dcca28d6312e52f514230ef0e740d8ca1494595704c104"
+    },
+    {
+      "path": "/private/tmp/TailorAssUpperCoupled.af6ggq_i/physics/actual-rejected-frame.json",
+      "sha256": "7548061f3564645ce88e710e103e2b649bac05fb6bde59882443d4ad6fb8e5cd"
+    }
+  ],
+  "clothVertices": 1449,
+  "bodyVertices": 13380,
+  "bodyFaces": 26756,
+  "independentSegmentTriangleIntersections": 99,
+  "witness": {
+    "vertexID": 1339,
+    "triangleID": 15926,
+    "segmentParameter": 0.5108397455779176,
+    "barycentric": [
+      0.8813736099509134,
+      0.04637238114619707,
+      0.07225400890288942
+    ],
+    "vertexStart": [
+      0.19654550374153829,
+      0.18677880080211814,
+      -0.1013126539703833
+    ],
+    "vertexEnd": [
+      0.19519846256072632,
+      0.18934147555235098,
+      -0.09897229966539778
+    ],
+    "triangle": [
+      [
+        0.19527659999999997,
+        0.18746240000000003,
+        -0.10163249999999999
+      ],
+      [
+        0.20076969999999997,
+        0.19105200000000006,
+        -0.09986009999999998
+      ],
+      [
+        0.19978919999999997,
+        0.19381580000000007,
+        -0.08179689999999999
+      ]
+    ]
+  },
+  "method": "Double precision independent Moller-Trumbore segment/triangle, strict interior barycentric witness, bbox only broadphase. No simulation rerun.",
+  "queryStart": [
+    [
+      0.19654550374153829,
+      0.18677880080211814,
+      -0.1013126539703833
+    ],
+    [
+      0.19527659999999997,
+      0.18746240000000003,
+      -0.10163249999999999
+    ],
+    [
+      0.20076969999999997,
+      0.19105200000000006,
+      -0.09986009999999998
+    ],
+    [
+      0.19978919999999997,
+      0.19381580000000007,
+      -0.08179689999999999
+    ]
+  ],
+  "queryEnd": [
+    [
+      0.19519846256072632,
+      0.18934147555235098,
+      -0.09897229966539778
+    ],
+    [
+      0.19527659999999997,
+      0.18746240000000003,
+      -0.10163249999999999
+    ],
+    [
+      0.20076969999999997,
+      0.19105200000000006,
+      -0.09986009999999998
+    ],
+    [
+      0.19978919999999997,
+      0.19381580000000007,
+      -0.08179689999999999
+    ]
+  ],
+  "acceptanceClaimed": false,
+  "purpose": "CCD path regression from an actual rejected upper-torso simulation candidate; this is not a garment quality pass."
+}
